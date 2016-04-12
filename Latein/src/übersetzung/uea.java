@@ -51,13 +51,18 @@ public class uea {
 	static String[] aj = {"adambulo", "adambulare", "auf und ab gehen", " ", "alicui ~ :", "neben jmd./bei jmd. auf und ab gehen", " ", "alicui rei ~ :", "neben etw/bei etw. auf und abgehen"};
 	static String[] ak = {"adapto", "adaptare", "anpassen", "passend machen"};
 	static String[] al = {"adaquo", "adaquare", "zur Tränke führen", "bewässern", "benetzen", " ", "Passiv: adaquari", "Wasser holen"};
-	static String[] am = {""};
+	static String[] am = {"adhorto", "adhortari", "aufmuntern", "ermahnen", " ", "ad aliquid / in aliquid ~ :", "zu etw. aufmuntern", " ", "de re ~ ut/ne : ", "in Bezug auf etw. ermahnen", " ", "ad defendam rem publicam ~ :", "zur Verteidigung des Staates ermahnen", " ", "de re frumentaria ~ :", "an die Getreideversorgung erinnern"};
+	static String[] an = {"adinspecto", "adinspectare", "mit ansehen"};
+	static String[] ao = {"adiudico", "adiudicare", "zuerkennen", "zusprechen", "zuschreiben", " ", "alicui aliquid ~ :", "jmd. etw. zusprechen", " ", "agrum populo ~ :", "das Land dem Volk zusprechen", " ", "causam alicui ~ :", "den Prozess zu jdms. Gunsten entscheiden", " ", "alicui salutem orbis terrarum ~ :", "jmd. die Rettung des Erdkreises zuschreiben"};
+	static String[] ap = {"adiuro", "adiurare", "dazu noch schwören", "unter Schwur hinzufügen","beschwören", "eidlich versichern", "schwören", "flehentlich bitten", "beschwören", " ", "aliquid ~ :", "etw. beschwören (+AcI)", " ", "per aliquem/aliquem/aliquid ~ :", "bei jmd./etw. schwören)", " ", "per deos ~ :", "bei den Göttern schwören", " ", "caput alicuius ~ :", "bei jmds. Haupt schwören"};
+	static String[] aq = {"adiuto", "adiutare", "aliuem ~ :", "jmd. helfen", "jmd. unterstützen"};
+	static String[] ar = {"adiuvo", "adiuvare", "moralisch aufrichten", "ermutigen", "fördern", "nähren", "förderlich sein", "hilfreich sein", " ", "aliquem ~ :", "jmd. helfen", "jmd. unterstützen", " ", "in re/de re/ad aliquid ~ :", "in etw./bei etw. untersützen", " ", "ut/ne", "darin", "dass/dass nicht", " ", "ad bellum ~ :", "beim Krieg unterstützen", " ", "ad verum probandum ~ :", "bei der Untersuchung der Wahrheit helfen", " ", "clamore milites ~ :", "die Soldaten durch Geschrei moralisch aufrichten", " ", "ignem amoris ~ :", "das Feuer der Liebe schüren", " ", "formam cura ~ :", "die Schönheit durch Pflege fördern", " ", "maerorem orationis lacrimis suis ~ :", "den traurigen Inhalt der Rede durch seine Tränen steigern", "multum ad rem ~", "viel zur Sache beitragen", " ", "causae adiuvantes", "mittelbare Ursachen"};
 	
 	
 	
 	
 	public static String[][] zg = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, 
-			ac, ad, ae, af, ag, ah, ai, aj, ak, al};
+			ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar};
 	
 	public static void auswahl() {
 		for (int i = 0; i<zg.length; i++) {
