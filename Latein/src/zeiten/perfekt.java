@@ -85,6 +85,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "o";
 						akon = true;
+						new akonjugation(gv, gvs);
 					}else {
 					}
 				}else if (gv.endsWith(" es")) {
@@ -133,6 +134,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "o";
 						akon = true;
+						new akonjugation(gv, gvs);
 					}else {
 					}
 				}else if (gv.endsWith(" simus") || gv.endsWith(" sitis")) {

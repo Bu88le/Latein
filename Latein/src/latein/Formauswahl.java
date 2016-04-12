@@ -1124,7 +1124,6 @@ public class Formauswahl {
 					new futurII(gesuchtevokabel);
 					futurII.futurIIpassiv();
 					
-					new akonjugation(futurII.returngv(), futurII.returngvs());
 					
 				}
 

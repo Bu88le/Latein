@@ -63,6 +63,7 @@ public class framemain implements ActionListener {
 		if (ae.getSource() == this.button1) {
 			gv = tfield1.getText();
 			new Formauswahl (gv);
+			frame1.setVisible(false);
 			frame1.dispose();
 		
 		}else if(ae.getSource() == this.button2) {

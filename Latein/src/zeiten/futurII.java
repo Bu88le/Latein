@@ -1,5 +1,7 @@
 package zeiten;
 
+import wörter.akonjugation;
+
 public class futurII {
 
 	public static String gv;
@@ -20,6 +22,7 @@ public class futurII {
 					if (gv.substring(0, gv.length()-4).endsWith("atus")) {
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "o";
+						new akonjugation(gv, gvs);
 					}else {
 						
 					}

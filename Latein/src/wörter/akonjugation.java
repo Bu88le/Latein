@@ -18,20 +18,10 @@ public class akonjugation {
 	void testen() {
 		for (int i = 0; i < a.rverbena().length; i++) {
 			if (gv.equals(a.rverbena()[i])) {
-				if (gv.equals(a.verbenapu[i])) {
-					akon = true;
-					formenu();
-					new uea(gv);
-				}else {
 					akon = true;
 					formen();
 					new uea(gv);
-				}
-
-			}else {
-				
-		}
-			
+			}			
 		}
 	}
 
