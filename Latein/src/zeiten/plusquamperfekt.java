@@ -97,7 +97,7 @@ public class plusquamperfekt {
 			//-----------Auswahl kons-Konjugation-----------
 			//----------------------------------------------
 		
-				public void plusquamperfektindikativkons() {
+				public static void plusquamperfektindikativkons() {
 					
 					if (gv.endsWith("xeram") || gv.endsWith("xeras") || gv.endsWith("xerat")) {
 						
@@ -247,17 +247,6 @@ public class plusquamperfekt {
 						plusquamperfektpassivkonjunktiva();
 					}
 
-					
-					if (akon == true) {
-						new akonjugation(gv, gvs);
-					}else if (ekon == true) {
-						JOptionPane.showMessageDialog(null, gv + " || " + gvs);
-					}else if (ikon == true) {
-						JOptionPane.showMessageDialog(null, gv + " || " + gvs);
-					}else if (konskon == true) {
-						JOptionPane.showMessageDialog(null, gv + " || " + gvs);
-					}
-
 				}
 				
 				
@@ -282,27 +271,59 @@ public class plusquamperfekt {
 							gvs = gv.substring(0, gv.length()-10);
 							gv = gv.substring(0, gv.length()-10) + "o";
 							akon = true;
-						}else {
+							new akonjugation(gv, gvs);
+						}else if (gv.substring(0, gv.length()-6).endsWith("itus")){
+							gvs = gv.substring(0, gv.length()-10);
+							gv = gv.substring(0, gv.length()-10) + "io";
+							ikon = true;
+						}else if (gv.substring(0, gv.length()-6).endsWith("tus")) {
+							gvs = gv.substring(0, gv.length()-9);
+							gv = gv.substring(0, gv.length()-9) + "o";
+							konskon = true;
+						}else if (gv.substring(0, gv.length()-6).endsWith("us")) {
+							gvs = gv.substring(0, gv.length()-8);
+							gv = gv.substring(0, gv.length()-8) + "eo";
+							ekon = true;
 						}
 					}else if (gv.endsWith(" essemus") || gv.endsWith(" essetis")) {
 						if (gv.substring(0, gv.length()-8).endsWith("ati")) {
 							gvs = gv.substring(0, gv.length()-11);
 							gv = gv.substring(0, gv.length()-11) + "o";
 							akon = true;
-						}else {
+							new akonjugation(gv, gvs);
+						}else if (gv.substring(0, gv.length()-8).endsWith("iti")){
+							gvs = gv.substring(0, gv.length()-11);
+							gv = gv.substring(0, gv.length()-11) + "io";
+							ikon = true;
+						}else if (gv.substring(0, gv.length()-8).endsWith("ti")) {
+							gvs = gv.substring(0, gv.length()-10);
+							gv = gv.substring(0, gv.length()-10) + "o";
+							konskon = true;
+						}else if (gv.substring(0, gv.length()-8).endsWith("i")) {
+							gvs = gv.substring(0, gv.length()-9);
+							gv = gv.substring(0, gv.length()-9) + "eo";
+							ekon = true;
 						}
 					}else if (gv.endsWith(" essent")) {
 						if (gv.substring(0, gv.length()-7).endsWith("ati")) {
 							gvs = gv.substring(0, gv.length()-10);
 							gv = gv.substring(0, gv.length()-10) + "o";
 							akon = true;
-						}else {
+							new akonjugation(gv, gvs);
+						}else if (gv.substring(0, gv.length()-7).endsWith("iti")){
+							gvs =gv.substring(0, gv.length()-10);
+							gv = gv.substring(0, gv.length()-10) + "io";
+							ikon = true;
+						}else if (gv.substring(0, gv.length()-7).endsWith("ti")) {
+							gvs = gv.substring(0, gv.length()-9);
+							gv = gv.substring(0, gv.length()-9) + "o";
+							konskon = true;
+						}else if (gv.substring(0, gv.length()-7).endsWith("i")) {
+							gvs = gv.substring(0, gv.length()-8);
+							gv = gv.substring(0, gv.length()-8) + "eo";
+							ekon = true;
 						}
 					}else {
-					}
-					
-					if (akon == true) {
-						new akonjugation(gv, gvs);
 					}
 				}
 				

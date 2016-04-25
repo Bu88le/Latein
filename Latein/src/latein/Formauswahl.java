@@ -787,6 +787,9 @@ public class Formauswahl {
 					void imperfektaktivindikative() {
 						ekon = true;
 						System.out.println("imperfekt Aktiv Indikativ e");
+						
+						new imperfekt(gesuchtevokabel);
+						imperfekt.imperfektindikativaktive();
 					}					
 					void imperfekta() {
 						akon = true;
@@ -819,6 +822,9 @@ public class Formauswahl {
 					void imperfektkonjunktiv() {
 						ekon = true;
 						System.out.println("Imperfekt Konjunktiv e");
+						
+						new imperfekt(gesuchtevokabel);
+						imperfekt.imperfektkonjunktivaktive();
 					}
 		
 					
@@ -845,6 +851,9 @@ public class Formauswahl {
 					void imperfektpassivindikative() {
 						ekon = true;
 						System.out.println("Imperfekt Passiv Indikativ e");
+						
+						new imperfekt(gesuchtevokabel);
+						imperfekt.imperfektpassivindikative();
 					}
 					
 					
@@ -855,6 +864,9 @@ public class Formauswahl {
 				void imperfektpassivkonjunktive() {
 					ekon = true;
 					System.out.println("imperfektpassivkonjunktiv e");
+					
+					new imperfekt(gesuchtevokabel);
+					imperfekt.imperfektpassivkonjunktive();
 				}
 				void imperfektpassivkonjunktiva() {
 					akon = true;
@@ -892,6 +904,11 @@ public class Formauswahl {
 		void perfektaktive() {
 			ekon = true;
 			System.out.println("Perfekt Aktiv E");
+			
+			new perfekt(gesuchtevokabel);
+			perfekt.perfektaktivindikative();
+			
+			
 		}
 	
 		void perfektaktivi() {
@@ -922,6 +939,9 @@ public class Formauswahl {
 		void perfektaktivkonjunktive() {
 			ekon = true;
 			System.out.println("Perfekt Aktiv Konjunktiv E");
+			
+			new perfekt(gesuchtevokabel);
+			perfekt.perfektaktivkonjunktive();
 		}
 	
 		void perfektaktivkonjunktivi() {
@@ -974,7 +994,8 @@ public class Formauswahl {
 				void plusquamperfektaktivkons() {
 					konskon = true;
 					System.out.println("Plusquamperfekt Aktiv Kons");
-					new plusquamperfekt (gesuchtevokabel);		
+					new plusquamperfekt(gesuchtevokabel);
+					plusquamperfekt.plusquamperfektindikativkons();		
 				}	
 				void plusquamperfektaktiva() {
 					akon = true;

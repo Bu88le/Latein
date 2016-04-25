@@ -1,6 +1,5 @@
 package latein;
 
-
 import frames.framemain;
 
 public class Main {
@@ -9,8 +8,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		new Main();
-		
+		new Main();	
 		
 	}
 	
@@ -24,5 +22,4 @@ public class Main {
 		new framemain();
 		
 	}
-
 }
