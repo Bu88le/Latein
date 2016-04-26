@@ -1,6 +1,6 @@
 package zeiten;
 
-import wörter.akonjugation;
+import wörter.*;
 
 public class futurII {
 
@@ -32,6 +32,7 @@ public class futurII {
 					}else if (gv.substring(0, gv.length()-4).endsWith("us")) {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "eo";
+						new ekonjugation(gv, gvs);
 					}
 				}else if (gv.endsWith(" eris") || gv.endsWith(" erit")) {
 					if (gv.substring(0, gv.length()-5).endsWith("atus")) {
@@ -46,6 +47,7 @@ public class futurII {
 					}else if (gv.substring(0, gv.length()-5).endsWith("us")) {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7);
+						new ekonjugation(gv, gvs);
 					}
 				}else if (gv.endsWith(" erimus") || gv.endsWith(" eritis")) {
 					if (gv.substring(0, gv.length()-7).endsWith("ati")) {
@@ -60,6 +62,7 @@ public class futurII {
 					}else if (gv.substring(0, gv.length()-7).endsWith("i")) {
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "eo";
+						new ekonjugation(gv, gvs);
 					}
 				}else if (gv.endsWith(" erunt")) {
 					if (gv.substring(0, gv.length()-6).endsWith("ati")) {
@@ -74,6 +77,7 @@ public class futurII {
 					}else if (gv.substring(0, gv.length()-6).endsWith("i")) {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "eo";
+						new ekonjugation(gv, gvs);
 					}
 				}
 			}

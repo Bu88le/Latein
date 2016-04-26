@@ -1,6 +1,6 @@
 package zeiten;
 
-import wörter.akonjugation;
+import wörter.*;
 
 public class perfekt {
 	static String gv;
@@ -140,6 +140,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "eo";
 						ekon = true;
+						new ekonjugation(gv, gvs);
 					}
 				}else if (gv.endsWith(" es")) {
 					if (gv.substring(0, gv.length()-3).endsWith("atus")) {
@@ -158,6 +159,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-5);
 						gv = gv.substring(0, gv.length()-5) + "eo";
 						ekon = true;
+						new ekonjugation(gv, gvs);
 					}
 				}else if (gv.endsWith(" sumus") || gv.endsWith(" estis")) {
 					if (gv.substring(0, gv.length()-6).endsWith("ati")) {
@@ -176,6 +178,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "eo";
 						ekon = true;
+						new ekonjugation(gv, gvs);
 					}
 				}else if (gv.endsWith(" sunt")) {
 					if (gv.substring(0, gv.length()-5).endsWith("ati")) {
@@ -194,6 +197,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "eo";
 						ekon = true;
+						new ekonjugation(gv, gvs);
 					}
 				}else {
 					perfektpassivkonjunktiva();
@@ -229,6 +233,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "eo";
 						ekon = true;
+						new ekonjugation(gv, gvs);
 					}
 				}else if (gv.endsWith(" simus") || gv.endsWith(" sitis")) {
 					if (gv.substring(0, gv.length()-6).endsWith("ati")) {
@@ -247,6 +252,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "eo";
 						ekon = true;
+						new ekonjugation(gv, gvs);
 					}
 				}else if (gv.endsWith(" sint")) {
 					if (gv.substring(0, gv.length()-5).endsWith("ati")) {
@@ -265,6 +271,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "eo";
 						ekon = true;
+						new ekonjugation(gv, gvs);
 					}
 				}
 			}
@@ -272,11 +279,11 @@ public class perfekt {
 			
 			
 			
-	public String returngv() {
+	public static String returngv() {
 		return gv;
 	}
 	
-	public String returngvs() {
+	public static String returngvs() {
 		return gvs;
 	}
 }

@@ -75,7 +75,7 @@ public class framefuturI implements ActionListener{
 			if (Formauswahl.akon == true) {
 				JOptionPane.showMessageDialog(null, akonjugation.futurIaktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if (Formauswahl.ekon == true) {
-				
+				JOptionPane.showMessageDialog(null, ekonjugation.futurIaktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if (Formauswahl.ikon == true) {
 				
 			}else if (Formauswahl.konskon == true) {
@@ -85,7 +85,7 @@ public class framefuturI implements ActionListener{
 					JOptionPane.showMessageDialog(null, akonjugation.futurIaktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 
 				}else if (ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.futurIaktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);					
 				}else if (ikonjugation.ikon == true) {
 					
 				}else if (konskonjugation.konskon == true) {
@@ -96,7 +96,7 @@ public class framefuturI implements ActionListener{
 			if (Formauswahl.akon == true) {
 				JOptionPane.showMessageDialog(null, akonjugation.futurIpassiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if (Formauswahl.ekon == true) {
-				
+				JOptionPane.showMessageDialog(null, ekonjugation.futurIpassiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if (Formauswahl.ikon == true) {
 				
 			}else if (Formauswahl.konskon == true) {
@@ -104,9 +104,8 @@ public class framefuturI implements ActionListener{
 			}else if (Formauswahl.sons == true) {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(null, akonjugation.futurIpassiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-
 				}else if (ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.futurIpassiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (ikonjugation.ikon == true) {
 					
 				}else if (konskonjugation.konskon == true) {

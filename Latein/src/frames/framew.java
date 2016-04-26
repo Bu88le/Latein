@@ -83,11 +83,9 @@ public class framew implements ActionListener  {
 		
 		if (ae.getSource() == this.button1) {
 			if (Formauswahl.akon == true) {
-				JOptionPane.showMessageDialog(null, akonjugation.präsensaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-				
-			}else if (Formauswahl.ekon == true) {
-				
-				
+				JOptionPane.showMessageDialog(null, akonjugation.präsensaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
+			}else if (Formauswahl.ekon == true) {				
+				JOptionPane.showMessageDialog(null, ekonjugation.präsensaktivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if(Formauswahl.ikon ==true) {
 				
 				
@@ -97,7 +95,7 @@ public class framew implements ActionListener  {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(null, akonjugation.präsensaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);	
 				}else if(ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.präsensaktivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if(ikonjugation.ikon == true) {
 					
 				}else if(konskonjugation.konskon == true) {
@@ -106,11 +104,9 @@ public class framew implements ActionListener  {
 			}
 		}else if (ae.getSource() == this.button2) {
 			if (Formauswahl.akon == true) {
-				JOptionPane.showMessageDialog(null, akonjugation.präsenspassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-				
-			}else if (Formauswahl.ekon == true) {
-				
-				
+				JOptionPane.showMessageDialog(null, akonjugation.präsenspassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
+			}else if (Formauswahl.ekon == true) {			
+				JOptionPane.showMessageDialog(null, ekonjugation.präsenspassivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if (Formauswahl.ikon == true) {
 				
 				
@@ -120,7 +116,7 @@ public class framew implements ActionListener  {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(null, akonjugation.präsenspassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if(ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.präsenspassivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if(ikonjugation.ikon == true) {
 					
 				}else if(konskonjugation.konskon == true) {
@@ -131,11 +127,9 @@ public class framew implements ActionListener  {
 			
 		}else if (ae.getSource() == this.button3) {
 			if (Formauswahl.akon == true) {
-				JOptionPane.showMessageDialog(null, akonjugation.präsensaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-				
-			}else if (Formauswahl.ekon == true) {
-				
-				
+				JOptionPane.showMessageDialog(null, akonjugation.präsensaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
+			}else if (Formauswahl.ekon == true) {				
+				JOptionPane.showMessageDialog(null, ekonjugation.präsensaktivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if (Formauswahl.ikon == true) {
 				
 				
@@ -146,7 +140,7 @@ public class framew implements ActionListener  {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(null, akonjugation.präsensaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.präsensaktivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if(ikonjugation.ikon == true) {
 					
 				}else if(konskonjugation.konskon == true) {
@@ -156,11 +150,9 @@ public class framew implements ActionListener  {
 			}
 		}else if (ae.getSource() == this.button4) {
 			if (Formauswahl.akon == true) {
-				JOptionPane.showMessageDialog(null, akonjugation.präsenspassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-				
+				JOptionPane.showMessageDialog(null, akonjugation.präsenspassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 			}else if (Formauswahl.ekon == true) {
-				
-				
+				JOptionPane.showMessageDialog(null, ekonjugation.präsenspassivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 			}else if (Formauswahl.ikon == true) {
 				
 				
@@ -171,7 +163,7 @@ public class framew implements ActionListener  {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(null, akonjugation.präsenspassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if(ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.präsenspassivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if(ikonjugation.ikon == true) {
 					
 				}else if(konskonjugation.konskon == true) {

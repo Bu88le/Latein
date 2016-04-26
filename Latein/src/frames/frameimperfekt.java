@@ -87,9 +87,8 @@ public class frameimperfekt implements ActionListener {
 			if (Formauswahl.akon == true) {
 				JOptionPane.showMessageDialog(null, akonjugation.imperfektaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				
-			}else if (Formauswahl.ekon == true) {
-				
-				
+			}else if (Formauswahl.ekon == true) {				
+				JOptionPane.showMessageDialog(null, ekonjugation.imperfektaktivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if(Formauswahl.ikon == true) {
 				
 				
@@ -99,10 +98,9 @@ public class frameimperfekt implements ActionListener {
 			}else if (Formauswahl.sons == true) {
 				
 				if (akonjugation.akon == true) {
-					JOptionPane.showMessageDialog(null, akonjugation.imperfektaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-					
+					JOptionPane.showMessageDialog(null, akonjugation.imperfektaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);					
 				}else if(ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.imperfektaktivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if(ikonjugation.ikon == true) {
 					
 				}else if(konskonjugation.konskon == true) {
@@ -113,11 +111,9 @@ public class frameimperfekt implements ActionListener {
 		}else if (ae.getSource() == this.button2) {
 			
 			if (Formauswahl.akon == true) {
-				JOptionPane.showMessageDialog(null, akonjugation.imperfektpassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-				
+				JOptionPane.showMessageDialog(null, akonjugation.imperfektpassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 			}else if (Formauswahl.ekon == true) {
-				
-				
+				JOptionPane.showMessageDialog(null, ekonjugation.imperfektpassivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 			}else if(Formauswahl.ikon == true) {
 				
 				
@@ -128,7 +124,7 @@ public class frameimperfekt implements ActionListener {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(null, akonjugation.imperfektpassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if(ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.imperfektpassivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if(ikonjugation.ikon == true) {
 					
 				}else if (konskonjugation.konskon == true) {
@@ -137,11 +133,9 @@ public class frameimperfekt implements ActionListener {
 			}
 		}else if (ae.getSource() == this.button3) {
 			if (Formauswahl.akon == true) {
-				JOptionPane.showMessageDialog(null, akonjugation.imperfektaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-				
+				JOptionPane.showMessageDialog(null, akonjugation.imperfektaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 			}else if(Formauswahl.ekon == true) {
-				
-				
+				JOptionPane.showMessageDialog(null, ekonjugation.imperfektaktivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 			}else if(Formauswahl.ikon == true) {
 				
 				
@@ -152,7 +146,7 @@ public class frameimperfekt implements ActionListener {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(null, akonjugation.imperfektaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.imperfektaktivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (ikonjugation.ikon == true) {
 					
 				}else if (konskonjugation.konskon == true) {
@@ -161,11 +155,9 @@ public class frameimperfekt implements ActionListener {
 			}
 		}else if (ae.getSource() == this.button4) {
 			if (Formauswahl.akon == true) {
-				JOptionPane.showMessageDialog(null, akonjugation.imperfektpassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-				
+				JOptionPane.showMessageDialog(null, akonjugation.imperfektpassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 			}else if(Formauswahl.ekon == true) {
-				
-				
+				JOptionPane.showMessageDialog(null, ekonjugation.imperfektpassivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 			}else if(Formauswahl.ikon == true) {
 				
 				
@@ -176,7 +168,7 @@ public class frameimperfekt implements ActionListener {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(null, akonjugation.imperfektpassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);	
 				}else if (ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.imperfektpassivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (ikonjugation.ikon == true) {
 					
 				}else if (konskonjugation.konskon == true) {

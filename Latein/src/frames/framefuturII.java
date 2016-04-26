@@ -75,7 +75,7 @@ public class framefuturII implements ActionListener{
 			if (Formauswahl.akon == true) {
 				JOptionPane.showMessageDialog(null, akonjugation.futurIIaktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if (Formauswahl.ekon == true) {
-				
+				JOptionPane.showMessageDialog(null, ekonjugation.futurIIaktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if (Formauswahl.ikon == true) {
 				
 			}else if (Formauswahl.konskon == true) {
@@ -83,9 +83,8 @@ public class framefuturII implements ActionListener{
 			}else if (Formauswahl.sons == true) {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(null, akonjugation.futurIIaktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-
 				}else if (ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.futurIIaktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (ikonjugation.ikon == true) {
 					
 				}else if (konskonjugation.konskon == true) {
@@ -96,7 +95,7 @@ public class framefuturII implements ActionListener{
 			if (Formauswahl.akon == true) {
 				JOptionPane.showMessageDialog(null, akonjugation.futurIIpassiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if (Formauswahl.ekon == true) {
-				
+				JOptionPane.showMessageDialog(null, ekonjugation.futurIIpassiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 			}else if (Formauswahl.ikon == true) {
 				
 			}else if (Formauswahl.konskon == true) {
@@ -104,9 +103,8 @@ public class framefuturII implements ActionListener{
 			}else if (Formauswahl.sons == true) {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(null, akonjugation.futurIIpassiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-
 				}else if (ekonjugation.ekon == true) {
-					
+					JOptionPane.showMessageDialog(null, ekonjugation.futurIIpassiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (ikonjugation.ikon == true) {
 					
 				}else if (konskonjugation.konskon == true) {

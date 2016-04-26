@@ -188,7 +188,6 @@ public class plusquamperfekt {
 				public static void plusquamperfektpassivindikativa() {
 					
 					if (gv.endsWith(" eram") ||gv.endsWith(" erat") || gv.endsWith(" eras")) {
-						System.out.println("HIER");
 						if (gv.substring(0, gv.length()-5).endsWith("atus")) {
 							gvs = gv.substring(0, gv.length()-9);
 							gv = gv.substring(0, gv.length()-9) + "o";
@@ -206,7 +205,7 @@ public class plusquamperfekt {
 							gvs = gv.substring(0, gv.length()-7);
 							gv = gv.substring(0, gv.length()-7) + "eo";
 							ekon = true;
-							System.out.println("jup");
+							new ekonjugation(gv, gvs);							
 						}
 					}else if (gv.endsWith(" eramus") || gv.endsWith(" eratis")) {
 						if (gv.substring(0, gv.length()-7).endsWith("ati")) {
@@ -224,6 +223,7 @@ public class plusquamperfekt {
 						}else if (gv.substring(0, gv.length()-7).endsWith("i")) {
 							gvs = gv.substring(0, gv.length()-8);
 							gv = gv.substring(0, gv.length()-8) + "eo";
+							new ekonjugation(gv, gvs);
 						}
 					}else if(gv.endsWith(" erant")) {
 						if (gv.substring(0, gv.length()-6).endsWith("ati")) {
@@ -242,6 +242,7 @@ public class plusquamperfekt {
 							gvs = gv.substring(0, gv.length()-7);
 							gv = gv.substring(0, gv.length()-7) + "eo";
 							ekon = true;
+							new ekonjugation(gv, gvs);
 						}
 					}else {
 						plusquamperfektpassivkonjunktiva();
@@ -284,6 +285,7 @@ public class plusquamperfekt {
 							gvs = gv.substring(0, gv.length()-8);
 							gv = gv.substring(0, gv.length()-8) + "eo";
 							ekon = true;
+							new ekonjugation(gv, gvs);
 						}
 					}else if (gv.endsWith(" essemus") || gv.endsWith(" essetis")) {
 						if (gv.substring(0, gv.length()-8).endsWith("ati")) {
@@ -303,6 +305,7 @@ public class plusquamperfekt {
 							gvs = gv.substring(0, gv.length()-9);
 							gv = gv.substring(0, gv.length()-9) + "eo";
 							ekon = true;
+							new ekonjugation(gv, gvs);
 						}
 					}else if (gv.endsWith(" essent")) {
 						if (gv.substring(0, gv.length()-7).endsWith("ati")) {
@@ -322,6 +325,7 @@ public class plusquamperfekt {
 							gvs = gv.substring(0, gv.length()-8);
 							gv = gv.substring(0, gv.length()-8) + "eo";
 							ekon = true;
+							new ekonjugation(gv, gvs);
 						}
 					}else {
 					}
@@ -336,7 +340,7 @@ public class plusquamperfekt {
 			return gv;
 		}
 		
-		public String returngvs() {
+		public static String returngvs() {
 			return gvs;
 		}
 		
