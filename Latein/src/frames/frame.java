@@ -65,6 +65,8 @@ public class frame implements ActionListener {
 		button6.addActionListener(this);
 		panel1.add(button6);
 		
+		frame1.getContentPane().add(panel1);
+		
 		button7 = new JButton();
 		button7.setText("neue Vokabel");
 		button7.setBackground(Color.RED);
@@ -73,13 +75,12 @@ public class frame implements ActionListener {
 		panel1.add(button7);
 		
 		button8 = new JButton();
+		button8.setFont(new Font("Vivaldi", Font.BOLD, 12));
 		button8.setText("Beenden");
 		button8.setBackground(Color.RED);
 		button8.setForeground(Color.BLACK);
 		button8.addActionListener(this);
 		panel1.add(button8);
-		
-		frame1.add(panel1);
 		frame1.setTitle(akonjugation.gv);
 		frame1.setVisible(true);
 	}

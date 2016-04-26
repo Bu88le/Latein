@@ -676,6 +676,9 @@ public class Formauswahl {
 				void präsensaktive() {
 					ekon = true;
 					System.out.println("Präsens Aktiv e");
+					
+					new präsens(gesuchtevokabel);
+					präsens.präsensaktivindikative();
 				}	
 				void präsensaktivi() {
 					ikon = true;
@@ -701,6 +704,9 @@ public class Formauswahl {
 				void präsenskonjunktive() {
 					ekon = true;
 					System.out.println("Präsens Konjunktiv e");
+					
+					new präsens(gesuchtevokabel);
+					präsens.präsensaktivkonunktive();
 				}	
 				void präsenskonjunktivi() {
 					ikon = true;
@@ -733,6 +739,9 @@ public class Formauswahl {
 				void präsenspassivindikative() {
 					ekon = true;
 					System.out.println("Präsens Passiv Indikativ e");
+					
+					new präsens(gesuchtevokabel);
+					präsens.präsenspassivindikative();
 				}
 				
 				void präsenspassivindikativi() {
@@ -752,6 +761,9 @@ public class Formauswahl {
 				void präsenspassivkonjunktive() {
 					ekon = true;
 					System.out.println("Präsens Passiv Konjunktiv");
+					
+					new präsens(gesuchtevokabel);
+					präsens.präsenspassivkonjunktive();
 				}
 			
 				void präsenspassivkonjunktivI() {

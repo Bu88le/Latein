@@ -60,6 +60,8 @@ public class perfekt {
 				}else if (gv.endsWith("uerunt") || gv.endsWith("uistis")) {
 					gvs = gv.substring(0, gv.length()-6);
 					gv = gv.substring(0, gv.length()-6) + "eo";
+				}else {
+					perfektaktivkonjunktive();
 				}
 			}
 			

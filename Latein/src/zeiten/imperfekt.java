@@ -51,6 +51,8 @@ public class imperfekt {
 				}else if (gv.endsWith("ebant")) {
 					gvs = gv.substring(0, gv.length()-5);
 					gv = gv.substring(0, gv.length()-5) + "eo";
+				}else {
+					imperfektkonjunktivaktive();
 				}
 			}
 			
@@ -91,6 +93,8 @@ public class imperfekt {
 					}else if (gv.endsWith("erent")) {
 						gvs = gv.substring(0, gv.length()-5);
 						gv = gv.substring(0, gv.length()-5) + "eo";
+					}else {
+						imperfektpassivindikative();
 					}
 				}
 	
@@ -137,6 +141,8 @@ public class imperfekt {
 					}else if (gv.endsWith("abamini") || gv.endsWith("abantur")) {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "eo";
+					}else {
+						imperfektpassivkonjunktive();
 					}
 				}
 				
@@ -180,6 +186,8 @@ public class imperfekt {
 					}else if (gv.endsWith("erentur")) {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "eo";
+					}else {
+						perfekt.perfektaktivindikative();
 					}
 				}
 				
