@@ -3,6 +3,7 @@ package frames;
 import wörter.*;
 import latein.*;
 import zeiten.*;
+import übersetzung.uea;
 
 import java.awt.Color;
 import java.awt.Cursor;
@@ -91,7 +92,7 @@ public class frameperfekt implements ActionListener {
 		button7.setText("Beenden");
 		button7.setBackground(Color.RED);
 		button7.setForeground(Color.BLACK);
-		button7.setFont(new Font("Calibri", Font.ITALIC, 15));
+		button7.setFont(new Font("Harrington Standard", Font.ITALIC, 15));
 		button7.addActionListener(this);
 		button7.setBounds(115, 225, 120, 30);
 		button7.setCursor(new Cursor (Cursor.HAND_CURSOR));
@@ -186,6 +187,7 @@ public class frameperfekt implements ActionListener {
 			}
 		}else if (ae.getSource() == this.button5) {
 			new framemain();
+			uea.stringbuffer.delete(0, uea.stringbuffer.length());
 			frame1.dispose();
 			akonjugation.akon = false;
 		}else if (ae.getSource() == this.button6) {

@@ -18,6 +18,7 @@ import wörter.akonjugation;
 import wörter.ekonjugation;
 import wörter.ikonjugation;
 import wörter.konskonjugation;
+import übersetzung.uea;
 
 public class framefuturI implements ActionListener{
 
@@ -73,7 +74,7 @@ public class framefuturI implements ActionListener{
 		
 		button5 = new JButton();
 		button5.setText("Beenden");
-		button5.setFont(new Font("Calibri", Font.ITALIC, 15));
+		button5.setFont(new Font("Harrington Standard", Font.ITALIC, 15));
 		button5.setBackground(Color.RED);
 		button5.setForeground(Color.BLACK);
 		button5.addActionListener(this);
@@ -129,6 +130,7 @@ public class framefuturI implements ActionListener{
 			}
 		}else if (ae.getSource() == this.button3) {
 			frame1.dispose();
+			uea.stringbuffer.delete(0, uea.stringbuffer.length());
 			new framemain();
 			akonjugation.akon = false;
 			

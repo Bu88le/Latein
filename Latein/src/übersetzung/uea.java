@@ -7,6 +7,7 @@ public class uea {
 	
 	static String gv;
 	static int zähler;
+	public static StringBuffer stringbuffer = new StringBuffer();
 	
 	public uea(String s) {
 		gv = s;
@@ -78,18 +79,22 @@ public class uea {
 	}
 	
 	public static void ausgabe(int z) {
-		StringBuffer s = new StringBuffer();
-		s.append(zg[z][1]);
-		s.append(" : ");
-		s.append("\n");
-		s.append("\n");
+
+		stringbuffer.append(zg[z][1]);
+		stringbuffer.append(" : ");
+		stringbuffer.append("\n");
+		stringbuffer.append("\n");
 		
 		for (int i = 2; i < zg[z].length; i++) {
-			s.append(zg[z][i]);
-			s.append("\n");
+			stringbuffer.append(zg[z][i]);
+			stringbuffer.append("\n");
 		}
 		
-		JOptionPane.showMessageDialog(null, s, framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, stringbuffer, framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
+	}
+	
+	public static StringBuffer returns() {
+		return stringbuffer;
 	}
 
 	

@@ -2,7 +2,10 @@ package frames;
 
 import javax.swing.*;
 
-import wörter.akonjugation;
+import latein.Formauswahl;
+import wörter.*;
+import übersetzung.uea;
+import übersetzung.uee;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,7 +15,7 @@ public class frame implements ActionListener {
 	
 	public static final String pfield1 = null;
 	static JFrame frame1;
-	JButton button1, button2, button3, button4, button5, button6, button7, button8;
+	JButton button1, button2, button3, button4, button5, button6, button7, button8, button9;
 	static JPanel panel1;
 	JTextField tfield1;
 	
@@ -88,14 +91,22 @@ public class frame implements ActionListener {
 		frame1.add(button7);
 		
 		button8 = new JButton();
-		button8.setFont(new Font("Calibri", Font.ITALIC, 15));
+		button8.setFont(new Font("Harrington Standard", Font.ITALIC, 15));
 		button8.setText("Beenden");
 		button8.setBackground(Color.RED);
 		button8.setForeground(Color.BLACK);
 		button8.addActionListener(this);
-		button8.setBounds(180, 190, 120, 30);
+		button8.setBounds(115, 225, 120, 30);
 		button8.setCursor(new Cursor (Cursor.HAND_CURSOR));
 		frame1.add(button8);
+		
+		button9 = new JButton("Übersetzung");
+		button9.setBackground(Color.lightGray);
+		button9.setForeground(Color.BLUE);
+		button9.setBounds(180, 190, 120, 30);
+		button9.addActionListener(this);
+		button9.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		frame1.add(button9);
 		
 		frame1.setTitle(akonjugation.gv);
 		frame1.setVisible(true);
@@ -125,9 +136,16 @@ public class frame implements ActionListener {
 			frame1.dispose();
 		}else if (ae.getSource() == this.button7) {
 			frame1.dispose();
+			uea.stringbuffer.delete(0, uea.stringbuffer.length());
 			new framemain();
 		}else if (ae.getSource() == this.button8) {
 			System.exit(0);
+		}else if (ae.getSource() == this.button9) {
+			if (akonjugation.akon == true) {
+				JOptionPane.showMessageDialog(null, uea.returns(), framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
+			}else if (Formauswahl.ekon == true) {
+				JOptionPane.showMessageDialog(null, uee.returns(), framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
+			}
 		}
 	}	
 }

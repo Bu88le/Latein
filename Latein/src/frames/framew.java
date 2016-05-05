@@ -13,6 +13,7 @@ import latein.Formauswahl;
 import java.awt.event.ActionListener;
 
 import wörter.akonjugation;
+import übersetzung.uea;
 
 public class framew implements ActionListener  {
 	
@@ -87,7 +88,7 @@ public class framew implements ActionListener  {
 		button7.setText("Beenden");
 		button7.setBackground(Color.RED);
 		button7.setForeground(Color.BLACK);
-		button7.setFont(new Font("Calibri", Font.ITALIC, 15));
+		button7.setFont(new Font("Harrington Standard", Font.ITALIC, 15));
 		button7.addActionListener(this);
 		button7.setBounds(115, 230, 120, 30);
 		button7.setCursor(new Cursor (Cursor.HAND_CURSOR));
@@ -191,6 +192,7 @@ public class framew implements ActionListener  {
 			}
 		}else if(ae.getSource() == this.button5) {
 			frame1.dispose();
+			uea.stringbuffer.delete(0, uea.stringbuffer.length());
 			new framemain();
 			akonjugation.akon = false;
 			
