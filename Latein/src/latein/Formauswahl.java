@@ -237,7 +237,8 @@ public class Formauswahl {
 				//------------------------KONJUNKTIV-------------------------
 				//-----------------------------------------------------------
 				
-						
+					/** Else-if Schleife prüft auf Konjunktiv && Passiv && Präsens*/
+				
 					}else if (gesuchtevokabel.endsWith("earis") || gesuchtevokabel.endsWith("eatur") ||
 							gesuchtevokabel.endsWith("eamur") || gesuchtevokabel.endsWith("eamini") ||
 							gesuchtevokabel.endsWith("eantur") || gesuchtevokabel.endsWith("ear")) {
@@ -261,7 +262,8 @@ public class Formauswahl {
 				//-----------------------------------------------------------
 
 		
-		
+					/** Else-if Schleife sucht nach Passiv && Indikativ && Präsens */
+							
 					}else if (gesuchtevokabel.endsWith("or") || gesuchtevokabel.endsWith("ris") ||
 							gesuchtevokabel.endsWith("tur") || gesuchtevokabel.endsWith("mur") ||
 							gesuchtevokabel.endsWith("mini") || gesuchtevokabel.endsWith("ntur")) {	
@@ -379,12 +381,6 @@ public class Formauswahl {
 				
 				plusquamperfektaktivkonjunktiv();
 			}
-
-		
-		/** Folgende Else-If-Schleife prüft, ob die Vokabel:
-		 *	1.: Aktiv && Konjunktiv && Perfekt ist, oder
-		 *	2.: Aktiv && Indikativ && Futur II 
-		 */	
 			
 
 		
@@ -397,7 +393,9 @@ public class Formauswahl {
 			 *  -----------------INDIKATIV------------------
 			 *  --------------------------------------------
 			 */
-				
+		
+		/** Else-If-Schleife prüft auf Imperfekt && Indikativ && Aktiv Endungen */
+			
 		}else if (gesuchtevokabel.endsWith("bam") || gesuchtevokabel.endsWith("bas") ||
 				gesuchtevokabel.endsWith("bat") || gesuchtevokabel.endsWith("bamus") ||
 				gesuchtevokabel.endsWith("batis") || gesuchtevokabel.endsWith("bant")) {
@@ -426,6 +424,8 @@ public class Formauswahl {
 			 *  ----------------KONJUNKTIV------------------
 			 *  --------------------------------------------
 			 */
+				
+		/** Else-IF-Schleife prüft auf Imperfekt && Konjunktiv && Aktiv */
 				
 		}else if (gesuchtevokabel.endsWith("rem") || gesuchtevokabel.endsWith("res") || 
 				gesuchtevokabel.endsWith("ret") || gesuchtevokabel.endsWith("remus") ||
@@ -457,6 +457,8 @@ public class Formauswahl {
 			 *  -----------------INDIKATIV---------------------
 			 *  -----------------------------------------------
 			 */
+		
+		/** Else-If Schleife prüft auf Futur I && Indikativ && Aktiv */
 			
 		}else if (gesuchtevokabel.endsWith("bo") || gesuchtevokabel.endsWith("bis") ||
 				gesuchtevokabel.endsWith("bit") || gesuchtevokabel.endsWith("bimus") ||
@@ -496,7 +498,9 @@ public class Formauswahl {
 				 *  -----------------KONJUNKTIV-------------------
 				 *  ----------------------------------------------
 				 */
-				
+			
+			/** Else-If Schleife prüft auf Perfekt && Konjunktiv && Aktiv */
+			
 			}else if (gesuchtevokabel.endsWith("ero") || gesuchtevokabel.endsWith("erim") ||
 					gesuchtevokabel.endsWith("eris") || gesuchtevokabel.endsWith("erit") ||
 					gesuchtevokabel.endsWith("erimus") || gesuchtevokabel.endsWith("eritis") ||
@@ -533,12 +537,14 @@ public class Formauswahl {
 					
 					perfektaktivkonjunktivkons();
 				}
-			/** Folgende Else-IF-Schleife prüft, ob die Vokabel Aktiv && Indikativ && Perfekt ist */
+
 			
 				/** ---------------------------------------------- 
 				 *  -----------------INDIKATIV--------------------
 				 *  ----------------------------------------------
 				 */
+				
+			/** Folgende Else-IF-Schleife prüft, ob die Vokabel Aktiv && Indikativ && Perfekt ist */
 
 			}else if ( gesuchtevokabel.endsWith("i") || gesuchtevokabel.endsWith("isti") ||
 					gesuchtevokabel.endsWith("it") || gesuchtevokabel.endsWith("imus") ||
@@ -583,7 +589,9 @@ public class Formauswahl {
 			 *  -----------------KONJUNKTIV-----------------
 			 *  --------------------------------------------
 			 */
-			
+		
+		/** Else-If Schleife prüft auf Präsens && Konjunktiv && Aktiv */
+					
 		}else if (gesuchtevokabel.endsWith("em") || gesuchtevokabel.endsWith("es") ||
 				gesuchtevokabel.endsWith("et") || gesuchtevokabel.endsWith("emus") ||
 				gesuchtevokabel.endsWith("etis") || gesuchtevokabel.endsWith("ament")) {
@@ -615,6 +623,8 @@ public class Formauswahl {
 			 *  ------------------INDIKATIV--------------------
 			 *  -----------------------------------------------
 			 */
+		
+		/** Else-If Schleife prüft auf Präsens && Indikativ && Aktiv */
 				
 		}else if (gesuchtevokabel.endsWith("eo") || gesuchtevokabel.endsWith("es") || 
 				gesuchtevokabel.endsWith("et") || gesuchtevokabel.endsWith("emus") ||
@@ -666,12 +676,12 @@ public class Formauswahl {
 			------------------------------------------------*/
 	
 				void präsensaktiva() {
-					akon = true;
-					System.out.println("Präsens Aktiv A");
-					new präsens(gesuchtevokabel);
-					präsens.präsensaktivindikativa();
+					akon = true; //Weißt der gesuchten Vokabel einen Boolean-Wert zu, der die Konjugation beschreibt. 
+					System.out.println("Präsens Aktiv A"); //Gibt in der Konsole einen Text aus, der die gefundene Zeit angibt.
+					new präsens(gesuchtevokabel); //Ruft latein.zeiten.präsens auf und übergibt die gesuchte Vokabel.
+					präsens.präsensaktivindikativa(); //Ruft die Methode "präsensaktivindikativa" in präsens auf.
 					
-					new akonjugation(präsens.returngv(), präsens.returngvs());
+					new akonjugation(präsens.returngv(), präsens.returngvs()); //ruft Konjugation auf und übergibt Wortstamm und ümgeformte gesuchte Vokabel
 				}				
 				void präsensaktive() {
 					ekon = true;
@@ -1151,8 +1161,8 @@ public class Formauswahl {
 		//------------------------------------------------------
 					
 				void futurIpassiva() {
-					akon = true;
-					System.out.println("Futur I Passiv");
+					akon = true; 
+					System.out.println("Futur I Passiv"); 
 					new futurI(gesuchtevokabel);
 					futurI.futurIpassiva();
 					

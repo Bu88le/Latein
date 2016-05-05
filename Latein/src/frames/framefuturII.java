@@ -29,6 +29,7 @@ public class framefuturII implements ActionListener{
 		frame1.setSize(250, 200);
 		frame1.setLocationRelativeTo(null);
 		frame1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame1.setResizable(false);
 		
 		panel1 = new JPanel();
 		

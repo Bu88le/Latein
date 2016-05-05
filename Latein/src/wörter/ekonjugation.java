@@ -1,6 +1,8 @@
 package wörter;
 
 import frames.frame;
+import vokabeln.e;
+import übersetzung.*;
 
 public class ekonjugation {
 	
@@ -10,8 +12,21 @@ public class ekonjugation {
 	public ekonjugation(String s, String t) {
 		gv = s;
 		gvs = t;
-		formen();
+		testen();
+		System.out.println("HI");
 	}
+	
+	public static void testen() {
+		for (int i = 0; i < e.rverbene().length; i++) {
+			if (gv.equals(e.rverbene()[i])) {
+				ekon = true;
+				formen();
+				new uee(gv);
+				System.out.println("HI");
+			}
+		}
+	}
+	
 	
 	//-----------------------------------------------------------------------------------------------
 	//--------------------------------------PRÄSENS--------------------------------------------------
@@ -62,7 +77,7 @@ public class ekonjugation {
 	
 	public static String[] endungenplusqaktiv = {"ueram", "ueras", "uerat", "ueramus", "ueratis", "uerant"};
 	public static String[] endungenplusqaktivkonjunktiv = {"uissem", "uisses", "uisset", "uissemus", "uissetis", "uissent"};
-	public static String[] endungenplusqpassiv = {"us eram", "itus eras", "itus erat", "iti eramus", "iti eratis", "iti erant"};
+	public static String[] endungenplusqpassiv = {"itus eram", "itus eras", "itus erat", "iti eramus", "iti eratis", "iti erant"};
 	public static String[] endungenplusqpassivkonjunktiv = {"itus essem", "itus esses", "itus esset", "iti essemus", "iti essetis", "iti essent"};
 	
 	

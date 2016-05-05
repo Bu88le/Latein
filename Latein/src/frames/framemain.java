@@ -22,6 +22,7 @@ public class framemain implements ActionListener {
 		frame1.setSize(250, 200);
 		frame1.setLocationRelativeTo(null);
 		frame1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame1.setResizable(false);
 		panel1 = new JPanel();
 		
 		label1 = new JLabel("Gesuchte Vokabel: ");
@@ -32,6 +33,7 @@ public class framemain implements ActionListener {
 		tfield1.setForeground(Color.BLACK);
 		panel1.add(tfield1);
 		
+		
 		label2 = new JLabel();
 		panel1.add(label2);
 		
@@ -40,7 +42,7 @@ public class framemain implements ActionListener {
 		button1.setBackground(Color.BLACK);
 		button1.setForeground(Color.WHITE);
 		button1.addActionListener(this);	
-		panel1.add(button1);
+		panel1.add(button1);		
 		
 
 		button2 = new JButton("Beenden");
