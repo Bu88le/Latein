@@ -1,6 +1,8 @@
 package frames;
 
 import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -22,51 +24,63 @@ public class framefuturI implements ActionListener{
 	static JFrame frame1;
 	static JPanel panel1;
 	static JTextField tfield1;
-	static JButton button1, button2, button3, button4;
+	static JButton button1, button2, button3, button4, button5;
 	
 	framefuturI() {
 		frame1 = new JFrame();
-		frame1.setSize(250, 200);
+		frame1.setSize(350, 300);
 		frame1.setLocationRelativeTo(null);
 		frame1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame1.setResizable(false);
+		frame1.setLayout(null);
 		
-		panel1 = new JPanel();
 		
 		button1 = new JButton();
 		button1.setText("Indikativ & Aktiv");
 		button1.setBackground(Color.BLACK);
 		button1.setForeground(Color.WHITE);
 		button1.addActionListener(this);
-		panel1.add(button1);
+		button1.setBounds(50, 25, 250, 30);
+		button1.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button1);
 		
 		button2 = new JButton();
 		button2.setText("Indikativ & Passiv");
 		button2.setBackground(Color.BLACK);
 		button2.setForeground(Color.WHITE);
-		button2.addActionListener(this);;
-		panel1.add(button2);
-		
-		tfield1 = new JTextField();
-		tfield1.setEditable(false);
-		tfield1.setVisible(false);
-		panel1.add(tfield1);
+		button2.addActionListener(this);
+		button2.setBounds(50, 60, 250, 30);
+		button2.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button2);
 		
 		button3 = new JButton();
 		button3.setText("neue Vokabel");
-		button3.setBackground(Color.RED);
-		button3.setForeground(Color.BLACK);
+		button3.setBackground(Color.lightGray);
+		button3.setForeground(Color.BLUE);
 		button3.addActionListener(this);
-		panel1.add(button3);
+		button3.setBounds(50, 150, 120 , 30);
+		button3.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button3);
 		
 		button4 = new JButton();
 		button4.setText("andere Zeit");
-		button4.setBackground(Color.RED);
-		button4.setForeground(Color.BLACK);
+		button4.setBackground(Color.lightGray);
+		button4.setForeground(Color.BLUE);
 		button4.addActionListener(this);
-		panel1.add(button4);
+		button4.setBounds(180, 150, 120, 30);
+		button4.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button4);
 		
-		frame1.add(panel1);
+		button5 = new JButton();
+		button5.setText("Beenden");
+		button5.setFont(new Font("Calibri", Font.ITALIC, 15));
+		button5.setBackground(Color.RED);
+		button5.setForeground(Color.BLACK);
+		button5.addActionListener(this);
+		button5.setBounds(115, 190, 120, 30);
+		button5.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button5);
+		
 		frame1.setTitle(akonjugation.gv);
 		frame1.setVisible(true);
 	}
@@ -114,13 +128,15 @@ public class framefuturI implements ActionListener{
 				}
 			}
 		}else if (ae.getSource() == this.button3) {
-			new framemain();
 			frame1.dispose();
+			new framemain();
 			akonjugation.akon = false;
 			
 		}else if (ae.getSource() == this.button4) {
-			new frame();
 			frame1.dispose();
+			new frame();			
+		}else if (ae.getSource() == this.button5) {
+			System.exit(0);
 		}
 	}
 }

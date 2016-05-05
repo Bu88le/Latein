@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 
 public class frame implements ActionListener {
 	
+	public static final String pfield1 = null;
 	static JFrame frame1;
 	JButton button1, button2, button3, button4, button5, button6, button7, button8;
 	static JPanel panel1;
@@ -17,71 +18,85 @@ public class frame implements ActionListener {
 	
 	public frame() {
 		frame1 = new JFrame();
-		frame1.setSize(250, 200);
+		frame1.setSize(350, 300);
 		frame1.setLocationRelativeTo(null);
 		frame1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame1.setResizable(false);
-		panel1 = new JPanel();
-		
+		frame1.setLayout(null);		
 		
 		button1 = new JButton();
 		button1.setText("Präsens");
 		button1.setBackground(Color.BLACK);
 		button1.setForeground(Color.WHITE);
 		button1.addActionListener(this);
-		panel1.add(button1);
+		button1.setBounds(50, 25, 120, 30);
+		button1.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button1);
 		
 		button2 = new JButton();
 		button2.setText("Imperfekt");
 		button2.setBackground(Color.BLACK);
 		button2.setForeground(Color.WHITE);
 		button2.addActionListener(this);
-		panel1.add(button2);
+		button2.setBounds(180, 25, 120, 30);
+		button2.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button2);
 		
 		button3 = new JButton();
 		button3.setText("Perfekt");
 		button3.setBackground(Color.BLACK);
 		button3.setForeground(Color.WHITE);
 		button3.addActionListener(this);
-		panel1.add(button3);
+		button3.setBounds(50, 95, 250, 30);
+		button3.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button3);
 		
 		button4 = new JButton();
 		button4.setText("Plusquamperfekt");
 		button4.setBackground(Color.BLACK);
 		button4.setForeground(Color.WHITE);
 		button4.addActionListener(this);
-		panel1.add(button4);
+		button4.setBounds(50, 130, 250, 30);
+		button4.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button4);
 		
 		button5 = new JButton();
 		button5.setText("Futur I");
 		button5.setBackground(Color.BLACK);
 		button5.setForeground(Color.WHITE);
 		button5.addActionListener(this);
-		panel1.add(button5);
+		button5.setBounds(50, 60, 120 ,30);
+		button5.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button5);
 		
 		button6 = new JButton();
 		button6.setText("Futur II");
 		button6.setBackground(Color.BLACK);
 		button6.setForeground(Color.WHITE);
 		button6.addActionListener(this);
-		panel1.add(button6);
-		
-		frame1.getContentPane().add(panel1);
+		button6.setBounds(180, 60, 120, 30);
+		button6.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button6);
 		
 		button7 = new JButton();
 		button7.setText("neue Vokabel");
-		button7.setBackground(Color.RED);
-		button7.setForeground(Color.BLACK);
+		button7.setBackground(Color.lightGray);
+		button7.setForeground(Color.BLUE);
 		button7.addActionListener(this);
-		panel1.add(button7);
+		button7.setBounds(50, 190, 120, 30);
+		button7.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button7);
 		
 		button8 = new JButton();
-		button8.setFont(new Font("Vivaldi", Font.BOLD, 12));
+		button8.setFont(new Font("Calibri", Font.ITALIC, 15));
 		button8.setText("Beenden");
 		button8.setBackground(Color.RED);
 		button8.setForeground(Color.BLACK);
 		button8.addActionListener(this);
-		panel1.add(button8);
+		button8.setBounds(180, 190, 120, 30);
+		button8.setCursor(new Cursor (Cursor.HAND_CURSOR));
+		frame1.add(button8);
+		
 		frame1.setTitle(akonjugation.gv);
 		frame1.setVisible(true);
 	}

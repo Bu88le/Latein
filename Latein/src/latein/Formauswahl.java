@@ -2,6 +2,7 @@ package latein;
 
 import javax.swing.JOptionPane;
 
+import frames.framemain;
 import zeiten.*;
 import wörter.*;
 
@@ -20,6 +21,7 @@ public class Formauswahl {
 		 */
 		gesuchtevokabel = s.toLowerCase();
 		ausscheidung1();
+		framemain.frame1.dispose();
 	}
 
 	void ausscheidung1() {

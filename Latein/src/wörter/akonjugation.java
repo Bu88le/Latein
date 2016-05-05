@@ -130,7 +130,7 @@ public class akonjugation {
 			imperfektpassivindikativ[i] = gvs + endungenimperfektpassiv[i];
 			System.out.println(imperfektpassivindikativ[i]);
 			
-			imperfektpassivkonjunktiv[i] = gvs + endungenimperfektpassivkonjunktiv[i];
+			imperfektpassivkonjunktiv[i] = (gvs + endungenimperfektpassivkonjunktiv[i]);
 			System.out.println(imperfektpassivkonjunktiv[i]);
 			
 			perfektaktivindikativ[i] = gvs + endungenperfektaktiv[i];
