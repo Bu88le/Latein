@@ -88,15 +88,17 @@ public class uea {
 	public static void ausgabe(int z) {
 
 
-		ss = "<html>" + zg[z][1] + " :" + "<p/>" + "<p/>";
+		stringbuffer.append("<html>");
+		stringbuffer.append(zg[z][1]);
+		stringbuffer.append(" : <p/> <p/>");
 				
 		for (int i = 2; i < zg[z].length; i++) {
-			ss = ss + zg[z][i] + "<p/>";
+			stringbuffer.append(zg[z][i] + "<p/>");
 			if (i == zg[z].length) {
-				ss = ss + "<html/>";
+				stringbuffer.append("<html/>");
 			}
 		}
 		
-		new übergabe(ss);
+		new übergabe(stringbuffer.toString());
 	}
 }

@@ -2,10 +2,14 @@ package vokabeln;
 
 public class a {
 
-	final static public String[] verbena = {"laboro", "pecco", "amo", "laudo", "abalieno", "abdico", "abequito", "aberro", "abiudico","abiuro", "ablego", "abloco", "abnego", "abnocto", "abnuto", "abomino", "abrogo", "absto", "abundo", "accelo", "acclamo", "acclaro", "acclino", "accommodo", "accubo", "accumulo", "accuro", "accuso", "accusito", "acerbo", "acervo", "adaequo", "adaggero", "adalligo", "adamo", "adambulo", "adapto", "adaquo", "adhorto", "adinspecto", "adiudico", "adiuro", "adiuto", "adiuvo"};
-	final static public String[] verbenapu = {"concrepo", "crepo", "discrepo", "cubo", "excubo", "incubo", "discrepo", "disseco", "domo", "excubo", "incubo", "increpo", "mico", "resono", "seco", "disseco", "sono", "tono", "veto"};
+	final static public String[] verbena = {"labor", "pecc", "am", "laud", "abalien", "abdic", "abequit", "aberr", "abiudic","abiur", "ableg", "abloc", "abneg", "abnoct", "abnut", "abomin", "abrog", "abst", "abund", "accel", "acclam", "acclar", "acclin", "accommod", "accub", "accumul", "accur", "accus", "accusit", "acerb", "acerv", "adaequ", "adagger", "adallig", "adam", "adambul", "adapt", "adaqu", "adhort", "adinspect", "adiudic", "adiur", "adiut", "adiuv"};
+	final static public String[] verbenapu = {"concrep", "crep", "discrep", "cub", "excub", "incub", "discrep", "dissec", "dom", "excub", "incub", "increp", "mic", "reson", "sec", "dissec", "son", "ton", "vet","","", "","","","","","","","","","","","","","","","","","","","","","","",""};
 	
 	static public String[] rverbena (){
 		return verbena;
+	}
+	
+	static public String[] rverbenau() {
+		return verbenapu;
 	}
 }

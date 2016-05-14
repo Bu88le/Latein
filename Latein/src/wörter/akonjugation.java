@@ -17,11 +17,15 @@ public class akonjugation {
 	
 	void testen() {
 		for (int i = 0; i < a.rverbena().length; i++) {
-			if (gv.equals(a.rverbena()[i])) {
-					akon = true;
-					formen();
-					new uea(gv);
-			}			
+			if (gvs.equals(a.rverbena()[i])) {
+				akon = true;
+				formen();
+				new uea(gv);
+			}else if (gvs.equals(a.rverbenau()[i])) {
+				akon = true;
+				formenu(i);
+				new uea(gv);
+			}
 		}
 	}
 
@@ -85,7 +89,10 @@ public class akonjugation {
 		public static String[] endungenplusqpassiv = {"atus eram", "atus eras", "atus erat", "ati eramus", "ati eratis", "ati erant"};
 		public static String[] endungenplusqpassivkonjunktiv = {"atus essem", "atus esses", "atus esset", "ati essemus", "ati essetis", "ati essent"};
 		
-		
+		public static String[] endungenplusquaktiv = {"ueram", "ueras", "uerat", "ueramus", "ueratis", "uerant"};
+		public static String[] endungenplusquaktivkonjunktiv = {"uissem", "uisses", "uisset", "uissemus", "uissetis", "uissent"};
+		public static String[] endungenplusqupassiv = {"itus eram", "itus eras", "itus erat", "iti eramus", "iti eratis", "iti erant"};
+		public static String[] endungenplusqupassivkonjunktiv = {"itus essem", "itus esses", "itus esset", "iti essemus", "iti essetis", "iti essent"};
 		//-------------------------------------------------------------------------------------------------
 		//-----------------------------------FUTUR I-------------------------------------------------------
 		//-------------------------------------------------------------------------------------------------
@@ -104,6 +111,9 @@ public class akonjugation {
 		
 		public static String[] endungenfuturIIaktiv = {"avero", "averis", "averit", "averimus", "averitis", "averint"};
 		public static String[] endungenfuturIIpassiv = {"atus ero", "atus eris", "atus erit", "ati erimus", "ati eritis", "ati erunt"};
+		
+		public static String[] endungenfuturIIuaktiv = {"uero", "ueris", "uerit", "uerimus", "ueritis", "uerint"};
+		public static String[] endungenfuturIIupassiv = {"itus ero", "itus eris", "itus erit", "iti erimus", "iti eritis", "iti erunt"};
 		
 		
 	public static void formen(){
@@ -171,42 +181,66 @@ public class akonjugation {
 		}
 	}
 	
-	static public void formenu() {
+	static public void formenu(int z) {
 		for (int i = 0; i < 6; i++) {
-			präsensaktivindikativ[i] = gvs + endungenpräsensaktiv[i];	
+			präsensaktivindikativ[i] = a.rverbenau()[z] + endungenpräsensaktiv[i];	
 			System.out.println (präsensaktivindikativ[i]);
 			
-			präsensaktivkonjunktiv[i] = gvs + endungenpräsensaktivkonjunktiv[i];
+			präsensaktivkonjunktiv[i] = a.rverbenau()[z] + endungenpräsensaktivkonjunktiv[i];
 			System.out.println(präsensaktivkonjunktiv[i]);
 			
-			präsenspassivindikativ[i] = gvs + endungenpräsenspassiv[i];
+			präsenspassivindikativ[i] = a.rverbenau()[z] + endungenpräsenspassiv[i];
 			System.out.println(präsenspassivindikativ[i]);
 			
-			präsenspassivkonjunktiv[i] = gvs + endungenpräsenspassivkonjunktiv[i];
+			präsenspassivkonjunktiv[i] = a.rverbenau()[z] + endungenpräsenspassivkonjunktiv[i];
 			System.out.println(präsenspassivkonjunktiv[i]);
 			
-			imperfektaktivindikativ[i] = gvs + endungenimperfektaktiv[i];
+			imperfektaktivindikativ[i] = a.rverbenau()[z] + endungenimperfektaktiv[i];
 			System.out.println(imperfektaktivindikativ[i]);
 			
-			imperfektaktivkonjunktiv[i] = gvs + endungenimperfektaktivkonjunktiv[i];
+			imperfektaktivkonjunktiv[i] = a.rverbenau()[z] + endungenimperfektaktivkonjunktiv[i];
 			System.out.println(imperfektaktivkonjunktiv[i]);
 			
-			imperfektpassivindikativ[i] = gvs + endungenimperfektpassiv[i];
+			imperfektpassivindikativ[i] = a.rverbenau()[z] + endungenimperfektpassiv[i];
 			System.out.println(imperfektpassivindikativ[i]);
 			
-			imperfektpassivkonjunktiv[i] = gvs + endungenimperfektpassivkonjunktiv[i];
+			imperfektpassivkonjunktiv[i] = a.rverbenau()[z] + endungenimperfektpassivkonjunktiv[i];
 			System.out.println(imperfektpassivkonjunktiv[i]);
 			
-			perfektaktivindikativ[i] = gvs + endungenperfektaktivu[i];
+			perfektaktivindikativ[i] = a.rverbenau()[z] + endungenperfektaktivu[i];
 			System.out.println(perfektaktivindikativ[i]);
 			
-			perfektaktivkonjunktiv[i] = gvs + endungenperfektaktivkonjunktivu[i];
+			perfektaktivkonjunktiv[i] = a.rverbenau()[z] + endungenperfektaktivkonjunktivu[i];
+			System.out.println(perfektaktivkonjunktiv[i]);
 			
+			perfektpassivindikativ[i] = a.rverbenau()[z] + endungenperfektpassivu[i];
+			System.out.println(perfektpassivindikativ[i]);
+			
+			perfektpassivkonjunktiv[i] = a.rverbenau()[z] + endungenperfektpassivkonjunktivu[i];
+			System.out.println(perfektpassivkonjunktiv[i]);
+			
+			plusquamperfektaktivindikativ[i] = a.rverbenau()[z] + endungenplusquaktiv[i];
+			System.out.println(plusquamperfektaktivindikativ[i]);
+			
+			plusquamperfektaktivkonjunktiv[i] = a.rverbenau()[z] + endungenplusquaktivkonjunktiv[i];
+			System.out.println(plusquamperfektaktivkonjunktiv[i]);
+			
+			plusquamperfektpassivindikativ[i] = a.rverbenau()[z] + endungenplusqupassiv[i];
+			System.out.println(plusquamperfektpassivindikativ[i]);
+			
+			plusquamperfektpassivkonjunktiv[i] = a.rverbenau()[z] + endungenplusqupassivkonjunktiv[i];
+			System.out.println(plusquamperfektpassivkonjunktiv[i]);
+			
+			futurIIaktiv[i] = a.rverbenau()[z] + endungenfuturIIuaktiv[i];
+			System.out.println(futurIIaktiv[i]);
+			
+			futurIIpassiv[i] = a.rverbenau()[z] + endungenfuturIIupassiv[i];
+			System.out.println(futurIIpassiv[i]);
 		}
 	}
 	
-	public String[] präsensaktivindikativ() {
-		return präsensaktivindikativ;
+	public String präsensaktivindikativ() {
+		return präsensaktivindikativ.toString();
 	}
 	
 	public String[] präsensaktivkonjunktiv() {
