@@ -184,6 +184,7 @@ public class plusquamperfekt {
 						
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "o";
+						
 					}else {
 						plusquamperfektpassivindikativa();
 					}
@@ -209,6 +210,17 @@ public class plusquamperfekt {
 						
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "eo";
+						
+					}else if (gv.endsWith("sissem") || gv.endsWith("sisses") || gv.endsWith("sisset")) {
+						gvs = gv.substring(0, gv.length()-6);
+						for (int i = 0; i < e.rverbenes()[i].length(); i++ ) {
+							if (gvs.equals(e.rverbenes()[i])) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenespn()[i];
+									vok = e.rverbenespn()[i].substring(0, e.rverbenespn()[i].length()-1) + "re";
+								}
+							}
+						}
 					}
 				}
 		
