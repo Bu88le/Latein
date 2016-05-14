@@ -1,9 +1,5 @@
 package zeiten;
 
-import java.util.concurrent.SynchronousQueue;
-
-import javax.swing.JOptionPane;
-
 import vokabeln.e;
 import wörter.*;
 
@@ -95,6 +91,17 @@ public class plusquamperfekt {
 									vok = e.rverbenesn()[i].substring(0, e.rverbenesn()[i].length()-1) + "re";
 									ekon = true;
 									System.out.println(vok);
+								}
+							}
+						}
+					}else if (gv.endsWith("serant")){
+						gvs = gv.substring(0, gv.length()-6);
+						for (int i = 0; i < e.verbenes.length; i++) {
+							if (e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenes()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									vok = e.rverbenesn()[i].substring(0, e.rverbenesn()[i].length()-1) + "re";
+									ekon = true;
 								}
 							}
 						}
