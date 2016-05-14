@@ -41,9 +41,9 @@ public class Formauswahl {
 		 */
 		if (gesuchtevokabel.contains(" ")) {
 			
-			if (gesuchtevokabel.endsWith("sum") || gesuchtevokabel.endsWith("es") ||
-					gesuchtevokabel.endsWith("est") || gesuchtevokabel.endsWith("sumus") ||
-					gesuchtevokabel.endsWith("estis") || gesuchtevokabel.endsWith("sunt")) {
+			if (gesuchtevokabel.endsWith(" sum") || gesuchtevokabel.endsWith(" es") ||
+					gesuchtevokabel.endsWith(" est") || gesuchtevokabel.endsWith(" sumus") ||
+					gesuchtevokabel.endsWith(" estis") || gesuchtevokabel.endsWith(" sunt")) {
 
 				perfektpassiv();
 
