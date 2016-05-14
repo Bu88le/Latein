@@ -17,7 +17,7 @@ public class uee {
 	
 	public static String[] a = {"moneo", "monere", "ermahnen"};
 	public static String[] b = {"adhaereo", "adhaerere", "angrenzen"};
-	public static String[] c = {"ardeo", "ardere", "brennen"};
+	public static String[] c = {"ardeo", "<u><b><font color=\"#FF0000\">ardere</font></u></b>", "brennen", "verbrennen","funkeln", "blitzen", "", "ardet domus", "das Haus brennt", "", "fauces siti ardent", "lechzen vor Durst", "", "oculi ardent", "die Augen funkeln", "", "fig bei Gefühlen: ", "glühen", "entbrannt sein", "heiß verliebt sein <font color=\"#6E6E6E\">(in aliquo/aliquo/aliquem</font> in jmd.", "", ""};
 	
 	public static String[][] zg = {a,b,c};
 	
