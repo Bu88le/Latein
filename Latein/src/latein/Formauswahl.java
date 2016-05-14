@@ -1121,8 +1121,8 @@ public class Formauswahl {
 					sons = true;					
 					System.out.println("Plusquamperfekt Passiv");
 					
-					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
-					p.plusquamperfektpassivindikativa();
+					new plusquamperfekt(gesuchtevokabel);
+					plusquamperfekt.plusquamperfektpassivindikativa();
 				}
 
 			/**----------------------------------------
