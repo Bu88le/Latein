@@ -216,8 +216,28 @@ public class plusquamperfekt {
 						for (int i = 0; i < e.rverbenes()[i].length(); i++ ) {
 							if (gvs.equals(e.rverbenes()[i])) {
 								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
-									gv = e.rverbenespn()[i];
+									gv = e.rverbenesn()[i];
 									vok = e.rverbenespn()[i].substring(0, e.rverbenespn()[i].length()-1) + "re";
+								}
+							}
+						}
+					}else if (gv.endsWith("sissemus") || gv.endsWith("sissetis")) {
+						gvs = gv.substring(0, gv.length()-8);
+						for (int i = 0; i < e.rverbenes()[i].length(); i++) {
+							if (e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									vok = e.rverbenespn()[i].substring(0,  e.rverbenespn()[i].length()-1) + "re";
+								}
+							}
+						}
+					}else if (gv.endsWith("sissent")) {
+						gvs = gv.substring(0, gv.length()-7);
+						for (int i = 0; i < e.rverbenes()[i].length(); i++) {
+							if (e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenes()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									vok = e.rverbenespn()[i].substring(0,  gvs.length()-1) + "re";
 								}
 							}
 						}

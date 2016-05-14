@@ -1,6 +1,5 @@
 package wörter;
 
-import frames.frame;
 import vokabeln.e;
 import übersetzung.*;
 

@@ -386,6 +386,11 @@ public class Formauswahl {
 					gesuchtevokabel.endsWith("ivissetis") || gesuchtevokabel.endsWith("ivissent")) {
 				
 				plusquamperfektkonjunktivi();
+			}else if (gesuchtevokabel.endsWith("sissem") || gesuchtevokabel.endsWith("sisses") ||
+					gesuchtevokabel.endsWith("sisset") || gesuchtevokabel.endsWith("sissemus") ||
+					gesuchtevokabel.endsWith("sissetis") || gesuchtevokabel.endsWith("sissent")){
+				
+				plusquamperfektkonjunktive();
 			}else {
 				
 				plusquamperfektaktivkonjunktiv();
