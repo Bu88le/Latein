@@ -1,13 +1,17 @@
 package zeiten;
 
+import java.util.concurrent.SynchronousQueue;
+
 import javax.swing.JOptionPane;
 
+import vokabeln.e;
 import wörter.*;
 
 public class plusquamperfekt {
 
 		static String gv;
 		static String gvs;
+		static String vok;
 		public static String gvu;
 		static boolean akon,ekon,ikon,konskon;
 		
@@ -68,6 +72,32 @@ public class plusquamperfekt {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "eo";
 						
+					}else if (gv.endsWith("seram") || gv.endsWith("seras") || gv.endsWith("serat")) {
+						gvs = gv.substring(0, gv.length()-5);
+						System.out.println(gvs);
+						for (int i = 0;i < e.verbenes.length; i++) {
+							if (e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									vok = e.rverbenesn()[i].substring(0, e.rverbenesn()[i].length()-1) + "re";
+									ekon = true;
+									System.out.println(vok);
+								}
+							}
+						}
+					}else if (gv.endsWith("seramus") || gv.endsWith("seratis")) {
+						gvs = gv.substring(0, gv.length()-7);
+						System.out.println(gvs);
+						for (int i = 0; i < e.verbenes.length; i++){
+							if (e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									vok = e.rverbenesn()[i].substring(0, e.rverbenesn()[i].length()-1) + "re";
+									ekon = true;
+									System.out.println(vok);
+								}
+							}
+						}
 					}else {
 						plusquamperfektkonjunktive();
 					}
@@ -203,7 +233,6 @@ public class plusquamperfekt {
 							konskon = true;
 						}else if(gv.substring(0, gv.length()-5).endsWith("us")) {
 							gvs = gv.substring(0, gv.length()-7);
-							gv = gv.substring(0, gv.length()-7) + "eo";
 							ekon = true;
 							new ekonjugation(gv, gvs);							
 						}
@@ -222,7 +251,6 @@ public class plusquamperfekt {
 							konskon = true;
 						}else if (gv.substring(0, gv.length()-7).endsWith("i")) {
 							gvs = gv.substring(0, gv.length()-8);
-							gv = gv.substring(0, gv.length()-8) + "eo";
 							new ekonjugation(gv, gvs);
 						}
 					}else if(gv.endsWith(" erant")) {
@@ -240,7 +268,6 @@ public class plusquamperfekt {
 							konskon = true;
 						}else if (gv.substring(0, gv.length()-6).endsWith("i")) {
 							gvs = gv.substring(0, gv.length()-7);
-							gv = gv.substring(0, gv.length()-7) + "eo";
 							ekon = true;
 							new ekonjugation(gv, gvs);
 						}
@@ -346,5 +373,9 @@ public class plusquamperfekt {
 		
 		public static String returngvu() {
 			return gvu;
+		}
+		
+		public static String returnvok() {
+			return vok;
 		}
 }

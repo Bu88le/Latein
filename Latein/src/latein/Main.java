@@ -14,12 +14,7 @@ public class Main {
 	
 	public Main() {
 		
-		menu();
-	}
-	
-	public void menu() {
-		
 		new framemain();
-		
+	
 	}
 }

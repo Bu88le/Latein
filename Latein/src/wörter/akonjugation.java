@@ -169,8 +169,6 @@ public class akonjugation {
 			futurIIpassiv[i] = gvs + endungenfuturIIpassiv[i];
 			System.out.println(futurIIpassiv[i]);
 		}
-		
-		abfrage();
 	}
 	
 	static public void formenu() {
@@ -205,11 +203,6 @@ public class akonjugation {
 			perfektaktivkonjunktiv[i] = gvs + endungenperfektaktivkonjunktivu[i];
 			
 		}
-	}
-	
-
-	static void abfrage() {
-		new frame();
 	}
 	
 	public String[] präsensaktivindikativ() {

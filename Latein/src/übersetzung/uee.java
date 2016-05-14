@@ -1,14 +1,14 @@
 package übersetzung;
-
 import javax.swing.JOptionPane;
 
-import frames.framemain;
+import frames.frame;
 
 public class uee {
 	
 	static String gv;
 	static int zähler;
 	static StringBuffer stringbuffer = new StringBuffer();
+	static String ss;
 	
 	public uee(String s) {
 		gv = s;
@@ -16,8 +16,10 @@ public class uee {
 	}
 	
 	public static String[] a = {"moneo", "monere", "ermahnen"};
+	public static String[] b = {"adhaereo", "adhaerere", "angrenzen"};
+	public static String[] c = {"ardeo", "ardere", "brennen"};
 	
-	public static String[][] zg = {a};
+	public static String[][] zg = {a,b,c};
 	
 	public static void auswahl() {
 		for (int i = 0; i<zg.length; i++) {
@@ -25,30 +27,22 @@ public class uee {
 			
 			ausgabe(i);
 			break;
-		 }
-		 
-		 
+		 }		 
 		}
 	}
 	
 	public static void ausgabe(int z) {
 
-		stringbuffer.append(zg[z][1]);
-		stringbuffer.append(" : ");
-		stringbuffer.append("\n");
-		stringbuffer.append("\n");
+		ss = "<html>" + zg[z][1] + " :" + "<p/>" + "<p/>";
 		
 		for (int i = 2; i < zg[z].length; i++) {
-			stringbuffer.append(zg[z][i]);
-			stringbuffer.append("\n");
+			ss = ss + zg[z][i] + "<p/>";
+			System.out.println(zg[z].length);
+			if (i == zg[z].length) {
+				ss = ss + "<html/>";
+			}
 		}
 		
-		JOptionPane.showMessageDialog(null, stringbuffer, framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
+		new übergabe(ss);
 	}
-	
-	public static StringBuffer returns() {
-		return stringbuffer;
-	}
-	
-
 }

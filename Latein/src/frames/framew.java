@@ -23,12 +23,6 @@ public class framew implements ActionListener  {
 	static JButton button1, button2, button3, button4, button5, button6, button7;
 	
 	framew() {
-		frame1 = new JFrame();
-		frame1.setSize(350, 300);
-		frame1.setLocationRelativeTo(null);
-		frame1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		frame1.setResizable(false);
-		frame1.setLayout(null);		
 		
 		button1 = new JButton();
 		button1.setText("Indikativ & Aktiv");
@@ -37,7 +31,7 @@ public class framew implements ActionListener  {
 		button1.addActionListener(this);
 		button1.setBounds(50,25,250,30);
 		button1.setCursor(new Cursor (Cursor.HAND_CURSOR));
-		frame1.add(button1);
+		framemain.frame1.add(button1);
 		
 		button2 = new JButton();
 		button2.setText("Indikativ & Passiv");
@@ -46,7 +40,7 @@ public class framew implements ActionListener  {
 		button2.addActionListener(this);
 		button2.setBounds(50, 60, 250, 30);
 		button2.setCursor(new Cursor (Cursor.HAND_CURSOR));
-		frame1.add(button2);
+		framemain.frame1.add(button2);
 		
 		button3 = new JButton();
 		button3.setText("Konjunktiv & Aktiv");
@@ -55,7 +49,7 @@ public class framew implements ActionListener  {
 		button3.addActionListener(this);
 		button3.setBounds(50, 95, 250, 30);
 		button3.setCursor(new Cursor (Cursor.HAND_CURSOR));
-		frame1.add(button3);
+		framemain.frame1.add(button3);
 		
 		button4 = new JButton();
 		button4.setText("Konjunktiv & Passiv");
@@ -64,7 +58,7 @@ public class framew implements ActionListener  {
 		button4.addActionListener(this);
 		button4.setBounds(50, 130, 250, 30);
 		button4.setCursor(new Cursor (Cursor.HAND_CURSOR));
-		frame1.add(button4);
+		framemain.frame1.add(button4);
 		
 		button5 = new JButton();
 		button5.setText("neue Vokabel");
@@ -73,7 +67,7 @@ public class framew implements ActionListener  {
 		button5.addActionListener(this);
 		button5.setBounds(50, 190, 120, 30);
 		button5.setCursor(new Cursor (Cursor.HAND_CURSOR));
-		frame1.add(button5);
+		framemain.frame1.add(button5);
 		
 		button6 = new JButton();
 		button6.setText("andere Zeit");
@@ -82,7 +76,7 @@ public class framew implements ActionListener  {
 		button6.addActionListener(this);
 		button6.setBounds(180, 190, 120, 30);
 		button6.setCursor(new Cursor (Cursor.HAND_CURSOR));
-		frame1.add(button6);
+		framemain.frame1.add(button6);
 		
 		button7 = new JButton();
 		button7.setText("Beenden");
@@ -92,10 +86,7 @@ public class framew implements ActionListener  {
 		button7.addActionListener(this);
 		button7.setBounds(115, 230, 120, 30);
 		button7.setCursor(new Cursor (Cursor.HAND_CURSOR));
-		frame1.add(button7);
-		
-		frame1.setTitle(akonjugation.gv);
-		frame1.setVisible(true);
+		framemain.frame1.add(button7);
 		
 	}	
 	
@@ -191,14 +182,26 @@ public class framew implements ActionListener  {
 				}
 			}
 		}else if(ae.getSource() == this.button5) {
-			frame1.dispose();
 			uea.stringbuffer.delete(0, uea.stringbuffer.length());
-			new framemain();
+			button1.setVisible(false);
+			button2.setVisible(false);
+			button3.setVisible(false);
+			button4.setVisible(false);
+			button5.setVisible(false);
+			button6.setVisible(false);
+			button7.setVisible(false);
+			framemain.framem();
 			akonjugation.akon = false;
 			
 		}else if(ae.getSource() == this.button6) {
-			frame1.dispose();
-			new frame();
+			button1.setVisible(false);
+			button2.setVisible(false);
+			button3.setVisible(false);
+			button4.setVisible(false);
+			button5.setVisible(false);
+			button6.setVisible(false);
+			button7.setVisible(false);
+			frame.auswahl();
 
 		}else if(ae.getSource() == this.button7) {
 			System.exit(0);

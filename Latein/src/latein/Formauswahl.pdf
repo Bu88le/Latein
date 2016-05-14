@@ -1070,7 +1070,7 @@ public class Formauswahl {
 					new plusquamperfekt(gesuchtevokabel);
 					plusquamperfekt.plusquamperfektindikativaktive();
 					
-					new ekonjugation(plusquamperfekt.returngv(), plusquamperfekt.returngvs());
+					new ekonjugation(plusquamperfekt.returngvs());
 				}
 				
 			/**--------------------------------------------

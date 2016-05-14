@@ -13,16 +13,22 @@ public class ekonjugation {
 		gv = s;
 		gvs = t;
 		testen();
-		System.out.println("HI");
 	}
 	
 	public static void testen() {
 		for (int i = 0; i < e.rverbene().length; i++) {
-			if (gv.equals(e.rverbene()[i])) {
+			if (gvs.equals(e.rverbene()[i])) {
 				ekon = true;
 				formen();
 				new uee(gv);
-				System.out.println("HI");
+			}else if (gvs.equals(e.rverbenes()[i])) {
+				ekon = true;
+				formens(i);
+				new uee(gv);
+			}else if (gvs.equals(e.rverbenespn()[i])) {
+				ekon = true;
+				formens(i);
+				new uee(gv);
 			}
 		}
 	}
@@ -67,6 +73,11 @@ public class ekonjugation {
 	public static String[] endungenperfektaktivkonjunktiv = {"uerium", "ueris", "uerit", "uerimus", "ueritis", "uerint"};
 	public static String[] endungenperfektpassivkonjunktiv = {"itus sim", "itus sis", "itus sit", "iti simus", "iti sitis", "iti sint"};
 	
+	public static String[] endungenperfektaktivs = {"si", "sisti", "sit", "simus", "sitis", "serunt"};
+	public static String[] endungenperfektaktivskonjunktiv = {"serim", "seris", "serit", "serimus", "seritis", "serint"};
+	public static String[] endungenperfektpassivs = {"sus sum", "sus es", "sus est", "si sumus", "si estis", "si sunt"};
+	public static String[] endungenperfektpassivskonjunktiv = {"sus sim", "sus sis", "sus sit", "si simus", "si sitis", "si sint"};
+	
 	//-------------------------------------------------------------------------------------------------
 	//-----------------------------------PLUSQUAMPERFEKT-----------------------------------------------
 	//-------------------------------------------------------------------------------------------------
@@ -80,6 +91,10 @@ public class ekonjugation {
 	public static String[] endungenplusqpassiv = {"itus eram", "itus eras", "itus erat", "iti eramus", "iti eratis", "iti erant"};
 	public static String[] endungenplusqpassivkonjunktiv = {"itus essem", "itus esses", "itus esset", "iti essemus", "iti essetis", "iti essent"};
 	
+	public static String[] endungenplusqsaktiv = {"seram", "seras", "serat", "seramus", "seratis", "serant"};
+	public static String[] endungenplusqsaktivkonjunktiv = {"sissem", "sisses", "sisset", "sissemus", "sissetis", "sissent"};
+	public static String[] endungenplusqspassiv = {"sus eram", "sus eras", "sus erat", "si eramus", "si eratis", "si erant"};
+	public static String[] endungenplusqspassivkonjunktiv = {"sus essem", "sus esses", "sus esset", "si essemus", "si essetis", "si essent"};
 	
 	//-------------------------------------------------------------------------------------------------
 	//-----------------------------------FUTUR I-------------------------------------------------------
@@ -98,6 +113,9 @@ public class ekonjugation {
 	
 	public static String[] endungenfuturIIaktiv = {"uero", "ueris", "uerit", "uerimus", "ueritis", "uerint"};
 	public static String[] endungenfuturIIpassiv = {"itus ero", "itus eris", "itus erit", "iti erimus", "iti eritis", "iti erunt"};
+	
+	public static String[] endungenfuturIIsaktiv = {"sero", "seris", "serit", "serimus", "seritis", "serint"};
+	public static String[] endungenfuturIIspassiv = {"sus ero", "sus eris", "sus erit", "si erimus", "si eritis", "si erunt"};
 	
 	
 	public static void formen(){
@@ -163,14 +181,72 @@ public class ekonjugation {
 			futurIIpassiv[i] = gvs + endungenfuturIIpassiv[i];
 			System.out.println(futurIIpassiv[i]);
 		}
+	}
+	
+	static void formens(int z) {
+		for (int i = 0; i<6; i++) {
+			präsensaktivindikativ[i] = e.rverbenespn()[z] + endungenpräsensaktiv[i];
+			System.out.println(präsensaktivindikativ[i]);
+			
+			präsensaktivkonjunktiv[i] = e.rverbenespn()[z] + endungenpräsensaktivkonjunktiv[i];
+			System.out.println(präsensaktivkonjunktiv[i]);
+			
+			präsenspassivindikativ[i] = e.rverbenespn()[z] + endungenpräsenspassiv[i];
+			System.out.println(präsenspassivindikativ[i]);
+			
+			präsenspassivkonjunktiv[i] = e.rverbenespn()[z] + endungenpräsenspassivkonjunktiv[i];
+			System.out.println(präsenspassivkonjunktiv[i]);
+			
+			imperfektaktivindikativ[i] = e.rverbenespn()[z] + endungenimperfektaktiv[i];
+			System.out.println(imperfektaktivindikativ[i]);
+			
+			imperfektaktivkonjunktiv[i] = e.rverbenespn()[z] + endungenimperfektaktivkonjunktiv[i];
+			System.out.println(imperfektaktivkonjunktiv[i]);
+			
+			imperfektpassivindikativ[i] = e.rverbenespn()[z] + endungenimperfektpassiv[i];
+			System.out.println(imperfektpassivindikativ[i]);
+			
+			imperfektpassivkonjunktiv[i] = e.rverbenespn()[z] + endungenimperfektpassivkonjunktiv[i];
+			System.out.println(imperfektpassivkonjunktiv[i]);
+			
+			futurIaktiv[i] = e.rverbenespn()[z] + endungenfuturIaktiv[i];
+			System.out.println(futurIaktiv[i]);
+			
+			futurIpassiv[i] = e.rverbenespn()[z] + endungenfuturIpassiv[i];
+			System.out.println(futurIpassiv[i]);
+			
+			perfektaktivindikativ[i] = e.rverbenes()[z] + endungenperfektaktivs[i];
+			System.out.println(perfektaktivindikativ[i]);
+			
+			perfektaktivkonjunktiv[i] = e.rverbenes()[z] + endungenperfektaktivskonjunktiv[i];
+			System.out.println(perfektaktivkonjunktiv[i]);
+			
+			perfektpassivindikativ[i] = e.rverbenes()[z] + endungenperfektpassivs[i];
+			System.out.println(perfektpassivindikativ[i]);
+			
+			perfektpassivkonjunktiv[i] = e.rverbenes()[z] + endungenperfektpassivskonjunktiv[i];
+			System.out.println(perfektpassivkonjunktiv[i]);
+			
+			plusquamperfektaktivindikativ[i] = e.rverbenes()[z] + endungenplusqsaktiv[i];
+			System.out.println(plusquamperfektaktivindikativ[i]);
+			
+			plusquamperfektaktivkonjunktiv[i] = e.rverbenes()[z] + endungenplusqsaktivkonjunktiv[i];
+			System.out.println(plusquamperfektaktivkonjunktiv[i]);
+			
+			plusquamperfektpassivindikativ[i] = e.rverbenes()[z] + endungenplusqspassiv[i];
+			System.out.println(plusquamperfektpassivindikativ[i]);
+			
+			plusquamperfektpassivkonjunktiv[i] = e.rverbenes()[z] + endungenplusqspassivkonjunktiv[i];
+			System.out.println(plusquamperfektpassivkonjunktiv[i]);
+			
+			futurIIaktiv[i] =  e.rverbenes()[z] + endungenfuturIIsaktiv[i];
+			System.out.println(futurIIaktiv[i]);
+			
+			futurIIpassiv[i] =  e.rverbenes()[z] + endungenfuturIIspassiv[i];
+			System.out.println(futurIIpassiv[i]);
+		}
 		
-		abfrage();
-	}
-	
-	static void abfrage() {
-		new frame();
-	}
-	
+	}	
 	
 	public String[] präsensaktivindikativ() {
 		return präsensaktivindikativ;
