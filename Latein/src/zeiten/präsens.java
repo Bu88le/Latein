@@ -24,7 +24,6 @@ public class präsens {
 				public static void präsensaktivindikativa() {
 					if (gv.endsWith("o")) {
 						gvs = gv.substring(0, gv.length()-1);
-						gv = gv;
 					}else if (gv.endsWith("as") || gv.endsWith("at")) {
 						gvs = gv.substring(0, gv.length()-2);
 						gv = gv.substring(0, gv.length()-2) + "o";
