@@ -1,5 +1,6 @@
 package zeiten;
 
+import vokabeln.e;
 import wörter.*;
 
 public class perfekt {
@@ -60,6 +61,42 @@ public class perfekt {
 				}else if (gv.endsWith("uerunt") || gv.endsWith("uistis")) {
 					gvs = gv.substring(0, gv.length()-6);
 					gv = gv.substring(0, gv.length()-6) + "eo";
+				}else if(gv.endsWith("si")) {
+					gvs = gv.substring(0, gv.length()-2);
+					for (int i = 0; i < e.rverbenes().length; i++) {
+						if (e.rverbenes()[i].equals(gvs)) {
+							if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+								gv = e.rverbenesn()[i];
+							}
+						}
+					}
+				}else if (gv.endsWith("sisti") || gv.endsWith("simus")){
+					gvs = gv.substring(0, gv.length()-5);
+					for (int i = 0; i < e.rverbenes().length; i++) {
+						if (e.rverbenes()[i].equals(gvs)) {
+							if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+								gv = e.rverbenesn()[i];
+							}
+						}
+					}
+				}else if (gv.endsWith("sit")){
+					gvs = gv.substring(0, gv.length()-3);
+					for (int i = 0; i < e.rverbenes().length; i++) {
+						if (e.rverbenes()[i].equals(gvs)) {
+							if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+								gv = e.rverbenesn()[i];
+							}
+						}
+					}
+				}else if (gv.endsWith("serunt") || gv.endsWith("sistis")){
+					gvs = gv.substring(0, gv.length()-6);
+					for (int i = 0; i < e.rverbenes().length; i++) {
+						if (e.rverbenes()[i].equals(gvs)) {
+							if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+								gv = e.rverbenesn()[i];
+							}
+						}
+					}
 				}else {
 					perfektaktivkonjunktive();
 				}
@@ -100,15 +137,39 @@ public class perfekt {
 				if (gv.endsWith("uerim") || gv.endsWith("ueris") || gv.endsWith("uerit")) {
 					gvs = gv.substring(0, gv.length()-5);
 					gv = gv.substring(0, gv.length()-5) + "eo";
-				}else if (gv.endsWith("ueris") || gv.endsWith("uerit")) {
-					gvs = gv.substring(0, gv.length()-5);
-					gv = gv.substring(0, gv.length()-5) + "eo";
 				}else if (gv.endsWith("uerimus") || gv.endsWith("ueritis")) {
 					gvs = gv.substring(0, gv.length()-7);
 					gv = gv.substring(0, gv.length()-7) + "eo";
 				}else if (gv.endsWith("uerint")) {
 					gvs = gv.substring(0, gv.length()-6);
 					gv = gv.substring(0, gv.length()-6) + "eo";
+				}else if (gv.endsWith("serim") || gv.endsWith("seris") || gv.endsWith("serit")) {
+					gvs = gv.substring(0, gv.length()-5);
+					for (int i = 0; i< e.rverbenes().length; i++) {
+						if (e.rverbenes()[i].equals(gvs)) {
+							if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+								gv = e.rverbenesn()[i];
+							}
+						}
+					}
+				}else if (gv.endsWith("serimus") || gv.endsWith("seritis")) {
+					gvs = gv.substring(0, gv.length()-7);
+					for (int i = 0; i< e.rverbenes().length; i++) {
+						if (e.rverbenes()[i].equals(gvs)) {
+							if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+								gv = e.rverbenesn()[i];
+							}
+						}
+					}
+				}else if (gv.endsWith("serint")) {
+					gvs = gv.substring(0, gv.length()-6);
+					for (int i = 0; i< e.rverbenes().length; i++) {
+						if (e.rverbenes()[i].equals(gvs)) {
+							if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+								gv = e.rverbenesn()[i];
+							}
+						}
+					}
 				}
 			}
 			
@@ -136,6 +197,16 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "o";
 						konskon = true;
+					}else if (gv.substring(0, gv.length()-4).endsWith("sus")){
+						gvs = gv.substring(0, gv.length()-7);
+						for (int i = 0; i < e.rverbenes().length; i++) {
+							if(e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									new ekonjugation(gv, gvs);									
+								}
+							}
+						}
 					}else if (gv.substring(0, gv.length()-4).endsWith("us")) {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "eo";
@@ -147,6 +218,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "o";
 						akon = true;
+						new akonjugation(gv, gvs);
 					}else if (gv.substring(0, gv.length()-3).endsWith("itus")){
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "io";
@@ -155,6 +227,16 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "o";
 						konskon = true;
+					}else if (gv.substring(0, gv.length()-3).endsWith("sus")){
+						gvs = gv.substring(0, gv.length()-6);
+						for (int i = 0; i < e.rverbenes().length; i++) {
+							if(e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									new ekonjugation(gv, gvs);									
+								}
+							}
+						}
 					}else if (gv.substring(0, gv.length()-4).endsWith("us")) {
 						gvs = gv.substring(0, gv.length()-5);
 						gv = gv.substring(0, gv.length()-5) + "eo";
@@ -166,6 +248,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-9);
 						gv = gv.substring(0, gv.length()-9) + "o";
 						akon = true;
+						new akonjugation(gv, gvs);
 					}else if (gv.substring(0, gv.length()-6).endsWith("iti")) {
 						gvs = gv.substring(0, gv.length()-9);
 						gv = gv.substring(0, gv.length()-9) + "io";
@@ -174,6 +257,16 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "o";
 						konskon = true;
+					}else if (gv.substring(0, gv.length()-6).endsWith("si")){
+						gvs = gv.substring(0, gv.length()-8);
+						for (int i = 0; i < e.rverbenes().length; i++) {
+							if(e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									new ekonjugation(gv, gvs);									
+								}
+							}
+						}
 					}else if (gv.substring(0, gv.length()-6).endsWith("i")) {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "eo";
@@ -185,6 +278,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "o";
 						akon = true;
+						new akonjugation(gv, gvs);
 					}else if (gv.substring(0, gv.length()-5).endsWith("iti")){
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "io";
@@ -193,6 +287,16 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "o";
 						konskon = true;
+					}else if (gv.substring(0, gv.length()-5).endsWith("si")){
+						gvs = gv.substring(0, gv.length()-7);
+						for (int i = 0; i < e.rverbenes().length; i++) {
+							if(e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									new ekonjugation(gv, gvs);									
+								}
+							}
+						}
 					}else if (gv.substring(0, gv.length()-5).endsWith("i")) {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "eo";
@@ -229,6 +333,16 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "o";
 						konskon = true;
+					}else if (gv.substring(0, gv.length()-4).endsWith("sus")){
+						gvs = gv.substring(0, gv.length()-7);
+						for (int i = 0; i < e.rverbenes()[i].length(); i++) {
+							if (e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									new ekonjugation(gv, gvs);
+								}
+							}
+						}
 					}else if(gv.substring(0, gv.length()-4).endsWith("us")) {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "eo";
@@ -240,6 +354,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-9);
 						gv = gv.substring(0, gv.length()-9) + "o";
 						akon = true;
+						new akonjugation(gv, gvs);
 					}else if (gv.substring(0, gv.length()-6).endsWith("iti")){
 						gvs = gv.substring(0, gv.length()-9);
 						gv = gv.substring(0, gv.length()-9) + "io";
@@ -248,6 +363,16 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "o";
 						konskon = true;
+					}else if (gv.substring(0, gv.length()-6).endsWith("si")){
+						gvs = gv.substring(0, gv.length()-8);
+						for (int i = 0; i < e.rverbenes()[i].length(); i++) {
+							if (e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									new ekonjugation(gv, gvs);
+								}
+							}
+						}
 					}else if (gv.substring(0, gv.length()-6).endsWith("i")) {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "eo";
@@ -259,6 +384,7 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "o";
 						akon = true;
+						new akonjugation(gv, gvs);
 					}else if (gv.substring(0, gv.length()-5).endsWith("iti")) {
 						gvs = gv.substring(0, gv.length()-8);
 						gv = gv.substring(0, gv.length()-8) + "io";
@@ -267,6 +393,16 @@ public class perfekt {
 						gvs = gv.substring(0, gv.length()-7);
 						gv = gv.substring(0, gv.length()-7) + "o";
 						konskon = true;
+					}else if (gv.substring(0, gv.length()-5).endsWith("si")){
+						gvs = gv.substring(0, gv.length()-7);
+						for (int i = 0; i < e.rverbenes()[i].length(); i++) {
+							if (e.rverbenes()[i].equals(gvs)) {
+								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+									gv = e.rverbenesn()[i];
+									new ekonjugation(gv, gvs);
+								}
+							}
+						}
 					}else if (gv.substring(0, gv.length()-5).endsWith("i")) {
 						gvs = gv.substring(0, gv.length()-6);
 						gv = gv.substring(0, gv.length()-6) + "eo";

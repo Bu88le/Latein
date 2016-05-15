@@ -254,6 +254,7 @@ public class frame {
 				button8.setVisible(false);
 				button9.setVisible(false);
 				uea.stringbuffer.delete(0, uea.stringbuffer.length());
+				uee.stringbuffer.delete(0, uee.stringbuffer.length());
 				framemain.framem();
 			}else if (ae.getSource() == frame.button8) {
 				System.exit(0);

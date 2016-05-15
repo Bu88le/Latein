@@ -4,7 +4,7 @@ public class uee {
 	
 	static String gv;
 	static int zähler;
-	static StringBuffer stringbuffer = new StringBuffer();
+	public static StringBuffer stringbuffer = new StringBuffer();
 	static String ss;
 	
 	public uee(String s) {
