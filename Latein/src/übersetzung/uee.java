@@ -9,7 +9,8 @@ public class uee {
 	
 	public uee(String s) {
 		gv = s;
-		auswahl();
+		System.out.println(gv);
+		auswahl(); 
 	}
 	
 	public static String[] a = {"moneo", "monere", "ermahnen"};
