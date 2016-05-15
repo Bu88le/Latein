@@ -295,12 +295,6 @@ public class plusquamperfekt {
 					}
 
 				}
-				
-				
-				public static void plusquamperfektpassivindikative(){
-					
-				}
-		
 		
 	/**-------------------------------------------------------------------------------------------------------------------
 	 * ----------------------------------------------PASSIV && KONJUNKTIV-------------------------------------------------
@@ -327,6 +321,18 @@ public class plusquamperfekt {
 							gvs = gv.substring(0, gv.length()-9);
 							gv = gv.substring(0, gv.length()-9) + "o";
 							konskon = true;
+						}else if (gv.substring(0, gv.length()-6).endsWith("sus")){
+							gvs = gv.substring(0, gv.length()-9);
+							for (int i = 0; i < e.rverbenes().length; i++){
+								if (e.rverbenes()[i].equals(gvs)) {
+									if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+										gv = e.rverbenesn()[i];
+										vok = e.rverbenesn()[i].substring(0, gvs.length()-1) + "re";
+										new ekonjugation(gv, gvs);
+									}
+								}
+							}
+							
 						}else if (gv.substring(0, gv.length()-6).endsWith("us")) {
 							gvs = gv.substring(0, gv.length()-8);
 							gv = gv.substring(0, gv.length()-8) + "eo";
@@ -347,6 +353,18 @@ public class plusquamperfekt {
 							gvs = gv.substring(0, gv.length()-10);
 							gv = gv.substring(0, gv.length()-10) + "o";
 							konskon = true;
+						}else if (gv.substring(0, gv.length()-8).endsWith("si")){
+							gvs = gv.substring(0, gv.length()-10);
+							for (int i = 0; i < e.rverbenes().length; i++){
+								if (e.rverbenes()[i].equals(gvs)) {
+									if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
+										gv = e.rverbenesn()[i];
+										vok = e.rverbenesn()[i].substring(0, gvs.length()-1) + "re";
+										new ekonjugation(gv, gvs);
+									}
+								}
+							}
+							
 						}else if (gv.substring(0, gv.length()-8).endsWith("i")) {
 							gvs = gv.substring(0, gv.length()-9);
 							gv = gv.substring(0, gv.length()-9) + "eo";

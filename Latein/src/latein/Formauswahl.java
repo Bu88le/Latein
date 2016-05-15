@@ -41,9 +41,9 @@ public class Formauswahl {
 		 */
 		if (gesuchtevokabel.contains(" ")) {
 			
-			if (gesuchtevokabel.endsWith("sum") || gesuchtevokabel.endsWith("es") ||
-					gesuchtevokabel.endsWith("est") || gesuchtevokabel.endsWith("sumus") ||
-					gesuchtevokabel.endsWith("estis") || gesuchtevokabel.endsWith("sunt")) {
+			if (gesuchtevokabel.endsWith(" sum") || gesuchtevokabel.endsWith(" es") ||
+					gesuchtevokabel.endsWith(" est") || gesuchtevokabel.endsWith(" sumus") ||
+					gesuchtevokabel.endsWith(" estis") || gesuchtevokabel.endsWith(" sunt")) {
 
 				perfektpassiv();
 
@@ -51,20 +51,20 @@ public class Formauswahl {
 				 * Vokabel Plusquamperfekt && Passiv ist
 				 * Wenn 'true', dann plusquamperfektpassiv()
 				 */
-			}else if (gesuchtevokabel.endsWith("eram") || gesuchtevokabel.endsWith("eras") ||
-					gesuchtevokabel.endsWith("erat") || gesuchtevokabel.endsWith("eramus") ||
-					gesuchtevokabel.endsWith("eratis") || gesuchtevokabel.endsWith("erant")) {
+			}else if (gesuchtevokabel.endsWith(" eram") || gesuchtevokabel.endsWith(" eras") ||
+					gesuchtevokabel.endsWith(" erat") || gesuchtevokabel.endsWith(" eramus") ||
+					gesuchtevokabel.endsWith(" eratis") || gesuchtevokabel.endsWith(" erant")) {
 
 
 				plusquamperfektpassiv();
 
 				/**Diese else-if-Schleife prüft, ob die Vokabel
-				 * Futur I && Passiv ist.
+				 * Futur I= && Passiv ist.
 				 * wenn 'true', dann futurIIpassiv() 	
 				 */
-			}else if (gesuchtevokabel.endsWith("ero") || gesuchtevokabel.endsWith("eris") || 
-					gesuchtevokabel.endsWith("erit") || gesuchtevokabel.endsWith("erimus") ||
-					gesuchtevokabel.endsWith("eritis") || gesuchtevokabel.endsWith("erunt")) {
+			}else if (gesuchtevokabel.endsWith(" ero") || gesuchtevokabel.endsWith(" eris") || 
+					gesuchtevokabel.endsWith(" erit") || gesuchtevokabel.endsWith(" erimus") ||
+					gesuchtevokabel.endsWith(" eritis") || gesuchtevokabel.endsWith(" erunt")) {
 
 				futurIIpassiv();
 
@@ -72,9 +72,9 @@ public class Formauswahl {
 				 * Vokabel Perfekt && Passiv && Konjunktiv ist
 				 * Wenn 'true', dann perfektpassivkonjunktiv()
 				 */
-			}else if(gesuchtevokabel.endsWith("sim") || gesuchtevokabel.endsWith("sis") ||
-					gesuchtevokabel.endsWith("sit") || gesuchtevokabel.endsWith("simus") ||
-					gesuchtevokabel.endsWith("sitis") || gesuchtevokabel.endsWith("sint")) {
+			}else if(gesuchtevokabel.endsWith(" sim") || gesuchtevokabel.endsWith("s is") ||
+					gesuchtevokabel.endsWith(" sit") || gesuchtevokabel.endsWith(" simus") ||
+					gesuchtevokabel.endsWith(" sitis") || gesuchtevokabel.endsWith(" sint")) {
 
 				perfektpassivkonjunktiv();
 
@@ -83,9 +83,9 @@ public class Formauswahl {
 				 * Plusquamperfekt && Passiv && Konjunktiv ist
 				 * Wenn 'true', dann plusquamperfektpassivkonjunktiv()
 				 */
-			}else if(gesuchtevokabel.endsWith("essem") || gesuchtevokabel.endsWith("esses") ||
-					gesuchtevokabel.endsWith("esset") || gesuchtevokabel.endsWith("essemus") ||
-					gesuchtevokabel.endsWith("essetis") || gesuchtevokabel.endsWith("essent")) {
+			}else if(gesuchtevokabel.endsWith(" essem") || gesuchtevokabel.endsWith(" esses") ||
+					gesuchtevokabel.endsWith("e sset") || gesuchtevokabel.endsWith(" essemus") ||
+					gesuchtevokabel.endsWith(" essetis") || gesuchtevokabel.endsWith(" essent")) {
 
 				plusquamperfektpassivkonjunktiv();
 
@@ -1126,8 +1126,8 @@ public class Formauswahl {
 				void plusquamperfektpassivkonjunktiv() {
 					sons = true;
 					System.out.println("Plusquamperfekt Passiv Konjunktiv");
-					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
-					p.plusquamperfektpassivkonjunktiva();
+					new plusquamperfekt(gesuchtevokabel);
+					plusquamperfekt.plusquamperfektpassivkonjunktiva();
 				}
 				
 	
