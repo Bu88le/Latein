@@ -81,19 +81,19 @@ public class framefuturI{
 		public void actionPerformed(ActionEvent ae) {
 			if (ae.getSource() == framefuturI.button1) {
 				if (Formauswahl.akon == true) {
-					JOptionPane.showMessageDialog(null, akonjugation.futurIaktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.futurIaktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (Formauswahl.ekon == true) {
-					JOptionPane.showMessageDialog(null, ekonjugation.futurIaktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.futurIaktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (Formauswahl.ikon == true) {
 					
 				}else if (Formauswahl.konskon == true) {
 					
 				}else if (Formauswahl.sons == true) {
 					if (akonjugation.akon == true) {
-						JOptionPane.showMessageDialog(null, akonjugation.futurIaktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(framemain.frame1, akonjugation.futurIaktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 
 					}else if (ekonjugation.ekon == true) {
-						JOptionPane.showMessageDialog(null, ekonjugation.futurIaktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);					
+						JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.futurIaktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);					
 					}else if (ikonjugation.ikon == true) {
 						
 					}else if (konskonjugation.konskon == true) {
@@ -102,18 +102,18 @@ public class framefuturI{
 				}
 			}else if (ae.getSource() == framefuturI.button2) {
 				if (Formauswahl.akon == true) {
-					JOptionPane.showMessageDialog(null, akonjugation.futurIpassiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.futurIpassiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (Formauswahl.ekon == true) {
-					JOptionPane.showMessageDialog(null, ekonjugation.futurIpassiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.futurIpassiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (Formauswahl.ikon == true) {
 					
 				}else if (Formauswahl.konskon == true) {
 					
 				}else if (Formauswahl.sons == true) {
 					if (akonjugation.akon == true) {
-						JOptionPane.showMessageDialog(null, akonjugation.futurIpassiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(framemain.frame1, akonjugation.futurIpassiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 					}else if (ekonjugation.ekon == true) {
-						JOptionPane.showMessageDialog(null, ekonjugation.futurIpassiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.futurIpassiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 					}else if (ikonjugation.ikon == true) {
 						
 					}else if (konskonjugation.konskon == true) {

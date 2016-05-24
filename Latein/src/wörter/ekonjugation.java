@@ -36,10 +36,10 @@ public class ekonjugation {
 	//-----------------------------------------------------------------------------------------------
 	//--------------------------------------PRÄSENS--------------------------------------------------
 	//-----------------------------------------------------------------------------------------------
-	public static String[] präsensaktivindikativ = {"", "", "", "", "", ""};
-	public static String[] präsensaktivkonjunktiv = {"", "", "", "", "", ""};
-	public static String[] präsenspassivindikativ = {"", "", "", "", "", ""};
-	public static String[] präsenspassivkonjunktiv = {"", "", "", "", "", ""};
+	public static String[] präsensaktivindikativ = new String[6];
+	public static String[] präsensaktivkonjunktiv = new String[6];
+	public static String[] präsenspassivindikativ = new String[6];
+	public static String[] präsenspassivkonjunktiv = new String[6];
 	
 	public static String[] endungenpräsensaktiv = {"eo", "es", "et", "emus", "etis", "ent"};
 	public static String[] endungenpräsensaktivkonjunktiv = {"eam", "eas", "eat", "eamus", "eatis", "eant"};
@@ -49,10 +49,10 @@ public class ekonjugation {
 	//-------------------------------------------------------------------------------------------------
 	//-------------------------------------IMPERFEKT---------------------------------------------------
 	//-------------------------------------------------------------------------------------------------
-	public static String[] imperfektaktivindikativ = {"", "", "", "", "", ""};
-	public static String[] imperfektaktivkonjunktiv = {"", "", "", "", "", ""};
-	public static String[] imperfektpassivindikativ = {"", "", "", "", "", ""};
-	public static String[] imperfektpassivkonjunktiv = {"", "", "", "", "", ""};
+	public static String[] imperfektaktivindikativ = new String[6];
+	public static String[] imperfektaktivkonjunktiv = new String[6];
+	public static String[] imperfektpassivindikativ = new String[6];
+	public static String[] imperfektpassivkonjunktiv = new String[6];
 	
 	public static String[] endungenimperfektaktiv = {"ebam", "ebas", "ebat", "ebamus", "ebatis", "ebant"};
 	public static String[] endungenimperfektaktivkonjunktiv = {"erem", "eres", "eret", "eremus", "eretis", "erent"};
@@ -62,10 +62,10 @@ public class ekonjugation {
 	//-------------------------------------------------------------------------------------------------
 	//------------------------------------PERFEKT------------------------------------------------------
 	//-------------------------------------------------------------------------------------------------
-	public static String[] perfektaktivindikativ = {"", "", "", "", "", ""};
-	public static String[] perfektaktivkonjunktiv = {"", "", "", "", "", ""};
-	public static String[] perfektpassivindikativ = {"", "", "", "", "", ""};
-	public static String[] perfektpassivkonjunktiv = {"", "", "", "", "", ""};
+	public static String[] perfektaktivindikativ = new String[6];
+	public static String[] perfektaktivkonjunktiv = new String[6];
+	public static String[] perfektpassivindikativ = new String[6];
+	public static String[] perfektpassivkonjunktiv = new String[6];
 	
 	public static String[] endungenperfektaktiv = {"ui", "uisti", "uit", "uimus", "uistis", "uerunt"};
 	public static String[] endungenperfektpassiv = {"itus sum", "itus es", "itus est", "iti sumus", "iti estis", "iti sunt"};
@@ -80,10 +80,10 @@ public class ekonjugation {
 	//-------------------------------------------------------------------------------------------------
 	//-----------------------------------PLUSQUAMPERFEKT-----------------------------------------------
 	//-------------------------------------------------------------------------------------------------
-	public static String[] plusquamperfektaktivindikativ = {"", "", "", "", "", ""};
-	public static String[] plusquamperfektaktivkonjunktiv = {"", "", "", "", "", ""};
-	public static String[] plusquamperfektpassivindikativ = {"", "", "", "", "", ""};
-	public static String[] plusquamperfektpassivkonjunktiv = {"", "", "", "", "", ""};
+	public static String[] plusquamperfektaktivindikativ = new String[6];
+	public static String[] plusquamperfektaktivkonjunktiv = new String[6];
+	public static String[] plusquamperfektpassivindikativ = new String[6];
+	public static String[] plusquamperfektpassivkonjunktiv = new String[6];
 	
 	public static String[] endungenplusqaktiv = {"ueram", "ueras", "uerat", "ueramus", "ueratis", "uerant"};
 	public static String[] endungenplusqaktivkonjunktiv = {"uissem", "uisses", "uisset", "uissemus", "uissetis", "uissent"};
@@ -98,8 +98,8 @@ public class ekonjugation {
 	//-------------------------------------------------------------------------------------------------
 	//-----------------------------------FUTUR I-------------------------------------------------------
 	//-------------------------------------------------------------------------------------------------
-	public static String[] futurIaktiv = {"", "", "", "", "", ""};
-	public static String[] futurIpassiv = {"", "", "", "", "", ""};
+	public static String[] futurIaktiv = new String[6];
+	public static String[] futurIpassiv = new String[6];
 	
 	public static String[] endungenfuturIaktiv = {"ebo", "ebis", "ebit", "ebimus", "ebitis", "ebunt"};
 	public static String[] endungenfuturIpassiv = {"ebor", "eberis", "ebitur", "ebimur", "ebimini", "ebuntur"};
@@ -107,8 +107,8 @@ public class ekonjugation {
 	//--------------------------------------------------------------------------------------------------
 	//--------------------------------------FUTUR II----------------------------------------------------
 	//--------------------------------------------------------------------------------------------------
-	public static String[] futurIIaktiv = {"", "", "", "", "", ""};
-	public static String[] futurIIpassiv = {"", "", "", "", "", ""};
+	public static String[] futurIIaktiv = new String[6];
+	public static String[] futurIIpassiv = new String[6];
 	
 	public static String[] endungenfuturIIaktiv = {"uero", "ueris", "uerit", "uerimus", "ueritis", "uerint"};
 	public static String[] endungenfuturIIpassiv = {"itus ero", "itus eris", "itus erit", "iti erimus", "iti eritis", "iti erunt"};

@@ -32,10 +32,10 @@ public class akonjugation {
 		//-----------------------------------------------------------------------------------------------
 		//--------------------------------------PRÄSENS--------------------------------------------------
 		//-----------------------------------------------------------------------------------------------
-		public static String[] präsensaktivindikativ = {"", "", "", "", "", ""};
-		public static String[] präsensaktivkonjunktiv = {"", "", "", "", "", ""};
-		public static String[] präsenspassivindikativ = {"", "", "", "", "", ""};
-		public static String[] präsenspassivkonjunktiv = {"", "", "", "", "", ""};
+		public static String[] präsensaktivindikativ = new String[6];
+		public static String[] präsensaktivkonjunktiv = new String[6];
+		public static String[] präsenspassivindikativ = new String[6];
+		public static String[] präsenspassivkonjunktiv = new String[6];
 		
 		
 		static String[] endungenpräsensaktiv = {"o \n", "as \n", "at \n", "amus \n", "atis \n", "ant \n"};
@@ -47,10 +47,10 @@ public class akonjugation {
 		//-------------------------------------------------------------------------------------------------
 		//-------------------------------------IMPERFEKT---------------------------------------------------
 		//-------------------------------------------------------------------------------------------------
-		public static String[] imperfektaktivindikativ = {"", "", "", "", "", ""};
-		public static String[] imperfektaktivkonjunktiv = {"", "", "", "", "", ""};
-		public static String[] imperfektpassivindikativ = {"", "", "", "", "", ""};
-		public static String[] imperfektpassivkonjunktiv = {"", "", "", "", "", ""};
+		public static String[] imperfektaktivindikativ = new String[6];
+		public static String[] imperfektaktivkonjunktiv = new String[6];
+		public static String[] imperfektpassivindikativ = new String[6];
+		public static String[] imperfektpassivkonjunktiv = new String[6];
 		
 		static String[] endungenimperfektaktiv = {"abam", "abas", "abat", "abamus", "abatis", "abant"};
 		static String[] endungenimperfektaktivkonjunktiv = {"arem", "ares", "aret", "aremus", "aretis", "arent"};
@@ -61,10 +61,10 @@ public class akonjugation {
 		//-------------------------------------------------------------------------------------------------
 		//------------------------------------PERFEKT------------------------------------------------------
 		//-------------------------------------------------------------------------------------------------
-		public static String[] perfektaktivindikativ = {"", "", "", "", "", ""};
-		public static String[] perfektaktivkonjunktiv = {"", "", "", "", "", ""};
-		public static String[] perfektpassivindikativ = {"", "", "", "", "", ""};
-		public static String[] perfektpassivkonjunktiv = {"", "", "", "", "", ""};
+		public static String[] perfektaktivindikativ = new String[6];
+		public static String[] perfektaktivkonjunktiv = new String[6];
+		public static String[] perfektpassivindikativ = new String[6];
+		public static String[] perfektpassivkonjunktiv = new String[6];
 		
 		public static String[] endungenperfektaktiv = {"avi", "avisti", "avit", "avimus", "avistis", "averunt"};
 		public static String[] endungenperfektaktivkonjunktiv = {"averim", "averis", "averit", "averimus", "averitis", "averint"};
@@ -79,10 +79,10 @@ public class akonjugation {
 		//-------------------------------------------------------------------------------------------------
 		//-----------------------------------PLUSQUAMPERFEKT-----------------------------------------------
 		//-------------------------------------------------------------------------------------------------
-		public static String[] plusquamperfektaktivindikativ = {"", "", "", "", "", ""};
-		public static String[] plusquamperfektaktivkonjunktiv = {"", "", "", "", "", ""};
-		public static String[] plusquamperfektpassivindikativ = {"", "", "", "", "", ""};
-		public static String[] plusquamperfektpassivkonjunktiv = {"", "", "", "", "", ""};
+		public static String[] plusquamperfektaktivindikativ = new String[6];
+		public static String[] plusquamperfektaktivkonjunktiv = new String[6];
+		public static String[] plusquamperfektpassivindikativ = new String[6];
+		public static String[] plusquamperfektpassivkonjunktiv = new String[6];
 		
 		public static String[] endungenplusqaktiv = {"averam", "averas", "averat", "averamus", "averatis", "averant"};
 		public static String[] endungenplusqaktivkonjunktiv = {"avissem", "avisses", "avisset", "avissemus", "avissetis", "avissent"};
@@ -96,8 +96,8 @@ public class akonjugation {
 		//-------------------------------------------------------------------------------------------------
 		//-----------------------------------FUTUR I-------------------------------------------------------
 		//-------------------------------------------------------------------------------------------------
-		public static String[] futurIaktiv = {"", "", "", "", "", ""};
-		public static String[] futurIpassiv = {"", "", "", "", "", ""};
+		public static String[] futurIaktiv = new String[6];
+		public static String[] futurIpassiv = new String[6];
 		
 		public static String[] endungenfuturIaktiv = {"abo", "abis", "abit", "abimus", "abitis", "abunt"};
 		public static String[] endungenfuturIpassiv = {"abor", "aberis", "abitur", "abimur", "abimini", "abuntur"};
@@ -106,8 +106,8 @@ public class akonjugation {
 		//--------------------------------------------------------------------------------------------------
 		//--------------------------------------FUTUR II----------------------------------------------------
 		//--------------------------------------------------------------------------------------------------
-		public static String[] futurIIaktiv = {"", "", "", "", "", ""};
-		public static String[] futurIIpassiv = {"", "", "", "", "", ""};
+		public static String[] futurIIaktiv = new String[6];
+		public static String[] futurIIpassiv = new String[6];
 		
 		public static String[] endungenfuturIIaktiv = {"avero", "averis", "averit", "averimus", "averitis", "averint"};
 		public static String[] endungenfuturIIpassiv = {"atus ero", "atus eris", "atus erit", "ati erimus", "ati eritis", "ati erunt"};
