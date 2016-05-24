@@ -26,29 +26,33 @@ public class frameadmin implements ItemListener, ActionListener{
 	static JFrame frame1;
 	static JRadioButton rbutton1;
 	static JButton button1, button2, button3, button4, button5, button6, button7;
+	public static int Y_Buttons = 20;
+	int höhe;
 	
 	public frameadmin() {
-		frame();
-	}
-	
-	public void frame() {
 		frame1 = new JFrame("ADMIN ACCESS");
 		frame1.setSize(450, 400);
 		frame1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame1.setLayout(null);
 		frame1.setLocationRelativeTo(null);
-		frame1.setResizable(false);
 		frame1.addComponentListener(new HListener());
 		frame1.addComponentListener(new WListener());
+		höhe = frame1.getHeight();
+		
+		frame();
+	}
+	
+	public void frame() {
+
 		
 		rbutton1 = new JRadioButton("Resizable", false);
-		rbutton1.setBounds(0,0,150,15);
-		rbutton1.setVisible(false);
+		rbutton1.setBounds(0,Y_Buttons-20,150,15);
+		rbutton1.setVisible(true);
 		rbutton1.addItemListener(this);
 		frame1.add(rbutton1);
 		
 		button1 = new JButton("Vokabel suchen");
-		button1.setBounds(125,20,200,30);
+		button1.setBounds(125,Y_Buttons,200,30);
 		button1.setBackground(Color.lightGray);
 		button1.setForeground(Color.BLUE);
 		button1.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -56,7 +60,7 @@ public class frameadmin implements ItemListener, ActionListener{
 		frame1.add(button1);
 		
 		button2 = new JButton("Button 2");
-		button2.setBounds(280, 60, 150, 30);
+		button2.setBounds(280, Y_Buttons+40, 150, 30);
 		button2.setBackground(Color.lightGray);
 		button2.setForeground(Color.BLUE);
 		button2.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -64,7 +68,7 @@ public class frameadmin implements ItemListener, ActionListener{
 		frame1.add(button2);
 		
 		button3 = new JButton("Button 3");
-		button3.setBounds(280, 100, 150, 30);
+		button3.setBounds(280, Y_Buttons+80, 150, 30);
 		button3.setBackground(Color.lightGray);
 		button3.setForeground(Color.BLUE);
 		button3.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -73,7 +77,7 @@ public class frameadmin implements ItemListener, ActionListener{
 		
 		
 		button4 = new JButton("Button 4");
-		button4.setBounds(125, 140, 200, 30);
+		button4.setBounds(125, Y_Buttons+120, 200, 30);
 		button4.setBackground(Color.lightGray);
 		button4.setForeground(Color.BLUE);
 		button4.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -81,7 +85,7 @@ public class frameadmin implements ItemListener, ActionListener{
 		frame1.add(button4);
 		
 		button5 = new JButton("Button 5");
-		button5.setBounds(10, 100, 150, 30);
+		button5.setBounds(10, Y_Buttons+80, 150, 30);
 		button5.setBackground(Color.lightGray);
 		button5.setForeground(Color.BLUE);
 		button5.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -89,7 +93,7 @@ public class frameadmin implements ItemListener, ActionListener{
 		frame1.add(button5);
 		
 		button6 = new JButton("Button 6");
-		button6.setBounds(10, 60, 150, 30);
+		button6.setBounds(10, Y_Buttons+40, 150, 30);
 		button6.setBackground(Color.lightGray);
 		button6.setForeground(Color.BLUE);
 		button6.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -99,6 +103,12 @@ public class frameadmin implements ItemListener, ActionListener{
 		
 		
 		frame1.setVisible(true);
+	}
+	
+	public void resetY(int i) {
+		Y_Buttons += i/10;
+		setVisible();
+		frame();
 	}
 
 	@Override
@@ -134,47 +144,20 @@ public class frameadmin implements ItemListener, ActionListener{
 		}
 		public void componentResized(ComponentEvent arg0) {
 			int height;
-			int width;
-			if (frame1.getHeight() != 400) {
-				if (frame1.getHeight() < 400) {
+			if (frame1.getHeight() > höhe) {
+					height = 400 - frame1.getHeight();
+					höhe = height;
+					resetY(height);
+			}else if (frame1.getHeight() < höhe) {
+				System.out.println("Yep, It's me");
 					height = frame1.getHeight() - 400;
-					button1.setBounds((int)button1.getLocation().getX(), 20-(height/5), button1.getWidth(), button1.getHeight());
-					button2.setBounds((int)button2.getLocation().getX(), 60-(height/5), button2.getWidth(), button2.getHeight());
-					button3.setBounds((int)button3.getLocation().getX(), 100-(height/5), button3.getWidth(), button3.getHeight() );
-					button4.setBounds((int)button4.getLocation().getX(), 140-(height/5), button4.getWidth(), button4.getHeight());
-					button5.setBounds((int)button5.getLocation().getX(), 100-(height/5), button5.getWidth(), button5.getHeight());
-					button6.setBounds((int)button6.getLocation().getX(), 60-(height/5), button6.getWidth(), button6.getHeight());	
-					while (frame1.getHeight() == 273 || frame1.getHeight() < 273) {
-						Point d = frame1.getLocation();
-						frame1.setResizable(false);
-						rbutton1.setSelected(false);
-						  Robot robot = null;
-						try {
-							robot = new Robot();
-						} catch (AWTException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						  robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-						  robot.mouseMove((int) ((d.getX())+((frame1.getWidth()/2))), (int) ((d.getY())+(frame1.getHeight()/2)));
-						frame1.setBounds((int)d.getX(), ((int) d.getY()-2), frame1.getWidth()+2, 274);
-					}
-					
-					
-				}else if (frame1.getHeight() > 400) {
-					height = frame1.getHeight() - 400;
-					button1.setBounds((int)button1.getLocation().getX(), 20+(height/5), button1.getWidth(), button1.getHeight());
-					button2.setBounds((int)button2.getLocation().getX(), 60+(height/5), button2.getWidth(), button2.getHeight());
-					button3.setBounds((int)button3.getLocation().getX(), 100+(height/5), button3.getWidth(), button3.getHeight() );
-					button4.setBounds((int)button4.getLocation().getX(), 140+(height/5), button4.getWidth(), button4.getHeight());
-					button5.setBounds((int)button5.getLocation().getX(), 100+(height/5), button5.getWidth(), button5.getHeight());
-					button6.setBounds((int)button6.getLocation().getX(), 60+(height/5), button6.getWidth(), button6.getHeight());
-				}else if (frame1.getHeight() == 273 ) {
+					höhe = height;
+					resetY(height);
+			}else if (frame1.getHeight() == 273 ) {
 					frame1.setResizable(false);
 					rbutton1.setSelected(false);
 					Point d = frame1.getLocation();
 					frame1.setLocation((int)d.getX(), (int) (d.getY()-5));
-				}
 			}
 		}
 
@@ -260,6 +243,16 @@ public class frameadmin implements ItemListener, ActionListener{
 			
 		}
 		
+	}
+	
+	public void setVisible() {
+		rbutton1.setVisible(false);
+		button1.setVisible(false);
+		button2.setVisible(false);
+		button3.setVisible(false);
+		button4.setVisible(false);
+		button5.setVisible(false);
+		button6.setVisible(false);
 	}
 
 }

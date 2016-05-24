@@ -97,10 +97,10 @@ public class frameimperfekt {
 		public void actionPerformed(ActionEvent ae) {
 			if (ae.getSource() == frameimperfekt.button1) {
 				if (Formauswahl.akon == true) {
-					JOptionPane.showMessageDialog(null, akonjugation.imperfektaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 					
 				}else if (Formauswahl.ekon == true) {				
-					JOptionPane.showMessageDialog(null, ekonjugation.imperfektaktivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektaktivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if(Formauswahl.ikon == true) {
 					
 					
@@ -110,9 +110,9 @@ public class frameimperfekt {
 				}else if (Formauswahl.sons == true) {
 					
 					if (akonjugation.akon == true) {
-						JOptionPane.showMessageDialog(null, akonjugation.imperfektaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);					
+						JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);					
 					}else if(ekonjugation.ekon == true) {
-						JOptionPane.showMessageDialog(null, ekonjugation.imperfektaktivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektaktivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 					}else if(ikonjugation.ikon == true) {
 						
 					}else if(konskonjugation.konskon == true) {
@@ -123,9 +123,9 @@ public class frameimperfekt {
 			}else if (ae.getSource() == frameimperfekt.button2) {
 				
 				if (Formauswahl.akon == true) {
-					JOptionPane.showMessageDialog(null, akonjugation.imperfektpassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
+					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektpassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 				}else if (Formauswahl.ekon == true) {
-					JOptionPane.showMessageDialog(null, ekonjugation.imperfektpassivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
+					JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektpassivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 				}else if(Formauswahl.ikon == true) {
 					
 					
@@ -134,9 +134,9 @@ public class frameimperfekt {
 					
 				}else if (Formauswahl.sons == true) {
 					if (akonjugation.akon == true) {
-						JOptionPane.showMessageDialog(null, akonjugation.imperfektpassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektpassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 					}else if(ekonjugation.ekon == true) {
-						JOptionPane.showMessageDialog(null, ekonjugation.imperfektpassivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektpassivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 					}else if(ikonjugation.ikon == true) {
 						
 					}else if (konskonjugation.konskon == true) {
@@ -145,9 +145,9 @@ public class frameimperfekt {
 				}
 			}else if (ae.getSource() == frameimperfekt.button3) {
 				if (Formauswahl.akon == true) {
-					JOptionPane.showMessageDialog(null, akonjugation.imperfektaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
+					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 				}else if(Formauswahl.ekon == true) {
-					JOptionPane.showMessageDialog(null, ekonjugation.imperfektaktivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
+					JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektaktivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 				}else if(Formauswahl.ikon == true) {
 					
 					
@@ -156,9 +156,9 @@ public class frameimperfekt {
 					
 				}else if (Formauswahl.sons == true) {
 					if (akonjugation.akon == true) {
-						JOptionPane.showMessageDialog(null, akonjugation.imperfektaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 					}else if (ekonjugation.ekon == true) {
-						JOptionPane.showMessageDialog(null, ekonjugation.imperfektaktivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektaktivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 					}else if (ikonjugation.ikon == true) {
 						
 					}else if (konskonjugation.konskon == true) {
@@ -167,9 +167,9 @@ public class frameimperfekt {
 				}
 			}else if (ae.getSource() == frameimperfekt.button4) {
 				if (Formauswahl.akon == true) {
-					JOptionPane.showMessageDialog(null, akonjugation.imperfektpassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
+					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektpassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 				}else if(Formauswahl.ekon == true) {
-					JOptionPane.showMessageDialog(null, ekonjugation.imperfektpassivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
+					JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektpassivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
 				}else if(Formauswahl.ikon == true) {
 					
 					
@@ -178,9 +178,9 @@ public class frameimperfekt {
 					
 				}else if (Formauswahl.sons == true) {
 					if (akonjugation.akon == true) {
-						JOptionPane.showMessageDialog(null, akonjugation.imperfektpassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);	
+						JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektpassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);	
 					}else if (ekonjugation.ekon == true) {
-						JOptionPane.showMessageDialog(null, ekonjugation.imperfektpassivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektpassivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 					}else if (ikonjugation.ikon == true) {
 						
 					}else if (konskonjugation.konskon == true) {

@@ -260,9 +260,9 @@ public class frame {
 				System.exit(0);
 			}else if (ae.getSource() == frame.button9) {
 				if (akonjugation.akon == true) {
-					JOptionPane.showMessageDialog(null, übergabe.returngv(), framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(framemain.frame1, übergabe.returngv(), framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
 				}else if (Formauswahl.ekon == true) {
-					JOptionPane.showMessageDialog(null, übergabe.returngv(), framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(framemain.frame1, übergabe.returngv(), framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
 				}
 			}else if (ae.getSource() == frame.button10) {
 				label1.setVisible(false);

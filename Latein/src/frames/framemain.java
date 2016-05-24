@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class framemain{
 
@@ -31,6 +33,7 @@ public class framemain{
 		frame1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame1.setResizable(false);
 		frame1.setLayout(null);
+		
 		framem();
 	}
 	
@@ -164,6 +167,7 @@ public class framemain{
 					tfield2.setVisible(true);
 					button3.setVisible(true);
 					pfield1.setVisible(true);
+					pfield1.requestFocus();
 					
 				}else {
 					button1.setVisible(false);
@@ -259,6 +263,7 @@ public class framemain{
 						tfield2.setVisible(true);
 						button3.setVisible(true);
 						pfield1.setVisible(true);
+						pfield1.requestFocus();
 					}else {
 						button1.setVisible(false);
 						button2.setVisible(false);
