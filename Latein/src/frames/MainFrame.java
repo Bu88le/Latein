@@ -40,6 +40,7 @@ public class MainFrame extends JFrame {
 		c.remove(pm);
 		c.add(pa);
 		pa.setBounds(0,0,600,400);
+		PanelAdmin.pwf_login.requestFocus();
 		c.revalidate();
 	}
 
