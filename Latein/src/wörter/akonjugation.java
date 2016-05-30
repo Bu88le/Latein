@@ -119,7 +119,7 @@ public class akonjugation {
 	public static void formen(){
 
 		for (int i = 0; i < 6; i++) {
-			präsensaktivindikativ[i] = gvs + endungenpräsensaktiv[i];	
+			präsensaktivindikativ[i] = gvs + endungenpräsensaktiv[i];
 			System.out.println (präsensaktivindikativ[i]);
 			
 			präsensaktivkonjunktiv[i] = gvs + endungenpräsensaktivkonjunktiv[i];
@@ -203,7 +203,7 @@ public class akonjugation {
 			
 			imperfektpassivindikativ[i] = a.rverbenau()[z] + endungenimperfektpassiv[i];
 			System.out.println(imperfektpassivindikativ[i]);
-			
+	
 			imperfektpassivkonjunktiv[i] = a.rverbenau()[z] + endungenimperfektpassivkonjunktiv[i];
 			System.out.println(imperfektpassivkonjunktiv[i]);
 			

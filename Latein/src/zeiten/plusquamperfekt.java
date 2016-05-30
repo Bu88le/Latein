@@ -486,7 +486,7 @@ public class plusquamperfekt {
 		
 		
 		
-		static public String returngv() {
+		public String returngv() {
 			return gv;
 		}
 		

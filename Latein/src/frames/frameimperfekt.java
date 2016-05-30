@@ -96,15 +96,15 @@ public class frameimperfekt {
 	static class AListener implements ActionListener{
 		public void actionPerformed(ActionEvent ae) {
 			if (ae.getSource() == frameimperfekt.button1) {
-				if (Formauswahl.akon == true) {
+				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 					
-				}else if (Formauswahl.ekon == true) {				
+				}else if (ekonjugation.ekon == true) {				
 					JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektaktivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-				}else if(Formauswahl.ikon == true) {
+				}else if(ikonjugation.ikon == true) {
 					
 					
-				}else if(Formauswahl.konskon == true) {
+				}else if(konskonjugation.konskon == true) {
 					
 					
 				}else if (Formauswahl.sons == true) {
@@ -122,14 +122,14 @@ public class frameimperfekt {
 				}
 			}else if (ae.getSource() == frameimperfekt.button2) {
 				
-				if (Formauswahl.akon == true) {
+				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektpassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
-				}else if (Formauswahl.ekon == true) {
+				}else if (ekonjugation.ekon == true) {
 					JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektpassivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
-				}else if(Formauswahl.ikon == true) {
+				}else if(ikonjugation.ikon == true) {
 					
 					
-				}else if (Formauswahl.konskon == true) {
+				}else if (konskonjugation.konskon == true) {
 					
 					
 				}else if (Formauswahl.sons == true) {
@@ -144,14 +144,14 @@ public class frameimperfekt {
 					}
 				}
 			}else if (ae.getSource() == frameimperfekt.button3) {
-				if (Formauswahl.akon == true) {
+				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
-				}else if(Formauswahl.ekon == true) {
+				}else if(ekonjugation.ekon == true) {
 					JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektaktivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
-				}else if(Formauswahl.ikon == true) {
+				}else if(ikonjugation.ikon == true) {
 					
 					
-				}else if(Formauswahl.konskon == true) {
+				}else if(konskonjugation.konskon == true) {
 					
 					
 				}else if (Formauswahl.sons == true) {
@@ -166,14 +166,14 @@ public class frameimperfekt {
 					}
 				}
 			}else if (ae.getSource() == frameimperfekt.button4) {
-				if (Formauswahl.akon == true) {
+				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.imperfektpassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
-				}else if(Formauswahl.ekon == true) {
+				}else if(ekonjugation.ekon == true) {
 					JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.imperfektpassivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
-				}else if(Formauswahl.ikon == true) {
+				}else if(ikonjugation.ikon == true) {
 					
 					
-				}else if(Formauswahl.konskon == true) {
+				}else if(konskonjugation.konskon == true) {
 					
 					
 				}else if (Formauswahl.sons == true) {
