@@ -10,7 +10,8 @@ public class Formauswahl {
 
 	String gesuchtevokabel;
 	
-	static public boolean akon, ekon, ikon, konskon, sons;
+	static private boolean akon, ekon, ikon, konskon;
+	static public boolean sons;
 	
 	
 
@@ -1025,10 +1026,9 @@ public class Formauswahl {
 		 * ----------------------------------------
 		 */
 		void perfektpassiv() {
-			sons = true;
 			System.out.println("Perfekt Passiv");
-			perfekt p = new perfekt(gesuchtevokabel);
-			p.perfektpassivindikativa();
+			new perfekt(gesuchtevokabel);
+			perfekt.perfektpassivindikativa();
 		}
 		
 		/*----------------------------------------
@@ -1039,8 +1039,8 @@ public class Formauswahl {
 		void perfektpassivkonjunktiv() {
 			sons = true;
 			System.out.println("Perfekt Passiv Konjunktiv");
-			perfekt p = new perfekt(gesuchtevokabel);
-			p.perfektpassivkonjunktiva();
+			new perfekt(gesuchtevokabel);
+			perfekt.perfektpassivkonjunktiva();
 		}
 	
 	
@@ -1083,10 +1083,10 @@ public class Formauswahl {
 				void plusquamperfektaktive() {
 					ekon = true;					
 					System.out.println("Plusquamperfekt Aktiv e");
-					new plusquamperfekt(gesuchtevokabel);
+					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
 					plusquamperfekt.plusquamperfektindikativaktive();
 					
-					new ekonjugation(plusquamperfekt.returngv(), plusquamperfekt.returngvs());
+					new ekonjugation(p.returngv(), p.returngvs());
 				}
 				
 			/**--------------------------------------------
@@ -1111,10 +1111,10 @@ public class Formauswahl {
 					ekon = true;
 					System.out.println("Plusquamperfekt Konjunktiv E");
 					
-					new plusquamperfekt(gesuchtevokabel);
+					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
 					plusquamperfekt.plusquamperfektkonjunktive();
 					
-					new ekonjugation(plusquamperfekt.returngv(), plusquamperfekt.returngvs());
+					new ekonjugation(p.returngv(), p.returngvs());
 				}
 				void plusquamperfektkonjunktivi() {
 					ikon = true;

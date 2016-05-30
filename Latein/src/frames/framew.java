@@ -93,14 +93,14 @@ public class framew implements ActionListener  {
 	public void actionPerformed(ActionEvent ae) {
 		
 		if (ae.getSource() == this.button1) {
-			if (Formauswahl.akon == true) {
+			if (akonjugation.akon == true) {
 				JOptionPane.showMessageDialog(framemain.frame1, akonjugation.präsensaktivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
-			}else if (Formauswahl.ekon == true) {				
+			}else if (ekonjugation.ekon == true) {				
 				JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.präsensaktivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-			}else if(Formauswahl.ikon ==true) {
+			}else if(ikonjugation.ikon ==true) {
 				
 				
-			}else if (Formauswahl.konskon == true) {
+			}else if (konskonjugation.konskon == true) {
 				
 			}else if (Formauswahl.sons == true) {
 				if (akonjugation.akon == true) {
@@ -114,14 +114,14 @@ public class framew implements ActionListener  {
 				}
 			}
 		}else if (ae.getSource() == this.button2) {
-			if (Formauswahl.akon == true) {
+			if (akonjugation.akon == true) {
 				JOptionPane.showMessageDialog(framemain.frame1, akonjugation.präsenspassivindikativ, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
-			}else if (Formauswahl.ekon == true) {			
+			}else if (ekonjugation.ekon == true) {			
 				JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.präsenspassivindikativ, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-			}else if (Formauswahl.ikon == true) {
+			}else if (ikonjugation.ikon == true) {
 				
 				
-			}else if (Formauswahl.konskon == true) {
+			}else if (konskonjugation.konskon == true) {
 				
 			}else if (Formauswahl.sons == true) {
 				if (akonjugation.akon == true) {
@@ -137,17 +137,17 @@ public class framew implements ActionListener  {
 			
 			
 		}else if (ae.getSource() == this.button3) {
-			if (Formauswahl.akon == true) {
+			if (akonjugation.akon == true) {
 				JOptionPane.showMessageDialog(framemain.frame1, akonjugation.präsensaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
-			}else if (Formauswahl.ekon == true) {				
+			}else if (ekonjugation.ekon == true) {				
 				JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.präsensaktivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
-			}else if (Formauswahl.ikon == true) {
+			}else if (ikonjugation.ikon == true) {
 				
 				
-			}else if (Formauswahl.konskon == true) {
+			}else if (konskonjugation.konskon == true) {
 				
 				
-			}else if(Formauswahl.sons == true) {
+			}/*else if(Formauswahl.sons == true) {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(framemain.frame1, akonjugation.präsensaktivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);
 				}else if (ekonjugation.ekon == true) {
@@ -158,16 +158,16 @@ public class framew implements ActionListener  {
 					
 				}
 				
-			}
+			}*/
 		}else if (ae.getSource() == this.button4) {
-			if (Formauswahl.akon == true) {
+			if (akonjugation.akon == true) {
 				JOptionPane.showMessageDialog(framemain.frame1, akonjugation.präsenspassivkonjunktiv, akonjugation.gv, JOptionPane.INFORMATION_MESSAGE);	
-			}else if (Formauswahl.ekon == true) {
+			}else if (ekonjugation.ekon == true) {
 				JOptionPane.showMessageDialog(framemain.frame1, ekonjugation.präsenspassivkonjunktiv, ekonjugation.gv, JOptionPane.INFORMATION_MESSAGE);				
-			}else if (Formauswahl.ikon == true) {
+			}else if (ikonjugation.ikon == true) {
 				
 				
-			}else if (Formauswahl.konskon == true) {
+			}else if (konskonjugation.konskon == true) {
 				
 			}else if (Formauswahl.sons == true) {
 				

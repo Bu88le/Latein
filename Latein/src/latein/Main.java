@@ -1,5 +1,6 @@
 package latein;
 
+import frames.MainFrame;
 import frames.framemain;
 
 public class Main {
@@ -14,7 +15,7 @@ public class Main {
 	
 	public Main() {
 		
-		new framemain();
+		new MainFrame();
 	
 	}
 }

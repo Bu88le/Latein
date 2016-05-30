@@ -261,7 +261,7 @@ public class frame {
 			}else if (ae.getSource() == frame.button9) {
 				if (akonjugation.akon == true) {
 					JOptionPane.showMessageDialog(framemain.frame1, übergabe.returngv(), framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
-				}else if (Formauswahl.ekon == true) {
+				}else if (ekonjugation.ekon == true) {
 					JOptionPane.showMessageDialog(framemain.frame1, übergabe.returngv(), framemain.tfield1.getText(), JOptionPane.INFORMATION_MESSAGE);
 				}
 			}else if (ae.getSource() == frame.button10) {
