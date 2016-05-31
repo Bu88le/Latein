@@ -8,6 +8,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
@@ -15,12 +16,12 @@ import javax.swing.border.LineBorder;
 import frames.MainFrame;
 import frames.buttons.CommonButton;
 
-public class PanelAdmin extends JLabel {
+public class PanelAdmin extends JPanel {
 	
 	private static JLabel lb1_desc, lb2_hint;
 	private static JTextField tf1_vocinput;
 	private static CommonButton b1_Suchen, b2_Beenden, b3_Admin;
-	private static JPasswordField pwf_login;
+	public static JPasswordField pwf_login;
 	
 	public PanelAdmin() {
 		setLayout(null);
@@ -98,7 +99,6 @@ public class PanelAdmin extends JLabel {
 		pwf_login = new JPasswordField();
 		pwf_login.setForeground(Color.BLACK);
 		pwf_login.setBounds(200,300,200,25);	
-		pwf_login.requestFocus();
 		pwf_login.addKeyListener(new KeyAdapter() {
 			String pw = String.valueOf(pwf_login.getPassword());
 			public void keyPressed(KeyEvent e) {
@@ -133,7 +133,7 @@ public class PanelAdmin extends JLabel {
 		});
 		add(pwf_login);
 		
-		b3_Admin = new CommonButton("ADMIN ACCESS", 225, 330, 150, 30, Color.RED, Color.BLACK);
+		b3_Admin = new CommonButton("ADMIN ACCESS", 225, 330, 150, 30, Color.BLACK, Color.RED);
 		b3_Admin.addActionListener(new ActionListener() {
 
 			@Override

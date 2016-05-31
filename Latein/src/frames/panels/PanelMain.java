@@ -13,11 +13,13 @@ import javax.swing.border.LineBorder;
 
 import frames.MainFrame;
 import frames.buttons.CommonButton;
+import latein.Formauswahl;
 
 public class PanelMain extends JPanel {
 	
+	public static String gv;
 	CommonButton b1_Suchen, b2_Beenden;
-	JTextField tf1_vocinput;
+	public static JTextField tf1_vocinput;
 	JLabel lb1_desc;
 	
 	public PanelMain() {
@@ -64,6 +66,9 @@ public class PanelMain extends JPanel {
 					}else {
 						if (tf1_vocinput.getText().equals("admin")) {
 							MainFrame.panelAdmin();
+						}else {
+							gv = tf1_vocinput.getText();
+							new Formauswahl(tf1_vocinput.getText());
 						}
 					}
 				}
