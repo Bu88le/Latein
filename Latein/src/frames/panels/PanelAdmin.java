@@ -8,6 +8,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
@@ -15,7 +16,7 @@ import javax.swing.border.LineBorder;
 import frames.MainFrame;
 import frames.buttons.CommonButton;
 
-public class PanelAdmin extends JLabel {
+public class PanelAdmin extends JPanel {
 	
 	private static JLabel lb1_desc, lb2_hint;
 	private static JTextField tf1_vocinput;

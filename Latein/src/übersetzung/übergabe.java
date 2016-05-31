@@ -1,6 +1,8 @@
 package übersetzung;
 
+import frames.MainFrame;
 import frames.frame;
+import latein.Main;
 
 public class übergabe {
 
@@ -8,7 +10,7 @@ public class übergabe {
 	
 	public übergabe(String s) {
 		gv = s;
-		new frame();
+		Main.mf.panelÜbersetzung();
 	}
 	
 	public static String returngv() {

@@ -33,22 +33,4 @@ public class CommonButton extends JButton {
 		setText(Text);
 	}
 	
-	public CommonButton(String Text, int Variation, int x, int y) {
-		setBounds(x, y, 120, 30);
-		setCursor(new Cursor(Cursor.HAND_CURSOR));
-		setText(Text);
-		if (Variation == 0) {
-			setBackground(Color.LIGHT_GRAY);
-			setForeground(Color.BLUE);
-		}
-		if (Variation == 1) {
-			setBackground(Color.RED);
-			setForeground(Color.BLACK);
-			setFont(new Font("Harrington Standard", Font.ITALIC, 15));
-		}
-		if (Variation < 0 || Variation > 1 ){
-			new CommonButton(Text, x, y);
-		}
-	}
-	
 }
