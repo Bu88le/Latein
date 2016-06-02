@@ -7,7 +7,12 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 import frames.panels.PanelAdmin;
+import frames.panels.PanelFuturI;
+import frames.panels.PanelFuturII;
+import frames.panels.PanelImperfekt;
 import frames.panels.PanelMain;
+import frames.panels.PanelPerfekt;
+import frames.panels.PanelPlusquamperfekt;
 import frames.panels.PanelPr‰sens;
 import frames.panels.PanelTenseSelection;
 import frames.panels.Panel‹bersetzung;
@@ -58,6 +63,7 @@ public class MainFrame extends JFrame {
 		c.remove(centerpanel);
 		c.revalidate();
 		c.add(centerpanel = new Panel‹bersetzung());
+		Panel‹bersetzung.sp1.requestFocus();
 		centerpanel.setBounds(0,0, 600, 390);
 		c.revalidate();
 	}
@@ -72,6 +78,41 @@ public class MainFrame extends JFrame {
 	public void panelPr‰sens() {
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelPr‰sens());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public void panelImperfekt() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelImperfekt());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public void panelFuturI() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelFuturI());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public void panelFuturII() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelFuturII());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public void panelPerfekt() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelPerfekt());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public void panelPlusquamperfekt() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelPlusquamperfekt());
 		centerpanel.setBounds(0,0,600,400);
 		c.revalidate();
 	}

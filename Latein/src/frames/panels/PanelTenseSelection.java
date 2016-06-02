@@ -36,8 +36,7 @@ public class PanelTenseSelection extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
+				Main.mf.panelImperfekt();				
 			}
 		});
 		add(b2_imperfekt);
@@ -47,8 +46,7 @@ public class PanelTenseSelection extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
+				Main.mf.panelFuturI();				
 			}
 			
 		});
@@ -59,8 +57,7 @@ public class PanelTenseSelection extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
+				Main.mf.panelPerfekt();				
 			}
 		});
 		add(b3_perfekt);
@@ -70,7 +67,7 @@ public class PanelTenseSelection extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				Main.mf.panelPlusquamperfekt();
 				
 			}
 		});
@@ -81,8 +78,7 @@ public class PanelTenseSelection extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
+				Main.mf.panelFuturII();				
 			}
 		});
 		add(b6_futurII);
