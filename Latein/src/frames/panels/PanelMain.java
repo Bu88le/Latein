@@ -14,6 +14,7 @@ import javax.swing.border.LineBorder;
 import frames.MainFrame;
 import frames.buttons.CommonButton;
 import latein.Formauswahl;
+import latein.Main;
 
 public class PanelMain extends JPanel {
 	
@@ -31,8 +32,16 @@ public class PanelMain extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
+				if (tf1_vocinput.getText().equals("") || !isValid(tf1_vocinput.getText())) {
+					
+				}else {
+					if (tf1_vocinput.getText().equals("admin")) {
+						MainFrame.panelAdmin();
+					}else {
+						gv = tf1_vocinput.getText();
+						new Formauswahl(tf1_vocinput.getText());
+					}
+				}				
 			}
 			
 		});

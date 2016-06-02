@@ -3,13 +3,15 @@ package frames;
 import java.awt.Container;
 
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 import frames.panels.PanelAdmin;
 import frames.panels.PanelMain;
+import frames.panels.PanelPr‰sens;
+import frames.panels.PanelTenseSelection;
 import frames.panels.Panel‹bersetzung;
+import ¸bersetzung.uea;
 
 public class MainFrame extends JFrame {
 	
@@ -33,8 +35,10 @@ public class MainFrame extends JFrame {
 
 	}
 	
-	private static void panelMain() {
-		c.add(centerpanel);
+	public static void panelMain() {
+		uea.stringbuffer.delete(0, uea.stringbuffer.length());
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelMain());
 		centerpanel.setBounds(0,0,600,400);
 		PanelMain.tf1_vocinput.requestFocus();
 		c.revalidate();
@@ -52,9 +56,31 @@ public class MainFrame extends JFrame {
 	public void panel‹bersetzung() {
 		setTitle(PanelMain.gv);
 		c.remove(centerpanel);
+		c.revalidate();
 		c.add(centerpanel = new Panel‹bersetzung());
 		centerpanel.setBounds(0,0, 600, 390);
 		c.revalidate();
 	}
 
+	public void panelTenseSelection() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelTenseSelection());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public void panelPr‰sens() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelPr‰sens());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	
+	
+	
+	
+	public void revalidaten() {
+		c.revalidate();
+	}
 }
