@@ -9,7 +9,7 @@ import javax.swing.JButton;
 public class CommonButton extends JButton {
 	
 	public CommonButton(String Text, int x, int y) {
-		setBounds(x, y, 250, 30);
+		setBounds(x, y, 300, 30);
 		setBackground(Color.BLACK);
 		setForeground(Color.WHITE);
 		setCursor(new Cursor(Cursor.HAND_CURSOR));

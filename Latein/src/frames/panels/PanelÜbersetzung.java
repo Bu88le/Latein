@@ -1,6 +1,7 @@
 package frames.panels;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -11,8 +12,10 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 
+import frames.MainFrame;
 import frames.framemain;
 import frames.buttons.CommonButton;
+import latein.Main;
 import übersetzung.übergabe;
 
 public class PanelÜbersetzung extends JPanel{
@@ -21,12 +24,15 @@ public class PanelÜbersetzung extends JPanel{
 		JLabel lb1_translation;
 		JScrollPane sp1;
 		
+		
 		public PanelÜbersetzung() {
 			setLayout(null);
+			
 			
 			lb1_translation = new JLabel(übergabe.returngv());
 			lb1_translation.setFont(new Font("Calibri", Font.PLAIN, 15));
 			lb1_translation.setForeground(Color.BLACK);
+			lb1_translation.setHorizontalAlignment(JLabel.CENTER);
 			
 			sp1 = new JScrollPane(lb1_translation, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
 		            ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -39,7 +45,7 @@ public class PanelÜbersetzung extends JPanel{
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					System.out.println("test");
+					Main.mf.panelTenseSelection();
 					
 				}
 				

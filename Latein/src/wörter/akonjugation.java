@@ -239,19 +239,55 @@ public class akonjugation {
 		}
 	}
 	
-	public String präsensaktivindikativ() {
-		return präsensaktivindikativ.toString();
+	public static String getPräsensaktivindikativ() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < präsensaktivindikativ.length; i++) {
+				sb.append("&#160" + präsensaktivindikativ[i] + "<p/>");
+			
+			if (i == präsensaktivindikativ.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString();
 	}
 	
-	public String[] präsensaktivkonjunktiv() {
-		return präsensaktivkonjunktiv;
+	public static String getPräsensaktivkonjunktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < präsensaktivkonjunktiv.length; i++) {
+			sb.append("&#160" + präsensaktivkonjunktiv[i]);
+			sb.append("<p/>");
+			if (i == präsensaktivkonjunktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
 	}
 	
-	public String[] präsenspassivindikativ() {
-		return präsenspassivindikativ;
+	public static String getPräsenspassivindikativ() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < präsenspassivindikativ.length; i++) {
+			sb.append("&#160" + präsenspassivindikativ[i]);
+			sb.append("<p/>");
+			if (i == präsenspassivindikativ.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
 	}
 	
-	public String[] präsenspassivkonjunktiv() {
-		return präsenspassivkonjunktiv;
+	public static String getPräsenspassivkonjunktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < präsenspassivkonjunktiv.length; i++) {
+			sb.append("&#160" + präsenspassivkonjunktiv[i]);
+			sb.append("<p/>");
+			if (i == präsenspassivkonjunktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
 	}
 }
