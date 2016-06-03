@@ -13,6 +13,7 @@ import frames.MainFrame;
 import frames.buttons.CommonButton;
 import latein.Main;
 import wörter.akonjugation;
+import wörter.ekonjugation;
 
 public class PanelImperfekt extends JPanel {
 	
@@ -28,7 +29,13 @@ public class PanelImperfekt extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				lb1_ad.setText(akonjugation.getImperfektAktivIndikativ());
+				if (akonjugation.akon) {
+					lb1_ad.setText(akonjugation.getImperfektAktivIndikativ());
+				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getImperfektAktivIndikativ());
+				}
+				
 				lb2_ad.setText(GetPersonen.getPersonen());
 				Main.mf.revalidaten();
 			}
@@ -40,7 +47,12 @@ public class PanelImperfekt extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				lb1_ad.setText(akonjugation.getImperfektAktivKonjunktiv());
+				if (akonjugation.akon) {
+					lb1_ad.setText(akonjugation.getImperfektAktivKonjunktiv());
+				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getImperfektAktivKonjunktiv());
+				}				
 				lb2_ad.setText(GetPersonen.getPersonen());
 				Main.mf.revalidaten();
 			}
@@ -53,10 +65,13 @@ public class PanelImperfekt extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (akonjugation.akon) {
-					lb1_ad.setText(akonjugation.getImperfektPassivIndikativ());
-					lb2_ad.setText(GetPersonen.getPersonen());
-					Main.mf.revalidaten();
+					lb1_ad.setText(akonjugation.getImperfektPassivIndikativ());	
 				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getImperfektPassivIndikativ());
+				}
+				lb2_ad.setText(GetPersonen.getPersonen());
+				Main.mf.revalidaten();
 				
 			}
 		});
@@ -68,11 +83,13 @@ public class PanelImperfekt extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (akonjugation.akon) {
-					lb1_ad.setText(akonjugation.getImperfektPassivKonjunktiv());
-					lb2_ad.setText(GetPersonen.getPersonen());
-					Main.mf.revalidaten();
+					lb1_ad.setText(akonjugation.getImperfektPassivKonjunktiv());	
 				}
-				
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getImperfektPassivKonjunktiv());
+				}
+				lb2_ad.setText(GetPersonen.getPersonen());
+				Main.mf.revalidaten();
 			}
 		});
 		add(b4_konjPas);

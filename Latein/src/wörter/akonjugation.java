@@ -21,7 +21,10 @@ public class akonjugation {
 				akon = true;
 				formen();
 				new uea(gv);
-			}else if (gvs.equals(a.rverbenau()[i])) {
+			}
+		}
+		for (int i = 0; i < a.rverbenau().length; i++) {
+			if (gvs.equals(a.rverbenau()[i])) {
 				akon = true;
 				formenu(i);
 				new uea(gv);

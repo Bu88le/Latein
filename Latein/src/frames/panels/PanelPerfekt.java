@@ -13,6 +13,7 @@ import frames.MainFrame;
 import frames.buttons.CommonButton;
 import latein.Main;
 import wörter.akonjugation;
+import wörter.ekonjugation;
 
 public class PanelPerfekt extends JPanel {
 
@@ -28,7 +29,12 @@ public class PanelPerfekt extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				lb1_ad.setText(akonjugation.getPerfektAktivIndikativ());
+				if (akonjugation.akon) {
+					lb1_ad.setText(akonjugation.getPerfektAktivIndikativ());
+				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getPerfektAktivIndikativ());
+				}
 				lb2_ad.setText(GetPersonen.getPersonen());
 				Main.mf.revalidaten();
 			}
@@ -40,7 +46,12 @@ public class PanelPerfekt extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				lb1_ad.setText(akonjugation.getPerfektAktivKonjunktiv());
+				if (akonjugation.akon) {
+					lb1_ad.setText(akonjugation.getPerfektAktivKonjunktiv());
+				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getPerfektAktivKonjunktiv());
+				}
 				lb2_ad.setText(GetPersonen.getPersonen());
 				Main.mf.revalidaten();
 			}
@@ -54,9 +65,13 @@ public class PanelPerfekt extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				if (akonjugation.akon) {
 					lb1_ad.setText(akonjugation.getPerfektPassivIndikativ());
-					lb2_ad.setText(GetPersonen.getPersonen());
-					Main.mf.revalidaten();
+					
 				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getPerfektPassivIndikativ());
+				}
+				lb2_ad.setText(GetPersonen.getPersonen());
+				Main.mf.revalidaten();
 				
 			}
 		});
@@ -69,9 +84,13 @@ public class PanelPerfekt extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				if (akonjugation.akon) {
 					lb1_ad.setText(akonjugation.getPerfektPassivKonjunktiv());
-					lb2_ad.setText(GetPersonen.getPersonen());
-					Main.mf.revalidaten();
+					
 				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getPerfektPassivKonjunktiv());
+				}
+				lb2_ad.setText(GetPersonen.getPersonen());
+				Main.mf.revalidaten();
 				
 			}
 		});

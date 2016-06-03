@@ -13,6 +13,9 @@ import frames.MainFrame;
 import frames.buttons.CommonButton;
 import latein.Main;
 import wörter.akonjugation;
+import wörter.ekonjugation;
+import wörter.ikonjugation;
+import wörter.konskonjugation;
 
 public class PanelFuturII extends JPanel {
 	CommonButton b1_indAkt, b3_indPas, b5_newVoc, b6_changeTense, b7_close;
@@ -27,7 +30,19 @@ public class PanelFuturII extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				lb1_ad.setText(akonjugation.getFuturIIAktiv());
+				if (akonjugation.akon) {
+					lb1_ad.setText(akonjugation.getFuturIIAktiv());
+				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getFuturIIAktiv());
+				}
+				if (ikonjugation.ikon) {
+					
+				}
+				if(konskonjugation.konskon) {
+					
+				}	
+				
 				lb2_ad.setText(GetPersonen.getPersonen());
 				Main.mf.revalidaten();
 			}
@@ -39,11 +54,21 @@ public class PanelFuturII extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getFuturIIPassiv());
+				}
+				if (ikonjugation.ikon) {
+					
+				}
+				if(konskonjugation.konskon) {
+					
+				}	
 				if (akonjugation.akon) {
 					lb1_ad.setText(akonjugation.getFuturIIPassiv());
-					lb2_ad.setText(GetPersonen.getPersonen());
-					Main.mf.revalidaten();
+					
 				}
+				lb2_ad.setText(GetPersonen.getPersonen());
+				Main.mf.revalidaten();
 				
 			}
 		});

@@ -1,9 +1,10 @@
 package frames.panels;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import javax.swing.AbstractButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -14,7 +15,9 @@ import übersetzung.übergabe;
 
 public class PanelTenseSelection extends JPanel {
 
-	CommonButton b1_präsens, b2_imperfekt, b3_perfekt, b4_plusquamperfekt, b5_futurI, b6_futurII, b7_newVoc, b8_Translation, b9_Close;
+	public static CommonButton b1_präsens; 
+	CommonButton b2_imperfekt,b3_perfekt,b4_plusquamperfekt,b5_futurI,b6_futurII,b7_newVoc,b8_Translation,b9_Close;
+	Object c;
 	
 	public PanelTenseSelection() {
 		
@@ -117,5 +120,6 @@ public class PanelTenseSelection extends JPanel {
 		add(b9_Close);
 		
 	}
+	
 	
 }

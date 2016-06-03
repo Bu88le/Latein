@@ -14,6 +14,7 @@ import frames.MainFrame;
 import frames.buttons.CommonButton;
 import latein.Main;
 import wörter.akonjugation;
+import wörter.ekonjugation;
 
 public class PanelPräsens extends JPanel {
 
@@ -29,7 +30,12 @@ public class PanelPräsens extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				lb1_ad.setText(akonjugation.getPräsensaktivindikativ());
+				if (akonjugation.akon) {
+					lb1_ad.setText(akonjugation.getPräsensaktivindikativ());
+				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getPräsensaktivindikativ());
+				}
 				lb2_ad.setText(GetPersonen.getPersonen());
 				Main.mf.revalidaten();
 			}
@@ -41,7 +47,12 @@ public class PanelPräsens extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				lb1_ad.setText(akonjugation.getPräsensaktivkonjunktiv());
+				if (akonjugation.akon) {
+					lb1_ad.setText(akonjugation.getPräsensaktivkonjunktiv());
+				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getPräsensaktivkonjunktiv());
+				}
 				lb2_ad.setText(GetPersonen.getPersonen());
 				Main.mf.revalidaten();
 			}
@@ -54,10 +65,13 @@ public class PanelPräsens extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (akonjugation.akon) {
-					lb1_ad.setText(akonjugation.getPräsenspassivindikativ());
-					lb2_ad.setText(GetPersonen.getPersonen());
-					Main.mf.revalidaten();
+					lb1_ad.setText(akonjugation.getPräsenspassivindikativ());	
 				}
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getPräsenspassivkonjunktiv());
+				}
+				lb2_ad.setText(GetPersonen.getPersonen());
+				Main.mf.revalidaten();
 				
 			}
 		});
@@ -69,11 +83,13 @@ public class PanelPräsens extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (akonjugation.akon) {
-					lb1_ad.setText(akonjugation.getPräsenspassivkonjunktiv());
-					lb2_ad.setText(GetPersonen.getPersonen());
-					Main.mf.revalidaten();
+					lb1_ad.setText(akonjugation.getPräsenspassivkonjunktiv());	
 				}
-				
+				if (ekonjugation.ekon) {
+					lb1_ad.setText(ekonjugation.getPräsenspassivkonjunktiv());
+				}
+				lb2_ad.setText(GetPersonen.getPersonen());
+				Main.mf.revalidaten();
 			}
 		});
 		add(b4_konjPas);

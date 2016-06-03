@@ -19,7 +19,7 @@ import latein.Main;
 public class PanelMain extends JPanel {
 	
 	public static String gv;
-	CommonButton b1_Suchen, b2_Beenden;
+	static CommonButton b1_Suchen, b2_Beenden;
 	public static JTextField tf1_vocinput;
 	JLabel lb1_desc;
 	

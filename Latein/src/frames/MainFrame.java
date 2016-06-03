@@ -1,6 +1,8 @@
 package frames;
 
 import java.awt.Container;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -16,6 +18,7 @@ import frames.panels.PanelPlusquamperfekt;
 import frames.panels.PanelPräsens;
 import frames.panels.PanelTenseSelection;
 import frames.panels.PanelÜbersetzung;
+import latein.Main;
 import übersetzung.uea;
 
 public class MainFrame extends JFrame {
@@ -24,7 +27,7 @@ public class MainFrame extends JFrame {
 	private static JPanel centerpanel;
 	
 	public MainFrame() {
-		super("Latein");
+		super("Latein");		
 		setSize(600, 400);
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);

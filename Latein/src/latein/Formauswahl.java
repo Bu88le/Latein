@@ -486,7 +486,7 @@ public class Formauswahl {
 				futurIa();
 				
 			}else if (gesuchtevokabel.endsWith("ebo") || gesuchtevokabel.endsWith("ebis") ||
-					gesuchtevokabel.endsWith("ebis") || gesuchtevokabel.endsWith("ebimus") ||
+					gesuchtevokabel.endsWith("ebit") || gesuchtevokabel.endsWith("ebimus") ||
 					gesuchtevokabel.endsWith("ebitis") || gesuchtevokabel.endsWith("ebunt")) {
 				
 				futurIe();

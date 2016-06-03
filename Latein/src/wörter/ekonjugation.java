@@ -247,19 +247,263 @@ public class ekonjugation {
 		
 	}	
 	
-	public String[] präsensaktivindikativ() {
-		return präsensaktivindikativ;
+	public static String getPräsensaktivindikativ() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < präsensaktivindikativ.length; i++) {
+				sb.append("&#160" + präsensaktivindikativ[i] + "<p/>");
+			
+			if (i == präsensaktivindikativ.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString();
 	}
 	
-	public String[] präsensaktivkonjunktiv() {
-		return präsensaktivkonjunktiv;
+	public static String getPräsensaktivkonjunktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < präsensaktivkonjunktiv.length; i++) {
+			sb.append("&#160" + präsensaktivkonjunktiv[i]);
+			sb.append("<p/>");
+			if (i == präsensaktivkonjunktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
 	}
 	
-	public String[] präsenspassivindikativ() {
-		return präsenspassivindikativ;
+	public static String getPräsenspassivindikativ() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < präsenspassivindikativ.length; i++) {
+			sb.append("&#160" + präsenspassivindikativ[i]);
+			sb.append("<p/>");
+			if (i == präsenspassivindikativ.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString();
 	}
 	
-	public String[] präsenspassivkonjunktiv() {
-		return präsenspassivkonjunktiv;
+	public static String getPräsenspassivkonjunktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < präsenspassivkonjunktiv.length; i++) {
+			sb.append("&#160" + präsenspassivkonjunktiv[i]);
+			sb.append("<p/>");
+			if (i == präsenspassivkonjunktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getImperfektAktivIndikativ() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < imperfektaktivindikativ.length; i++) {
+			sb.append("&#160" + imperfektaktivindikativ[i]);
+			sb.append("<p/>");
+			if (i == imperfektaktivindikativ.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getImperfektAktivKonjunktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < imperfektaktivkonjunktiv.length; i++) {
+			sb.append("&#160" + imperfektaktivkonjunktiv[i]);
+			sb.append("<p/>");
+			if (i == imperfektaktivkonjunktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getImperfektPassivIndikativ() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < imperfektpassivindikativ.length; i++) {
+			sb.append("&#160" + imperfektpassivindikativ[i]);
+			sb.append("<p/>");
+			if (i == imperfektpassivindikativ.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getImperfektPassivKonjunktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < imperfektpassivkonjunktiv.length; i++) {
+			sb.append("&#160" + imperfektpassivkonjunktiv[i]);
+			sb.append("<p/>");
+			if (i == imperfektpassivkonjunktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getFuturIAktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < futurIaktiv.length; i++) {
+			sb.append("&#160" + futurIaktiv[i]);
+			sb.append("<p/>");
+			if (i == futurIaktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getFuturIPassiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < futurIpassiv.length; i++) {
+			sb.append("&#160" + futurIpassiv[i]);
+			sb.append("<p/>");
+			if (i == futurIpassiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getFuturIIAktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < futurIIaktiv.length; i++) {
+			sb.append("&#160" + futurIIaktiv[i]);
+			sb.append("<p/>");
+			if (i == futurIIaktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getFuturIIPassiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < futurIIpassiv.length; i++) {
+			sb.append("&#160" + futurIIpassiv[i]);
+			sb.append("<p/>");
+			if (i == futurIIpassiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getPerfektAktivIndikativ(){
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < perfektaktivindikativ.length; i++) {
+			sb.append("&#160" + perfektaktivindikativ[i]);
+			sb.append("<p/>");
+			if (i == perfektaktivindikativ.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getPerfektAktivKonjunktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < perfektaktivkonjunktiv.length; i++) {
+			sb.append("&#160" + perfektaktivkonjunktiv[i]);
+			sb.append("<p/>");
+			if (i == perfektaktivkonjunktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getPerfektPassivIndikativ() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < perfektpassivindikativ.length; i++) {
+			sb.append("&#160" + perfektpassivindikativ[i]);
+			sb.append("<p/>");
+			if (i == perfektpassivindikativ.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getPerfektPassivKonjunktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < perfektpassivkonjunktiv.length; i++) {
+			sb.append("&#160" + perfektpassivkonjunktiv[i]);
+			sb.append("<p/>");
+			if (i == perfektpassivkonjunktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getPlusqAktivIndikativ() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < plusquamperfektaktivindikativ.length; i++) {
+			sb.append("&#160" + plusquamperfektaktivindikativ[i]);
+			sb.append("<p/>");
+			if (i == plusquamperfektaktivindikativ.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getPlusqAktivKonjunktiv(){
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < plusquamperfektaktivkonjunktiv.length; i++) {
+			sb.append("&#160" + plusquamperfektaktivkonjunktiv[i]);
+			sb.append("<p/>");
+			if (i == plusquamperfektaktivkonjunktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getPlusqPassivIndikativ() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < plusquamperfektpassivindikativ.length; i++) {
+			sb.append("&#160" + plusquamperfektpassivindikativ[i]);
+			sb.append("<p/>");
+			if (i == plusquamperfektpassivindikativ.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
+	}
+	
+	public static String getPlusqPassivKonjunktiv() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("<html><b><font color=\"#0000FF\">");
+		for (int i = 0; i < plusquamperfektpassivkonjunktiv.length; i++) {
+			sb.append("&#160" + plusquamperfektpassivkonjunktiv[i]);
+			sb.append("<p/>");
+			if (i == plusquamperfektpassivkonjunktiv.length) {
+				sb.append("<font/></b></html>");
+			}
+		}
+		return sb.toString().trim();
 	}
 }
