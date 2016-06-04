@@ -20,6 +20,7 @@ public class akonjugation {
 			if (gvs.equals(a.rverbena()[i])) {
 				akon = true;
 				formen();
+				System.out.println("Hi");
 				new uea(gv);
 			}
 		}
@@ -27,6 +28,13 @@ public class akonjugation {
 			if (gvs.equals(a.rverbenau()[i])) {
 				akon = true;
 				formenu(i);
+				new uea(gv);
+			}
+		}
+		for (int i = 0; i < a.rverbenadp().length; i++) {
+			if (gvs.equals(a.rverbenadp()[i])) {
+				akon = true;
+				formendp(i);
 				new uea(gv);
 			}
 		}
@@ -238,6 +246,70 @@ public class akonjugation {
 			System.out.println(futurIIaktiv[i]);
 			
 			futurIIpassiv[i] = a.rverbenau()[z] + endungenfuturIIupassiv[i];
+			System.out.println(futurIIpassiv[i]);
+		}
+	}
+	
+	private static void formendp(int z) {
+		for (int i = 0; i < 6; i++) {
+			präsensaktivindikativ[i] = "Deponens! Keine aktive Form!";
+			System.out.println (präsensaktivindikativ[i]);
+			
+			präsensaktivkonjunktiv[i] = "Deponens! Keine aktive Form!";
+			System.out.println(präsensaktivkonjunktiv[i]);
+			
+			präsenspassivindikativ[i] = gvs + endungenpräsenspassiv[i];
+			System.out.println(präsenspassivindikativ[i]);
+			
+			präsenspassivkonjunktiv[i] = gvs + endungenpräsenspassivkonjunktiv[i];
+			System.out.println(präsenspassivkonjunktiv[i]);
+			
+			imperfektaktivindikativ[i] = "Deponens! Keine aktive Form!";
+			System.out.println(imperfektaktivindikativ[i]);
+			
+			imperfektaktivkonjunktiv[i] = "Deponens! Keine aktive Form!";
+			System.out.println(imperfektaktivkonjunktiv[i]);
+			
+			imperfektpassivindikativ[i] = gvs + endungenimperfektpassiv[i];
+			System.out.println(imperfektpassivindikativ[i]);
+			
+			imperfektpassivkonjunktiv[i] = (gvs + endungenimperfektpassivkonjunktiv[i]);
+			System.out.println(imperfektpassivkonjunktiv[i]);
+			
+			perfektaktivindikativ[i] ="Deponens! Keine aktive Form!";
+			System.out.println(perfektaktivindikativ[i]);
+			
+			perfektaktivkonjunktiv[i] = "Deponens! Keine aktive Form!";
+			System.out.println(perfektaktivkonjunktiv[i]);	
+			
+			perfektpassivindikativ[i] = gvs + endungenperfektpassiv[i];
+			System.out.println(perfektpassivindikativ[i]);
+			
+			perfektpassivkonjunktiv[i] = gvs + endungenperfektpassivkonjunktiv[i];
+			System.out.println(perfektpassivkonjunktiv[i]);
+			
+			plusquamperfektaktivindikativ[i] = "Deponens! Keine aktive Form!";
+			System.out.println(plusquamperfektaktivindikativ[i]);
+			
+			plusquamperfektaktivkonjunktiv[i] = "Deponens! Keine aktive Form!";
+			System.out.println(plusquamperfektaktivkonjunktiv[i]);
+			
+			plusquamperfektpassivindikativ[i] = gvs + endungenplusqpassiv[i];
+			System.out.println(plusquamperfektpassivindikativ[i]);
+			
+			plusquamperfektpassivkonjunktiv[i] = gvs + endungenplusqpassivkonjunktiv[i];
+			System.out.println(plusquamperfektpassivkonjunktiv[i]);
+			
+			futurIaktiv[i] = "Deponens! Keine aktive Form!";
+			System.out.println(futurIaktiv[i]);
+			
+			futurIpassiv[i] = gvs + endungenfuturIpassiv[i];
+			System.out.println(futurIpassiv[i]);
+			
+			futurIIaktiv[i] = "Deponens! Keine aktive Form!";
+			System.out.println(futurIIaktiv[i]);
+			
+			futurIIpassiv[i] = gvs + endungenfuturIIpassiv[i];
 			System.out.println(futurIIpassiv[i]);
 		}
 	}

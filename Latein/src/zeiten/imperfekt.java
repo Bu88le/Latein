@@ -70,7 +70,7 @@ public class imperfekt {
 						gv = gv.substring(0, gv.length()-4) + "o";
 					}else if (gv.endsWith("aremus") || gv.endsWith("aretis")) {
 						gvs = gv.substring(0, gv.length()-6);
-						gv = gv.substring(gv.length()-6) + "o";
+						gv = gv.substring(0, gv.length()-6) + "o";
 					}else if (gv.endsWith("arent")) {
 						gvs = gv.substring(0, gv.length()-5);
 						gv = gv.substring(0, gv.length()-5) + "o";

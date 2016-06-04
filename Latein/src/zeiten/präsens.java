@@ -115,6 +115,8 @@ public class präsens {
 					if (gv.endsWith("or")) {
 						gvs = gv.substring(0,  gv.length()-2);
 						gv = gv.substring(0, gv.length()-2) + "o";
+						System.out.println(gvs);
+						System.out.println(gv);
 					}else if (gv.endsWith("aris") || gv.endsWith("atur") || gv.endsWith("amur")) {
 						gvs = gv.substring(0, gv.length()-4);
 						gv = gv.substring(0, gv.length()-4) + "o";
