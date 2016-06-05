@@ -28,6 +28,7 @@ public class PanelMain extends JPanel {
 		setLayout(null);
 		
 		b1_Suchen = new CommonButton("Suchen", 200, 190, 90, 30);
+		b1_Suchen.setEnabled(false);
 		b1_Suchen.addActionListener(new ActionListener() {
 
 			@Override

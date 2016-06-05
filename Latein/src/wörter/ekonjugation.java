@@ -7,6 +7,7 @@ public class ekonjugation {
 	
 	public static String gvs, gv;
 	static public boolean ekon;
+	public static String[] endungeninf = {"ere", "eri"};
 	
 	public ekonjugation(String s, String t) {
 		gv = s;
@@ -20,11 +21,15 @@ public class ekonjugation {
 				ekon = true;
 				formen();
 				new uee(gv);
-			}else if (gvs.equals(e.rverbenes()[i])) {
+			}
+		}for (int i = 0; i <e.rverbenes().length; i++) {			
+			if (gvs.equals(e.rverbenes()[i])) {
 				ekon = true;
 				formens(i);
 				new uee(gv);
-			}else if (gvs.equals(e.rverbenespn()[i])) {
+			}
+		}for (int i = 0; i < e.rverbenespn().length; i++) {
+			if (gvs.equals(e.rverbenespn()[i])) {
 				ekon = true;
 				formens(i);
 				new uee(gv);

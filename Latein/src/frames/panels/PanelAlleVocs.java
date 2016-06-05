@@ -15,6 +15,7 @@ import javax.swing.ScrollPaneConstants;
 import frames.buttons.CommonButton;
 import latein.Main;
 import wörter.akonjugation;
+import übersetzung.zusammenfassung;
 
 public class PanelAlleVocs extends JPanel {
 	
@@ -25,7 +26,7 @@ public class PanelAlleVocs extends JPanel {
 	public PanelAlleVocs() {
 		setLayout(null);
 		
-		lb1_vocs = new JLabel(akonjugation.returnallevocs(), JLabel.CENTER);
+		lb1_vocs = new JLabel(zusammenfassung.returnallevocs(), JLabel.CENTER);
 		lb1_vocs.setFont(new Font("Calibri", Font.PLAIN, 15));
 		lb1_vocs.setForeground(Color.BLACK);
 		

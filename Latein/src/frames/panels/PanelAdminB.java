@@ -50,7 +50,7 @@ public class PanelAdminB extends JPanel {
 		});
 		add(b3);
 		
-		b4_close = new CommonButton("Beenden", 200, 220, 200, 30, Color.RED, Color.BLACK);
+		b4_close = new CommonButton("Beenden", 195, 220, 200, 30, Color.RED, Color.BLACK);
 		b4_close.addActionListener(new ActionListener() {
 
 			@Override
