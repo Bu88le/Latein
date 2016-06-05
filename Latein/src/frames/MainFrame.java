@@ -1,14 +1,14 @@
 package frames;
 
 import java.awt.Container;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 import frames.panels.PanelAdmin;
+import frames.panels.PanelAdminB;
+import frames.panels.PanelAlleVocs;
 import frames.panels.PanelFuturI;
 import frames.panels.PanelFuturII;
 import frames.panels.PanelImperfekt;
@@ -18,7 +18,6 @@ import frames.panels.PanelPlusquamperfekt;
 import frames.panels.PanelPräsens;
 import frames.panels.PanelTenseSelection;
 import frames.panels.PanelÜbersetzung;
-import latein.Main;
 import übersetzung.uea;
 
 public class MainFrame extends JFrame {
@@ -60,6 +59,21 @@ public class MainFrame extends JFrame {
 		PanelAdmin.pwf_login.requestFocus();
 		c.revalidate();
 	}
+	
+	public static void panelAdminB() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelAdminB());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public static void panelAlleVocs() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelAlleVocs());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
 	
 	public void panelÜbersetzung() {
 		setTitle(PanelMain.gv);

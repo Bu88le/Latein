@@ -79,12 +79,14 @@ public class uea {
 	static String[] ay = {"admurmuro", "<u><b><font color=\"#FF0000\">admurmurare</font></u></b>", "beifällig murmeln", "murren"};
 	static String[] az = {"admutilo", "<u><b><font color=\"#FF0000\">admutilare</font></u></b>", "verstümmeln", "hereinlegen"};
 	static String[] ba = {"adnato", "<u><b><font color=\"#FF0000\">adnatare</font></u></b>", "heranschwimmen", " ", "<font color=\"#6E6E6E\">ad aliquid/alicui rei ~ :</font>", "an etw. heranschwimmen"};
-	static String[] bb = {"adopino", "<u><b><font color=\"#FF0000\">adopinare</font></u></b>", "(dazu vermuten)"};
+	static String[] bb = {"adopino", "<u><b><font color=\"#FF0000\">adopinare</font></u></b>", "(dazu) vermuten"};
 	static String[] bc = {"adopto", "<u><b><font color=\"#FF0000\">adoptare</font></u></b>", "erwählen", "annehmen", "zu Hilfe nehmen", "sich aneignen", "adoptieren", "aneignen", "<font color=\"#6E6E6E\">sibi aliquem defensorem~ :</font>", "sich jmd. als Verteidiger nehmen", " ", "<font color=\"#6E6E6E\">Etruscas opes ~ :</font>", "die Streitkräfte der Etrusker zu Hilfe holen", " ", "<font color=\"#6E6E6E\">ramus ramum adoptat :</font>", "ein Zweig nimmt einen anderen Zweig auf", " ", "<font color=\"#6E6E6E\">aliquem sibi filium ~ :</font>", "jmd. als Sohn adoptieren", " ", "<font color=\"#6E6E6E\">illum pro filio ~ :</font>", "jenen an Sohnes Statt annehmen", " ", "<font color=\"#6E6E6E\">aliquem a patre ~ :</font>", "jmd. vom (leiblichen) Vater adoptieren", " ", "<font color=\"#6E6E6E\">aliquem in regnum ~ :</font>", "jmd. durch Adoption als Nachfolger berufen", " ", "<font color=\"#6E6E6E\">sibi cognomen ~ :</font>", "sich einen Beinnamen aneignen"};
+	
+	static String[] bd = {"adoro", "<u><b><font color=\"#FF0000\">adorare</font></u></b>", "anflehen", "erflehen", "verehren", " ", "<font color=\"#6E6E6E\">aliquem aliquid ~ :</font>", "jmd. um etw. anflehen", " ", "<font color=\"#6E6E6E\">pacem deum ~ :</font>", "Gott um Frieden anflehen"," ","<font color=\"#6E6E6E\">Ennium poetam ~ :</font>", "den Dichter Ennius verehren"};
 	
 	
 	public static String[][] zg = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, 
-			ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ax, ay, az, ba, bb, bc};
+			ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ax, ay, az, ba, bb, bc, bd};
 	
 	public static void auswahl() {
 		for (int i = 0; i<zg.length; i++) {

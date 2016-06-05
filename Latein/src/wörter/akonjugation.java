@@ -1,5 +1,10 @@
 package wörter;
 import vokabeln.*;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
 import frames.*;
 import übersetzung.*;
 public class akonjugation {
@@ -7,6 +12,8 @@ public class akonjugation {
 	public static String gv;
 	static String gvs;
 	static public boolean akon;
+	private static String[] alle;
+	private static String[] endungeninf = {"are", "ari"};
 	
 	public akonjugation(String s, String t) {
 		gv = s;
@@ -312,6 +319,48 @@ public class akonjugation {
 			futurIIpassiv[i] = gvs + endungenfuturIIpassiv[i];
 			System.out.println(futurIIpassiv[i]);
 		}
+	}
+	
+	public static String returnallevocs() {
+		ArrayList<String> list = new ArrayList<String>();
+		for (int i = 0; i < a.rverbena().length;i++) {
+			list.add(a.rverbena()[i] + endungeninf[0]);
+		}
+		for (int i = 0; i < a.rverbenadp().length; i++) {
+			list.add(a.rverbenadp()[i] + endungeninf[1]);
+		}
+		for (int i = 0; i < a.rverbenau().length; i++) {
+			list.add(a.rverbenau()[i] + endungeninf[0]);
+		}
+		
+		Collections.sort(list);
+		String s = "<html><b><font color=\"#0101DF\", size=\"12\">A</font></b><p/>";
+		Character c;
+		
+		for (int i = 0; i < list.size(); i++) {
+			if (i > 0) {
+				System.out.println("Hi");
+				if (!(list.get(i).charAt(0) == list.get(i-1).charAt(0))) {
+					System.out.println("This is me");
+					c = list.get(i).charAt(0);
+					s+="<b><font color=\"#0101DF\", size=\"12\">" + c.toUpperCase(c) + "</font></b>";
+					s+="<p/>";
+				}
+			}			
+			if (i<10) {
+				s+=" ";
+				s+=i+1;
+				s+=". ";
+			}
+			if (i>=10) {
+				s += i+1;
+				s += ". ";
+			}			
+			s +=list.get(i);
+			s += "<p/>";
+		}
+		s += "<html/>";
+		return s;
 	}
 	
 	public static String getPräsensaktivindikativ() {

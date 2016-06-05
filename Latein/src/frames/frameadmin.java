@@ -4,6 +4,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import latein.Formauswahl;
+import wörter.akonjugation;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -65,7 +66,7 @@ public class frameadmin extends JFrame implements ItemListener, ActionListener, 
 		button1.addActionListener(this);
 		super.add(button1);
 		
-		button2 = new JButton("Button 2");
+		button2 = new JButton("Versuch");
 		button2.setBounds(280, Y_Buttons+40, 150, 30);
 		button2.setBackground(Color.lightGray);
 		button2.setForeground(Color.BLUE);
@@ -128,6 +129,8 @@ public class frameadmin extends JFrame implements ItemListener, ActionListener, 
 		if (ae.getSource() == frameadmin.button1) {
 			frame1.dispose();
 			new framemain();
+		}else if (ae.getSource() == frameadmin.button2) {
+			akonjugation.allevocs();
 		}
 		
 	}

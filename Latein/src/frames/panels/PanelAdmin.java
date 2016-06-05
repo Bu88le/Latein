@@ -14,7 +14,10 @@ import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 
 import frames.MainFrame;
+import frames.frameadmin;
 import frames.buttons.CommonButton;
+import latein.Formauswahl;
+import latein.Main;
 
 public class PanelAdmin extends JPanel {
 	
@@ -44,7 +47,7 @@ public class PanelAdmin extends JPanel {
 					if (tf1_vocinput.getText().equals("") || !isValid(tf1_vocinput.getText())) {
 						
 					}else {
-						//TODO 
+						new Formauswahl(tf1_vocinput.getText());
 					}
 				}
 				
@@ -105,7 +108,7 @@ public class PanelAdmin extends JPanel {
 					String pw = String.valueOf(pwf_login.getPassword());
 					if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 						if (pw.equals("latein")) {
-
+							Main.mf.panelAdminB();
 						}else if (pw.equals("")) {
 							lb2_hint.setVisible(false);
 							lb2_hint.setText("KEIN PASSWORT EINGEGEBEN");
