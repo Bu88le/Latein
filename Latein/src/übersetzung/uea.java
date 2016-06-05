@@ -1,15 +1,11 @@
 package übersetzung;
-import frames.*;
-import wörter.akonjugation;
-
-import javax.swing.JOptionPane;
 
 public class uea {
 	
 	static String gv;
 	static int zähler;
 	public static StringBuffer stringbuffer = new StringBuffer();
-	public static String ss = "";
+	private static String ss = "";
 	
 	public uea(String s) {
 		gv = s;
@@ -84,11 +80,14 @@ public class uea {
 	
 	static String[] bd = {"adoro", "<u><b><font color=\"#FF0000\">adorare</font></u></b>", "anflehen", "erflehen", "verehren", " ", "<font color=\"#6E6E6E\">aliquem aliquid ~ :</font>", "jmd. um etw. anflehen", " ", "<font color=\"#6E6E6E\">pacem deum ~ :</font>", "Gott um Frieden anflehen"," ","<font color=\"#6E6E6E\">Ennium poetam ~ :</font>", "den Dichter Ennius verehren"};
 	static String[] be = {"adorno", "<u><b><font color=\"#FF0000\">adornare</font></u></b>", "ausrüsten", "zurechtmachen", "ausstatten", "schmücken", " ", "<font color=\"#6E6E6E\">naves ~ :</font>", "Schiffe ausrüsten", " ", "<font color=\"#6E6E6E\">accusationem ~ :</font>", "eine Anklage vorbereiten", " ", "<font color=\"#6E6E6E\">maria classibus ~ :</font>", "Meere mit Flotten ausstatten", " ", "<font color=\"#6E6E6E\">forum magnifico ornatu ~ :</font>", "das Forum mit prächtigem Aufwand schmücken"};
-	
+	static String[] bf = {"adulo", "<u><b><font color=\"#FF0000\">adulare</font></u></b>", "mit dem Schwanz wedeln", "sich anschmiegen", "sanft abwischen", "streichelnd abwischen", " ", "<font color=\"#6E6E6E\">sanguinem ~ :</font>", "das Blut sanft abwischen", " ", "<font color=\"#6E6E6E\">alicui/aliquem ~ :</font>", "vor jmdn. kriechen", "jmd. schmeicheln", " ", "<font color=\"#6E6E6E\">plebem/plebi ~ :</font>", "dem Pöbel schmeicheln"};
+	static String[] bg = {"adultero", "<u><b><font color=\"#FF0000\">adulterare</font></u></b>", "die Ehe brechen", "zum Ehebruch verführen", "verfälschen", "nachmachen", " ", "<font color=\"#6E6E6E\">alicui/cum aliquo ~ :</font>", "mit jmd. die Ehe brechen", " ", "<font color=\"#6E6E6E\">adulterari ~ :</font>", "herumhuren", " ", "<font color=\"#6E6E6E\">alicui adulterari :</font>", "mit jmd. herumhuren"," ", "<font color=\"#6E6E6E\">miluo adulterari :</font>", "mit dem Falken herumhuren"," ", "<font color=\"#6E6E6E\">ius civile ~ :</font>", "das Bürgerrecht verfälschen", " ", "<font color=\"#6E6E6E\">faciem arte ~ :</font>", "das Gesicht künstlich verändern"};
+	static String[] bh = {"adumbro", "<u><b><font color=\"#FF0000\">adumbrare</font></u></b>", "beschatten", "skizzieren", "schildern", "nachahmen", " ", "<font color=\"#6E6E6E\">Macedonum morem ~ :</font>", "die Art der Makedonen nachahmen"};
 	
 	
 	public static String[][] zg = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, 
-			ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ax, ay, az, ba, bb, bc, bd};
+			ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ax, ay, az, ba, bb, bc, bd,
+			be, bf, bg, bh};
 	
 	public static void auswahl() {
 		for (int i = 0; i<zg.length; i++) {

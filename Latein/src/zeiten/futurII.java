@@ -38,6 +38,7 @@ public class futurII {
 					if (gv.substring(0, gv.length()-5).endsWith("atus")) {
 						gvs = gv.substring(0, gv.length()-9);
 						gv = gv.substring(0, gv.length()-9) + "o";
+						new akonjugation(gv, gvs);
 					}else if (gv.substring(0, gv.length()-5).endsWith("itus")){
 						gvs = gv.substring(0, gv.length()-9);
 						gv = gv.substring(0, gv.length()-9) + "io";
@@ -53,6 +54,7 @@ public class futurII {
 					if (gv.substring(0, gv.length()-7).endsWith("ati")) {
 						gvs = gv.substring(0, gv.length()-10);
 						gv = gv.substring(0, gv.length()-10) + "o";
+						new akonjugation(gv, gvs);
 					}else if (gv.substring(0, gv.length()-7).endsWith("iti")){
 						gvs = gv.substring(0, gv.length()-10);
 						gv = gv.substring(0, gv.length()-10) + "io";
@@ -68,6 +70,7 @@ public class futurII {
 					if (gv.substring(0, gv.length()-6).endsWith("ati")) {
 						gvs = gv.substring(0, gv.length()-9);
 						gv = gv.substring(0, gv.length()-9) + "o";
+						new akonjugation(gv, gvs);
 					}else if (gv.substring(0, gv.length()-6).endsWith("iti")){
 						gvs = gv.substring(0, gv.length()-9);
 						gv = gv.substring(0, gv.length()-9) + "io";

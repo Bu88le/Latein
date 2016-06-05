@@ -1,25 +1,20 @@
 package frames;
-import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-
-import latein.Formauswahl;
-import wörter.akonjugation;
-
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
-import java.awt.event.InputEvent;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+import javax.swing.WindowConstants;
+
+import übersetzung.zusammenfassung;
 
 
 public class frameadmin extends JFrame implements ItemListener, ActionListener, ComponentListener{
@@ -130,7 +125,7 @@ public class frameadmin extends JFrame implements ItemListener, ActionListener, 
 			frame1.dispose();
 			new framemain();
 		}else if (ae.getSource() == frameadmin.button2) {
-			akonjugation.allevocs();
+			zusammenfassung.returnallevocs();
 		}
 		
 	}

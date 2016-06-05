@@ -40,7 +40,7 @@ public class akonjugation {
 		for (int i = 0; i < a.rverbenadp().length; i++) {
 			if (gvs.equals(a.rverbenadp()[i])) {
 				akon = true;
-				formendp(i);
+				formendp();
 				new uea(gv);
 			}
 		}
@@ -256,7 +256,7 @@ public class akonjugation {
 		}
 	}
 	
-	private static void formendp(int z) {
+	private static void formendp() {
 		for (int i = 0; i < 6; i++) {
 			präsensaktivindikativ[i] = "Deponens! Keine aktive Form!";
 			System.out.println (präsensaktivindikativ[i]);
