@@ -19,11 +19,11 @@ public class PanelFehler extends JPanel {
 		setLayout(null);
 		
 		JLabel lb1_info = new JLabel("", JLabel.CENTER);
-		lb1_info.setText("<html>Hmm... anscheinend ist deine Vokabel oder diese Form diesem Programm nicht bekannt. <p/> Um zu überprüfen, ob deine Vokabel existiert, klicke bitte auf den \"Überprüfung\"-Buttons unten. <p/><p/>Falls deine Vokabel nicht aufgelistet sein sollte, schreibe bitte eine <p/> E-Mail an: <u color = \"#0101DF\">bubblereg@gmx.de</u> <p/>Betreff: <u><font color=\"#0101DF\">fehlende Vokabel</font></u> <p/> deine Vokabel mit Bedeutungen als Inhalt. <p/> <p/> So können wir diesen Fehler möglichst schnell beheben");
+		lb1_info.setText("<html>Hmm... anscheinend ist deine Vokabel oder diese Form diesem Programm nicht bekannt. <p/> Um zu überprüfen, ob deine Vokabel existiert, klicke bitte auf den \"Überprüfung\"-Button unten. <p/><p/>Falls deine Vokabel nicht aufgelistet sein sollte, schreibe bitte eine <p/> E-Mail an: <u color = \"#0101DF\">bubblereg@gmx.de</u> <p/>Betreff: <u><font color=\"#0101DF\">fehlende Vokabel</font></u> <p/> deine Vokabel mit Bedeutungen als Inhalt. <p/> <p/> So können wir diesen Fehler möglichst schnell beheben");
 		lb1_info.setBounds(5, 5, 600, 200);
 		add(lb1_info);
 		
-		b1_show = new CommonButton("Anzeigen", 215, 220, 130, 30, Color.LIGHT_GRAY, Color.BLUE);
+		b1_show = new CommonButton("Überprüfung", 215, 220, 130, 30, Color.LIGHT_GRAY, Color.BLUE);
 		b1_show.addActionListener(new ActionListener() {
 
 			@Override
