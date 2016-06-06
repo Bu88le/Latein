@@ -47,20 +47,18 @@ public class zusammenfassung {
 		Collections.sort(list);
 			for (int i = 0; i < list.size(); i++) {
 				if (i > 0) {
-					System.out.println("Hi");
 					if (!(list.get(i).charAt(0) == list.get(i-1).charAt(0))) {
-						System.out.println("This is me");
 						c = list.get(i).charAt(0);
 						s+="<b><font color=\"#0101DF\", size=\"12\">" + c.toUpperCase(c) + "</font></b>";
 						s+="<p/>";
 					}
-				}			
-				if (i<10) {
-					s+=" ";
+				}
+				if (i<=8) {
+					s+=" &#160 ";
 					s+=i+1;
 					s+=". ";
 				}
-				if (i>=10) {
+				if (i>8) {
 					s += i+1;
 					s += ". ";
 				}			

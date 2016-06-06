@@ -673,6 +673,7 @@ public class Formauswahl {
 	
 			präsensaktivkons();
 		}else {
+			Main.mf.panelFehler();
 		}
 	}
 

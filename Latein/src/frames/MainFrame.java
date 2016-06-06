@@ -9,6 +9,7 @@ import javax.swing.WindowConstants;
 import frames.panels.PanelAdmin;
 import frames.panels.PanelAdminB;
 import frames.panels.PanelAlleVocs;
+import frames.panels.PanelFehler;
 import frames.panels.PanelFuturI;
 import frames.panels.PanelFuturII;
 import frames.panels.PanelImperfekt;
@@ -50,6 +51,12 @@ public class MainFrame extends JFrame {
 		PanelMain.tf1_vocinput.requestFocus();
 		c.revalidate();
 
+	}
+	public void panelFehler() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelFehler());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
 	}
 	
 	public static void panelAdmin() {

@@ -49,7 +49,7 @@ public class PanelAlleVocs extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Main.mf.panelAdminB();
+				Main.mf.panelFehler();
 				
 			}
 			
