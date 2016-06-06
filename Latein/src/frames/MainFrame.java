@@ -19,6 +19,7 @@ import frames.panels.PanelPlusquamperfekt;
 import frames.panels.PanelPr‰sens;
 import frames.panels.PanelTenseSelection;
 import frames.panels.Panel‹bersetzung;
+import frames.panels.Panel‹bersetzungsFehler;
 import ¸bersetzung.uea;
 
 public class MainFrame extends JFrame {
@@ -56,6 +57,14 @@ public class MainFrame extends JFrame {
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelFehler());
 		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public void panel‹bersetzungsFehler() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new Panel‹bersetzungsFehler());
+		centerpanel.setBounds(0,0,600,400);
+		Panel‹bersetzungsFehler.lb1_anzeige.requestFocus();
 		c.revalidate();
 	}
 	

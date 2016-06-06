@@ -84,10 +84,14 @@ public class uea {
 	static String[] bg = {"adultero", "<u><b><font color=\"#FF0000\">adulterare</font></u></b>", "die Ehe brechen", "zum Ehebruch verführen", "verfälschen", "nachmachen", " ", "<font color=\"#6E6E6E\">alicui/cum aliquo ~ :</font>", "mit jmd. die Ehe brechen", " ", "<font color=\"#6E6E6E\">adulterari ~ :</font>", "herumhuren", " ", "<font color=\"#6E6E6E\">alicui adulterari :</font>", "mit jmd. herumhuren"," ", "<font color=\"#6E6E6E\">miluo adulterari :</font>", "mit dem Falken herumhuren"," ", "<font color=\"#6E6E6E\">ius civile ~ :</font>", "das Bürgerrecht verfälschen", " ", "<font color=\"#6E6E6E\">faciem arte ~ :</font>", "das Gesicht künstlich verändern"};
 	static String[] bh = {"adumbro", "<u><b><font color=\"#FF0000\">adumbrare</font></u></b>", "beschatten", "skizzieren", "schildern", "nachahmen", " ", "<font color=\"#6E6E6E\">Macedonum morem ~ :</font>", "die Art der Makedonen nachahmen"};
 	
+	static String[]	bi = {"aduno", "<u><b><font color=\"#FF0000\">adunare</font></u></b>", "vereinigen", "verbinden"};
+	static String[] bj = {"advecto", "<u><b><font color=\"#FF0000\">advectare</font></u></b>", "zuführen"};
+	static String[] bk = {"advelo", "<u><b><font color=\"#FF0000\">advelare</font></u></b>", "umhüllen", "bekränzen", "<font color=\"#6E6E6E\">tempora viridi lauro ~ :</font>", "die Schläfen mit frischem Lorbeer bekränzen"};
+	
 	
 	public static String[][] zg = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, 
 			ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ax, ay, az, ba, bb, bc, bd,
-			be, bf, bg, bh};
+			be, bf, bg, bh, bi, bj, bk};
 	
 	public static void auswahl() {
 		for (int i = 0; i<zg.length; i++) {

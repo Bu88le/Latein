@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -20,7 +23,7 @@ import übersetzung.übergabe;
 public class PanelÜbersetzung extends JPanel{
 
 		CommonButton b1_go;
-		JLabel lb1_translation;
+		JLabel lb1_translation, lb2_fehler;
 		public static JScrollPane sp1;
 		
 		
@@ -58,5 +61,18 @@ public class PanelÜbersetzung extends JPanel{
 				
 			});	
 			add(b1_go);
+			
+			lb2_fehler = new JLabel("<html>Fehler in der Übersetzung?<u><font color=\"#0101FD\">HIER</font></u> klicken.<html/>", JLabel.CENTER);
+			lb2_fehler.setBounds(10, 325, 200, 45);
+			lb2_fehler.addMouseListener(new MouseAdapter() {
+
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					Main.mf.panelÜbersetzungsFehler();					
+				}
+
+				
+			});
+			add(lb2_fehler);
 		}
 }

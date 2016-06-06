@@ -77,8 +77,7 @@ public class PanelMain extends JPanel {
 						if (tf1_vocinput.getText().equals("admin")) {
 							MainFrame.panelAdmin();
 						}else {
-							gv = tf1_vocinput.getText();
-							new Formauswahl(tf1_vocinput.getText());
+							b1_Suchen.doClick();
 						}
 					}
 				}
