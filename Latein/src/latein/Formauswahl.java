@@ -1071,7 +1071,7 @@ public class Formauswahl {
 					plusquamperfekt p = new plusquamperfekt (gesuchtevokabel);
 					p.plusquamperfektindikativaktiva();
 			
-					new akonjugation (p.returngv(), p.returngvs());				
+					//new akonjugation (p.returngv(), p.returngvs());				
 				}	
 				void plusquamperfektaktivi() {
 					ikon = true;

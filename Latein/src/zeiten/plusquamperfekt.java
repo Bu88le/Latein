@@ -31,7 +31,7 @@ public class plusquamperfekt {
 					if (gv.endsWith("averam") || gv.endsWith("averas") || gv.endsWith("averat") ) {
 										
 						gvs = gv.substring(0, gv.length()-6);
-						gv = gv.substring(0, gv.length()-6) + "o";
+						Auswahl.überprüfung(gvs);
 						
 					}else if(gv.endsWith("averamus") || gv.endsWith("averatis")) {
 						

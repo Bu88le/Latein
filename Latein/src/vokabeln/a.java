@@ -20,4 +20,24 @@ public class a {
 	static public String[] rverbenadp() {
 		return verbenadp;
 	}
+	
+	public static String[][] rverbenakon() {
+		String[][] übergabe = new String[3][];
+		übergabe[0] = new String[verbena.length];
+		übergabe[1] = new String[verbenau.length];
+		übergabe[2] = new String[verbenadp.length];
+		
+		
+		
+		for (int i = 0; i < verbena.length; i++) {
+			übergabe[0][i] = verbena[i];
+		}
+		for (int i = 0; i < verbenau.length; i++) {
+			übergabe[1][i] = verbenau[i];
+		}
+		for (int i = 0; i < verbenadp.length; i++) {
+			übergabe[2][i] = verbenadp[i];
+		}
+		return übergabe;
+	}
 }
