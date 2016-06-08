@@ -1,6 +1,7 @@
 package frames.panels;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -73,6 +74,7 @@ public class Panel‹bersetzung extends JPanel{
 
 				
 			});
+			lb2_fehler.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			add(lb2_fehler);
 		}
 }

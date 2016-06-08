@@ -1,6 +1,7 @@
 package frames.panels;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -54,6 +55,7 @@ public class PanelFehler extends JPanel {
 			}
 			
 		});
+		b3_close.setFont(new Font("Calibri", Font.ITALIC, 15));
 		add(b3_close);
 	}
 }

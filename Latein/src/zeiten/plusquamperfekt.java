@@ -56,7 +56,7 @@ public class plusquamperfekt {
 					if (gv.endsWith("ueram") || gv.endsWith("ueras") || gv.endsWith("uerat")) {
 						
 						gvs = gv.substring(0, gv.length()-5);
-						gv = gv.substring(0, gv.length()-5) + "eo";
+						Auswahl.überprüfung(gvs);
 						
 					}else if (gv.endsWith("ueramus") || gv.endsWith("ueratis")) {
 						
@@ -70,14 +70,11 @@ public class plusquamperfekt {
 						
 					}else if (gv.endsWith("seram") || gv.endsWith("seras") || gv.endsWith("serat")) {
 						gvs = gv.substring(0, gv.length()-5);
-						System.out.println(gvs);
 						for (int i = 0;i < e.verbenes.length; i++) {
 							if (e.rverbenes()[i].equals(gvs)) {
 								if (gvs.equals(e.rverbenesn()[i].substring(0, gvs.length()))) {
 									gv = e.rverbenesn()[i];
-									vok = e.rverbenesn()[i].substring(0, e.rverbenesn()[i].length()-1) + "re";
-									ekon = true;
-									System.out.println(vok);
+									Auswahl.überprüfung(gvs);
 								}
 							}
 						}
