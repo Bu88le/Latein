@@ -1,6 +1,8 @@
 package vokabeln;
 
 public class a {
+	static String[][] übergabe = new String[3][];
+	
 
 	final static public String[] verbena = {"labor", "pecc", "am", "laud", "abalien", "abdic", "abequit", "aberr", "abiudic","abiur", "ableg", "abloc", "abneg", "abnoct", "abnut", "abomin", "abrog", "abst", "abund", "accel", "acclam", "acclar", "acclin", "accommod", "accub", "accumul", "accur", "accus", "accusit", "acerb", "acerv", "adaequ", "adagger", "adallig", "adam", "adambul", "adapt", "adaqu", "adhort", "adinspect", "adiudic", "adiur", "adiut", "adiuv", "admatur", "admigr", "adminicul", "administr", "admurmur", "admutil", "adnat", "adopt", "ador", "adorn", "adul","adulter", "adumbr", "adun", "advect", "advel"};
 	final static public String[] verbenau = {"concrep", "crep", "discrep", "cub", "excub", "incub", "discrep", "dissec", "dom", "excub", "incub", "increp", "mic", "reson", "sec", "dissec", "son", "ton", "vet"};
@@ -21,8 +23,7 @@ public class a {
 		return verbenadp;
 	}
 	
-	public static String[][] rverbenakon() {
-		String[][] übergabe = new String[3][];
+	public static void verbenAkon() {
 		übergabe[0] = new String[verbena.length];
 		übergabe[1] = new String[verbenau.length];
 		übergabe[2] = new String[verbenadp.length];
@@ -38,6 +39,9 @@ public class a {
 		for (int i = 0; i < verbenadp.length; i++) {
 			übergabe[2][i] = verbenadp[i];
 		}
+	}
+	
+	public static String[][] getVerbenAkon() {
 		return übergabe;
 	}
 }

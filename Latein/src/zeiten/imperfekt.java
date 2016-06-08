@@ -25,13 +25,13 @@ public class imperfekt {
 			public static void imperfektaktivindikativa(){
 				if (gv.endsWith("abam") || gv.endsWith("abas") || gv.endsWith("abat")) {
 					gvs = gv.substring(0, gv.length()-4);
-					gv = gv.substring(0, gv.length()-4) + "o";
+					Auswahl.überprüfung(gvs);
 				}else if (gv.endsWith("abamus") || gv.endsWith("abatis")) {
 					gvs = gv.substring(0, gv.length()-6);
-					gv = gv.substring(0, gv.length()-6) + "o";
+					Auswahl.überprüfung(gvs);
 				}else if (gv.endsWith("abant")) {
 					gvs = gv.substring(0, gv.length()-5);
-					gv = gv.substring(0, gv.length()-5) + "o";
+					Auswahl.überprüfung(gvs);
 				}else {
 					imperfektaktivkonjunktiva();
 				}
@@ -44,13 +44,13 @@ public class imperfekt {
 			public static void imperfektindikativaktive() {
 				if (gv.endsWith("ebam") || gv.endsWith("ebas") || gv.endsWith("ebat")) {
 					gvs = gv.substring(0,  gv.length()-4);
-					gv = gv.substring(0, gv.length()-4) + "eo";
+					Auswahl.überprüfung(gvs);
 				}else if (gv.endsWith("ebamus") || gv.endsWith("ebatis")) {
 					gvs = gv.substring(0, gv.length()-6);
-					gv = gv.substring(0, gv.length()-6) + "eo";
+					Auswahl.überprüfung(gvs);
 				}else if (gv.endsWith("ebant")) {
 					gvs = gv.substring(0, gv.length()-5);
-					gv = gv.substring(0, gv.length()-5) + "eo";
+					Auswahl.überprüfung(gvs);
 				}else {
 					imperfektkonjunktivaktive();
 				}
@@ -67,13 +67,13 @@ public class imperfekt {
 				public static void imperfektaktivkonjunktiva() {
 					if (gv.endsWith("arem") || gv.endsWith("ares") || gv.endsWith("aret")) {
 						gvs = gv.substring(0, gv.length()-4);
-						gv = gv.substring(0, gv.length()-4) + "o";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("aremus") || gv.endsWith("aretis")) {
 						gvs = gv.substring(0, gv.length()-6);
-						gv = gv.substring(0, gv.length()-6) + "o";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("arent")) {
 						gvs = gv.substring(0, gv.length()-5);
-						gv = gv.substring(0, gv.length()-5) + "o";
+						Auswahl.überprüfung(gvs);
 					}else {
 						imperfektpassivindikativa();
 					}
@@ -86,13 +86,13 @@ public class imperfekt {
 				public static void imperfektkonjunktivaktive() {
 					if (gv.endsWith("eres") || gv.endsWith("erem") || gv.endsWith("eret")) {
 						gvs = gv.substring(0,  gv.length()-4);
-						gv = gv.substring(0, gv.length()-4) + "eo";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("eremus") || gv.endsWith("eretis")) {
 						gvs = gv.substring(0, gv.length()-6);
-						gv = gv.substring(0, gv.length()-6) + "eo";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("erent")) {
 						gvs = gv.substring(0, gv.length()-5);
-						gv = gv.substring(0, gv.length()-5) + "eo";
+						Auswahl.überprüfung(gvs);
 					}else {
 						imperfektpassivindikative();
 					}
@@ -117,13 +117,13 @@ public class imperfekt {
 				public static void imperfektpassivindikativa() {
 					if (gv.endsWith("abar")) {
 						gvs = gv.substring(0, gv.length()-4);
-						gv = gv.substring(0, gv.length()-4) + "o";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("abaris") || gv.endsWith("abatur") || gv.endsWith("abamur")) {
 						gvs = gv.substring(0, gv.length()-6);
-						gv = gv.substring(0, gv.length()-6) + "o";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("abamini") || gv.endsWith("abantur")) {
 						gvs = gv.substring(0, gv.length()-7);
-						gv = gv.substring(0, gv.length()-7) + "o";
+						Auswahl.überprüfung(gvs);
 					}
 				}
 				
@@ -134,13 +134,13 @@ public class imperfekt {
 				public static void imperfektpassivindikative() {
 					if (gv.endsWith("ebar")) {
 						gvs = gv.substring(0,  gv.length()-4);
-						gv = gv.substring(0, gv.length()-4) + "eo";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("ebaris") || gv.endsWith("ebatur") || gv.endsWith("ebamur")) {
 						gvs = gv.substring(0, gv.length()-6);
-						gv = gv.substring(0, gv.length()-6) + "eo";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("abamini") || gv.endsWith("abantur")) {
 						gvs = gv.substring(0, gv.length()-7);
-						gv = gv.substring(0, gv.length()-7) + "eo";
+						Auswahl.überprüfung(gvs);
 					}else {
 						imperfektpassivkonjunktive();
 					}
@@ -159,13 +159,13 @@ public class imperfekt {
 				public static void imperfektpassivkonjunktiva() {
 					if (gv.endsWith("arer")) {
 						gvs = gv.substring(0, gv.length()-4);
-						gv = gv.substring(0, gv.length()-4) + "o";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("areris") || gv.endsWith("aretur") || gv.endsWith("aremur")) {
 						gvs = gv.substring(0, gv.length()-6);
-						gv = gv.substring(0, gv.length()-6) + "o";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("aremini") || gv.endsWith("arentur")) {
 						gvs = gv.substring(0, gv.length()-7);
-						gv = gv.substring(0, gv.length()-7) + "o";
+						Auswahl.überprüfung(gvs);
 					}else {
 						perfekt p = new perfekt(gv);
 						p.perfektaktivindikativa();
@@ -179,27 +179,17 @@ public class imperfekt {
 				public static void imperfektpassivkonjunktive() {
 					if (gv.endsWith("erer")) {
 						gvs = gv.substring(0,  gv.length()-4);
-						gv = gv.substring(0, gv.length()-4) + "eo";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("ereris") || gv.endsWith("eretur") || gv.endsWith("eremus")) {
 						gvs = gv.substring(0, gv.length()-6);
-						gv = gv.substring(0, gv.length()-6) + "eo";
+						Auswahl.überprüfung(gvs);
 					}else if (gv.endsWith("erentur")) {
 						gvs = gv.substring(0, gv.length()-7);
-						gv = gv.substring(0, gv.length()-7) + "eo";
+						Auswahl.überprüfung(gvs);
 					}else {
 						perfekt.perfektaktivindikative();
 					}
 				}
-				
-				
-				
-				
-				
-				
-			
-			public void imperfektaktivindikative() {
-				
-			}
 			
 		public static String returngv() {
 			return gv;

@@ -2,6 +2,7 @@ package frames.panels;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -12,18 +13,18 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 
+import frames.MainFrame;
 import frames.buttons.CommonButton;
 import latein.Main;
-import wörter.akonjugation;
 import übersetzung.zusammenfassung;
 
 public class PanelAlleVocs extends JPanel {
 	
 	JLabel lb1_vocs;
-	JScrollPane sp1_anzeige;
+	public static JScrollPane sp1_anzeige;
 	CommonButton b1_go;
 	
-	public PanelAlleVocs() {
+	public PanelAlleVocs(JPanel p) {
 		setLayout(null);
 		
 		lb1_vocs = new JLabel(zusammenfassung.returnallevocs(), JLabel.CENTER);
@@ -49,8 +50,10 @@ public class PanelAlleVocs extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Main.mf.panelFehler();
-				
+				MainFrame.c.remove(MainFrame.centerpanel); 
+				MainFrame.c.add(MainFrame.centerpanel = p);
+				MainFrame.c.setBounds(0,0,600,400);
+				Main.mf.revalidaten();;
 			}
 			
 		});	

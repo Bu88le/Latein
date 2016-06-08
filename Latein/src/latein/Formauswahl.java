@@ -708,8 +708,6 @@ public class Formauswahl {
 					System.out.println("Präsens Aktiv A"); //Gibt in der Konsole einen Text aus, der die gefundene Zeit angibt.
 					new präsens(gesuchtevokabel); //Ruft latein.zeiten.präsens auf und übergibt die gesuchte Vokabel.
 					präsens.präsensaktivindikativa(); //Ruft die Methode "präsensaktivindikativa" in präsens auf.
-					
-					new akonjugation(präsens.returngv(), präsens.returngvs()); //ruft Konjugation auf und übergibt Wortstamm und ümgeformte gesuchte Vokabel
 				}				
 				void präsensaktive() {
 					ekon = true;
@@ -718,7 +716,6 @@ public class Formauswahl {
 					new präsens(gesuchtevokabel);
 					präsens.präsensaktivindikative();
 					
-					new ekonjugation(präsens.returngv(), präsens.returngvs());
 				}	
 				void präsensaktivi() {
 					ikon = true;
@@ -739,7 +736,6 @@ public class Formauswahl {
 					new präsens(gesuchtevokabel);
 					präsens.präsensaktivkonjunktiva();
 					
-					new akonjugation(präsens.returngv(), präsens.returngvs());
 				}
 				void präsenskonjunktive() {
 					ekon = true;
@@ -748,7 +744,6 @@ public class Formauswahl {
 					new präsens(gesuchtevokabel);
 					präsens.präsensaktivkonunktive();
 					
-					new ekonjugation(präsens.returngv(), präsens.returngvs());
 				}	
 				void präsenskonjunktivi() {
 					ikon = true;
@@ -774,8 +769,6 @@ public class Formauswahl {
 					System.out.println("Präsens Passiv");
 					new präsens(gesuchtevokabel);
 					präsens.präsenspassivindikativa();
-					
-					new akonjugation(präsens.returngv(), präsens.returngvs());
 				}
 				
 				void präsenspassivindikative() {
@@ -785,7 +778,6 @@ public class Formauswahl {
 					new präsens(gesuchtevokabel);
 					präsens.präsenspassivindikative();
 					
-					new ekonjugation(präsens.returngv(), präsens.returngvs());
 				}
 				
 				void präsenspassivindikativi() {
@@ -809,7 +801,6 @@ public class Formauswahl {
 					new präsens(gesuchtevokabel);
 					präsens.präsenspassivkonjunktive();
 					
-					new ekonjugation(präsens.returngv(), präsens.returngvs());
 				}
 			
 				void präsenspassivkonjunktivI() {
@@ -823,7 +814,6 @@ public class Formauswahl {
 					new präsens(gesuchtevokabel);
 					präsens.präsenspassivkonjunktiva();
 					
-					new akonjugation(präsens.returngv(), präsens.returngvs());
 				}
 				
 				
@@ -848,8 +838,6 @@ public class Formauswahl {
 						
 						new imperfekt(gesuchtevokabel);
 						imperfekt.imperfektindikativaktive();
-						
-						new ekonjugation(imperfekt.returngv(), imperfekt.returngvs());
 					}					
 					void imperfekta() {
 						akon = true;
@@ -857,7 +845,6 @@ public class Formauswahl {
 						new imperfekt(gesuchtevokabel);
 						imperfekt.imperfektaktivindikativa();
 						
-						new akonjugation(imperfekt.returngv(), imperfekt.returngvs());
 					}					
 					void imperfekti() {
 						ikon = true;
@@ -873,7 +860,6 @@ public class Formauswahl {
 						new imperfekt(gesuchtevokabel);
 						imperfekt.imperfektaktivkonjunktiva();
 						
-						new akonjugation(imperfekt.returngv(), imperfekt.returngvs());
 					}	
 					void imperfektkonjunktivi() {
 						ikon = true;
@@ -886,7 +872,6 @@ public class Formauswahl {
 						new imperfekt(gesuchtevokabel);
 						imperfekt.imperfektkonjunktivaktive();
 						
-						new ekonjugation(imperfekt.returngv(), imperfekt.returngvs());
 					}
 		
 					
@@ -904,7 +889,6 @@ public class Formauswahl {
 						new imperfekt(gesuchtevokabel);
 						imperfekt.imperfektpassivindikativa();
 						
-						new akonjugation(imperfekt.returngv(), imperfekt.returngvs());
 					}					
 					void imperfektpassivindikativi() {
 						ikon = true;
@@ -917,7 +901,6 @@ public class Formauswahl {
 						new imperfekt(gesuchtevokabel);
 						imperfekt.imperfektpassivindikative();
 						
-						new ekonjugation(imperfekt.returngv(), imperfekt.returngvs());
 					}
 					
 					
@@ -932,7 +915,6 @@ public class Formauswahl {
 					new imperfekt(gesuchtevokabel);
 					imperfekt.imperfektpassivkonjunktive();
 					
-					new ekonjugation(imperfekt.returngv(), imperfekt.returngvs());
 				}
 				void imperfektpassivkonjunktiva() {
 					akon = true;
@@ -940,7 +922,6 @@ public class Formauswahl {
 					new imperfekt(gesuchtevokabel);
 					imperfekt.imperfektpassivkonjunktiva();
 					
-					new akonjugation(imperfekt.returngv(), imperfekt.returngvs());
 				}
 				void imperfektpassivkonjunktivi() {
 					ikon = true;
@@ -964,7 +945,6 @@ public class Formauswahl {
 			perfekt p = new perfekt(gesuchtevokabel);
 			p.perfektaktivindikativa();
 			
-			new akonjugation(p.returngv(), p.returngvs());
 		}
 	
 		void perfektaktive() {
@@ -974,7 +954,6 @@ public class Formauswahl {
 			new perfekt(gesuchtevokabel);
 			perfekt.perfektaktivindikative();
 			
-			new ekonjugation(perfekt.returngv(), perfekt.returngvs());
 		}
 	
 		void perfektaktivi() {
@@ -998,8 +977,6 @@ public class Formauswahl {
 			
 			perfekt p = new perfekt(gesuchtevokabel);
 			p.perfektakitvkonjunktiva();
-			
-			new akonjugation(p.returngv(), p.returngvs());
 		}
 	
 		void perfektaktivkonjunktive() {
@@ -1008,8 +985,6 @@ public class Formauswahl {
 			
 			new perfekt(gesuchtevokabel);
 			perfekt.perfektaktivkonjunktive();
-			
-			new ekonjugation(perfekt.returngv(), perfekt.returngvs());
 		}
 	
 		void perfektaktivkonjunktivi() {
@@ -1070,8 +1045,7 @@ public class Formauswahl {
 					System.out.println("Plusquamperfekt Aktiv A");
 					plusquamperfekt p = new plusquamperfekt (gesuchtevokabel);
 					p.plusquamperfektindikativaktiva();
-			
-					//new akonjugation (p.returngv(), p.returngvs());				
+						
 				}	
 				void plusquamperfektaktivi() {
 					ikon = true;
@@ -1079,7 +1053,6 @@ public class Formauswahl {
 					System.out.println("Plusquamperfekt Aktiv I");
 					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
 					p.plusquamperfektindikativaktivi();
-					JOptionPane.showMessageDialog(null, p.returngv());
 				}	
 				void plusquamperfektaktive() {
 					ekon = true;					
@@ -1087,7 +1060,6 @@ public class Formauswahl {
 					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
 					plusquamperfekt.plusquamperfektindikativaktive();
 					
-					new ekonjugation(p.returngv(), p.returngvs());
 				}
 				
 			/**--------------------------------------------
@@ -1106,7 +1078,6 @@ public class Formauswahl {
 					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
 					p.plusquamperfektkonjunktiva();
 
-					new akonjugation (p.returngv(), p.returngvs());
 				}
 				void plusquamperfektkonjunktive() {
 					ekon = true;
@@ -1115,7 +1086,6 @@ public class Formauswahl {
 					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
 					plusquamperfekt.plusquamperfektkonjunktive();
 					
-					new ekonjugation(p.returngv(), p.returngvs());
 				}
 				void plusquamperfektkonjunktivi() {
 					ikon = true;
@@ -1163,7 +1133,6 @@ public class Formauswahl {
 					new futurI(gesuchtevokabel);
 					futurI.futurIaktiva();
 					
-					new akonjugation(futurI.returngv(), futurI.returngvs());
 				}				
 				void futurIe() {
 					ekon = true;
@@ -1172,7 +1141,6 @@ public class Formauswahl {
 					new futurI(gesuchtevokabel);
 					futurI.futurIaktive();
 					
-					new ekonjugation(futurI.returngv(), futurI.returngvs());
 				}
 				void futurIi() {
 					ikon = true;
@@ -1193,7 +1161,6 @@ public class Formauswahl {
 					new futurI(gesuchtevokabel);
 					futurI.futurIpassiva();
 					
-					new akonjugation(futurI.returngv(), futurI.returngvs());
 				}		
 				void futurIpassive() {
 					ekon = true;
@@ -1201,8 +1168,7 @@ public class Formauswahl {
 					
 					new futurI(gesuchtevokabel);
 					futurI.futurIpassive();
-					
-					new ekonjugation(futurI.returngv(), futurI.returngvs());
+				
 				}
 				void futurIpassivI() {
 					ikon = true;

@@ -21,11 +21,12 @@ import frames.panels.PanelTenseSelection;
 import frames.panels.PanelÜbersetzung;
 import frames.panels.PanelÜbersetzungsFehler;
 import übersetzung.uea;
+import übersetzung.uee;
 
 public class MainFrame extends JFrame {
 	
 	static public Container c;
-	private static JPanel centerpanel;
+	public static JPanel centerpanel;
 	
 	public MainFrame() {
 		super("Latein");		
@@ -46,6 +47,7 @@ public class MainFrame extends JFrame {
 	
 	public static void panelMain() {
 		uea.stringbuffer.delete(0, uea.stringbuffer.length());
+		uee.stringbuffer.delete(0, uee.stringbuffer.length());
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelMain());
 		centerpanel.setBounds(0,0,600,400);
@@ -85,8 +87,9 @@ public class MainFrame extends JFrame {
 	
 	public static void panelAlleVocs() {
 		c.remove(centerpanel);
-		c.add(centerpanel = new PanelAlleVocs());
+		c.add(centerpanel = new PanelAlleVocs(centerpanel));
 		centerpanel.setBounds(0,0,600,400);
+		PanelAlleVocs.sp1_anzeige.requestFocus();
 		c.revalidate();
 	}
 	

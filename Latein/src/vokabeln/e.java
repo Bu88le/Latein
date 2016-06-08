@@ -1,6 +1,7 @@
 package vokabeln;
 
 public class e {
+	static String[][] übergabe = new String[3][];
 	
 	final static public String[] verbene = {"mon"};
 	final static public String[] verbenes = {"adhae", "ar"};
@@ -24,8 +25,7 @@ public class e {
 		return verbenespn;
 	}
 	
-	public static String[][] rverbenekon() {
-		String[][] übergabe = new String[3][];
+	public static void verbenEkon() {
 		übergabe[0] = new String[verbene.length];
 		übergabe[1] = new String[verbenes.length];
 		übergabe[2] = new String[verbenespn.length];
@@ -34,13 +34,21 @@ public class e {
 		
 		for (int i = 0; i < verbene.length; i++) {
 			übergabe[0][i] = verbene[i];
+			System.out.println(verbene[i]);
 		}
 		for (int i = 0; i < verbenes.length; i++) {
 			übergabe[1][i] = verbenes[i];
+			System.out.println("---------");
+			System.out.println(verbenes[i]);
 		}
 		for (int i = 0; i < verbenespn.length; i++) {
 			übergabe[2][i] = verbenespn[i];
+			System.out.println("--------------");
+			System.out.println("Hallo:" + verbenespn[i]);
 		}
+	}
+	
+	public static String[][] getVerbenEkon() {
 		return übergabe;
 	}
 

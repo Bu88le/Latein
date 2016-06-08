@@ -24,7 +24,7 @@ public class PanelFehler extends JPanel {
 		lb1_info.setBounds(5, 5, 600, 200);
 		add(lb1_info);
 		
-		b1_show = new CommonButton("Überprüfung", 215, 220, 130, 30, Color.LIGHT_GRAY, Color.BLUE);
+		b1_show = new CommonButton("Überprüfung", 235, 220, 130, 30, Color.LIGHT_GRAY, Color.BLUE);
 		b1_show.addActionListener(new ActionListener() {
 
 			@Override
@@ -35,7 +35,7 @@ public class PanelFehler extends JPanel {
 		});
 		add(b1_show);
 		
-		b2_newvoc = new CommonButton("Neue Vokabel", 215, 300, 130, 30, Color.LIGHT_GRAY, Color.BLUE);
+		b2_newvoc = new CommonButton("Neue Vokabel", 235, 300, 130, 30, Color.LIGHT_GRAY, Color.BLUE);
 		b2_newvoc.addActionListener(new ActionListener() {
 
 			@Override
@@ -46,7 +46,7 @@ public class PanelFehler extends JPanel {
 		});
 		add(b2_newvoc);
 		
-		b3_close = new CommonButton("Beenden", 215, 340, 130, 30, Color.RED, Color.BLACK);
+		b3_close = new CommonButton("Beenden", 235, 340, 130, 30, Color.RED, Color.BLACK);
 		b3_close.addActionListener(new ActionListener() {
 
 			@Override
