@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -13,8 +14,9 @@ import latein.Main;
 
 public class PanelFehler extends JPanel {
 
-	CommonButton b1_show, b2_newvoc, b3_close;
+	CommonButton b1_show, b2_newvoc, b3_close, b4_email;
 	JLabel lb1_info;
+	static JLabel lb2_hinweis;
 	
 	public PanelFehler() {
 		setLayout(null);
@@ -24,7 +26,7 @@ public class PanelFehler extends JPanel {
 		lb1_info.setBounds(5, 5, 600, 200);
 		add(lb1_info);
 		
-		b1_show = new CommonButton("Überprüfung", 235, 220, 130, 30, Color.LIGHT_GRAY, Color.BLUE);
+		b1_show = new CommonButton("Überprüfung", 235, 205, 130, 30, Color.LIGHT_GRAY, new Color(0,128,0));
 		b1_show.addActionListener(new ActionListener() {
 
 			@Override
@@ -35,7 +37,7 @@ public class PanelFehler extends JPanel {
 		});
 		add(b1_show);
 		
-		b2_newvoc = new CommonButton("Neue Vokabel", 235, 300, 130, 30, Color.LIGHT_GRAY, Color.BLUE);
+		b2_newvoc = new CommonButton("Neue Vokabel", 315, 290, 150, 30, Color.LIGHT_GRAY, Color.BLUE);
 		b2_newvoc.addActionListener(new ActionListener() {
 
 			@Override
@@ -46,7 +48,7 @@ public class PanelFehler extends JPanel {
 		});
 		add(b2_newvoc);
 		
-		b3_close = new CommonButton("Beenden", 235, 340, 130, 30, Color.RED, Color.BLACK);
+		b3_close = new CommonButton("Beenden", 235, 330, 120, 30, Color.RED, Color.BLACK);
 		b3_close.addActionListener(new ActionListener() {
 
 			@Override
@@ -57,5 +59,28 @@ public class PanelFehler extends JPanel {
 		});
 		b3_close.setFont(new Font("Calibri", Font.ITALIC, 15));
 		add(b3_close);
+		
+		lb2_hinweis = new JLabel("Das E-Mail Programm konnte leider nicht automatisch gestartet werden", JLabel.CENTER);
+		lb2_hinweis.setBounds(50,240,500,40);
+		lb2_hinweis.setFont(new Font("Calibri", Font.PLAIN, 15));
+		lb2_hinweis.setVisible(false);
+		add(lb2_hinweis);
+		
+		b4_email = new CommonButton("E-Mail verfassen", 135, 290, 150, 30, Color.LIGHT_GRAY, Color.BLUE);
+		b4_email.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					new ProcessBuilder( "cmd", "/c", "start", "/B","mailTo:bubblereg@gmx.de").start();
+				} catch (IOException e1) {
+					e1.printStackTrace();
+					lb2_hinweis.setVisible(true);
+					Main.mf.revalidaten();
+				}					
+			}
+		});
+		add(b4_email);
 	}
+	
 }

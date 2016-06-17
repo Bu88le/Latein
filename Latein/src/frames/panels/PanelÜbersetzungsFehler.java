@@ -1,10 +1,15 @@
 package frames.panels;
 
 import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.IOException;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -14,8 +19,8 @@ import latein.Main;
 
 public class Panel‹bersetzungsFehler extends JPanel {
 
-	CommonButton b1_go, b2_close;
-	public static JLabel lb1_anzeige;
+	CommonButton b1_go, b2_close, b3_email;
+	public static JLabel lb1_anzeige, lb2_hinweis;
 	
 	public Panel‹bersetzungsFehler() {
 		setLayout(null);
@@ -32,7 +37,7 @@ public class Panel‹bersetzungsFehler extends JPanel {
 		});
 		add(lb1_anzeige);
 		
-		b1_go = new CommonButton("OK", 255, 290, 90, 30, Color.LIGHT_GRAY, Color.BLUE);
+		b1_go = new CommonButton("OK", 315, 290, 150, 30, Color.LIGHT_GRAY, Color.BLUE);
 		b1_go.addActionListener(new ActionListener() {
 
 			@Override
@@ -43,7 +48,7 @@ public class Panel‹bersetzungsFehler extends JPanel {
 		});
 		add(b1_go);
 		
-		b2_close = new CommonButton("Beenden", 255, 330, 90, 30, Color.RED, Color.BLACK);
+		b2_close = new CommonButton("Beenden", 225, 330, 120, 30, Color.RED, Color.BLACK);
 		b2_close.addActionListener(new ActionListener() {
 			
 			@Override
@@ -53,6 +58,28 @@ public class Panel‹bersetzungsFehler extends JPanel {
 		});
 		add(b2_close);
 		
+		lb2_hinweis = new JLabel("Das E-Mail Programm konnte leider nicht automatisch gestartet werden", JLabel.CENTER);
+		lb2_hinweis.setBounds(50,240,500,40);
+		lb2_hinweis.setFont(new Font("Calibri", Font.PLAIN, 15));
+		lb2_hinweis.setVisible(false);
+		add(lb2_hinweis);
+		
+		b3_email = new CommonButton("E-Mail verfassen", 135,290,150,30, Color.LIGHT_GRAY, Color.BLUE);
+		b3_email.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					new ProcessBuilder( "cmd", "/c", "start", "/B","mailTo:bubblereg@gmx.de").start();
+				} catch (IOException e1) {
+					e1.printStackTrace();
+					lb2_hinweis.setVisible(true);
+					Main.mf.revalidaten();
+				}				
+			}
+		});
+		b3_email.setToolTipText("Ein Mausklick ˆffnet das Standard Email-Programm");
+		add(b3_email);
 	}
 	
 }

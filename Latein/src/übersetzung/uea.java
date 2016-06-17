@@ -119,4 +119,29 @@ public class uea {
 		
 		new übergabe(stringbuffer.toString());
 	}
+	
+	public static void ausgabeReverse(String s) {
+		Start:
+		for (int i = 0; i < zg.length; i++) {
+			for (int z = 2; z < zg[i].length; z++) {
+				if (s.equals(zg[i][z])){
+					stringbuffer.append("<html>");
+					stringbuffer.append(zg[i][1]);
+					stringbuffer.append(" : <p/> <p/>");
+					
+					for (int t = 2; t < zg[i].length; t++){
+						stringbuffer.append(zg[i][t] + "<p/>");
+						if (t == zg[i].length) {
+							stringbuffer.append("<html/>");
+							break Start;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	public static StringBuffer getAusgabeReverse() {
+		return stringbuffer;
+	}
 }

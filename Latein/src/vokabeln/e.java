@@ -1,7 +1,10 @@
 package vokabeln;
 
+import javax.swing.JOptionPane;
+
 public class e {
-	static String[][] übergabe = new String[3][];
+	static String[][] übergabe = new String[2][];
+	static String[][] rest = new String[1][];
 	
 	final static public String[] verbene = {"mon"};
 	final static public String[] verbenes = {"adhae", "ar"};
@@ -28,28 +31,29 @@ public class e {
 	public static void verbenEkon() {
 		übergabe[0] = new String[verbene.length];
 		übergabe[1] = new String[verbenes.length];
-		übergabe[2] = new String[verbenespn.length];
-		
-		
 		
 		for (int i = 0; i < verbene.length; i++) {
 			übergabe[0][i] = verbene[i];
-			System.out.println(verbene[i]);
-		}
-		for (int i = 0; i < verbenes.length; i++) {
-			übergabe[1][i] = verbenes[i];
-			System.out.println("---------");
-			System.out.println(verbenes[i]);
 		}
 		for (int i = 0; i < verbenespn.length; i++) {
-			übergabe[2][i] = verbenespn[i];
-			System.out.println("--------------");
-			System.out.println("Hallo:" + verbenespn[i]);
+			übergabe[1][i] = verbenespn[i];
+		}
+		verbenEkonRest();
+	}
+	
+	private static void verbenEkonRest() {
+		rest[0] = new String[verbenes.length];
+		for (int i = 0; i < verbenes.length; i++) {
+			rest[0][i] = verbenes[i];
 		}
 	}
 	
 	public static String[][] getVerbenEkon() {
 		return übergabe;
+	}
+	
+	public static String[][] getVerbenEkonRest() {
+		return rest;
 	}
 
 }

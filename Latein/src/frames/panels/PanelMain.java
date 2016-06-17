@@ -15,11 +15,13 @@ import frames.MainFrame;
 import frames.buttons.CommonButton;
 import latein.Formauswahl;
 import latein.Main;
+import übersetzung.ReverseAusgabe;
+import übersetzung.uea;
 
 public class PanelMain extends JPanel {
 	
 	public static String gv;
-	static CommonButton b1_Suchen, b2_Beenden;
+	static CommonButton b1_Suchen, b2_Beenden, b3_reverseSuche;
 	public static JTextField tf1_vocinput;
 	JLabel lb1_desc;
 	
@@ -27,7 +29,7 @@ public class PanelMain extends JPanel {
 		
 		setLayout(null);
 		
-		b1_Suchen = new CommonButton("Suchen", 200, 190, 90, 30);
+		b1_Suchen = new CommonButton("Suchen", 150, 190, 150, 30);
 		b1_Suchen.setEnabled(false);
 		b1_Suchen.addActionListener(new ActionListener() {
 
@@ -49,7 +51,7 @@ public class PanelMain extends JPanel {
 		add(b1_Suchen);
 		
 		
-		b2_Beenden = new CommonButton("Beenden", 310, 190, 90, 30, Color.RED, Color.BLACK);
+		b2_Beenden = new CommonButton("Beenden", 240, 225, 120, 30, Color.RED, Color.BLACK);
 		b2_Beenden.addActionListener(new ActionListener() {
 
 			@Override
@@ -89,9 +91,11 @@ public class PanelMain extends JPanel {
 				if (tf1_vocinput.getText().equals("") || !isValid(tf1_vocinput.getText())) {
 					tf1_vocinput.setBorder(new LineBorder(Color.RED, 2));
 					b1_Suchen.setEnabled(false);
+					b3_reverseSuche.setEnabled(false);
 				}else {
 					tf1_vocinput.setBorder(new LineBorder(Color.BLACK, 1));
 					b1_Suchen.setEnabled(true);
+					b3_reverseSuche.setEnabled(true);
 				}
 				
 			}
@@ -102,6 +106,23 @@ public class PanelMain extends JPanel {
 		lb1_desc = new JLabel("Gesuchte Vokabel", JLabel.CENTER);
 		lb1_desc.setBounds(200, 125, 200, 10);
 		add(lb1_desc);
+		
+		b3_reverseSuche = new CommonButton("Rückwärtssuche", 310, 190, 150, 30);
+		b3_reverseSuche.setEnabled(false);
+		b3_reverseSuche.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (tf1_vocinput.getText().equals("") || !isValid(tf1_vocinput.getText())) {
+					
+				}else {
+					ReverseAusgabe.ausgabeUEA(tf1_vocinput.getText());
+					Main.mf.panelReverseAusgabe();
+				}
+				
+			}
+		});
+		add(b3_reverseSuche);
 		
 		
 	}

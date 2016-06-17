@@ -9,6 +9,7 @@ import javax.swing.WindowConstants;
 import frames.panels.PanelAdmin;
 import frames.panels.PanelAdminB;
 import frames.panels.PanelAlleVocs;
+import frames.panels.PanelAusgabeReverse;
 import frames.panels.PanelFehler;
 import frames.panels.PanelFuturI;
 import frames.panels.PanelFuturII;
@@ -54,6 +55,13 @@ public class MainFrame extends JFrame {
 		PanelMain.tf1_vocinput.requestFocus();
 		c.revalidate();
 
+	}
+	
+	public void panelReverseAusgabe() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelAusgabeReverse());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
 	}
 	public void panelFehler() {
 		c.remove(centerpanel);
