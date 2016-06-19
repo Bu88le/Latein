@@ -15,6 +15,7 @@ import frames.panels.PanelFuturI;
 import frames.panels.PanelFuturII;
 import frames.panels.PanelImperfekt;
 import frames.panels.PanelMain;
+import frames.panels.PanelMehrereWörter;
 import frames.panels.PanelPerfekt;
 import frames.panels.PanelPlusquamperfekt;
 import frames.panels.PanelPräsens;
@@ -55,6 +56,13 @@ public class MainFrame extends JFrame {
 		PanelMain.tf1_vocinput.requestFocus();
 		c.revalidate();
 
+	}
+	
+	public void panelMehrereWörter(StringBuffer sb) {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelMehrereWörter(sb));
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
 	}
 	
 	public void panelReverseAusgabe() {

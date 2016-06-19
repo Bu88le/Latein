@@ -1,7 +1,6 @@
 package übersetzung;
 
 import frames.MainFrame;
-import frames.frame;
 import latein.Main;
 
 public class übergabe {

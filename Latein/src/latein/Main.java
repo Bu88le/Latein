@@ -1,7 +1,6 @@
 package latein;
 
 import frames.MainFrame;
-import frames.framemain;
 	
 public class Main {
 	

@@ -117,7 +117,7 @@ public class PanelMain extends JPanel {
 					
 				}else {
 					ReverseAusgabe.ausgabeUEA(tf1_vocinput.getText());
-					Main.mf.panelReverseAusgabe();
+					
 				}
 				
 			}

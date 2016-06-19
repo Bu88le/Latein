@@ -2,7 +2,6 @@ package latein;
 
 import javax.swing.JOptionPane;
 
-import frames.framemain;
 import zeiten.*;
 import wörter.*;
 

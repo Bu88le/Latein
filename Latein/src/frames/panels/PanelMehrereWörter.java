@@ -14,9 +14,9 @@ import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.LineBorder;
 
-import frames.MainFrame;
 import frames.buttons.CommonButton;
 import wörter.akonjugation;
+import wörter.ekonjugation;
 import zeiten.Auswahl;
 
 public class PanelMehrereWörter extends JPanel {
@@ -25,6 +25,7 @@ public class PanelMehrereWörter extends JPanel {
 	JLabel lb1_anzeige, lb2_hinweis;
 	JScrollPane sp1;
 	CommonButton b1_go, b2_close;
+	String gv, gvs;
 	
 	public PanelMehrereWörter(StringBuffer sb) {
 		setLayout(null);
@@ -33,6 +34,7 @@ public class PanelMehrereWörter extends JPanel {
 		lb2_hinweis.setFont(new Font("Calibri", Font.PLAIN, 15));
 		lb2_hinweis.setForeground(new Color(0,128,0));
 		lb2_hinweis.setBounds(0,5,600,20);
+		add(lb2_hinweis);
 		
 		lb1_anzeige = new JLabel(sb.toString(), JLabel.CENTER);
 		lb1_anzeige.setFont(new Font("Calibri", Font.PLAIN, 15));
@@ -44,7 +46,7 @@ public class PanelMehrereWörter extends JPanel {
 		add(sp1);
 		
 		tf1_eingabe = new JTextField("", 15);
-		tf1_eingabe.setBounds(200, 225, 200, 20);
+		tf1_eingabe.setBounds(275, 240, 50, 25);
 		tf1_eingabe.setBorder(new LineBorder(Color.RED));
 		tf1_eingabe.addKeyListener(new KeyAdapter() {
 			@Override
@@ -53,7 +55,7 @@ public class PanelMehrereWörter extends JPanel {
 					if (tf1_eingabe.getText().equals("") || !isValid(tf1_eingabe.getText())) {
 						
 					}else {
-						if (sb.toString().contains(tf1_eingabe.getText())) {
+						if (sb.toString().length() >= Double.parseDouble(tf1_eingabe.getText())) {
 							b1_go.doClick();
 						}else {
 							
@@ -72,25 +74,41 @@ public class PanelMehrereWörter extends JPanel {
 					tf1_eingabe.setBorder(new LineBorder(Color.BLACK, 1));
 					b1_go.setEnabled(true);
 				}
-				
 			}
 		});
 		add(tf1_eingabe);
 		
-		b1_go = new CommonButton("Go", 255, 265, 90, 30, Color.LIGHT_GRAY, Color.BLUE);
+		b1_go = new CommonButton("Go", 255, 270, 90, 30, Color.LIGHT_GRAY, Color.BLUE);
+		b1_go.setEnabled(false);
 		b1_go.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (Auswahl.akon) {
-					new akonjugation(tf1_eingabe.getText(),tf1_eingabe.getText().substring(0, tf1_eingabe.getText().length()-1));
+				if (sb.toString().length() >= Integer.parseInt(tf1_eingabe.getText())) {
+					if (Auswahl.ekon) {
+						gv =  vokabeln.e.getVerbenEkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()] + "eo";
+						gvs = vokabeln.e.getVerbenEkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()];
+						new ekonjugation(gv, gvs);
+					}
+					if (Auswahl.ekon2) {
+						gv =  vokabeln.e.getVerbenEkonRest()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()] + "eo";
+						gvs = vokabeln.e.getVerbenEkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()];
+						new ekonjugation(gv, gvs);
+					}
+					if (Auswahl.akon) {
+						gv = vokabeln.a.getVerbenAkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()] + "o";
+						gvs = vokabeln.a.getVerbenAkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()];
+						new akonjugation(gv, gvs);
+					}
+					
 				}
 			}
 		});
+		add(b1_go);
 	}
 	
 	private static boolean isValid(String s) {
-		if (s.matches("[a-zA-Z\\\\s\\p{Blank}\\p{Alpha}]*"))
+		if (s.matches("[\\d]*"))
 			return true;
 		
 		return false;

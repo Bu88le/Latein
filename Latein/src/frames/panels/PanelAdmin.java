@@ -14,7 +14,6 @@ import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 
 import frames.MainFrame;
-import frames.frameadmin;
 import frames.buttons.CommonButton;
 import latein.Formauswahl;
 import latein.Main;

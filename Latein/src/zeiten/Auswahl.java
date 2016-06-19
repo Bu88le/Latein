@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
+import latein.Main;
 import vokabeln.a;
 import vokabeln.e;
 import wörter.akonjugation;
@@ -14,7 +15,7 @@ public class Auswahl {
 	
 	private static String gv;
 	private static int zähler = 0;
-	private static ArrayList<Point> pointArray = new ArrayList<Point>();
+	public static ArrayList<Point> pointArray = new ArrayList<Point>();
 	public static boolean akon, ekon, ekon2, kosnkon, ikon;
 	
 	public static void überprüfung(String gvs) {
@@ -24,13 +25,16 @@ public class Auswahl {
 		for (int i = 0; i < a.getVerbenAkon().length; i++) {
 			for (int z = 0; z < a.getVerbenAkon()[i].length; z++) {
 				if (gvs.equals(a.getVerbenAkon()[i][z])) {
-					gv = gvs + "o";
-					new akonjugation(gv, gvs);
+					zähler++;
+					pointArray.add(new Point(i,z));
+					akon = true;
+				}
+				if (akon && zähler > 0 && gvs.equals(a.getVerbenAkon()[i][z])) {
+					auswertung(i, z, gvs);
 					break akonjugation;
 				}
-				if (i == a.getVerbenAkon().length-1 && !gvs.equals(a.getVerbenAkon()[i][z])) {
+				if (i == a.getVerbenAkon().length-1 && z == a.getVerbenAkon()[i].length-1 && akon == false) {
 					überprüfung2(gvs);
-					break akonjugation;
 				}
 			}
 		}
@@ -38,7 +42,6 @@ public class Auswahl {
 	
 	private static void überprüfung2(String gvs) {
 		e.verbenEkon();
-		System.out.println(e.getVerbenEkon().length);
 		ekonjugation:
 		for (int i = 0; i < e.getVerbenEkon().length; i++) {
 			for (int z = 0; z < e.getVerbenEkon()[i].length; z++) {
@@ -47,11 +50,9 @@ public class Auswahl {
 					pointArray.add(new Point(i,z));
 					ekon = true;
 				}
-				if (i == e.getVerbenEkon().length && !gvs.equals(e.getVerbenEkon()[i][z])) {
-					break ekonjugation;
-				}
-				if (i == e.getVerbenEkon().length-1 && zähler > 0 && gvs.equals(e.getVerbenEkon()[i][z])) {
+				if (ekon && zähler > 0 && gvs.equals(e.getVerbenEkon()[i][z])) {
 					auswertung(i, z, gvs);
+					break ekonjugation;
 				}
 			}
 		}
@@ -63,7 +64,8 @@ public class Auswahl {
 					pointArray.add(new Point(i,z));
 					ekon2 = true;
 				}
-				if (i == e.getVerbenEkonRest().length-1 && zähler > 0 && gvs.equals(e.getVerbenEkonRest()[i][z])) {
+				if (ekon2 && zähler > 0 && gvs.equals(e.getVerbenEkonRest()[i][z])) {
+					System.out.println("hi");
 					auswertung(i,z,gvs);
 				}
 			}
@@ -78,6 +80,9 @@ public class Auswahl {
 		}else if (ekon2 && zähler == 1) {
 			gv = e.rverbenespn()[z] + "eo";
 			new ekonjugation(gv, s);
+		}else if (akon && zähler == 1) {
+			gv = a.getVerbenAkon()[i][z] + "o";
+			new akonjugation(gv, s);
 		}
 		
 		if (zähler > 1) {
@@ -87,13 +92,21 @@ public class Auswahl {
 					gv = e.getVerbenEkon()[(int) pointArray.get(a).getX()][(int) pointArray.get(a).getY()] + "eo";
 					sb.append(gv);
 					sb.append("\n");
-					new ekonjugation(gv, s);
+					Main.mf.panelMehrereWörter(sb);
 				}
 			}else if (ekon2) {
 				for (int a = 0; a < pointArray.size(); a++) {
 					gv = e.rverbenespn()[(int) pointArray.get(a).getY()] + "eo";
 					sb.append(gv);
 					sb.append("\n");
+					Main.mf.panelMehrereWörter(sb);
+				}
+			}else if (akon) {
+				for (int a = 0; a < pointArray.size(); a++) {
+					gv = vokabeln.a.getVerbenAkon()[(int) pointArray.get(a).getX()][(int) pointArray.get(a).getY()] + "o";
+					sb.append(gv);
+					sb.append("\n");
+					Main.mf.panelMehrereWörter(sb);
 				}
 			}
 			
