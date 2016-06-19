@@ -28,6 +28,9 @@ public class PanelMehrereWörter extends JPanel {
 	String gv, gvs;
 	
 	public PanelMehrereWörter(StringBuffer sb) {
+		
+		String[] länge = sb.toString().split("<p/>");
+		
 		setLayout(null);
 		
 		lb2_hinweis = new JLabel("Ihre Vokabel trifft auf mehrere lateinische Wörter zu! Bitte wählen sie eine Vokabel aus:", JLabel.CENTER);
@@ -55,11 +58,7 @@ public class PanelMehrereWörter extends JPanel {
 					if (tf1_eingabe.getText().equals("") || !isValid(tf1_eingabe.getText())) {
 						
 					}else {
-						if (sb.toString().length() >= Double.parseDouble(tf1_eingabe.getText())) {
 							b1_go.doClick();
-						}else {
-							
-						}
 					}
 				}
 				
@@ -67,7 +66,7 @@ public class PanelMehrereWörter extends JPanel {
 
 			@Override
 			public void keyReleased(KeyEvent e) {
-				if (tf1_eingabe.getText().equals("") || !isValid(tf1_eingabe.getText())) {
+				if (tf1_eingabe.getText().equals("") || !isValid(tf1_eingabe.getText()) || Integer.parseInt(tf1_eingabe.getText()) > länge.length) {
 					tf1_eingabe.setBorder(new LineBorder(Color.RED, 2));
 					b1_go.setEnabled(false);
 				}else {
@@ -84,7 +83,6 @@ public class PanelMehrereWörter extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (sb.toString().length() >= Integer.parseInt(tf1_eingabe.getText())) {
 					if (Auswahl.ekon) {
 						gv =  vokabeln.e.getVerbenEkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()] + "eo";
 						gvs = vokabeln.e.getVerbenEkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()];
@@ -101,7 +99,6 @@ public class PanelMehrereWörter extends JPanel {
 						new akonjugation(gv, gvs);
 					}
 					
-				}
 			}
 		});
 		add(b1_go);

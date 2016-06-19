@@ -1,6 +1,7 @@
 package frames.panels;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -26,7 +27,7 @@ public class PanelMain extends JPanel {
 	JLabel lb1_desc;
 	
 	public PanelMain() {
-		
+
 		setLayout(null);
 		
 		b1_Suchen = new CommonButton("Suchen", 150, 190, 150, 30);
@@ -41,6 +42,7 @@ public class PanelMain extends JPanel {
 					if (tf1_vocinput.getText().equals("admin")) {
 						MainFrame.panelAdmin();
 					}else {
+						setCursor(new Cursor(Cursor.WAIT_CURSOR));
 						gv = tf1_vocinput.getText();
 						new Formauswahl(tf1_vocinput.getText());
 					}
@@ -116,6 +118,7 @@ public class PanelMain extends JPanel {
 				if (tf1_vocinput.getText().equals("") || !isValid(tf1_vocinput.getText())) {
 					
 				}else {
+					setCursor(new Cursor(Cursor.WAIT_CURSOR));
 					ReverseAusgabe.ausgabeUEA(tf1_vocinput.getText());
 					
 				}

@@ -90,24 +90,24 @@ public class Auswahl {
 			if (ekon) {				
 				for (int a = 0; a < pointArray.size(); a++) {
 					gv = e.getVerbenEkon()[(int) pointArray.get(a).getX()][(int) pointArray.get(a).getY()] + "eo";
-					sb.append(gv);
-					sb.append("\n");
-					Main.mf.panelMehrereWörter(sb);
+					sb.append("<html>" + gv);
+					sb.append("<p/");
 				}
+				Main.mf.panelMehrereWörter(sb.append("<html/>"));
 			}else if (ekon2) {
 				for (int a = 0; a < pointArray.size(); a++) {
 					gv = e.rverbenespn()[(int) pointArray.get(a).getY()] + "eo";
-					sb.append(gv);
-					sb.append("\n");
-					Main.mf.panelMehrereWörter(sb);
+					sb.append("<html>" + gv);
+					sb.append("<p/");
 				}
+				Main.mf.panelMehrereWörter(sb.append("<html/>"));
 			}else if (akon) {
 				for (int a = 0; a < pointArray.size(); a++) {
 					gv = vokabeln.a.getVerbenAkon()[(int) pointArray.get(a).getX()][(int) pointArray.get(a).getY()] + "o";
-					sb.append(gv);
-					sb.append("\n");
-					Main.mf.panelMehrereWörter(sb);
+					sb.append("<html>" + gv);
+					sb.append("<p/");
 				}
+				Main.mf.panelMehrereWörter(sb.append("<html/>"));
 			}
 			
 		}

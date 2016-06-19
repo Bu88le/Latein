@@ -29,7 +29,8 @@ public class PanelÜbersetzung extends JPanel{
 		
 		
 		public PanelÜbersetzung() {
-			setLayout(null);
+			setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+		 	setLayout(null);
 			
 			
 			lb1_translation = new JLabel(übergabe.returngv());

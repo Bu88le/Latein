@@ -44,7 +44,6 @@ public class MainFrame extends JFrame {
 		c = getContentPane();
 		
 		panelMain();
-
 	}
 	
 	public static void panelMain() {
