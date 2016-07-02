@@ -6,15 +6,20 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.LineBorder;
 
+import frames.MainFrame;
 import frames.buttons.CommonButton;
+import latein.Main;
 import wörter.akonjugation;
 import wörter.ekonjugation;
 import zeiten.Auswahl;
@@ -26,10 +31,12 @@ public class PanelMehrereWörter extends JPanel {
 	JScrollPane sp1;
 	CommonButton b1_go, b2_close;
 	String gv, gvs;
+	JList jl1_anzeige;
+	DefaultListModel dlm1_Strings;
 	
-	public PanelMehrereWörter(StringBuffer sb) {
+	public PanelMehrereWörter(ArrayList<String> MehrereWörter) {
 		
-		String[] länge = sb.toString().split("<p/>");
+		//String[] länge = sb.toString().split("<p/>");
 		
 		setLayout(null);
 		
@@ -39,7 +46,17 @@ public class PanelMehrereWörter extends JPanel {
 		lb2_hinweis.setBounds(0,5,600,20);
 		add(lb2_hinweis);
 		
-		lb1_anzeige = new JLabel(sb.toString(), JLabel.CENTER);
+		dlm1_Strings = new DefaultListModel();
+		jl1_anzeige = new JList(dlm1_Strings);	
+		for (int i = 0; i < MainFrame.MehrereVokabeln.size(); i++) {
+			if (i%2 == 0) {
+				System.out.println(MainFrame.MehrereVokabeln.get(i));
+				dlm1_Strings.addElement(MainFrame.MehrereVokabeln.get(i));
+			}
+		}	
+		jl1_anzeige.setBounds(5,30,600,150);
+		add(jl1_anzeige);
+		/*lb1_anzeige = new JLabel(sb.toString(), JLabel.CENTER);
 		lb1_anzeige.setFont(new Font("Calibri", Font.PLAIN, 15));
 		lb1_anzeige.setForeground(Color.BLACK);
 		
@@ -75,7 +92,7 @@ public class PanelMehrereWörter extends JPanel {
 				}
 			}
 		});
-		add(tf1_eingabe);
+		add(tf1_eingabe);*/
 		
 		b1_go = new CommonButton("Go", 255, 270, 90, 30, Color.LIGHT_GRAY, Color.BLUE);
 		b1_go.setEnabled(false);

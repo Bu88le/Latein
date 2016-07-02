@@ -1,11 +1,16 @@
 package übersetzung;
 
+import java.awt.Point;
+import java.util.ArrayList;
+
 public class uea {
 	
 	static String gv;
 	static int zähler;
 	public static StringBuffer stringbuffer = new StringBuffer();
 	private static String ss = "";
+	public static ArrayList<Point> pointZG = new ArrayList<Point>();
+	public static ArrayList<String> Übersetzungen = new ArrayList<String>();
 	
 	public uea(String s) {
 		gv = s;
@@ -140,6 +145,23 @@ public class uea {
 							stringbuffer.append("<html/>");
 							break Start;
 						}
+					}
+				}
+			}
+		}
+	}
+	
+	public static void VokabelÜberprüfung(String gv) {
+		Start:
+		for (int i = 0; i < zg.length; i++) {
+			for (int z = 0; z < zg[i].length; z++) {
+				if (gv.equals(zg[i][z])) {
+					if (pointZG.contains(new Point(i,z))) {
+						
+					}else {
+						pointZG.add(new Point(i,z));
+						Übersetzungen.add(zg[i][z]);
+						break Start;
 					}
 				}
 			}

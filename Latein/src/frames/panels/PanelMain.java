@@ -8,6 +8,9 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
@@ -15,9 +18,7 @@ import javax.swing.border.LineBorder;
 import frames.MainFrame;
 import frames.buttons.CommonButton;
 import latein.Formauswahl;
-import latein.Main;
 import übersetzung.ReverseAusgabe;
-import übersetzung.uea;
 
 public class PanelMain extends JPanel {
 	

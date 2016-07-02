@@ -1,8 +1,14 @@
 package frames;
 
 import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
@@ -29,10 +35,14 @@ public class MainFrame extends JFrame {
 	
 	static public Container c;
 	public static JPanel centerpanel;
+	JMenuBar jmb1;
+	JMenu jm1;
+	JMenuItem jmi1_help, jmi2_about, jmi3_exit;
+	public static ArrayList<String> MehrereVokabeln = new ArrayList<String>();
 	
 	public MainFrame() {
 		super("Latein");		
-		setSize(600, 400);
+		setSize(600, 435);
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -41,7 +51,62 @@ public class MainFrame extends JFrame {
 		
 		centerpanel = new PanelMain();
 		
+		jmb1 = new JMenuBar();
+		setJMenuBar(jmb1);
+		
+		jm1 = new JMenu("?");
+		jmb1.add(jm1);
+		
+		jmi1_help = new JMenuItem("Help");
+		jmi1_help.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		jm1.add(jmi1_help);
+		
+		jmi2_about = new JMenuItem("About");
+		jmi2_about.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		jm1.add(jmi2_about);
+		
+		jm1.addSeparator();
+		
+		jmi3_exit = new JMenuItem("Beenden");
+		jmi3_exit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);				
+			}
+		});
+		jm1.add(jmi3_exit);
+		
 		c = getContentPane();
+		
+		MehrereVokabeln.add("Versuch");
+		MehrereVokabeln.add("Test");
+		MehrereVokabeln.add("Versuch");
+		MehrereVokabeln.add("Test");
+		MehrereVokabeln.add("Versuch");
+		MehrereVokabeln.add("Test");
+		MehrereVokabeln.add("Versuch");
+		MehrereVokabeln.add("Test");
+		MehrereVokabeln.add("Versuch");
+		MehrereVokabeln.add("Test");
+		MehrereVokabeln.add("Versuch");
+		MehrereVokabeln.add("Test");
+		MehrereVokabeln.add("Versuch");
+		MehrereVokabeln.add("Test");
 		
 		panelMain();
 	}
@@ -57,9 +122,10 @@ public class MainFrame extends JFrame {
 
 	}
 	
-	public void panelMehrereWörter(StringBuffer sb) {
+	public void panelMehrereWörter(ArrayList<String> MehrereWörter) {
 		c.remove(centerpanel);
-		c.add(centerpanel = new PanelMehrereWörter(sb));
+		System.out.println(MehrereVokabeln.size());
+		c.add(centerpanel = new PanelMehrereWörter(MehrereWörter));
 		centerpanel.setBounds(0,0,600,400);
 		c.revalidate();
 	}
@@ -70,6 +136,7 @@ public class MainFrame extends JFrame {
 		centerpanel.setBounds(0,0,600,400);
 		c.revalidate();
 	}
+	
 	public void panelFehler() {
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelFehler());
@@ -122,6 +189,7 @@ public class MainFrame extends JFrame {
 	public void panelTenseSelection() {
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelTenseSelection());
+		PanelTenseSelection.b1_präsens.requestFocus();
 		centerpanel.setBounds(0,0,600,400);
 		c.revalidate();
 	}

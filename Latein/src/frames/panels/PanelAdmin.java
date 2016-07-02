@@ -266,79 +266,107 @@ public class PanelAdmin extends JPanel {
 		 */
 		pwf_login.addKeyListener(new KeyAdapter() {
 			/*
-			 * String pw enthält das eingegebene Passwort
-			 */
-			String pw = String.valueOf(pwf_login.getPassword());
-			/*
 			 * Wenn Taste gedrückt wird:
 			 */
 			public void keyPressed(KeyEvent e) {
-				/*
-				 * Wenn gedrückte Taste ENTER ist, dann überprüfe:
-				 */
-					if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-						/*
-						 * Wenn das eingegebene Passwort "latein" ist, dann rufe MainFrame.panelAdminB() auf
-						 */
-						if (pw.equals("latein")) {
-							Main.mf.panelAdminB();
-						/*
-						 * Wenn kein Passwort eingegeben wurde:
-						 * setze Text von lb2_hint zu "Kein Passwort eingegeben", setze Schriftfarbe zu rot, setzte Sichtbar, repainte ContentPane des Frames
-						 */
-						}else if (pw.equals("")) {
-							lb2_hint.setVisible(false);
-							lb2_hint.setText("KEIN PASSWORT EINGEGEBEN");
-							lb2_hint.setForeground(Color.RED);
-							lb2_hint.setVisible(true);
-							MainFrame.c.repaint();
-						/*
-						 * Wenn das eingegebene Passwort "pwa" ist:
-						 * setze Text von lb2_hint zu "latein", setze Schriftfarbe schwarz, setzte Sichtbar, repainte ContentPane des Frames
-						 */
-						}else if (pw.equals("pwa")) {
-							lb2_hint.setVisible(false);
-							lb2_hint.setText("latein");
-							lb2_hint.setForeground(Color.BLACK);
-							lb2_hint.setVisible(true);
-							MainFrame.c.revalidate();
-						/*
-						 * Wenn eingegebenes Passwort "pw" ist:
-						 * setze lb2_hint unsichtbar, setzte Text des PasswortFieldsa zu "latein"
-						 */
-						}else if (pw.equals("pw")) {
-							lb2_hint.setVisible(false);
-							pwf_login.setText("latein");
-						}else if (!pw.equals("latein") || !pw.equals("") || !pw.equals("pwa") || !pw.equals("pw")) {
-							lb2_hint.setVisible(false);
-							lb2_hint.setText("FALSCHES PASSWORT");
-							lb2_hint.setVisible(true);
-							MainFrame.c.revalidate();
-						}
-					}
-					
+				if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+					b3_Admin.doClick();
+				}
 			}
 		});
+		/*
+		 * Füge das PW-Field dem panel hinzu
+		 */
 		add(pwf_login);
 		
+		/*
+		 * Initialisierung des CommonButtons b3_Admin
+		 */
 		b3_Admin = new CommonButton("ADMIN ACCESS", 225, 330, 150, 30, Color.BLACK, Color.RED);
+		/*
+		 * Hinzufügen eines Action Listeners
+		 */
 		b3_Admin.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
+				/*
+				 * String pw enthält das eingegebene Passwort
+				 */
+				String pw = String.valueOf(pwf_login.getPassword());
+				/*
+				 * Wenn gedrückte Taste ENTER ist, dann überprüfe:
+				 */
+				/*
+				 * Wenn das eingegebene Passwort "latein" ist, dann rufe MainFrame.panelAdminB() auf
+				 */
+				if (pw.equals("latein")) {
+					Main.mf.panelAdminB();
+					/*
+					 * Wenn kein Passwort eingegeben wurde:
+					 * setze Text von lb2_hint zu "Kein Passwort eingegeben", setze Schriftfarbe zu rot, setzte Sichtbar, repainte ContentPane des Frames
+					 */
+				}else if (pw.equals("")) {
+					lb2_hint.setVisible(false);
+					lb2_hint.setText("KEIN PASSWORT EINGEGEBEN");
+					lb2_hint.setForeground(Color.RED);
+					lb2_hint.setVisible(true);
+					MainFrame.c.repaint();
+					/*
+					 * Wenn das eingegebene Passwort "pwa" ist:
+					 * setze Text von lb2_hint zu "latein", setze Schriftfarbe schwarz, setzte Sichtbar, repainte ContentPane des Frames
+					 */
+				}else if (pw.equals("pwa")) {
+					lb2_hint.setVisible(false);
+					lb2_hint.setText("latein");
+					lb2_hint.setForeground(Color.BLACK);
+					lb2_hint.setVisible(true);
+					MainFrame.c.revalidate();
+					/*
+					 * Wenn eingegebenes Passwort "pw" ist:
+					 * setze lb2_hint unsichtbar, setze Text des PasswortFieldsa zu "latein"
+					 */
+				}else if (pw.equals("pw")) {
+					lb2_hint.setVisible(false);
+					pwf_login.setText("latein");
+					/*
+					 * Wenn Eingabe != der vorher beschriebenen Eingaben ist, dann:
+					 * setze Text von lb2_hint zu "PASSWORT", revalidate den Frame
+					 */
+				}else if (!pw.equals("latein") || !pw.equals("") || !pw.equals("pwa") || !pw.equals("pw")) {
+					lb2_hint.setVisible(false);
+					lb2_hint.setText("FALSCHES PASSWORT");
+					lb2_hint.setVisible(true);
+					MainFrame.c.revalidate();
+				}
 			}
+				
 		
 		});
+		/*
+		 * Fügt dem Panel b3_Admin hinzu
+		 */
 		add(b3_Admin);
 		
+		/*
+		 * Initialisierung von b4_reverseSuche
+		 */
 		b4_reverseSuche = new CommonButton("Rückwärtssuche", 310, 115, 150, 30);
+		/*
+		 * b4_reverseSuche wird disabled
+		 */
 		b4_reverseSuche.setEnabled(false);
+		/*
+		 * Hinzufügen eines ActionListeners
+		 */
 		b4_reverseSuche.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				/*
+				 * Wenn Eingabe leer oder ungültig ist, mache nicht, osnst:
+				 * rufe ReverseAusgabe.ausgabeUEA mit Eingabe als Argument auf
+				 */
 				if (tf1_vocinput.getText().equals("") || !isValid(tf1_vocinput.getText())) {
 					
 				}else {
@@ -348,11 +376,18 @@ public class PanelAdmin extends JPanel {
 				
 			}
 		});
+		/*
+		 * Füge dem Panel b4_reverseSuche hinzu
+		 */
 		add(b4_reverseSuche);
 		
 	}
 	
+	
 	private static boolean isValid(String s) {
+		/*
+		 * Prüft, ob der übergebene String nur erlaubte Zeichen enthält
+		 */
 		if (s.matches("[a-zA-Z\\\\s\\p{Blank}\\p{Alpha}]*"))
 			return true;
 		

@@ -2,14 +2,14 @@ package zeiten;
 
 import java.awt.Point;
 import java.util.ArrayList;
-
-import javax.swing.JOptionPane;
+import java.util.logging.MemoryHandler;
 
 import latein.Main;
 import vokabeln.a;
 import vokabeln.e;
 import wörter.akonjugation;
 import wörter.ekonjugation;
+import übersetzung.uea;
 
 public class Auswahl {
 	
@@ -17,8 +17,9 @@ public class Auswahl {
 	private static int zähler = 0;
 	public static ArrayList<Point> pointArray = new ArrayList<Point>();
 	public static boolean akon, ekon, ekon2, kosnkon, ikon;
+	public static ArrayList <String> MehrereVokabeln = new ArrayList<String>();
 	
-	public static void überprüfung(String gvs) {
+	public static void überprüfung(String gvs) {		
 		zähler = 0;
 		a.verbenAkon();
 		akonjugation:
@@ -90,24 +91,26 @@ public class Auswahl {
 			if (ekon) {				
 				for (int a = 0; a < pointArray.size(); a++) {
 					gv = e.getVerbenEkon()[(int) pointArray.get(a).getX()][(int) pointArray.get(a).getY()] + "eo";
-					sb.append("<html>" + gv);
-					sb.append("<p/");
 				}
-				Main.mf.panelMehrereWörter(sb.append("<html/>"));
+				Main.mf.panelMehrereWörter(MehrereVokabeln);
 			}else if (ekon2) {
 				for (int a = 0; a < pointArray.size(); a++) {
 					gv = e.rverbenespn()[(int) pointArray.get(a).getY()] + "eo";
 					sb.append("<html>" + gv);
 					sb.append("<p/");
 				}
-				Main.mf.panelMehrereWörter(sb.append("<html/>"));
+				Main.mf.panelMehrereWörter(MehrereVokabeln);
 			}else if (akon) {
 				for (int a = 0; a < pointArray.size(); a++) {
 					gv = vokabeln.a.getVerbenAkon()[(int) pointArray.get(a).getX()][(int) pointArray.get(a).getY()] + "o";
-					sb.append("<html>" + gv);
-					sb.append("<p/");
+					MehrereVokabeln.add(gv);
+					uea.VokabelÜberprüfung(gv);
 				}
-				Main.mf.panelMehrereWörter(sb.append("<html/>"));
+				zähler = 0;
+				for (int b = 0; b < uea.Übersetzungen.size(); b++) {
+					MehrereVokabeln.add(zähler+1, uea.Übersetzungen.get(b));
+				}
+				Main.mf.panelMehrereWörter(MehrereVokabeln);
 			}
 			
 		}
