@@ -105,11 +105,11 @@ public class PanelMehrereWörter extends JPanel {
 						gvs = vokabeln.e.getVerbenEkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()];
 						new ekonjugation(gv, gvs);
 					}
-					if (Auswahl.ekon2) {
+					/*if (Auswahl.ekon2) {
 						gv =  vokabeln.e.getVerbenEkonRest()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()] + "eo";
 						gvs = vokabeln.e.getVerbenEkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()];
 						new ekonjugation(gv, gvs);
-					}
+					}*/
 					if (Auswahl.akon) {
 						gv = vokabeln.a.getVerbenAkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()] + "o";
 						gvs = vokabeln.a.getVerbenAkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()];

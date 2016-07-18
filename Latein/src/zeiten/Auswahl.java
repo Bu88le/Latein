@@ -16,103 +16,109 @@ public class Auswahl {
 	private static String gv;
 	private static int zähler = 0;
 	public static ArrayList<Point> pointArray = new ArrayList<Point>();
-	public static boolean akon, ekon, ekon2, kosnkon, ikon;
+	public static boolean akon, ekon, ekon2, konskon, ikon, found;
 	public static ArrayList <String> MehrereVokabeln = new ArrayList<String>();
 	
-	public static void überprüfung(String gvs) {		
+	private static String[][] getVerben;
+	
+	public Auswahl(String gvs) {
+		akon = false;
+		ekon = false;
+		ekon2 = false;
+		konskon = false;
+		ikon = false;
+		found = false;
+		pointArray.clear();
+		MehrereVokabeln.clear();
+		überprüfungAKonjugation(gvs);
+	}
+	
+	private static void überprüfungAKonjugation(String gvs) {
 		zähler = 0;
+		
 		a.verbenAkon();
-		akonjugation:
-		for (int i = 0; i < a.getVerbenAkon().length; i++) {
-			for (int z = 0; z < a.getVerbenAkon()[i].length; z++) {
-				if (gvs.equals(a.getVerbenAkon()[i][z])) {
+		getVerben = a.getVerbenAkon();
+		
+		forSchleife:
+		for (int i = 0; i < getVerben.length; i++) {
+			for (int z = 0; z < getVerben[i].length; z++) {
+				if (gvs.equals(getVerben[i][z])) {
 					zähler++;
 					pointArray.add(new Point(i,z));
 					akon = true;
-				}
-				if (akon && zähler > 0 && gvs.equals(a.getVerbenAkon()[i][z])) {
-					auswertung(i, z, gvs);
-					break akonjugation;
-				}
-				if (i == a.getVerbenAkon().length-1 && z == a.getVerbenAkon()[i].length-1 && akon == false) {
-					überprüfung2(gvs);
+					found = true;
 				}
 			}
 		}
+		
+		if (akon && zähler > 0 && found) {
+			Auswertung(gvs);
+		}
+		if (found == false) {
+			überprüfungEKonjugation(gvs);
+		}
 	}
 	
-	private static void überprüfung2(String gvs) {
+	private static void überprüfungEKonjugation(String gvs) {
+		zähler = 0;
+		
 		e.verbenEkon();
-		ekonjugation:
-		for (int i = 0; i < e.getVerbenEkon().length; i++) {
-			for (int z = 0; z < e.getVerbenEkon()[i].length; z++) {
-				if (gvs.equals(e.getVerbenEkon()[i][z])) {
+		getVerben = e.getVerbenEkon();
+		
+		for (int i = 0; i < getVerben.length; i++) {
+			for (int z = 0; z < getVerben[i].length; z++) {
+				if (gvs.equals(getVerben[i][z])) {
 					zähler++;
 					pointArray.add(new Point(i,z));
 					ekon = true;
-				}
-				if (ekon && zähler > 0 && gvs.equals(e.getVerbenEkon()[i][z])) {
-					auswertung(i, z, gvs);
-					break ekonjugation;
+					found = true;
 				}
 			}
 		}
-		ekonjugation2:
-		for (int i = 0; i < e.getVerbenEkonRest().length; i++){
-			for (int z = 0; z < e.getVerbenEkonRest()[i].length; z++) {
-				if (gvs.equals(e.getVerbenEkonRest()[i][z])) {
+		
+		if (ekon && zähler > 0 && found) {
+			Auswertung(gvs);
+		}
+		
+		getVerben = e.getVerbenEkonRest();
+		System.out.println(gvs);
+		for (int i = 0; i < getVerben.length; i++) {
+			for (int z = 0; z < getVerben[i].length; z ++) {
+				if ( gvs.equals(getVerben[i][z])) {
 					zähler++;
 					pointArray.add(new Point(i,z));
 					ekon2 = true;
-				}
-				if (ekon2 && zähler > 0 && gvs.equals(e.getVerbenEkonRest()[i][z])) {
-					System.out.println("hi");
-					auswertung(i,z,gvs);
+					found = true;
 				}
 			}
+		}
+		
+		if (ekon2 && zähler > 0 && found) {
+			Auswertung(gvs);
+		}
+		if (found == false){
+			//TODO
 		}
 	}
 	
-	
-	private static void auswertung(int i, int z, String s) {
-		if (ekon && zähler == 1) {
-			gv = e.getVerbenEkon()[i][z] + "eo";
-			new ekonjugation(gv, s);
-		}else if (ekon2 && zähler == 1) {
-			gv = e.rverbenespn()[z] + "eo";
-			new ekonjugation(gv, s);
-		}else if (akon && zähler == 1) {
-			gv = a.getVerbenAkon()[i][z] + "o";
-			new akonjugation(gv, s);
-		}
-		
-		if (zähler > 1) {
-			StringBuffer sb = new StringBuffer();
-			if (ekon) {				
-				for (int a = 0; a < pointArray.size(); a++) {
-					gv = e.getVerbenEkon()[(int) pointArray.get(a).getX()][(int) pointArray.get(a).getY()] + "eo";
-				}
-				Main.mf.panelMehrereWörter(MehrereVokabeln);
-			}else if (ekon2) {
-				for (int a = 0; a < pointArray.size(); a++) {
-					gv = e.rverbenespn()[(int) pointArray.get(a).getY()] + "eo";
-					sb.append("<html>" + gv);
-					sb.append("<p/");
-				}
-				Main.mf.panelMehrereWörter(MehrereVokabeln);
-			}else if (akon) {
-				for (int a = 0; a < pointArray.size(); a++) {
-					gv = vokabeln.a.getVerbenAkon()[(int) pointArray.get(a).getX()][(int) pointArray.get(a).getY()] + "o";
-					MehrereVokabeln.add(gv);
-					uea.VokabelÜberprüfung(gv);
-				}
-				zähler = 0;
-				for (int b = 0; b < uea.Übersetzungen.size(); b++) {
-					MehrereVokabeln.add(zähler+1, uea.Übersetzungen.get(b));
-				}
-				Main.mf.panelMehrereWörter(MehrereVokabeln);
+	private static void Auswertung(String gvs) {
+		if (zähler == 1 && found) {
+			if (akon) {
+				gv = getVerben[(int) pointArray.get(0).getX()][(int) pointArray.get(0).getY()] + "o";
+				new akonjugation(gv, gvs);
 			}
-			
+			if (ekon) {
+				gv = getVerben[(int) pointArray.get(0).getX()][(int) pointArray.get(0).getY()] + "eo";
+				new ekonjugation(gv, gvs);
+			}
+			if (ekon2) {
+				getVerben = e.getVerbenEkon();
+				gv = getVerben[1][(int) pointArray.get(0).getY()] + "eo";
+				new ekonjugation(gv, gvs);
+			}
+		}
+		if (zähler > 1 && found) {
+			System.out.println(zähler);
 		}
 	}
 	

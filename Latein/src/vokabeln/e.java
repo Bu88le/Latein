@@ -30,7 +30,7 @@ public class e {
 	
 	public static void verbenEkon() {
 		übergabe[0] = new String[verbene.length];
-		übergabe[1] = new String[verbenes.length];
+		übergabe[1] = new String[verbenespn.length];
 		
 		for (int i = 0; i < verbene.length; i++) {
 			übergabe[0][i] = verbene[i];
