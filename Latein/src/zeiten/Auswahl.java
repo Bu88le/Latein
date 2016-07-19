@@ -14,6 +14,7 @@ import übersetzung.uea;
 public class Auswahl {
 	
 	private static String gv;
+	public static String gvs;
 	private static int zähler = 0;
 	public static ArrayList<Point> pointArray = new ArrayList<Point>();
 	public static boolean akon, ekon, ekon2, konskon, ikon, found;
@@ -22,6 +23,7 @@ public class Auswahl {
 	private static String[][] getVerben;
 	
 	public Auswahl(String gvs) {
+		this.gvs = gvs;
 		akon = false;
 		ekon = false;
 		ekon2 = false;
@@ -118,7 +120,19 @@ public class Auswahl {
 			}
 		}
 		if (zähler > 1 && found) {
-			System.out.println(zähler);
+			for (int i = 0; i < pointArray.size(); i++){
+				if (akon) {
+					MehrereVokabeln.add((getVerben[(int) pointArray.get(i).getX()][(int) pointArray.get(i).getY()]) + "o" );
+				}
+				if (ekon) {
+					MehrereVokabeln.add((getVerben[(int) pointArray.get(i).getX()][(int) pointArray.get(i).getY()]) + "eo");
+				}
+				if (ekon2) {
+					MehrereVokabeln.add((getVerben[1][(int)pointArray.get(i).getY()]) + "eo");
+				}
+			}
+			
+			Main.mf.panelMehrereWörter(MehrereVokabeln);
 		}
 	}
 	

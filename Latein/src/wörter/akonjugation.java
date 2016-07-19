@@ -3,6 +3,7 @@ import vokabeln.*;
 
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 import frames.*;
@@ -10,7 +11,7 @@ import übersetzung.*;
 public class akonjugation {
 	
 	public static String gv;
-	static String gvs;
+	static String gvs, Übersetzung;
 	static public boolean akon;
 	private static String[] alle;
 	public static String[] endungeninf = {"are", "ari"};
@@ -20,6 +21,12 @@ public class akonjugation {
 		gvs = t;
 		testen();
 
+	}
+	
+	public akonjugation(String s, String t, String Übersetzung) {
+		gv = s;
+		gvs = t;
+		testenMitÜbersetzung(Übersetzung);
 	}
 	
 	void testen() {
@@ -43,6 +50,25 @@ public class akonjugation {
 				formendp();
 				new uea(gv);
 			}
+		}
+	}
+	
+	void testenMitÜbersetzung(String Übersetzung) {
+		if (Arrays.asList(a.rverbena()).contains(gvs)) {
+			akon = true;
+			formen();
+			new uea(gv, Übersetzung);
+		}
+		if (Arrays.asList(a.rverbenau()).contains(gvs)) {
+			akon = true;
+			boolean found = false;
+			formenu(Arrays.asList(a.rverbenau()).indexOf(gvs));
+			new uea(gv, Übersetzung);
+		}
+		if (Arrays.asList(a.rverbenadp()).contains(gvs)) {
+			akon = true;
+			formendp();
+			new uea(gv, Übersetzung);
 		}
 	}
 

@@ -93,21 +93,6 @@ public class MainFrame extends JFrame {
 		
 		c = getContentPane();
 		
-		MehrereVokabeln.add("Versuch");
-		MehrereVokabeln.add("Test");
-		MehrereVokabeln.add("Versuch");
-		MehrereVokabeln.add("Test");
-		MehrereVokabeln.add("Versuch");
-		MehrereVokabeln.add("Test");
-		MehrereVokabeln.add("Versuch");
-		MehrereVokabeln.add("Test");
-		MehrereVokabeln.add("Versuch");
-		MehrereVokabeln.add("Test");
-		MehrereVokabeln.add("Versuch");
-		MehrereVokabeln.add("Test");
-		MehrereVokabeln.add("Versuch");
-		MehrereVokabeln.add("Test");
-		
 		panelMain();
 	}
 	
@@ -124,7 +109,6 @@ public class MainFrame extends JFrame {
 	
 	public void panelMehrereWörter(ArrayList<String> MehrereWörter) {
 		c.remove(centerpanel);
-		System.out.println(MehrereVokabeln.size());
 		c.add(centerpanel = new PanelMehrereWörter(MehrereWörter));
 		centerpanel.setBounds(0,0,600,400);
 		c.revalidate();

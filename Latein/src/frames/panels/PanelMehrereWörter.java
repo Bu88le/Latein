@@ -8,6 +8,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
+import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -15,7 +16,10 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 import frames.MainFrame;
 import frames.buttons.CommonButton;
@@ -23,6 +27,7 @@ import latein.Main;
 import wörter.akonjugation;
 import wörter.ekonjugation;
 import zeiten.Auswahl;
+import übersetzung.uea;
 
 public class PanelMehrereWörter extends JPanel {
 	
@@ -31,8 +36,8 @@ public class PanelMehrereWörter extends JPanel {
 	JScrollPane sp1;
 	CommonButton b1_go, b2_close;
 	String gv, gvs;
-	JList jl1_anzeige;
-	DefaultListModel dlm1_Strings;
+	JList jl1_anzeige, jl2_übersetzung;
+	DefaultListModel dlm1_Strings, dlm2_Übersetzungen;
 	
 	public PanelMehrereWörter(ArrayList<String> MehrereWörter) {
 		
@@ -48,74 +53,49 @@ public class PanelMehrereWörter extends JPanel {
 		
 		dlm1_Strings = new DefaultListModel();
 		jl1_anzeige = new JList(dlm1_Strings);	
-		for (int i = 0; i < MainFrame.MehrereVokabeln.size(); i++) {
-			if (i%2 == 0) {
-				System.out.println(MainFrame.MehrereVokabeln.get(i));
-				dlm1_Strings.addElement(MainFrame.MehrereVokabeln.get(i));
-			}
-		}	
-		jl1_anzeige.setBounds(5,30,600,150);
+		for (int i = 0; i < MehrereWörter.size(); i++) {
+			dlm1_Strings.addElement(MehrereWörter.get(i));
+		}
+		jl1_anzeige.setBounds(5,30,300,150);
+		DefaultListCellRenderer renderer = (DefaultListCellRenderer) jl1_anzeige.getCellRenderer();
+		renderer.setHorizontalAlignment(SwingConstants.CENTER);
+		jl1_anzeige.setBorder(new LineBorder(Color.BLACK));
 		add(jl1_anzeige);
-		/*lb1_anzeige = new JLabel(sb.toString(), JLabel.CENTER);
-		lb1_anzeige.setFont(new Font("Calibri", Font.PLAIN, 15));
-		lb1_anzeige.setForeground(Color.BLACK);
 		
-		sp1 = new JScrollPane(lb1_anzeige, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-		            ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-		sp1.setBounds(5,25,575,210);
-		add(sp1);
 		
-		tf1_eingabe = new JTextField("", 15);
-		tf1_eingabe.setBounds(275, 240, 50, 25);
-		tf1_eingabe.setBorder(new LineBorder(Color.RED));
-		tf1_eingabe.addKeyListener(new KeyAdapter() {
-			@Override
-			public void keyPressed(KeyEvent e) {
-				if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-					if (tf1_eingabe.getText().equals("") || !isValid(tf1_eingabe.getText())) {
-						
-					}else {
-							b1_go.doClick();
-					}
-				}
-				
-			}
+		dlm2_Übersetzungen = new DefaultListModel();
+		jl2_übersetzung = new JList(dlm2_Übersetzungen);
+		uea.ZusammenschlussVokabelÜbersetzung(MehrereWörter.get(0));
+		for (int i = 0; i < uea.Zusammenschluss().size(); i++) {
+			dlm2_Übersetzungen.addElement(uea.Zusammenschluss().get(i));
+		}
+		jl2_übersetzung.setBounds(305,30,285,150);
+		DefaultListCellRenderer renderer2 = (DefaultListCellRenderer) jl2_übersetzung.getCellRenderer();
+		renderer2.setHorizontalAlignment(SwingConstants.CENTER);
+		jl2_übersetzung.setBorder(new LineBorder(Color.BLACK));
+		jl2_übersetzung.addListSelectionListener(new ListSelectionListener() {
 
-			@Override
-			public void keyReleased(KeyEvent e) {
-				if (tf1_eingabe.getText().equals("") || !isValid(tf1_eingabe.getText()) || Integer.parseInt(tf1_eingabe.getText()) > länge.length) {
-					tf1_eingabe.setBorder(new LineBorder(Color.RED, 2));
-					b1_go.setEnabled(false);
-				}else {
-					tf1_eingabe.setBorder(new LineBorder(Color.BLACK, 1));
-					b1_go.setEnabled(true);
-				}
-			}
-		});
-		add(tf1_eingabe);*/
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+            	jl1_anzeige.setSelectedIndex(jl2_übersetzung.getSelectedIndex());
+                jl2_übersetzung.clearSelection();                
+            }
+        });
+		add(jl2_übersetzung);
+		
 		
 		b1_go = new CommonButton("Go", 255, 270, 90, 30, Color.LIGHT_GRAY, Color.BLUE);
-		b1_go.setEnabled(false);
 		b1_go.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-					if (Auswahl.ekon) {
-						gv =  vokabeln.e.getVerbenEkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()] + "eo";
-						gvs = vokabeln.e.getVerbenEkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()];
-						new ekonjugation(gv, gvs);
+				if (Auswahl.akon) {
+					if (jl1_anzeige.getSelectedIndex() >= 0) {
+						new akonjugation(MehrereWörter.get(jl1_anzeige.getSelectedIndex()), Auswahl.gvs, uea.Zusammenschluss.get(jl1_anzeige.getSelectedIndex()));
+					}else {
+						new akonjugation(MehrereWörter.get(0), Auswahl.gvs, uea.Zusammenschluss.get(0));
 					}
-					/*if (Auswahl.ekon2) {
-						gv =  vokabeln.e.getVerbenEkonRest()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()] + "eo";
-						gvs = vokabeln.e.getVerbenEkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()];
-						new ekonjugation(gv, gvs);
-					}*/
-					if (Auswahl.akon) {
-						gv = vokabeln.a.getVerbenAkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()] + "o";
-						gvs = vokabeln.a.getVerbenAkon()[(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getX()][(int) Auswahl.pointArray.get(Integer.parseInt(tf1_eingabe.getText())).getY()];
-						new akonjugation(gv, gvs);
-					}
-					
+				}
 			}
 		});
 		add(b1_go);
