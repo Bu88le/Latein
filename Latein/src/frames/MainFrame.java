@@ -10,6 +10,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
 import frames.panels.PanelAdmin;
@@ -28,6 +29,7 @@ import frames.panels.PanelPräsens;
 import frames.panels.PanelTenseSelection;
 import frames.panels.PanelÜbersetzung;
 import frames.panels.PanelÜbersetzungsFehler;
+import latein.Main;
 import übersetzung.uea;
 import übersetzung.uee;
 
@@ -36,7 +38,6 @@ public class MainFrame extends JFrame {
 	static public Container c;
 	public static JPanel centerpanel;
 	JMenuBar jmb1;
-	JMenu jm1;
 	JMenuItem jmi1_help, jmi2_about, jmi3_exit;
 	public static ArrayList<String> MehrereVokabeln = new ArrayList<String>();
 	
@@ -54,32 +55,28 @@ public class MainFrame extends JFrame {
 		jmb1 = new JMenuBar();
 		setJMenuBar(jmb1);
 		
-		jm1 = new JMenu("?");
-		jmb1.add(jm1);
-		
 		jmi1_help = new JMenuItem("Help");
+		jmi1_help.setHorizontalAlignment(SwingConstants.CENTER);
 		jmi1_help.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				System.out.println("HELP");
 				
 			}
 		});
-		jm1.add(jmi1_help);
+		jmb1.add(jmi1_help);
 		
 		jmi2_about = new JMenuItem("About");
 		jmi2_about.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				System.out.println("about");
 				
 			}
 		});
-		jm1.add(jmi2_about);
-		
-		jm1.addSeparator();
+		jmb1.add(jmi2_about);
 		
 		jmi3_exit = new JMenuItem("Beenden");
 		jmi3_exit.addActionListener(new ActionListener() {
@@ -89,7 +86,7 @@ public class MainFrame extends JFrame {
 				System.exit(0);				
 			}
 		});
-		jm1.add(jmi3_exit);
+		jmb1.add(jmi3_exit);
 		
 		c = getContentPane();
 		
