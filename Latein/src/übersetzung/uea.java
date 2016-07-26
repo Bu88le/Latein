@@ -37,8 +37,6 @@ public class uea {
 	static String[] i = {"abiudico", "<u><b><font color=\"#FF0000\">abiudicare</font></u></b>", "richterlich aberkennen", "absprechen", " ", "<font color=\"#6E6E6E\">~ aliquid ab aliquo/alicui:</font>", "jmd. etw. absprechen"};
 	static String[] j = {"abiuro", "<u><b><font color=\"#FF0000\">abiurare</font></u></b>", "abschwören", "verleugnen"};
 	
-	static String[] bp = {"adaequo", "::::::", "LALELU"};
-	
 	static String[] k = {"ablego", "<u><b><font color=\"#FF0000\">ablegare</font></u></b>", "wegschicken", "entfernen", "abkommandieren"};
 	static String[] l = {"abloco", "<u><b><font color=\"#FF0000\">ablocare</font></u></b>", "verpachten", "vermieten"};
 	static String[] m = {"abnego", "<u><b><font color=\"#FF0000\">abnegare</font></u></b>", "abschlagen", "verweigern"};
@@ -105,14 +103,13 @@ public class uea {
 	static String[] bl = {"advento", "<u><b><font color=\"#FF0000\">adventare</font></u></b>", "heranrücken"};
 	static String[] bm = {"advero", "<u><b><font color=\"#FF0000\">adversare</font></u></b>", "ständig auf etw. richten", " ", "<font color=\"#6E6E6E\">animum sedulo ~:</font>", "die Aufmerksamkeit eifrig richten(auf)"};
 	
-	static String[] bn = {"adaequo", "adaequare", "TEST"};
-	static String[] bo = {"adaequo", "adaequare", "blbla"};
+
 	
 	
 	
 	public static String[][] zg = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, 
 			ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ax, ay, az, ba, bb, bc, bd,
-			be, bf, bg, bh, bi, bj, bk, bl, bm, bn, bo, bp};
+			be, bf, bg, bh, bi, bj, bk, bl, bm};
 	
 	public static void auswahl() {
 		for (int i = 0; i<zg.length; i++) {
@@ -189,6 +186,7 @@ public class uea {
 	}
 	
 	public static void ZusammenschlussVokabelÜbersetzung(String s) {
+		Zusammenschluss.clear();
 		for (int i = 0; i < zg.length; i++) {
 			if (zg[i][0].equals(s)) {
 				Zusammenschluss.add(zg[i][2]);
