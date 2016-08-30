@@ -1,6 +1,7 @@
 package frames;
 
 import java.awt.Container;
+import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -15,19 +16,25 @@ import javax.swing.WindowConstants;
 
 import frames.panels.PanelAdmin;
 import frames.panels.PanelAdminB;
+import frames.panels.PanelAlleNomen;
 import frames.panels.PanelAlleVocs;
 import frames.panels.PanelAusgabeReverse;
+import frames.panels.PanelAuswahl‹berpr¸fung;
 import frames.panels.PanelFehler;
 import frames.panels.PanelFuturI;
 import frames.panels.PanelFuturII;
 import frames.panels.PanelImperfekt;
 import frames.panels.PanelMain;
 import frames.panels.PanelMehrereWˆrter;
+import frames.panels.PanelNumerusSelection;
 import frames.panels.PanelPerfekt;
+import frames.panels.PanelPlural;
 import frames.panels.PanelPlusquamperfekt;
 import frames.panels.PanelPr‰sens;
+import frames.panels.PanelSingular;
 import frames.panels.PanelTenseSelection;
 import frames.panels.Panel‹bersetzung;
+import frames.panels.Panel‹bersetzungNomen;
 import frames.panels.Panel‹bersetzungsFehler;
 import latein.Main;
 import ¸bersetzung.uea;
@@ -53,6 +60,7 @@ public class MainFrame extends JFrame {
 		centerpanel = new PanelMain();
 		
 		jmb1 = new JMenuBar();
+		jmb1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		setJMenuBar(jmb1);
 		
 		jmi1_help = new JMenuItem("Help");
@@ -79,6 +87,8 @@ public class MainFrame extends JFrame {
 		jmb1.add(jmi2_about);
 		
 		jmi3_exit = new JMenuItem("Beenden");
+		jmi3_exit.setHorizontalTextPosition(SwingConstants.CENTER);
+		jmi3_exit.setHorizontalAlignment(SwingConstants.CENTER);
 		jmi3_exit.addActionListener(new ActionListener() {
 			
 			@Override
@@ -125,9 +135,16 @@ public class MainFrame extends JFrame {
 		c.revalidate();
 	}
 	
-	public void panel‹bersetzungsFehler() {
+	public void panelAuswahl‹berpr¸fung() {
 		c.remove(centerpanel);
-		c.add(centerpanel = new Panel‹bersetzungsFehler());
+		c.add(centerpanel = new PanelAuswahl‹berpr¸fung());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public void panel‹bersetzungsFehler(int i) {
+		c.remove(centerpanel);
+		c.add(centerpanel = new Panel‹bersetzungsFehler(i));
 		centerpanel.setBounds(0,0,600,400);
 		Panel‹bersetzungsFehler.lb1_anzeige.requestFocus();
 		c.revalidate();
@@ -148,11 +165,19 @@ public class MainFrame extends JFrame {
 		c.revalidate();
 	}
 	
-	public static void panelAlleVocs() {
+	public static void panelAlleVerben() {
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelAlleVocs(centerpanel));
 		centerpanel.setBounds(0,0,600,400);
 		PanelAlleVocs.sp1_anzeige.requestFocus();
+		c.revalidate();
+	}
+	
+	public static void panelAlleNomen() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelAlleNomen(centerpanel));
+		centerpanel.setBounds(0,0,600,400);
+		PanelAlleNomen.sp1_anzeige.requestFocus();
 		c.revalidate();
 	}
 	
@@ -166,11 +191,26 @@ public class MainFrame extends JFrame {
 		centerpanel.setBounds(0,0, 600, 390);
 		c.revalidate();
 	}
+	
+	public void panel‹bersetzungNomen() {
+		setTitle(PanelMain.gv);
+		c.remove(centerpanel);
+		c.add(centerpanel = new Panel‹bersetzungNomen());
+		Panel‹bersetzungNomen.sp1.requestFocus();
+		centerpanel.setBounds(0,0, 600, 390);
+		c.revalidate();
+	}
 
 	public void panelTenseSelection() {
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelTenseSelection());
-		PanelTenseSelection.b1_pr‰sens.requestFocus();
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public void panelNumerusSelection() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelNumerusSelection());
 		centerpanel.setBounds(0,0,600,400);
 		c.revalidate();
 	}
@@ -217,6 +257,19 @@ public class MainFrame extends JFrame {
 		c.revalidate();
 	}
 	
+	public void panelSingular() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelSingular());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
+	
+	public void panelPlural() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelPlural());
+		centerpanel.setBounds(0,0,600,400);
+		c.revalidate();
+	}
 	
 	
 	

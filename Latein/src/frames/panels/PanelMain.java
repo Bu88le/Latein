@@ -18,6 +18,7 @@ import javax.swing.border.LineBorder;
 import frames.MainFrame;
 import frames.buttons.CommonButton;
 import latein.Formauswahl;
+import latein.Main;
 import übersetzung.ReverseAusgabe;
 
 public class PanelMain extends JPanel {
@@ -31,7 +32,7 @@ public class PanelMain extends JPanel {
 
 		setLayout(null);
 		
-		b1_Suchen = new CommonButton("Suchen", 150, 190, 150, 30);
+		b1_Suchen = new CommonButton("Suchen",150, 190, 150, 30);
 		b1_Suchen.setEnabled(false);
 		b1_Suchen.addActionListener(new ActionListener() {
 
@@ -127,7 +128,6 @@ public class PanelMain extends JPanel {
 			}
 		});
 		add(b3_reverseSuche);
-		
 		
 	}
 	

@@ -1,6 +1,7 @@
 package frames.panels;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,6 +21,7 @@ public class PanelFehler extends JPanel {
 	
 	public PanelFehler() {
 		setLayout(null);
+		setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 		
 		JLabel lb1_info = new JLabel("", JLabel.CENTER);
 		lb1_info.setText("<html>Hmm... anscheinend ist deine Vokabel oder diese Form diesem Programm nicht bekannt. <p/> Um zu überprüfen, ob deine Vokabel existiert, klicke bitte auf den \"Überprüfung\"-Button unten. <p/><p/>Falls deine Vokabel nicht aufgelistet sein sollte, schreibe bitte eine <p/> E-Mail an: <u color = \"#0101DF\">bubblereg@gmx.de</u> <p/>Betreff: <u><font color=\"#0101DF\">fehlende Vokabel</font></u> <p/> deine Vokabel mit Bedeutungen als Inhalt. <p/> <p/> So können wir diesen Fehler möglichst schnell beheben");
@@ -31,7 +33,7 @@ public class PanelFehler extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Main.mf.panelAlleVocs();				
+				Main.mf.panelAuswahlÜberprüfung();				
 			}
 			
 		});

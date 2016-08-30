@@ -672,7 +672,8 @@ public class Formauswahl {
 	
 			präsensaktivkons();
 		}else {
-			Main.mf.panelFehler();
+			new FormauswahlNomen(gesuchtevokabel);
+			//Main.mf.panelFehler();
 		}
 	}
 

@@ -22,7 +22,7 @@ public class Panel‹bersetzungsFehler extends JPanel {
 	CommonButton b1_go, b2_close, b3_email;
 	public static JLabel lb1_anzeige, lb2_hinweis;
 	
-	public Panel‹bersetzungsFehler() {
+	public Panel‹bersetzungsFehler(int i) {
 		setLayout(null);
 		
 		lb1_anzeige = new JLabel("", JLabel.CENTER);
@@ -42,7 +42,14 @@ public class Panel‹bersetzungsFehler extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Main.mf.panel‹bersetzung();				
+				//1 = Verben
+				//2 = Nomen
+				
+				if (i == 1) {
+					Main.mf.panel‹bersetzung();
+				}else if (i == 2) {
+					Main.mf.panel‹bersetzungNomen();
+				}
 			}
 			
 		});

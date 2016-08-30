@@ -70,7 +70,7 @@ public class Panel‹bersetzung extends JPanel{
 
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					Main.mf.panel‹bersetzungsFehler();					
+					Main.mf.panel‹bersetzungsFehler(1);					
 				}
 
 				

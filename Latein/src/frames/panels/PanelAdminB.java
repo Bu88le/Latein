@@ -27,24 +27,23 @@ public class PanelAdminB extends JPanel {
 		});
 		add(b1_vocSearch);
 		
-		b2_allVocs = new CommonButton("Alle Vokabeln anzeigen", 385, 140, 200, 30);
+		b2_allVocs = new CommonButton("Alle Verben anzeigen", 385, 140, 200, 30);
 		b2_allVocs.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Main.mf.panelAlleVocs();				
+				Main.mf.panelAlleVerben();				
 			}
 			
 		});
 		add(b2_allVocs);
 		
-		b3 = new CommonButton("Button 3", 385, 180, 200, 30);
+		b3 = new CommonButton("Alle Nomen anzeigen", 385, 180, 200, 30);
 		b3.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
+				Main.mf.panelAlleNomen();				
 			}
 			
 		});

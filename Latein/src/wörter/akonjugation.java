@@ -75,10 +75,10 @@ public class akonjugation {
 		//-----------------------------------------------------------------------------------------------
 		//--------------------------------------PRÄSENS--------------------------------------------------
 		//-----------------------------------------------------------------------------------------------
-		public static String[] präsensaktivindikativ = new String[6];
-		public static String[] präsensaktivkonjunktiv = new String[6];
-		public static String[] präsenspassivindikativ = new String[6];
-		public static String[] präsenspassivkonjunktiv = new String[6];
+		static String[] präsensaktivindikativ = new String[6];
+		static String[] präsensaktivkonjunktiv = new String[6];
+		static String[] präsenspassivindikativ = new String[6];
+		static String[] präsenspassivkonjunktiv = new String[6];
 		
 		
 		static String[] endungenpräsensaktiv = {"o \n", "as \n", "at \n", "amus \n", "atis \n", "ant \n"};

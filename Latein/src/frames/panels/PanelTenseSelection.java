@@ -21,7 +21,6 @@ public class PanelTenseSelection extends JPanel {
 
 	public static CommonButton b1_präsens; 
 	CommonButton b2_imperfekt,b3_perfekt,b4_plusquamperfekt,b5_futurI,b6_futurII,b7_newVoc,b8_Translation,b9_Close;
-	Object c;
 	
 	public PanelTenseSelection() {
 		
