@@ -12,12 +12,14 @@ public class zusammenfassung {
 	private static ArrayList<String> list = new ArrayList<String>();
 	//Erstellt einen String mit <html>-Formatierung und dem Buchstaben 'A'
 	//in Schriftgröße 12 und Schriftfarbe BLAU
-	private static String s = "<html><b><font color=\"#0101DF\", size=\"12\">A</font></b><p/>";
+	private static String s;
 	private static Character c, chara, charb;
 	static String y;
 	static String z;
 	
 	public zusammenfassung() {
+		list.clear();
+		s = "";
 		returnallevocsa();
 		
 	}
@@ -50,8 +52,11 @@ public class zusammenfassung {
 	
 	public static String returnallevocs() {
 		new zusammenfassung();
-		System.out.println(list.toString());
+	
 		Collections.sort(list); //Sortiert die ArrayList
+		
+		s = "<html><b><font color=\"#0101DF\", size=\"12\">A</font></b><p/>";
+		
 			for (int i = 0; i < list.size(); i++) {
 				if (i > 0) { //Greift beim zweiten Durchlauf der Schleife
 					

@@ -10,9 +10,11 @@ public class ZusammenfassungNomen {
 
 	private static ArrayList<String> list = new ArrayList<String>();
 	static Character c;
-	private static String s = "<html><b><font color=\"#0101DF\", size=\"12\">A</font></b><p/>";
+	private static String s;
 	
 	public ZusammenfassungNomen() {
+		list.clear();
+		s = "";
 		returnAlleVocsADek();
 	}
 	
@@ -20,15 +22,15 @@ public class ZusammenfassungNomen {
 		
 		for (int i = 0; i < UeAD.zg.length; i++) {
 			int z = UeAD.zg[i][0].length();
-			System.out.println(UeAD.zg[i][1].substring(29, 29+(z-1)));
 			list.add(UeAD.zg[i][1].substring(28, 28+z));
 		}
 	}
 	
 	public static String returnAlleNomen() {
 		new ZusammenfassungNomen();
-		System.out.println(list.toString());
+		
 		Collections.sort(list); //Sortiert die ArrayList
+		s = "<html><b><font color=\"#0101DF\", size=\"12\">A</font></b><p/>";
 			for (int i = 0; i < list.size(); i++) {
 				if (i > 0) { //Greift beim zweiten Durchlauf der Schleife
 					
