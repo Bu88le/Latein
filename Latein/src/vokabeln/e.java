@@ -1,7 +1,5 @@
 package vokabeln;
 
-import javax.swing.JOptionPane;
-
 public class e {
 	static String[][] übergabe = new String[2][];
 	static String[][] rest = new String[1][];

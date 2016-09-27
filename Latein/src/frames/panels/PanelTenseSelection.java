@@ -116,6 +116,7 @@ public class PanelTenseSelection extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				Main.mf.saveVocs();
 				System.exit(0);
 				
 			}

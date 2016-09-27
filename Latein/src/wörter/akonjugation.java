@@ -1,19 +1,14 @@
 package wörter;
 import vokabeln.*;
 
-import java.awt.List;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
-import frames.*;
 import übersetzung.*;
 public class akonjugation {
 	
 	public static String gv;
 	static String gvs, Übersetzung;
 	static public boolean akon;
-	private static String[] alle;
 	public static String[] endungeninf = {"are", "ari"};
 	
 	public akonjugation(String s, String t) {
@@ -61,7 +56,6 @@ public class akonjugation {
 		}
 		if (Arrays.asList(a.rverbenau()).contains(gvs)) {
 			akon = true;
-			boolean found = false;
 			formenu(Arrays.asList(a.rverbenau()).indexOf(gvs));
 			new uea(gv, Übersetzung);
 		}

@@ -8,7 +8,6 @@ public class uea {
 	static String gv;
 	static int zähler;
 	public static StringBuffer stringbuffer = new StringBuffer();
-	private static String ss = "";
 	public static ArrayList<Point> pointZG = new ArrayList<Point>();
 	public static ArrayList<String> Übersetzungen = new ArrayList<String>();
 	public static ArrayList<String> Zusammenschluss = new ArrayList<String>();
@@ -168,22 +167,6 @@ public class uea {
 		}
 	}
 	
-	private static void VokabelÜberprüfung(String gv) {
-		Start:
-		for (int i = 0; i < zg.length; i++) {
-			for (int z = 0; z < zg[i].length; z++) {
-				if (gv.equals(zg[i][z])) {
-					if (pointZG.contains(new Point(i,z))) {
-						
-					}else {
-						pointZG.add(new Point(i,z));
-						Übersetzungen.add(zg[i][z]);
-						break Start;
-					}
-				}
-			}
-		}
-	}
 	
 	public static void ZusammenschlussVokabelÜbersetzung(String s) {
 		Zusammenschluss.clear();

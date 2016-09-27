@@ -2,14 +2,12 @@ package zeiten;
 
 import java.awt.Point;
 import java.util.ArrayList;
-import java.util.logging.MemoryHandler;
 
 import latein.Main;
 import vokabeln.a;
 import vokabeln.e;
 import wörter.akonjugation;
 import wörter.ekonjugation;
-import übersetzung.uea;
 
 public class Auswahl {
 	
@@ -23,7 +21,7 @@ public class Auswahl {
 	private static String[][] getVerben;
 	
 	public Auswahl(String gvs) {
-		this.gvs = gvs;
+		Auswahl.gvs = gvs;
 		akon = false;
 		ekon = false;
 		ekon2 = false;
@@ -41,7 +39,7 @@ public class Auswahl {
 		a.verbenAkon();
 		getVerben = a.getVerbenAkon();
 		
-		forSchleife:
+		
 		for (int i = 0; i < getVerben.length; i++) {
 			for (int z = 0; z < getVerben[i].length; z++) {
 				if (gvs.equals(getVerben[i][z])) {

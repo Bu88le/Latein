@@ -4,6 +4,10 @@ import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -47,6 +51,7 @@ public class MainFrame extends JFrame {
 	JMenuBar jmb1;
 	JMenuItem jmi1_help, jmi2_about, jmi3_exit;
 	public static ArrayList<String> MehrereVokabeln = new ArrayList<String>();
+	BufferedWriter writer = null;
 	
 	public MainFrame() {
 		super("Latein");		
@@ -54,7 +59,7 @@ public class MainFrame extends JFrame {
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		setResizable(false);
+		setResizable(true);
 		setVisible(true);
 		
 		centerpanel = new PanelMain();
@@ -63,7 +68,7 @@ public class MainFrame extends JFrame {
 		jmb1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		setJMenuBar(jmb1);
 		
-		jmi1_help = new JMenuItem("Help");
+		jmi1_help = new JMenu("Help");
 		jmi1_help.setHorizontalAlignment(SwingConstants.CENTER);
 		jmi1_help.addActionListener(new ActionListener() {
 			
@@ -75,7 +80,7 @@ public class MainFrame extends JFrame {
 		});
 		jmb1.add(jmi1_help);
 		
-		jmi2_about = new JMenuItem("About");
+		jmi2_about = new JMenu("About");
 		jmi2_about.addActionListener(new ActionListener() {
 			
 			@Override
@@ -86,7 +91,7 @@ public class MainFrame extends JFrame {
 		});
 		jmb1.add(jmi2_about);
 		
-		jmi3_exit = new JMenuItem("Beenden");
+		jmi3_exit = new JMenu("Beenden");
 		jmi3_exit.setHorizontalTextPosition(SwingConstants.CENTER);
 		jmi3_exit.setHorizontalAlignment(SwingConstants.CENTER);
 		jmi3_exit.addActionListener(new ActionListener() {
@@ -269,6 +274,29 @@ public class MainFrame extends JFrame {
 		c.add(centerpanel = new PanelPlural());
 		centerpanel.setBounds(0,0,600,400);
 		c.revalidate();
+	}
+	
+	public void saveVocs() {
+		String dateiname = "." + File.separator + "vokabeln.dat";					
+		try {
+			writer = new BufferedWriter(new FileWriter(dateiname));
+			for (int i = 0; i < PanelMain.zurück().size(); i++) {
+				writer.write(PanelMain.zurück().get(i).toString());
+				writer.newLine();
+			}
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}finally {
+			if (writer != null) {
+				try {
+					writer.close();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		}
+		
 	}
 	
 	

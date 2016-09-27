@@ -1,18 +1,11 @@
 package latein;
 
-import javax.swing.JOptionPane;
 
 import zeiten.*;
-import wörter.*;
 
 public class Formauswahl {
 
 	String gesuchtevokabel;
-	
-	static private boolean akon, ekon, ikon, konskon;
-	static public boolean sons;
-	
-	
 
 
 	public Formauswahl(String s) {
@@ -704,13 +697,13 @@ public class Formauswahl {
 			------------------------------------------------*/
 	
 				void präsensaktiva() {
-					akon = true; //Weißt der gesuchten Vokabel einen Boolean-Wert zu, der die Konjugation beschreibt. 
+					
 					System.out.println("Präsens Aktiv A"); //Gibt in der Konsole einen Text aus, der die gefundene Zeit angibt.
 					new präsens(gesuchtevokabel); //Ruft latein.zeiten.präsens auf und übergibt die gesuchte Vokabel.
 					präsens.präsensaktivindikativa(); //Ruft die Methode "präsensaktivindikativa" in präsens auf.
 				}				
 				void präsensaktive() {
-					ekon = true;
+					
 					System.out.println("Präsens Aktiv e");
 					
 					new präsens(gesuchtevokabel);
@@ -718,11 +711,11 @@ public class Formauswahl {
 					
 				}	
 				void präsensaktivi() {
-					ikon = true;
+					
 					System.out.println("Präsens Aktiv I");
 				}				
 				void präsensaktivkons() {
-					konskon = true;
+					
 					System.out.println("Präsens Kons");
 				}
 	
@@ -731,14 +724,14 @@ public class Formauswahl {
 			*----------------------------------------------*/
 				
 				void präsenskonjunktiva() {
-					akon = true;
+					
 					System.out.println("Präsens Konjunktiv a");
 					new präsens(gesuchtevokabel);
 					präsens.präsensaktivkonjunktiva();
 					
 				}
 				void präsenskonjunktive() {
-					ekon = true;
+					
 					System.out.println("Präsens Konjunktiv e");
 					
 					new präsens(gesuchtevokabel);
@@ -746,11 +739,11 @@ public class Formauswahl {
 					
 				}	
 				void präsenskonjunktivi() {
-					ikon = true;
+					
 					System.out.println("Präsens Konjunktiv I");
 				}	
 				void präsenskonjunktivkons() {
-					konskon = true;
+					
 					System.out.println("Präsens Konjunktiv kons");
 				}
 	
@@ -765,14 +758,14 @@ public class Formauswahl {
 
 	
 				void präsenspassivindikativa() {
-					akon = true;
+					
 					System.out.println("Präsens Passiv");
 					new präsens(gesuchtevokabel);
 					präsens.präsenspassivindikativa();
 				}
 				
 				void präsenspassivindikative() {
-					ekon = true;
+					
 					System.out.println("Präsens Passiv Indikativ e");
 					
 					new präsens(gesuchtevokabel);
@@ -781,12 +774,12 @@ public class Formauswahl {
 				}
 				
 				void präsenspassivindikativi() {
-					ikon = true;
+					
 					System.out.println("Präsens Passiv Indikativ i");
 				}
 				
 				void präsenspassivindikativkons() {
-					konskon = true;
+					
 					System.out.println("Präsens PAssiv Indikativ Kons");
 				}
 				
@@ -795,7 +788,7 @@ public class Formauswahl {
 			*-------------------------------------------------*/
 
 				void präsenspassivkonjunktive() {
-					ekon = true;
+					
 					System.out.println("Präsens Passiv Konjunktiv");
 					
 					new präsens(gesuchtevokabel);
@@ -804,12 +797,12 @@ public class Formauswahl {
 				}
 			
 				void präsenspassivkonjunktivI() {
-					ikon = true;
+					
 					System.out.println("Präsens Passiv KonjunktivI");
 				}
 				
 				void präsenspassivkonjunktiva() {
-					akon = true;
+					
 					System.out.println("Präsens Passiv Konjunktiv a");
 					new präsens(gesuchtevokabel);
 					präsens.präsenspassivkonjunktiva();
@@ -833,21 +826,21 @@ public class Formauswahl {
 			*-------------------------------------------------*/
 		
 					void imperfektaktivindikative() {
-						ekon = true;
+						
 						System.out.println("imperfekt Aktiv Indikativ e");
 						
 						new imperfekt(gesuchtevokabel);
 						imperfekt.imperfektindikativaktive();
 					}					
 					void imperfekta() {
-						akon = true;
+						
 						System.out.println("Imperfekt A");
 						new imperfekt(gesuchtevokabel);
 						imperfekt.imperfektaktivindikativa();
 						
 					}					
 					void imperfekti() {
-						ikon = true;
+						
 						System.out.println("Imperfekt I");
 					}					
 			/**----------------------------------------------
@@ -855,18 +848,18 @@ public class Formauswahl {
 			 * ---------------------------------------------- */
 		
 					void imperfektkonjunktiva() {
-						akon = true;
+						
 						System.out.println("Imperfekt Konjunktiv A");
 						new imperfekt(gesuchtevokabel);
 						imperfekt.imperfektaktivkonjunktiva();
 						
 					}	
 					void imperfektkonjunktivi() {
-						ikon = true;
+						
 						System.out.println("Imperfekt Konjunktiv I");
 					}		
 					void imperfektkonjunktiv() {
-						ekon = true;
+						
 						System.out.println("Imperfekt Konjunktiv e");
 						
 						new imperfekt(gesuchtevokabel);
@@ -884,18 +877,18 @@ public class Formauswahl {
 			 * --------------------------------------*/
 					
 					void imperfektpassivindikativa() {
-						akon = true;
+						
 						System.out.println("Imperfekt Passiv indikativ a");
 						new imperfekt(gesuchtevokabel);
 						imperfekt.imperfektpassivindikativa();
 						
 					}					
 					void imperfektpassivindikativi() {
-						ikon = true;
+						
 						System.out.println("Imperfekt Passiv Indikativ i");
 					}					
 					void imperfektpassivindikative() {
-						ekon = true;
+						
 						System.out.println("Imperfekt Passiv Indikativ e");
 						
 						new imperfekt(gesuchtevokabel);
@@ -909,7 +902,7 @@ public class Formauswahl {
 			 * -------------------------------------- */
 	
 				void imperfektpassivkonjunktive() {
-					ekon = true;
+					
 					System.out.println("imperfektpassivkonjunktiv e");
 					
 					new imperfekt(gesuchtevokabel);
@@ -917,14 +910,14 @@ public class Formauswahl {
 					
 				}
 				void imperfektpassivkonjunktiva() {
-					akon = true;
+					
 					System.out.println("Imperfekt Passiv Konjunktiv a");
 					new imperfekt(gesuchtevokabel);
 					imperfekt.imperfektpassivkonjunktiva();
 					
 				}
 				void imperfektpassivkonjunktivi() {
-					ikon = true;
+					
 					System.out.println("Imperfekt Passiv Konjunktiv i");
 				}
 				
@@ -940,15 +933,15 @@ public class Formauswahl {
 		 * -------------------------------------------
 		 */
 		void perfektaktiva() {
-			akon = true;
+			;
 			System.out.println("Perfekt Aktiv A");
-			perfekt p = new perfekt(gesuchtevokabel);
-			p.perfektaktivindikativa();
+			new perfekt(gesuchtevokabel);
+			perfekt.perfektaktivindikativa();
 			
 		}
 	
 		void perfektaktive() {
-			ekon = true;
+			
 			System.out.println("Perfekt Aktiv E");
 			
 			new perfekt(gesuchtevokabel);
@@ -957,12 +950,12 @@ public class Formauswahl {
 		}
 	
 		void perfektaktivi() {
-			ikon = true;
+			
 			System.out.println("Perfekt Atkiv I");
 		}
 	
 		void perfektaktivkons() {
-			konskon = true;
+			
 			System.out.println("Perfekt Aktiv Kons");
 		}
 		
@@ -972,15 +965,15 @@ public class Formauswahl {
 		 */
 	
 		void perfektaktivkonjunktiva() {
-			akon = true;
+			
 			System.out.println("Perfekt Aktiv Konjunktiv A");
 			
-			perfekt p = new perfekt(gesuchtevokabel);
-			p.perfektakitvkonjunktiva();
+			new perfekt(gesuchtevokabel);
+			perfekt.perfektakitvkonjunktiva();
 		}
 	
 		void perfektaktivkonjunktive() {
-			ekon = true;
+			
 			System.out.println("Perfekt Aktiv Konjunktiv E");
 			
 			new perfekt(gesuchtevokabel);
@@ -988,12 +981,12 @@ public class Formauswahl {
 		}
 	
 		void perfektaktivkonjunktivi() {
-			ikon = true;
+			
 			System.out.println("Perfekt Aktiv Konjunktiv I");
 		}
 	
 		void perfektaktivkonjunktivkons() {
-			konskon = true;
+			
 			System.out.println("Perfekt Aktiv Konjunktiv Kons");
 		}
 	
@@ -1013,7 +1006,7 @@ public class Formauswahl {
 		 */
 	
 		void perfektpassivkonjunktiv() {
-			sons = true;
+		
 			System.out.println("Perfekt Passiv Konjunktiv");
 			new perfekt(gesuchtevokabel);
 			perfekt.perfektpassivkonjunktiva();
@@ -1034,30 +1027,30 @@ public class Formauswahl {
 			 * ----------------------------------------------------*/
 
 				void plusquamperfektaktivkons() {
-					konskon = true;
+					
 					System.out.println("Plusquamperfekt Aktiv Kons");
 					new plusquamperfekt(gesuchtevokabel);
 					plusquamperfekt.plusquamperfektindikativkons();		
 				}	
 				void plusquamperfektaktiva() {
-					akon = true;
+					
 					
 					System.out.println("Plusquamperfekt Aktiv A");
-					plusquamperfekt p = new plusquamperfekt (gesuchtevokabel);
-					p.plusquamperfektindikativaktiva();
+					new plusquamperfekt (gesuchtevokabel);
+					plusquamperfekt.plusquamperfektindikativaktiva();
 						
 				}	
 				void plusquamperfektaktivi() {
-					ikon = true;
+					
 					
 					System.out.println("Plusquamperfekt Aktiv I");
-					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
-					p.plusquamperfektindikativaktivi();
+					new plusquamperfekt(gesuchtevokabel);
+					plusquamperfekt.plusquamperfektindikativaktivi();
 				}	
 				void plusquamperfektaktive() {
-					ekon = true;					
+										
 					System.out.println("Plusquamperfekt Aktiv e");
-					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
+					new plusquamperfekt(gesuchtevokabel);
 					plusquamperfekt.plusquamperfektindikativaktive();
 					
 				}
@@ -1067,28 +1060,28 @@ public class Formauswahl {
 			 * --------------------------------------------*/
 	
 				void plusquamperfektaktivkonjunktiv() {
-					konskon = true;
+					
 					
 					System.out.println("Plusquamperfekt aktiv Konjunktiv");
 				}
 				void plusquamperfektkonjunktiva() {
-					akon = true;
+					
 					
 					System.out.println("Plusquamperfekt Konjunktiv A");
-					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
-					p.plusquamperfektkonjunktiva();
+					new plusquamperfekt(gesuchtevokabel);
+					plusquamperfekt.plusquamperfektkonjunktiva();
 
 				}
 				void plusquamperfektkonjunktive() {
-					ekon = true;
+					
 					System.out.println("Plusquamperfekt Konjunktiv E");
 					
-					plusquamperfekt p = new plusquamperfekt(gesuchtevokabel);
+					new plusquamperfekt(gesuchtevokabel);
 					plusquamperfekt.plusquamperfektkonjunktive();
 					
 				}
 				void plusquamperfektkonjunktivi() {
-					ikon = true;
+					
 					System.out.println("Plusquamperfekt Konjunktiv i");
 				}
 				
@@ -1100,7 +1093,7 @@ public class Formauswahl {
 			 * -------------INDIKATIV------------------
 			 * ---------------------------------------- */
 				void plusquamperfektpassiv() {
-					sons = true;					
+										
 					System.out.println("Plusquamperfekt Passiv");
 					
 					new plusquamperfekt(gesuchtevokabel);
@@ -1111,8 +1104,9 @@ public class Formauswahl {
 			 * --------------KONJUGATION---------------
 			 * ----------------------------------------*/				
 				void plusquamperfektpassivkonjunktiv() {
-					sons = true;
+					
 					System.out.println("Plusquamperfekt Passiv Konjunktiv");
+					
 					new plusquamperfekt(gesuchtevokabel);
 					plusquamperfekt.plusquamperfektpassivkonjunktiva();
 				}
@@ -1128,14 +1122,14 @@ public class Formauswahl {
 		//--------------------------------------------------------
 					
 				void futurIa() {
-					akon = true;
+					
 					System.out.println("Futur I a");
 					new futurI(gesuchtevokabel);
 					futurI.futurIaktiva();
 					
 				}				
 				void futurIe() {
-					ekon = true;
+					
 					System.out.println("Futur I e");
 					
 					new futurI(gesuchtevokabel);
@@ -1143,11 +1137,11 @@ public class Formauswahl {
 					
 				}
 				void futurIi() {
-					ikon = true;
+					
 					System.out.println("Futur I i");
 				}				
 				void futurIkons() {
-					konskon = true;
+					
 					System.out.println("Futur I kons");
 				}
 	
@@ -1156,14 +1150,14 @@ public class Formauswahl {
 		//------------------------------------------------------
 					
 				void futurIpassiva() {
-					akon = true; 
+					
 					System.out.println("Futur I Passiv"); 
 					new futurI(gesuchtevokabel);
 					futurI.futurIpassiva();
 					
 				}		
 				void futurIpassive() {
-					ekon = true;
+					
 					System.out.println("Futur I Passiv E");
 					
 					new futurI(gesuchtevokabel);
@@ -1171,11 +1165,11 @@ public class Formauswahl {
 				
 				}
 				void futurIpassivI() {
-					ikon = true;
+					
 					System.out.println("Futur I Passiv");
 				}
 				void futurIpassivKonsGem() {
-					konskon = true;
+					
 					System.out.println("Futur I Passiv Kons Gem");
 				}
 
@@ -1189,7 +1183,7 @@ public class Formauswahl {
 		//-----------------------------------------------------
 				
 				void futurIIpassiv() {
-					sons = true;
+					
 					System.out.println("Futur II passiv");
 					new futurII(gesuchtevokabel);
 					futurII.futurIIpassiv();					

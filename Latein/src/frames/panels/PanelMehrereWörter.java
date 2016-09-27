@@ -4,8 +4,6 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 import javax.swing.DefaultListCellRenderer;
@@ -15,29 +13,32 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.ScrollPaneConstants;
+
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import frames.MainFrame;
 import frames.buttons.CommonButton;
-import latein.Main;
 import wörter.akonjugation;
-import wörter.ekonjugation;
 import zeiten.Auswahl;
 import übersetzung.uea;
 
 public class PanelMehrereWörter extends JPanel {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	
 	JTextField tf1_eingabe;
 	JLabel lb1_anzeige, lb2_hinweis;
 	JScrollPane sp1;
 	CommonButton b1_go, b2_close;
 	String gv, gvs;
-	JList jl1_anzeige, jl2_übersetzung;
-	DefaultListModel dlm1_Strings, dlm2_Übersetzungen;
+	JList<String> jl1_anzeige, jl2_übersetzung;
+	DefaultListModel<String> dlm1_Strings, dlm2_Übersetzungen;
 	
 	public PanelMehrereWörter(ArrayList<String> MehrereWörter) {
 		
@@ -51,8 +52,8 @@ public class PanelMehrereWörter extends JPanel {
 		lb2_hinweis.setBounds(0,5,600,20);
 		add(lb2_hinweis);
 		
-		dlm1_Strings = new DefaultListModel();
-		jl1_anzeige = new JList(dlm1_Strings);	
+		dlm1_Strings = new DefaultListModel<String>();
+		jl1_anzeige = new JList<String>(dlm1_Strings);	
 		for (int i = 0; i < MehrereWörter.size(); i++) {
 			dlm1_Strings.addElement(MehrereWörter.get(i));
 		}
@@ -63,8 +64,8 @@ public class PanelMehrereWörter extends JPanel {
 		add(jl1_anzeige);
 		
 		
-		dlm2_Übersetzungen = new DefaultListModel();
-		jl2_übersetzung = new JList(dlm2_Übersetzungen);
+		dlm2_Übersetzungen = new DefaultListModel<String>();
+		jl2_übersetzung = new JList<String>(dlm2_Übersetzungen);
 		uea.ZusammenschlussVokabelÜbersetzung(MehrereWörter.get(0));
 		for (int i = 0; i < uea.Zusammenschluss().size(); i++) {
 			dlm2_Übersetzungen.addElement(uea.Zusammenschluss().get(i));
@@ -100,12 +101,4 @@ public class PanelMehrereWörter extends JPanel {
 		});
 		add(b1_go);
 	}
-	
-	private static boolean isValid(String s) {
-		if (s.matches("[\\d]*"))
-			return true;
-		
-		return false;
-	}
-
 }

@@ -1,6 +1,7 @@
 package frames.panels;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Panel;
 import java.awt.event.ActionEvent;
@@ -50,10 +51,11 @@ public class PanelAlleVocs extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				p.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 				MainFrame.c.remove(MainFrame.centerpanel); 
 				MainFrame.c.add(MainFrame.centerpanel = p);
 				MainFrame.c.setBounds(0,0,600,400);
-				Main.mf.revalidaten();;
+				Main.mf.revalidaten();
 			}
 			
 		});	

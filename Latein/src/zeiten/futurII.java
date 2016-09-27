@@ -1,8 +1,5 @@
 package zeiten;
 
-import wörter.akonjugation;
-import wörter.ekonjugation;
-
 public class futurII {
 
 	public static String gv;

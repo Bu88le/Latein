@@ -167,8 +167,8 @@ public class imperfekt {
 						gvs = gv.substring(0, gv.length()-7);
 						new Auswahl(gvs);
 					}else {
-						perfekt p = new perfekt(gv);
-						p.perfektaktivindikativa();
+						new perfekt(gv);
+						perfekt.perfektaktivindikativa();
 					}
 				}
 				

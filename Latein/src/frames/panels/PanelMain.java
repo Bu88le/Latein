@@ -6,11 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 
+import javax.swing.GroupLayout;
 import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
@@ -18,7 +21,6 @@ import javax.swing.border.LineBorder;
 import frames.MainFrame;
 import frames.buttons.CommonButton;
 import latein.Formauswahl;
-import latein.Main;
 import übersetzung.ReverseAusgabe;
 
 public class PanelMain extends JPanel {
@@ -27,12 +29,13 @@ public class PanelMain extends JPanel {
 	static CommonButton b1_Suchen, b2_Beenden, b3_reverseSuche;
 	public static JTextField tf1_vocinput;
 	JLabel lb1_desc;
+	public static ArrayList<String> stringList = new ArrayList<String>();
 	
 	public PanelMain() {
 
 		setLayout(null);
 		
-		b1_Suchen = new CommonButton("Suchen",150, 190, 150, 30);
+		b1_Suchen = new CommonButton("Suchen",150, 190, 120,30);
 		b1_Suchen.setEnabled(false);
 		b1_Suchen.addActionListener(new ActionListener() {
 
@@ -44,6 +47,7 @@ public class PanelMain extends JPanel {
 					if (tf1_vocinput.getText().equals("admin")) {
 						MainFrame.panelAdmin();
 					}else {
+						stringList.add(tf1_vocinput.getText());
 						setCursor(new Cursor(Cursor.WAIT_CURSOR));
 						gv = tf1_vocinput.getText();
 						new Formauswahl(tf1_vocinput.getText());
@@ -70,6 +74,7 @@ public class PanelMain extends JPanel {
 		tf1_vocinput = new JTextField("");
 		tf1_vocinput.setToolTipText("<html><center><font color=#585858 size=3>" + 
 				"Gib deine gesuchte Vokabel hier ein" + "</font></center></html>");
+		tf1_vocinput.setSize(200,150);
 		tf1_vocinput.setBounds(200, 150, 200, 25);
 		tf1_vocinput.setBorder(new LineBorder(Color.RED, 2));
 		tf1_vocinput.addKeyListener(new KeyAdapter() {
@@ -108,6 +113,7 @@ public class PanelMain extends JPanel {
 		add(tf1_vocinput);
 		
 		lb1_desc = new JLabel("Gesuchte Vokabel", JLabel.CENTER);
+		lb1_desc.setSize(200,125);
 		lb1_desc.setBounds(200, 125, 200, 10);
 		add(lb1_desc);
 		
@@ -129,6 +135,10 @@ public class PanelMain extends JPanel {
 		});
 		add(b3_reverseSuche);
 		
+	}
+	
+	public static ArrayList zurück() {
+		return stringList;
 	}
 	
 	private static boolean isValid(String s) {

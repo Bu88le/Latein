@@ -1,7 +1,6 @@
 package zeiten;
 
 import vokabeln.e;
-import wörter.*;
 
 public class plusquamperfekt {
 
@@ -103,7 +102,7 @@ public class plusquamperfekt {
 			//---------------Auswahl i-Konjugation-----------
 			//-----------------------------------------------
 		
-				public void plusquamperfektindikativaktivi() {
+				public static void plusquamperfektindikativaktivi() {
 					
 					if (gv.endsWith("iveram") || gv.endsWith("iveras") || gv.endsWith("iverat")) {
 						

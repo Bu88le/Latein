@@ -70,7 +70,7 @@ public class zusammenfassung {
 						//Erster Buchstabe des Wortes an Stelle 'i' wird Char 'c' zugewiesen
 						c = list.get(i).charAt(0);
 						//Dem Return-String wird der gefundene BUchstabe in Schriftgröße 12 und Schriftfarbe BLAU hinzugefügt
-						s+="<b><font color=\"#0101DF\", size=\"12\">" + c.toUpperCase(c) + "</font></b>";
+						s+="<b><font color=\"#0101DF\", size=\"12\">" + Character.toUpperCase(c) + "</font></b>";
 						s+="<p/>";
 					}
 				}

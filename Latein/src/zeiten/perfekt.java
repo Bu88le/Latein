@@ -1,7 +1,6 @@
 package zeiten;
 
 import vokabeln.e;
-import wörter.*;
 
 public class perfekt {
 	static String gv;
