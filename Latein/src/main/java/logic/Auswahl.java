@@ -8,6 +8,12 @@ public class Auswahl {
 	public Auswahl(String gvs) {
 
 		this.gvs = gvs;
+		testing();
+
+	}
+
+
+	private void testing() {
 
 	}
 
