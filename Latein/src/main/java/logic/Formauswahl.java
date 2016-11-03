@@ -5,7 +5,7 @@ public class Formauswahl {
 	String gv, gvs;
 
 
-	public Formauswahl(String gv) {
+	public Formauswahl(String gv) throws IllegalArgumentException {
 		this.gv = gv;
 		aussortierungPassivGrob();
 	}
@@ -14,7 +14,7 @@ public class Formauswahl {
 	// \/\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\/
 	// /\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\/PASSIV-GROB/\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\/
 	// /\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\/
-	private void aussortierungPassivGrob() {
+	private void aussortierungPassivGrob() throws IllegalArgumentException {
 
 		// If-Schleifen überprüfuen die gesuchte Vokabel auf typische
 		// Passivendungen in der Vergangenheit auf das charakteristische
@@ -62,7 +62,7 @@ public class Formauswahl {
 	// /\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\/PASSIV-FEIN/\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\/
 	// /\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\/
 
-	private void aussortierungPassivFein() {
+	private void aussortierungPassivFein() throws IllegalArgumentException {
 
 		// Prüft die gesuchte Vokabel auf Passiv-Endungen
 		if (gv.endsWith("or") || gv.endsWith("ris") || gv.endsWith("tur") || gv.endsWith("mur") || gv.endsWith("mini")
@@ -267,7 +267,7 @@ public class Formauswahl {
 		}
 	}
 	
-	void aussortierungAktiv() {	
+	void aussortierungAktiv() throws IllegalArgumentException {	
 
 		
 			// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
@@ -634,29 +634,29 @@ public class Formauswahl {
 						 */
 		
 				
-						}else if (gv.endsWith("eo") || gv.endsWith("es") || 
+					}else if (gv.endsWith("eo") || gv.endsWith("es") || 
 								gv.endsWith("et") || gv.endsWith("emus") ||
 								gv.endsWith("etis") || gv.endsWith("ent")) {
 					
 							tempusPräsensAktivIndikativEKonjugation();
 					
-						}else if (gv.endsWith("io") || gv.endsWith("is") ||
+					}else if (gv.endsWith("io") || gv.endsWith("is") ||
 								gv.endsWith("it") || gv.endsWith("imus") ||
 								gv.endsWith("itis") || gv.endsWith("iunt")) {
 					
 							tempusPräsensAktivIndikativIKonjugation();
 					
-						}else if (gv.endsWith("o") || gv.endsWith("as") ||
+					}else if (gv.endsWith("o") || gv.endsWith("as") ||
 								gv.endsWith("at") || gv.endsWith("amus") ||
 								gv.endsWith("atis") || gv.endsWith("ant")) {
 					
 							tempusPräsensAktivIndikativAKonjugation();
-						}else if (gv.endsWith("unt")) {
+					}else if (gv.endsWith("unt")) {
 					
 							tempusPräsensAktivIndikativKonsKonjugation();
-						}else {
-				
-						}
+				}else {
+					throw new IllegalArgumentException();
+				}
 	}
 
 	//@formatter:off

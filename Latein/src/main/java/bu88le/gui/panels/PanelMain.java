@@ -21,12 +21,18 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
 import bu88le.gui.Strings;
 import logic.Formauswahl;
 
 public class PanelMain extends JPanel {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8056120548948180739L;
 
 	JTextField tfEingabeVokabel;
 	JButton btSuche, btBeenden;
@@ -68,7 +74,7 @@ public class PanelMain extends JPanel {
 		pnBorderMitte.setLayout(new GridBagLayout());
 
 		// Label, das auffordert die Vokabel einzugeben
-		lbBeschreibung = new JLabel(Strings.getString("PanelMain.label_Beschreibung"), JLabel.CENTER); //$NON-NLS-1$
+		lbBeschreibung = new JLabel(Strings.getString("PanelMain.label_Beschreibung"), SwingConstants.CENTER); //$NON-NLS-1$
 		c.gridy = 0;
 		c.gridx = 0;
 		c.fill = GridBagConstraints.VERTICAL; // Füllt das "Kästchen" von oben
@@ -81,7 +87,7 @@ public class PanelMain extends JPanel {
 		// ----JTextField-----------------
 		// -------------------------------
 
-		tfEingabeVokabel = new JTextField(Strings.getString("PanelMain.tf_EingabeVokabel")); //$NON-NLS-1$
+		tfEingabeVokabel = new JTextField();
 		c.fill = GridBagConstraints.VERTICAL;
 		c.gridy = 1;
 		c.gridx = 0;
@@ -143,8 +149,8 @@ public class PanelMain extends JPanel {
 		// ----------------------
 
 		btSuche = new JButton(Strings.getString("PanelMain.bt_Suche")); //$NON-NLS-1$
-		btSuche.setBackground(Color.LIGHT_GRAY);
-		btSuche.setForeground(Color.BLUE);
+		btSuche.setBackground(Color.BLACK);
+		btSuche.setForeground(Color.WHITE);
 		btSuche.setCursor(new Cursor(Cursor.HAND_CURSOR)); // Umstellen des
 															// Cursors auf
 															// Zeige-Cursor
@@ -154,7 +160,13 @@ public class PanelMain extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new Formauswahl(tfEingabeVokabel.getText());
+				try {
+					new Formauswahl(tfEingabeVokabel.getText().toLowerCase());
+				} catch (IllegalArgumentException iae) {
+					System.out.println("hallo");
+				} catch (Exception ex) {
+
+				}
 
 			}
 		});
@@ -202,7 +214,7 @@ public class PanelMain extends JPanel {
 
 
 	private static boolean isValid(String s) {
-		if (s.matches("[a-zA-Z\\\\s\\p{Blank}\\p{Alpha}]*")) //$NON-NLS-1$
+		if (s.matches("[a-zA-Z\\p{Blank}ß~üäö]*")) //$NON-NLS-1$
 			return true;
 
 		return false;

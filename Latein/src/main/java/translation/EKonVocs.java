@@ -10,26 +10,26 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-public class AKonVocs {
+public class EKonVocs {
 
 	static ArrayList<String[]> gesamtVokabeln = new ArrayList<String[]>();
-	private static ArrayList<String[]> stammVocs = new ArrayList<String[]>();
+	static ArrayList<String[]> stammVocs = new ArrayList<String[]>();
 
 	String auslesen;
-	URL url1 = getClass().getClassLoader().getResource("vocabulary/akon.dat");
-	URL url2 = getClass().getClassLoader().getResource("stems/akon.dat");
+	URL url1 = getClass().getClassLoader().getResource("vocabulary/ekon.dat");
+	URL url2 = getClass().getClassLoader().getResource("stems/ekon.dat");
 
 	File file = null;
 	BufferedReader reader = null;
 
 
-	public AKonVocs() {
+	public EKonVocs() {
 		stammAuslesen();
 		vocsAuslesen();
 	}
 
 
-	public void vocsAuslesen() {
+	private void vocsAuslesen() {
 		try {
 			file = new File(url1.toURI());
 			reader = new BufferedReader(new FileReader(file));
@@ -70,7 +70,8 @@ public class AKonVocs {
 	}
 
 
-	public void stammAuslesen() {
+	private void stammAuslesen() {
+
 		try {
 			file = new File(url2.toURI());
 			reader = new BufferedReader(new FileReader(file));
@@ -112,12 +113,12 @@ public class AKonVocs {
 	}
 
 
-	public static ArrayList<String[]> getAKonStamm() {
+	public static ArrayList<String[]> getEKonStamm() {
 		return stammVocs;
 	}
 
 
-	public static ArrayList<String[]> getAKonVocs() {
+	public static ArrayList<String[]> getEKonVocs() {
 		return gesamtVokabeln;
 	}
 

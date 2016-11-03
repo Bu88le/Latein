@@ -10,20 +10,20 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-public class AKonVocs {
+public class IKonVocs {
 
 	static ArrayList<String[]> gesamtVokabeln = new ArrayList<String[]>();
 	private static ArrayList<String[]> stammVocs = new ArrayList<String[]>();
 
 	String auslesen;
-	URL url1 = getClass().getClassLoader().getResource("vocabulary/akon.dat");
-	URL url2 = getClass().getClassLoader().getResource("stems/akon.dat");
+	URL url1 = getClass().getClassLoader().getResource("vocabulary/ikon.dat");
+	URL url2 = getClass().getClassLoader().getResource("stems/ikon.dat");
 
 	File file = null;
 	BufferedReader reader = null;
 
 
-	public AKonVocs() {
+	public IKonVocs() {
 		stammAuslesen();
 		vocsAuslesen();
 	}
@@ -112,12 +112,12 @@ public class AKonVocs {
 	}
 
 
-	public static ArrayList<String[]> getAKonStamm() {
+	public static ArrayList<String[]> getIKonStamm() {
 		return stammVocs;
 	}
 
 
-	public static ArrayList<String[]> getAKonVocs() {
+	public static ArrayList<String[]> getIKonVocs() {
 		return gesamtVokabeln;
 	}
 

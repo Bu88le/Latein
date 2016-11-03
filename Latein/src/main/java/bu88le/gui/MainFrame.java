@@ -5,6 +5,7 @@ import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -15,6 +16,7 @@ import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
 import bu88le.gui.panels.PanelMain;
+import bu88le.gui.panels.PanelSelectWords;
 
 public class MainFrame extends JFrame {
 
@@ -28,6 +30,7 @@ public class MainFrame extends JFrame {
 	private JMenuItem jmiAbout, jmiHelp;
 	private static JPanel centerpanel;
 	private static Container c;
+
 
 	public MainFrame() {
 		super("Latein");
@@ -44,6 +47,7 @@ public class MainFrame extends JFrame {
 
 		setVisible(true);
 	}
+
 
 	private void initGUI() {
 
@@ -78,6 +82,7 @@ public class MainFrame extends JFrame {
 
 	}
 
+
 	public static void panelMain() {
 		if (centerpanel != null)
 			c.remove(centerpanel);
@@ -85,6 +90,16 @@ public class MainFrame extends JFrame {
 		c.add(centerpanel = new PanelMain(), BorderLayout.CENTER);
 		c.revalidate();
 	}
+
+
+	public static void panelSelectWords(ArrayList<String> foundVoc, ArrayList<String> unusualForms,
+			ArrayList<String> infinitive, ArrayList<Integer> placeFoundVocs, ArrayList<String> translation) {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelSelectWords(centerpanel, foundVoc, unusualForms, infinitive, placeFoundVocs,
+				translation), BorderLayout.CENTER);
+		c.revalidate();
+	}
+
 
 	public static void back(JPanel caller) {
 		c.remove(centerpanel);
