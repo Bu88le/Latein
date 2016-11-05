@@ -161,9 +161,10 @@ public class PanelMain extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
+					System.out.println(tfEingabeVokabel.getText());
 					new Formauswahl(tfEingabeVokabel.getText().toLowerCase());
 				} catch (IllegalArgumentException iae) {
-					System.out.println("hallo");
+					// TODO
 				} catch (Exception ex) {
 
 				}

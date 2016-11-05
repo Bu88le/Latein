@@ -25,13 +25,14 @@ public class CommonPanel extends JPanel {
 	JPanel buttonPanel;
 	JButton back, mainMenu;
 
+
 	public CommonPanel(JPanel caller) {
 
 		setLayout(new BorderLayout(10, 10));
 
 		back = new JButton("Zurück");
-		back.setBackground(Color.BLACK);
-		back.setForeground(Color.WHITE);
+		back.setBackground(new Color(9, 119, 165));
+		back.setForeground(new Color(193, 193, 193));
 		back.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		back.setPreferredSize(new Dimension(120, 30));
 		back.setBorderPainted(false);
@@ -45,8 +46,8 @@ public class CommonPanel extends JPanel {
 		});
 
 		mainMenu = new JButton("Hauptmenü");
-		mainMenu.setBackground(Color.BLACK);
-		mainMenu.setForeground(Color.WHITE);
+		mainMenu.setBackground(new Color(9, 119, 165));
+		mainMenu.setForeground(new Color(193, 193, 193));
 		mainMenu.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		mainMenu.setPreferredSize(new Dimension(120, 30));
 		mainMenu.setBorderPainted(false);
@@ -62,7 +63,7 @@ public class CommonPanel extends JPanel {
 		buttonPanel = new JPanel();
 		buttonPanel.setPreferredSize(new Dimension(getWidth(), 50));
 		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.LINE_AXIS));
-		buttonPanel.setBorder(BorderFactory.createEmptyBorder(0, 75, 0, 60));
+		buttonPanel.setBorder(BorderFactory.createEmptyBorder(0, 75, 0, 75));
 
 		buttonPanel.add(mainMenu);
 		buttonPanel.add(Box.createHorizontalGlue());

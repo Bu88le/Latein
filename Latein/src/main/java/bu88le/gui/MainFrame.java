@@ -17,6 +17,8 @@ import javax.swing.WindowConstants;
 
 import bu88le.gui.panels.PanelMain;
 import bu88le.gui.panels.PanelSelectWords;
+import bu88le.gui.panels.PanelTenseSelection;
+import bu88le.gui.panels.PanelTranslation;
 
 public class MainFrame extends JFrame {
 
@@ -97,6 +99,21 @@ public class MainFrame extends JFrame {
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelSelectWords(centerpanel, foundVoc, unusualForms, infinitive, placeFoundVocs,
 				translation), BorderLayout.CENTER);
+		c.revalidate();
+	}
+
+
+	public static void panelTranslation(StringBuffer ausgabe) {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelTranslation(centerpanel, ausgabe), BorderLayout.CENTER);
+		PanelTranslation.jsp_ausgabe.requestFocus();
+		c.revalidate();
+	}
+
+
+	public static void panelTenseSelection() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelTenseSelection(centerpanel), BorderLayout.CENTER);
 		c.revalidate();
 	}
 

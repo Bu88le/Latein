@@ -7,6 +7,7 @@ import translation.AKonVocs;
 import translation.EKonVocs;
 import translation.IKonVocs;
 import translation.KonsKonVocs;
+import wordShaping.AKonjugation;
 
 public class Auswahl {
 
@@ -18,6 +19,8 @@ public class Auswahl {
 	ArrayList<String> infinitive = new ArrayList<String>();
 	ArrayList<String> translation = new ArrayList<String>();
 	ArrayList<Integer> placeFoundVocs = new ArrayList<Integer>();
+
+	public static Thread thread;
 
 
 	public Auswahl(String gvs) {
@@ -34,6 +37,8 @@ public class Auswahl {
 
 
 	private void testing() {
+
+		new AKonVocs();
 
 		for (int i = 0; i < AKonVocs.getAKonStamm().size(); i++) {
 			for (int z = 0; z < AKonVocs.getAKonStamm().get(i).length; z++) {
@@ -108,6 +113,10 @@ public class Auswahl {
 	private void counting() {
 		if (vocCount == 1) {
 			if (aKon) {
+				thread = new Thread(new AKonjugation(gvs), "Formenbildung");
+				thread.start();
+
+				new AKonVocs(foundVoc);
 
 			} else if (eKon) {
 
@@ -146,7 +155,6 @@ public class Auswahl {
 					}
 				}
 			}
-
 			MainFrame.panelSelectWords(foundVoc, unusualForms, infinitive, placeFoundVocs, translation);
 		}
 	}
