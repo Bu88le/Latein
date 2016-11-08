@@ -12,7 +12,7 @@ import wordShaping.AKonjugation;
 public class Auswahl {
 
 	String gvs, info;
-	boolean aKon, eKon, iKon, konsKon;
+	public static boolean aKon, eKon, iKon, konsKon;
 	int vocCount;
 	ArrayList<String> foundVoc = new ArrayList<String>();
 	ArrayList<String> unusualForms = new ArrayList<String>();

@@ -13,6 +13,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import bu88le.gui.MainFrame;
+import logic.Auswahl;
+
 public class PanelTenseSelection extends CommonPanel {
 
 	/**
@@ -45,8 +48,7 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-
+				MainFrame.panelPräsens();
 			}
 		});
 		c.fill = GridBagConstraints.VERTICAL;
@@ -64,7 +66,7 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				MainFrame.panelImperfekt();
 
 			}
 		});
@@ -80,8 +82,7 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-
+				MainFrame.panelFuturI();
 			}
 		});
 		c.gridy = 2;
@@ -96,7 +97,7 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				MainFrame.panelPerfekt();
 
 			}
 		});
@@ -112,7 +113,7 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				MainFrame.panelPlusquamperfekt();
 
 			}
 		});
@@ -128,7 +129,7 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				MainFrame.panelFuturII();
 
 			}
 		});
@@ -136,6 +137,17 @@ public class PanelTenseSelection extends CommonPanel {
 		panelCenter.add(b6_futurII, c);
 
 		add(panelCenter, BorderLayout.CENTER);
+	}
+
+
+	private void threadTesting() {
+		boolean running = true;
+
+		while (running) {
+			if (Auswahl.thread.isAlive() == false) {
+				running = false;
+			}
+		}
 	}
 
 }

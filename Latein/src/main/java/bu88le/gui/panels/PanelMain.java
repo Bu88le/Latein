@@ -34,7 +34,7 @@ public class PanelMain extends JPanel {
 	 */
 	private static final long serialVersionUID = -8056120548948180739L;
 
-	JTextField tfEingabeVokabel;
+	public static JTextField tfEingabeVokabel;
 	JButton btSuche, btBeenden;
 	JPanel pnPlatzhalterOBEN, pnPlatzhalterLinks, pnPlatzhalterRechts, pnBorderMitte, pnButtons;
 	JLabel lbBeschreibung;
@@ -161,7 +161,6 @@ public class PanelMain extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					System.out.println(tfEingabeVokabel.getText());
 					new Formauswahl(tfEingabeVokabel.getText().toLowerCase());
 				} catch (IllegalArgumentException iae) {
 					// TODO

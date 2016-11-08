@@ -192,223 +192,103 @@ public class AKonjugation extends Thread {
 	}
 
 
-	public static String returnPräsensAktivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < präsensAktivIndikativ.length; i++) {
-			r += präsensAktivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPräsensAktivIndikativ() {
+		return präsensAktivIndikativ;
 
 	}
 
 
-	public static String returnPräsensAktivKonjunktiv() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += präsensAktivKonjunktiv[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPräsensAktivKonjunktiv() {
+		return präsensAktivKonjunktiv;
 	}
 
 
-	public static String returnPräsensPassivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += präsensPassivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPräsensPassivIndikativ() {
+		return präsensPassivIndikativ;
 	}
 
 
-	public static String returnPräsensPassivKonjunktiv() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += präsensPassivKonjunktiv[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPräsensPassivKonjunktiv() {
+		return präsensPassivKonjunktiv;
 	}
 
 
-	public static String returnImperfektAktivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += imperfektAktivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnImperfektAktivIndikativ() {
+		return imperfektAktivIndikativ;
 	}
 
 
-	public static String returnImperfektAktvKonjunktiv() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += imperfektAktivKonjunktiv[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnImperfektAktvKonjunktiv() {
+		return imperfektAktivKonjunktiv;
 	}
 
 
-	public static String returnImperfektPassivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += imperfektPassivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnImperfektPassivIndikativ() {
+		return imperfektPassivIndikativ;
 	}
 
 
-	public static String returnImperfektPassivKonjunktiv() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += imperfektPassivKonjunktiv[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnImperfektPassivKonjunktiv() {
+		return imperfektPassivKonjunktiv;
 	}
 
 
-	public static String returnFuturIAktivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += futurIAktivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnFuturIAktivIndikativ() {
+		return futurIAktivIndikativ;
 	}
 
 
-	public static String returnFuturIPassivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += futurIPassivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnFuturIPassivIndikativ() {
+		return futurIPassivIndikativ;
 	}
 
 
-	public static String returnPerfektAktivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += perfektAktivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPerfektAktivIndikativ() {
+		return perfektAktivIndikativ;
 	}
 
 
-	public static String returnPerfektAktivKonjunktiv() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += perfektAktivKonjunktiv[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPerfektAktivKonjunktiv() {
+		return perfektAktivKonjunktiv;
 	}
 
 
-	public static String returnPerfektPassivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += perfektPassivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPerfektPassivIndikativ() {
+		return perfektPassivIndikativ;
 	}
 
 
-	public static String returnPerfektPassivKonjunktiv() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += perfektPassivKonjunktiv[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPerfektPassivKonjunktiv() {
+		return perfektPassivKonjunktiv;
 	}
 
 
-	public static String returnPlusquamperfektAktivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += plusquamperfektAktivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPlusquamperfektAktivIndikativ() {
+		return plusquamperfektAktivIndikativ;
 	}
 
 
-	public static String returnPlusquamperfektAktivKonjunktiv() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += plusquamperfektAktivKonjunktiv[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPlusquamperfektAktivKonjunktiv() {
+		return plusquamperfektAktivKonjunktiv;
 	}
 
 
-	public static String returnPlusquamperfektPassivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += plusquamperfektPassivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPlusquamperfektPassivIndikativ() {
+		return plusquamperfektPassivIndikativ;
 	}
 
 
-	public static String returnPlusquamperfektPassivKonjunktiv() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += plusquamperfektPassivKonjunktiv[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnPlusquamperfektPassivKonjunktiv() {
+		return plusquamperfektPassivKonjunktiv;
 	}
 
 
-	public static String returnFuturIIAktivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += futurIIAktivIndikativ[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnFuturIIAktivIndikativ() {
+		return futurIIAktivIndikativ;
 	}
 
 
-	public static String returnFuturIIPassivIndikativ() {
-		String r = "<html>";
-		for (int i = 0; i < 6; i++) {
-			r += futurIIPassivKonjunktiv[i];
-			r += "<p/>";
-		}
-		r += "<html/>";
-		return r;
+	public static String[] returnFuturIIPassivIndikativ() {
+		return futurIIPassivKonjunktiv;
 	}
 }

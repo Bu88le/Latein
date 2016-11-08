@@ -15,7 +15,13 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
+import bu88le.gui.panels.PanelFuturI;
+import bu88le.gui.panels.PanelFuturII;
+import bu88le.gui.panels.PanelImperfekt;
 import bu88le.gui.panels.PanelMain;
+import bu88le.gui.panels.PanelPerfekt;
+import bu88le.gui.panels.PanelPlusquamperfekt;
+import bu88le.gui.panels.PanelPräsens;
 import bu88le.gui.panels.PanelSelectWords;
 import bu88le.gui.panels.PanelTenseSelection;
 import bu88le.gui.panels.PanelTranslation;
@@ -90,6 +96,7 @@ public class MainFrame extends JFrame {
 			c.remove(centerpanel);
 
 		c.add(centerpanel = new PanelMain(), BorderLayout.CENTER);
+		PanelMain.tfEingabeVokabel.requestFocus();
 		c.revalidate();
 	}
 
@@ -114,6 +121,48 @@ public class MainFrame extends JFrame {
 	public static void panelTenseSelection() {
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelTenseSelection(centerpanel), BorderLayout.CENTER);
+		c.revalidate();
+	}
+
+
+	public static void panelPräsens() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelPräsens(centerpanel), BorderLayout.CENTER);
+		c.revalidate();
+	}
+
+
+	public static void panelImperfekt() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelImperfekt(centerpanel), BorderLayout.CENTER);
+		c.revalidate();
+	}
+
+
+	public static void panelPerfekt() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelPerfekt(centerpanel), BorderLayout.CENTER);
+		c.revalidate();
+	}
+
+
+	public static void panelPlusquamperfekt() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelPlusquamperfekt(centerpanel), BorderLayout.CENTER);
+		c.revalidate();
+	}
+
+
+	public static void panelFuturI() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelFuturI(centerpanel), BorderLayout.CENTER);
+		c.revalidate();
+	}
+
+
+	public static void panelFuturII() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelFuturII(centerpanel), BorderLayout.CENTER);
 		c.revalidate();
 	}
 

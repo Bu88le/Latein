@@ -1425,6 +1425,9 @@ public class Formauswahl {
 					}else if (gv.endsWith("averint")) {
 						gvs = gv.substring(0, gv.length()-7);
 						new Auswahl(gvs);
+					}else if (gv.endsWith("avero")) {
+						gvs = gv.substring(0, gv.length()-5);
+						new Auswahl(gvs);
 					}
 					
 				}
