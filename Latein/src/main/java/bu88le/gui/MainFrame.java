@@ -15,6 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
+import bu88le.gui.panels.PanelAdminLogin;
 import bu88le.gui.panels.PanelFuturI;
 import bu88le.gui.panels.PanelFuturII;
 import bu88le.gui.panels.PanelImperfekt;
@@ -34,8 +35,8 @@ public class MainFrame extends JFrame {
 	private static final long serialVersionUID = -2941050948770885476L;
 
 	private JMenuBar jmbZsm;
-	private JMenu jmHelp, jmExit;
-	private JMenuItem jmiAbout, jmiHelp;
+	private JMenu jmExit;
+	private JMenuItem jmiAbout;
 	private static JPanel centerpanel;
 	private static Container c;
 
@@ -163,6 +164,14 @@ public class MainFrame extends JFrame {
 	public static void panelFuturII() {
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelFuturII(centerpanel), BorderLayout.CENTER);
+		c.revalidate();
+	}
+
+
+	public static void panelAdminLogin() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelAdminLogin(), BorderLayout.CENTER);
+		PanelAdminLogin.jpwField.requestFocus();
 		c.revalidate();
 	}
 

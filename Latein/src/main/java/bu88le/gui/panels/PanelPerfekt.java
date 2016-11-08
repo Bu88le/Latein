@@ -21,6 +21,10 @@ import wordShaping.AKonjugation;
 
 public class PanelPerfekt extends CommonPanel {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3825990864957530337L;
 	JPanel pageStart, pageStart_Oben, pageStart_Unten;
 	JButton b1_AktivIndikativ, b2_AktivKonjunktiv, b3_PassivIndikativ, b4_PassivKonjunktiv;
 	JLabel lb1_numerus, lb2_voc;

@@ -48,6 +48,7 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				threadTesting();
 				MainFrame.panelPräsens();
 			}
 		});
@@ -66,8 +67,8 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				threadTesting();
 				MainFrame.panelImperfekt();
-
 			}
 		});
 		c.gridy = 1;
@@ -82,6 +83,7 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				threadTesting();
 				MainFrame.panelFuturI();
 			}
 		});
@@ -97,8 +99,8 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				threadTesting();
 				MainFrame.panelPerfekt();
-
 			}
 		});
 		c.gridy = 3;
@@ -113,8 +115,8 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				threadTesting();
 				MainFrame.panelPlusquamperfekt();
-
 			}
 		});
 		c.gridy = 4;
@@ -129,8 +131,8 @@ public class PanelTenseSelection extends CommonPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				threadTesting();
 				MainFrame.panelFuturII();
-
 			}
 		});
 		c.gridy = 5;
