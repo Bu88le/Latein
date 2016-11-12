@@ -16,6 +16,7 @@ import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
 import bu88le.gui.panels.PanelAdminLogin;
+import bu88le.gui.panels.PanelAdminMenu;
 import bu88le.gui.panels.PanelFuturI;
 import bu88le.gui.panels.PanelFuturII;
 import bu88le.gui.panels.PanelImperfekt;
@@ -26,6 +27,7 @@ import bu88le.gui.panels.PanelPräsens;
 import bu88le.gui.panels.PanelSelectWords;
 import bu88le.gui.panels.PanelTenseSelection;
 import bu88le.gui.panels.PanelTranslation;
+import bu88le.gui.panels.PanelZusammenfassungVokabeln;
 
 public class MainFrame extends JFrame {
 
@@ -172,6 +174,20 @@ public class MainFrame extends JFrame {
 		c.remove(centerpanel);
 		c.add(centerpanel = new PanelAdminLogin(), BorderLayout.CENTER);
 		PanelAdminLogin.jpwField.requestFocus();
+		c.revalidate();
+	}
+
+
+	public static void panelAdminMenu() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelAdminMenu(), BorderLayout.CENTER);
+		c.revalidate();
+	}
+
+
+	public static void panelZusammenfassungVokabeln() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelZusammenfassungVokabeln(centerpanel), BorderLayout.CENTER);
 		c.revalidate();
 	}
 

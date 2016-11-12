@@ -221,7 +221,7 @@ public class PanelAdminLogin extends JPanel {
 						|| String.valueOf(jpwField.getPassword()).equals("b")) {
 					MainFrame.panelMain();
 				} else if (String.valueOf(jpwField.getPassword()).equals("latein")) {
-
+					MainFrame.panelAdminMenu();
 				}
 
 			}

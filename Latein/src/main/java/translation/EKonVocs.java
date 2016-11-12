@@ -2,10 +2,9 @@ package translation;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
@@ -16,8 +15,8 @@ public class EKonVocs {
 	static ArrayList<String[]> stammVocs = new ArrayList<String[]>();
 
 	String auslesen;
-	URL url1 = getClass().getClassLoader().getResource("vocabulary/ekon.dat");
-	URL url2 = getClass().getClassLoader().getResource("stems/ekon.dat");
+	InputStream inpStream1 = getClass().getClassLoader().getResourceAsStream("vocabulary/ekon.dat");
+	InputStream inpStream2 = getClass().getClassLoader().getResourceAsStream("stems/ekon.dat");
 
 	File file = null;
 	BufferedReader reader = null;
@@ -29,13 +28,14 @@ public class EKonVocs {
 	}
 
 
+	public EKonVocs(boolean run) {
+		vocsAuslesen();
+	}
+
+
 	private void vocsAuslesen() {
 		try {
-			file = new File(url1.toURI());
-			reader = new BufferedReader(new FileReader(file));
-		} catch (FileNotFoundException fnfe) {
-			JOptionPane.showMessageDialog(null, "Datei nicht gefunden. Bitte umgehend an den Support wenden!",
-					"Warning: File not found", JOptionPane.WARNING_MESSAGE);
+			reader = new BufferedReader(new InputStreamReader(inpStream1));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -73,11 +73,7 @@ public class EKonVocs {
 	private void stammAuslesen() {
 
 		try {
-			file = new File(url2.toURI());
-			reader = new BufferedReader(new FileReader(file));
-		} catch (FileNotFoundException fnfe) {
-			JOptionPane.showMessageDialog(null, "Datei nicht gefunden. Bitte umgehend an den Support wenden!",
-					"Warning: File not found", JOptionPane.WARNING_MESSAGE);
+			reader = new BufferedReader(new InputStreamReader(inpStream2));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

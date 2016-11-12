@@ -2,9 +2,9 @@ package translation;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -18,6 +18,8 @@ public class KonsKonVocs {
 	String auslesen;
 	URL url1 = getClass().getClassLoader().getResource("vocabulary/konskon.dat");
 	URL url2 = getClass().getClassLoader().getResource("stems/konskon.dat");
+	InputStream inpStream1 = getClass().getClassLoader().getResourceAsStream("vocabulary/konskon.dat");
+	InputStream inpStream2 = getClass().getClassLoader().getResourceAsStream("stems/konskon.dat");
 
 	File file = null;
 	BufferedReader reader = null;
@@ -29,13 +31,14 @@ public class KonsKonVocs {
 	}
 
 
+	public KonsKonVocs(boolean run) {
+		vocsAuslesen();
+	}
+
+
 	public void vocsAuslesen() {
 		try {
-			file = new File(url1.toURI());
-			reader = new BufferedReader(new FileReader(file));
-		} catch (FileNotFoundException fnfe) {
-			JOptionPane.showMessageDialog(null, "Datei nicht gefunden. Bitte umgehend an den Support wenden!",
-					"Warning: File not found", JOptionPane.WARNING_MESSAGE);
+			reader = new BufferedReader(new InputStreamReader(inpStream1));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -72,11 +75,7 @@ public class KonsKonVocs {
 
 	public void stammAuslesen() {
 		try {
-			file = new File(url2.toURI());
-			reader = new BufferedReader(new FileReader(file));
-		} catch (FileNotFoundException fnfe) {
-			JOptionPane.showMessageDialog(null, "Datei nicht gefunden. Bitte umgehend an den Support wenden!",
-					"Warning: File not found", JOptionPane.WARNING_MESSAGE);
+			reader = new BufferedReader(new InputStreamReader(inpStream2));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
