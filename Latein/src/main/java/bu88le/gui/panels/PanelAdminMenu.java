@@ -37,7 +37,7 @@ public class PanelAdminMenu extends JPanel {
 		panelPageStart = new JPanel();
 		panelPageStart.setLayout(new GridBagLayout());
 
-		bt1_PageStart = new JButton("Button1");
+		bt1_PageStart = new JButton("Hauptmenü");
 		bt1_PageStart.setBackground(Color.BLACK);
 		bt1_PageStart.setForeground(Color.WHITE);
 		bt1_PageStart.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -46,7 +46,7 @@ public class PanelAdminMenu extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				MainFrame.panelMain();
 
 			}
 		});
@@ -79,7 +79,7 @@ public class PanelAdminMenu extends JPanel {
 		c.gridy = 0;
 		panelLineEnd.add(bt2_LineEnd_bt1, c);
 
-		bt3_LineEnd_bt3 = new JButton("Button3");
+		bt3_LineEnd_bt3 = new JButton("Texte");
 		bt3_LineEnd_bt3.setBackground(Color.BLACK);
 		bt3_LineEnd_bt3.setForeground(Color.WHITE);
 		bt3_LineEnd_bt3.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -88,8 +88,7 @@ public class PanelAdminMenu extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-
+				MainFrame.panelTextSelect();
 			}
 		});
 		c.insets = new Insets(50, 0, 0, 5);

@@ -5,6 +5,7 @@ import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URI;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -24,12 +25,15 @@ import bu88le.gui.panels.PanelMain;
 import bu88le.gui.panels.PanelPerfekt;
 import bu88le.gui.panels.PanelPlusquamperfekt;
 import bu88le.gui.panels.PanelPräsens;
+import bu88le.gui.panels.PanelSelectText;
+import bu88le.gui.panels.PanelSelectTextSeneca;
 import bu88le.gui.panels.PanelSelectWords;
+import bu88le.gui.panels.PanelSetText;
 import bu88le.gui.panels.PanelTenseSelection;
 import bu88le.gui.panels.PanelTranslation;
 import bu88le.gui.panels.PanelZusammenfassungVokabeln;
 
-public class MainFrame extends JFrame {
+public class MainFrame {
 
 	/**
 	 * 
@@ -41,22 +45,22 @@ public class MainFrame extends JFrame {
 	private JMenuItem jmiAbout;
 	private static JPanel centerpanel;
 	private static Container c;
+	private static JFrame frame;
 
 
 	public MainFrame() {
-		super("Latein");
+		frame = new JFrame("Latein");
+		frame.setSize(600, 435);
+		frame.setLocationRelativeTo(null);
+		frame.getContentPane().setLayout(null);
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame.setLayout(new BorderLayout(10, 10));
 
-		setSize(600, 435);
-		setLocationRelativeTo(null);
-		getContentPane().setLayout(null);
-		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		setLayout(new BorderLayout(10, 10));
-
-		c = getContentPane();
+		c = frame.getContentPane();
 
 		initGUI();
 
-		setVisible(true);
+		frame.setVisible(true);
 	}
 
 
@@ -64,7 +68,7 @@ public class MainFrame extends JFrame {
 
 		jmbZsm = new JMenuBar();
 		jmbZsm.setCursor(new Cursor(Cursor.HAND_CURSOR));
-		setJMenuBar(jmbZsm);
+		frame.setJMenuBar(jmbZsm);
 
 		jmiAbout = new JMenu("?");
 		jmiAbout.addActionListener(new ActionListener() {
@@ -190,12 +194,43 @@ public class MainFrame extends JFrame {
 		c.add(centerpanel = new PanelZusammenfassungVokabeln(centerpanel), BorderLayout.CENTER);
 		c.revalidate();
 	}
+	
+	public static void panelTextSelect() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelSelectText(centerpanel), BorderLayout.CENTER);
+		c.revalidate();
+	}
+	
+	public static void panelTextsSeneca() {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelSelectTextSeneca(centerpanel), BorderLayout.CENTER);
+		c.revalidate();
+	}
+	
+	public static void panelSetText(String str) {
+		c.remove(centerpanel);
+		c.add(centerpanel = new PanelSetText(centerpanel, str), BorderLayout.CENTER);
+		c.revalidate();
+		frame.setSize(800, 750);
+		frame.setLocationRelativeTo(null);
+	}
 
 
 	public static void back(JPanel caller) {
 		c.remove(centerpanel);
+		frame.setSize(600, 435);
+		frame.setLocationRelativeTo(null);
 		c.add(centerpanel = caller, BorderLayout.CENTER);
 		c.repaint();
 	}
+	
+	public static JPanel getCenterpanel() {
+		return centerpanel;
+	}
+	
+	public static void newSize (int width, int height) {
+		frame.setSize(width, height);
+	}
+
 
 }
