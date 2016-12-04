@@ -112,8 +112,6 @@ public class PanelSetText extends CommonPanel {
 	private void saveToFile() {
 		URL url = getClass().getClassLoader().getResource(name);
 		try {
-			/*file = new File(url.toURI());
-			outputStream = new FileOutputStream(file);*/
 			FileOutputStream fos = new FileOutputStream(new File(url.toURI()));
 			byte[] b = tp_eingabe_latein.getText().getBytes();
 			fos.write(b, 0, b.length);
