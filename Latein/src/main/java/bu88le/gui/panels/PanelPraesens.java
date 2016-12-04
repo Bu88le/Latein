@@ -19,7 +19,7 @@ import javax.swing.JScrollPane;
 import logic.Auswahl;
 import wordShaping.AKonjugation;
 
-public class PanelPräsens extends CommonPanel {
+public class PanelPraesens extends CommonPanel {
 
 	/**
 	 * 
@@ -34,7 +34,7 @@ public class PanelPräsens extends CommonPanel {
 	String numerus = "<html><font size=4>";
 
 
-	public PanelPräsens(JPanel caller) {
+	public PanelPraesens(JPanel caller) {
 		super(caller);
 		initGUI();
 	}
@@ -59,7 +59,7 @@ public class PanelPräsens extends CommonPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (Auswahl.aKon) {
-					umschreibenAufString(AKonjugation.returnPräsensAktivIndikativ());
+					umschreibenAufString(AKonjugation.returnPraesensAktivIndikativ());
 				}
 				System.out.println(AKonjugation.returnPlusquamperfektAktivIndikativ()[0]);
 
@@ -76,7 +76,7 @@ public class PanelPräsens extends CommonPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (Auswahl.aKon) {
-					umschreibenAufString(AKonjugation.returnPräsensPassivIndikativ());
+					umschreibenAufString(AKonjugation.returnPraesensPassivIndikativ());
 				}
 
 			}
@@ -100,11 +100,11 @@ public class PanelPräsens extends CommonPanel {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				if (Auswahl.aKon) {
-					umschreibenAufString(AKonjugation.returnPräsensAktivKonjunktiv());
+					umschreibenAufString(AKonjugation.returnPraesensAktivKonjunktiv());
 				}
 
 			}
-		});
+		}); 
 
 		b4_PassivKonjunktiv = new JButton("Passiv & Konjunktiv");
 		b4_PassivKonjunktiv.setBackground(Color.BLACK);
@@ -116,7 +116,7 @@ public class PanelPräsens extends CommonPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (Auswahl.aKon) {
-					umschreibenAufString(AKonjugation.returnPräsensPassivKonjunktiv());
+					umschreibenAufString(AKonjugation.returnPraesensPassivKonjunktiv());
 				}
 
 			}

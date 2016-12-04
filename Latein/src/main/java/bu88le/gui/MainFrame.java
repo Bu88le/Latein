@@ -5,7 +5,6 @@ import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.URI;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -24,7 +23,7 @@ import bu88le.gui.panels.PanelImperfekt;
 import bu88le.gui.panels.PanelMain;
 import bu88le.gui.panels.PanelPerfekt;
 import bu88le.gui.panels.PanelPlusquamperfekt;
-import bu88le.gui.panels.PanelPräsens;
+import bu88le.gui.panels.PanelPraesens;
 import bu88le.gui.panels.PanelSelectText;
 import bu88le.gui.panels.PanelSelectTextSeneca;
 import bu88le.gui.panels.PanelSelectWords;
@@ -132,9 +131,9 @@ public class MainFrame {
 	}
 
 
-	public static void panelPräsens() {
+	public static void panelPraesens() {
 		c.remove(centerpanel);
-		c.add(centerpanel = new PanelPräsens(centerpanel), BorderLayout.CENTER);
+		c.add(centerpanel = new PanelPraesens(centerpanel), BorderLayout.CENTER);
 		c.revalidate();
 	}
 

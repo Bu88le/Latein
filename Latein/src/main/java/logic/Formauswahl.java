@@ -16,7 +16,7 @@ public class Formauswahl {
 	// /\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\//\/\/
 	private void aussortierungPassivGrob() throws IllegalArgumentException {
 
-		// If-Schleifen überprüfuen die gesuchte Vokabel auf typische
+		// If-Schleifen ï¿½berprï¿½fuen die gesuchte Vokabel auf typische
 		// Passivendungen in der Vergangenheit auf das charakteristische
 		// " " +Endung
 
@@ -64,7 +64,7 @@ public class Formauswahl {
 
 	private void aussortierungPassivFein() throws IllegalArgumentException {
 
-		// Prüft die gesuchte Vokabel auf Passiv-Endungen
+		// Prï¿½ft die gesuchte Vokabel auf Passiv-Endungen
 		if (gv.endsWith("or") || gv.endsWith("ris") || gv.endsWith("tur") || gv.endsWith("mur") || gv.endsWith("mini")
 				|| gv.endsWith("ntur") || gv.endsWith("er") || gv.endsWith("ar")) {
 
@@ -77,7 +77,7 @@ public class Formauswahl {
 				// ::--::--::--::--::--::--Konjunktiv::--::--::--::--::--::--
 				// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 	
-				/* Überprüft auf Endungen für:
+				/* ï¿½berprï¿½ft auf Endungen fï¿½r:
 				 *  1) Tempus: Imperfekt
 				 *  2) Modus: Konjunktiv
 				 *  3) Genus verbi: Passiv
@@ -105,7 +105,7 @@ public class Formauswahl {
 	
 						tempusImperfektPassivKonjunktivIKonjugation();
 					} else {
-						tempusPräsensPassivKonjunktivAKonjugation();
+						tempusPraesensPassivKonjunktivAKonjugation();
 					}
 					
 					
@@ -113,7 +113,7 @@ public class Formauswahl {
 				// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::--
 				// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 					
-				/* Überprüft auf Endungen für:
+				/* ï¿½berprï¿½ft auf Endungen fï¿½r:
 				 *   1) Tempus: Imperfekt
 				 *   2) Modus: Indikativ
 				 *   3) Genus verbi: Passiv
@@ -150,7 +150,7 @@ public class Formauswahl {
 					// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::--
 					// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 					
-					/* Überprüft auf Endungen für:
+					/* ï¿½berprï¿½ft auf Endungen fï¿½r:
 					 *  1) Tempus: Futur I
 					 *  2) Modus: Indikativ
 					 * 	3) Genus verbi: Passiv
@@ -183,15 +183,15 @@ public class Formauswahl {
 						
 
 			// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
-			// ::--::--::--::--::--::--PRÄSENS::--::--::--::--::--::--::--
+			// ::--::--::--::--::--::--PRï¿½SENS::--::--::--::--::--::--::--
 			// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 						
 					// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 					// ::--::--::--::--::--::--KONJUNKTIV::--::--::--::--::--::--
 					// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 					
-					/* Überprüft auf Endungen für:
-					 *  1) Tempus: Präsens
+					/* ï¿½berprï¿½ft auf Endungen fï¿½r:
+					 *  1) Tempus: Prï¿½sens
 					 *  2) Modus: Konjunktiv
 					 * 	3) Genus verbi: Passiv
 					 */
@@ -200,31 +200,31 @@ public class Formauswahl {
 							|| gv.endsWith("eamur") || gv.endsWith("eamini")
 							|| gv.endsWith("eantur") || gv.endsWith("ear")) {
 						
-						tempusPräsensPassivKonjunktivEKonjugation();
+						tempusPraesensPassivKonjunktivEKonjugation();
 		
 					} else if (gv.endsWith("iaris") || gv.endsWith("iatur")
 							|| gv.endsWith("iamur") || gv.endsWith("iamini")
 							|| gv.endsWith("iantur")) {
 						
-						tempusPräsensPassivKonjunktivIKonjugation();
+						tempusPraesensPassivKonjunktivIKonjugation();
 		
 					} else if (gv.endsWith("er") || gv.endsWith("eris")
 							|| gv.endsWith("etur") || gv.endsWith("emur")
 							|| gv.endsWith("emini") || gv.endsWith("entur")) {
 						
-						tempusPräsensPassivKonjunktivAKonjugation();
+						tempusPraesensPassivKonjunktivAKonjugation();
 					
 					}else if (gv.endsWith("aris") || gv.endsWith("atur")
 							|| gv.endsWith("amur") || gv.endsWith("amini")
 							|| gv.endsWith("antur") || gv.endsWith("ar")) {
 						
-						tempusPräsensPassivKonjunktivEKonjugation();
+						tempusPraesensPassivKonjunktivEKonjugation();
 					// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 					// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::
 					// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 					
-					/* Überprüft auf Endungen für:
-					 *  1) Tempus: Präsens
+					/* ï¿½berprï¿½ft auf Endungen fï¿½r:
+					 *  1) Tempus: Prï¿½sens
 					 *  2) Modus: Konjunktiv
 					 * 	3) Genus verbi: Passiv
 					 */
@@ -237,23 +237,23 @@ public class Formauswahl {
 								|| gv.endsWith("emur") || gv.endsWith("emini")
 								|| gv.endsWith("entur")) {
 							
-							tempusPräsensPassivIndikativEKonjugation();
+							tempusPraesensPassivIndikativEKonjugation();
 			
 						} else if (gv.endsWith("ior") || gv.endsWith("iris")
 								|| gv.endsWith("itur") || gv.endsWith("imur")
 								|| gv.endsWith("imini") || gv.endsWith("iuntur")) {
 							
-							tempusPräsensPassivIndikativIKonjugation();
+							tempusPraesensPassivIndikativIKonjugation();
 			
 						} else if (gv.endsWith("aris") || gv.endsWith("atur")
 								|| gv.endsWith("amur") || gv.endsWith("amini")
 								|| gv.endsWith("antur") || gv.endsWith("or")) {
 							
-							tempusPräsensPassivIndikativAKonjugation();
+							tempusPraesensPassivIndikativAKonjugation();
 			
 						} else if (gv.endsWith("untur")) {
 							
-							tempusPräsensPassivIndikativKonsKonjugation();
+							tempusPraesensPassivIndikativKonsKonjugation();
 						}
 					}
 
@@ -278,7 +278,7 @@ public class Formauswahl {
 					// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::--
 					// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 
-					/* Überprüft auf Endungen für:
+					/* ï¿½berprï¿½ft auf Endungen fï¿½r:
 					 *  1) Tempus: Plusquamperfekt
 					 *  2) Modus: Indikativ
 					 *  3) Genus verbi: Aktiv
@@ -320,7 +320,7 @@ public class Formauswahl {
 					// ::--::--::--::--::--::--KONJUNKTIV::--::--::--::--::--::--
 					// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 
-					/* Überprüft auf Endungen für:
+					/* ï¿½berprï¿½ft auf Endungen fï¿½r:
 					 *  1) Tempus: PLusquamperfekt
 					 *  2) Modus: Konjunktiv
 					 *  3) Genus verbi: Aktiv
@@ -371,7 +371,7 @@ public class Formauswahl {
 						// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::--
 						// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 						
-						/* Überprüft auf Endungen für:
+						/* ï¿½berprï¿½ft auf Endungen fï¿½r:
 						 *  1) Tempus: Imperfekt
 						 *  2) Modus: Indikativ
 						 *  3) Genus verbi: Aktiv
@@ -405,7 +405,7 @@ public class Formauswahl {
 						// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::--
 						// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 						
-						/* Überprüft auf Endungen für:
+						/* ï¿½berprï¿½ft auf Endungen fï¿½r:
 						 *  1) Tempus: Imperfekt
 						 *  2) Modus: Konjunktiv
 						 *  3) Genus verbi: Aktiv
@@ -441,7 +441,7 @@ public class Formauswahl {
 						// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::--
 						// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 							
-						/* Überprüft auf Endungen für:
+						/* ï¿½berprï¿½ft auf Endungen fï¿½r:
 						 *  1) Tempus: Futur I
 						 *  2) Modus: Indikativ
 						 *  3) Genus verbi: Aktiv
@@ -485,7 +485,7 @@ public class Formauswahl {
 						// ::--::--::--::--::--::--KONJUNKTIV::--::--::--::--::--::--
 						// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 											
-						/* Überprüft auf Endungen für:
+						/* ï¿½berprï¿½ft auf Endungen fï¿½r:
 						 *  1) Tempus: Perfekt
 						 *  2) Modus: Konjunktiv
 						 *  3) Genus verbi: Aktiv
@@ -537,7 +537,7 @@ public class Formauswahl {
 						// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::--
 						// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 											
-						/* Überprüft auf Endungen für:
+						/* ï¿½berprï¿½ft auf Endungen fï¿½r:
 						 *  1) Tempus: Perfekt
 						 *  2) Modus: Indikativ
 						 *  3) Genus verbi: Aktiv
@@ -582,15 +582,15 @@ public class Formauswahl {
 			 
 			
 			// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
-			// ::--::--::--::--::--::--PRÄSENS::--::--::--::--::--::--::--
+			// ::--::--::--::--::--::--PRï¿½SENS::--::--::--::--::--::--::--
 			// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 																							
 						// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 						// ::--::--::--::--::--::--KONJUNKTIV::--::--::--::--::--::--
 						// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 																
-						/* Überprüft auf Endungen für:
-						 *  1) Tempus: Präsens
+						/* ï¿½berprï¿½ft auf Endungen fï¿½r:
+						 *  1) Tempus: Prï¿½sens
 						 *  2) Modus: Konjunktiv
 						 *  3) Genus verbi: Aktiv
 						 */
@@ -600,7 +600,7 @@ public class Formauswahl {
 								gv.endsWith("et") || gv.endsWith("emus") ||
 								gv.endsWith("etis") || gv.endsWith("ament")) {
 							
-							tempusPräsensAktivKonjunktivAKonjugation();
+							tempusPraesensAktivKonjunktivAKonjugation();
 							
 						}else if (gv.endsWith("am") || gv.endsWith("as") ||
 								gv.endsWith("at") || gv.endsWith("amus") ||
@@ -610,16 +610,16 @@ public class Formauswahl {
 									gv.endsWith("iat") || gv.endsWith("iamus") ||
 									gv.endsWith("iatis") || gv.endsWith("iant")) {
 								
-								tempusPräsensAktivKonjunktivIKonjugation();
+								tempusPraesensAktivKonjunktivIKonjugation();
 								
 							}else if(gv.endsWith("eam") || gv.endsWith("eas") ||
 									gv.endsWith("eat") || gv.endsWith("eamus") ||
 									gv.endsWith("eatis") || gv.endsWith("eant")) {
 								
-								tempusPräsensAktivKonjunktivEKonjugation();
+								tempusPraesensAktivKonjunktivEKonjugation();
 								
 							}else {
-								tempusPräsensAktivKonjunktivKonsKonjugation();
+								tempusPraesensAktivKonjunktivKonsKonjugation();
 							}
 				
 		
@@ -627,8 +627,8 @@ public class Formauswahl {
 						// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::--
 						// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 																
-						/* Überprüft auf Endungen für:
-						 *  1) Tempus: Präsens
+						/* ï¿½berprï¿½ft auf Endungen fï¿½r:
+						 *  1) Tempus: Prï¿½sens
 						 *  2) Modus: Indikativ
 						 *  3) Genus verbi: Aktiv
 						 */
@@ -638,22 +638,22 @@ public class Formauswahl {
 								gv.endsWith("et") || gv.endsWith("emus") ||
 								gv.endsWith("etis") || gv.endsWith("ent")) {
 					
-							tempusPräsensAktivIndikativEKonjugation();
+							tempusPraesensAktivIndikativEKonjugation();
 					
 					}else if (gv.endsWith("io") || gv.endsWith("is") ||
 								gv.endsWith("it") || gv.endsWith("imus") ||
 								gv.endsWith("itis") || gv.endsWith("iunt")) {
 					
-							tempusPräsensAktivIndikativIKonjugation();
+							tempusPraesensAktivIndikativIKonjugation();
 					
 					}else if (gv.endsWith("o") || gv.endsWith("as") ||
 								gv.endsWith("at") || gv.endsWith("amus") ||
 								gv.endsWith("atis") || gv.endsWith("ant")) {
 					
-							tempusPräsensAktivIndikativAKonjugation();
+							tempusPraesensAktivIndikativAKonjugation();
 					}else if (gv.endsWith("unt")) {
 					
-							tempusPräsensAktivIndikativKonsKonjugation();
+							tempusPraesensAktivIndikativKonsKonjugation();
 				}else {
 					throw new IllegalArgumentException();
 				}
@@ -661,7 +661,7 @@ public class Formauswahl {
 
 	//@formatter:off
 	// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
-	// ::--::--::--::--::--::--::--::--PRÄSENS::--::--::--::--::--::--::--::--
+	// ::--::--::--::--::--::--::--::--PRï¿½SENS::--::--::--::--::--::--::--::--
 	// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 	
 		// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
@@ -672,8 +672,8 @@ public class Formauswahl {
 			// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::--::--::--
 			// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 	
-				private void tempusPräsensAktivIndikativAKonjugation() {
-					System.out.println("Präsens - Aktiv - Indikativ - A Konjugation");
+				private void tempusPraesensAktivIndikativAKonjugation() {
+					System.out.println("Prï¿½sens - Aktiv - Indikativ - A Konjugation");
 					
 					if (gv.endsWith("o")) {
 						gvs = gv.substring(0, gv.length()-1);
@@ -688,13 +688,13 @@ public class Formauswahl {
 						gvs = gv.substring(0, gv.length()-3);
 						new Auswahl(gvs);
 					}else {
-						tempusPräsensAktivKonjunktivAKonjugation();
+						tempusPraesensAktivKonjunktivAKonjugation();
 					}
 					
 				}
 				
-				private void tempusPräsensAktivIndikativEKonjugation() {
-					System.out.println("Präsens - Aktiv - Indikativ - E Konjugation");
+				private void tempusPraesensAktivIndikativEKonjugation() {
+					System.out.println("Prï¿½sens - Aktiv - Indikativ - E Konjugation");
 					
 					if (gv.endsWith("eo") || gv.endsWith("es") || gv.endsWith("et")) {
 						gvs = gv.substring(0, gv.length()-2);
@@ -706,12 +706,12 @@ public class Formauswahl {
 						gvs = gv.substring(0, gv.length()-3);
 						new Auswahl(gvs);
 					}else {
-						tempusPräsensAktivKonjunktivEKonjugation();
+						tempusPraesensAktivKonjunktivEKonjugation();
 					}
 				}
 				
-				private void tempusPräsensAktivIndikativIKonjugation() {
-					System.out.println("Präsens - Aktiv - Indikativ - I Konjugation");
+				private void tempusPraesensAktivIndikativIKonjugation() {
+					System.out.println("Prï¿½sens - Aktiv - Indikativ - I Konjugation");
 					
 					if (gv.endsWith("io")||gv.endsWith("is") || gv.endsWith("it")) {
 						gvs = gv.substring(0, gv.length()-2);
@@ -720,13 +720,13 @@ public class Formauswahl {
 						gvs = gv.substring(0, gv.length()-4);
 						new Auswahl(gvs);
 					}else {
-						tempusPräsensAktivKonjunktivIKonjugation();
+						tempusPraesensAktivKonjunktivIKonjugation();
 					}
 					
 				}
 				
-				private void tempusPräsensAktivIndikativKonsKonjugation() {
-					System.out.println("Präsens - Aktiv - Indikativ - Kons Konjugation");
+				private void tempusPraesensAktivIndikativKonsKonjugation() {
+					System.out.println("Prï¿½sens - Aktiv - Indikativ - Kons Konjugation");
 					
 					gvs = gv.substring(0, gv.length()-3); //"unt"-Endung
 					new Auswahl(gvs);
@@ -738,8 +738,8 @@ public class Formauswahl {
 			// ::--::--::--::--::--::--KONJUNKTIV::--::--::--::--::--::--::--
 			// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 	
-				private void tempusPräsensAktivKonjunktivAKonjugation() {
-					System.out.println("Präsens - Aktiv - Konjunktiv - A Konjugation");
+				private void tempusPraesensAktivKonjunktivAKonjugation() {
+					System.out.println("Prï¿½sens - Aktiv - Konjunktiv - A Konjugation");
 					
 					if (gv.endsWith("em") || gv.endsWith("es") || gv.endsWith("et")) {
 						gvs = gv.substring(0,  gv.length()-2);
@@ -751,13 +751,13 @@ public class Formauswahl {
 						gvs = gv.substring(0, gv.length()-3);
 						new Auswahl(gvs);
 					}else {
-						tempusPräsensPassivIndikativAKonjugation();
+						tempusPraesensPassivIndikativAKonjugation();
 					}
 					
 				}
 				
-				private void tempusPräsensAktivKonjunktivEKonjugation() {
-					System.out.println("Präsens - Aktiv - Konjunktiv - E Konjugation");
+				private void tempusPraesensAktivKonjunktivEKonjugation() {
+					System.out.println("Prï¿½sens - Aktiv - Konjunktiv - E Konjugation");
 					
 					if (gv.endsWith("eam") || gv.endsWith("eas") || gv.endsWith("eat")) {
 						gvs = gv.substring(0,  gv.length()-3);
@@ -769,12 +769,12 @@ public class Formauswahl {
 						gvs = gv.substring(0, gv.length()-4);
 						new Auswahl(gvs);
 					}else {
-						tempusPräsensPassivIndikativEKonjugation();
+						tempusPraesensPassivIndikativEKonjugation();
 					}
 				}
 				
-				private void tempusPräsensAktivKonjunktivIKonjugation() {
-					System.out.println("Präsens - Aktiv - Konjunktiv - I Konjugation");
+				private void tempusPraesensAktivKonjunktivIKonjugation() {
+					System.out.println("Prï¿½sens - Aktiv - Konjunktiv - I Konjugation");
 					
 					if (gv.endsWith("iam") || gv.endsWith("ias") || gv.endsWith("iat")) {
 						gvs = gv.substring(0,  gv.length()-3);
@@ -786,14 +786,14 @@ public class Formauswahl {
 						gvs = gv.substring(0, gv.length()-4);
 						new Auswahl(gvs);
 					}else {
-						tempusPräsensPassivIndikativIKonjugation();
+						tempusPraesensPassivIndikativIKonjugation();
 					}
 					
 					
 				}
 				
-				private void tempusPräsensAktivKonjunktivKonsKonjugation() {
-					System.out.println("Präsens - Aktiv - Konjunktiv - Kons Konjugation");
+				private void tempusPraesensAktivKonjunktivKonsKonjugation() {
+					System.out.println("Prï¿½sens - Aktiv - Konjunktiv - Kons Konjugation");
 					
 					gvs = gv.substring(0, gv.length()-4); //"iunt"-Endung
 					new Auswahl(gvs);					
@@ -810,8 +810,8 @@ public class Formauswahl {
 			// ::--::--::--::--::--::--INDIKATIV::--::--::--::--::--::--::--
 			// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 	
-				private void tempusPräsensPassivIndikativAKonjugation() {
-					System.out.println("Präsens - Passiv - Indikativ - A Konjugation");
+				private void tempusPraesensPassivIndikativAKonjugation() {
+					System.out.println("Prï¿½sens - Passiv - Indikativ - A Konjugation");
 					
 					if (gv.endsWith("or")) {
 						gvs = gv.substring(0,  gv.length()-2);
@@ -823,13 +823,13 @@ public class Formauswahl {
 						gvs = gv.substring(0, gv.length()-5);
 						new Auswahl(gvs);
 					}else {
-						tempusPräsensPassivKonjunktivAKonjugation();
+						tempusPraesensPassivKonjunktivAKonjugation();
 					}
 					
 				}
 				
-				private void tempusPräsensPassivIndikativEKonjugation() {
-					System.out.println("Präsens - Passiv - Indikativ - E Konjugation");
+				private void tempusPraesensPassivIndikativEKonjugation() {
+					System.out.println("Prï¿½sens - Passiv - Indikativ - E Konjugation");
 					
 					if (gv.endsWith("eor")) {
 						gvs = gv.substring(0,  gv.length()-3);
@@ -841,13 +841,13 @@ public class Formauswahl {
 						gvs = gv.substring(0, gv.length()-5);
 						new Auswahl(gvs);
 					}else {
-						tempusPräsensPassivKonjunktivEKonjugation();
+						tempusPraesensPassivKonjunktivEKonjugation();
 					}
 					
 				}
 				
-				private void tempusPräsensPassivIndikativIKonjugation() {
-					System.out.println("Präsens - Passiv - Indikativ - I Konjugation");
+				private void tempusPraesensPassivIndikativIKonjugation() {
+					System.out.println("Prï¿½sens - Passiv - Indikativ - I Konjugation");
 					
 					if (gv.endsWith("ior")) {
 						gvs = gv.substring(0,  gv.length()-3);
@@ -862,13 +862,13 @@ public class Formauswahl {
 						gvs =gv.substring(0, gv.length()-6);
 						new Auswahl(gvs);
 					}else {
-						tempusPräsensPassivKonjunktivIKonjugation();
+						tempusPraesensPassivKonjunktivIKonjugation();
 					}
 					
 				}
 				
-				private void tempusPräsensPassivIndikativKonsKonjugation() {
-					System.out.println("Präsens - Passiv - Indikativ - Kons Konjugation");
+				private void tempusPraesensPassivIndikativKonsKonjugation() {
+					System.out.println("Prï¿½sens - Passiv - Indikativ - Kons Konjugation");
 					
 					gvs = gv.substring(0, gv.length()-5); //"untur"-Endung
 					new Auswahl(gvs);					
@@ -879,8 +879,8 @@ public class Formauswahl {
 			// ::--::--::--::--::--::--KONJUNKTIV::--::--::--::--::--::--::--
 			// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 	
-				private void tempusPräsensPassivKonjunktivAKonjugation() {
-					System.out.println("Präsens - Passiv - Konjunktiv - A Konjugation");
+				private void tempusPraesensPassivKonjunktivAKonjugation() {
+					System.out.println("Prï¿½sens - Passiv - Konjunktiv - A Konjugation");
 					
 					if (gv.endsWith("er")) {
 						gvs = gv.substring(0, gv.length()-2);
@@ -895,8 +895,8 @@ public class Formauswahl {
 					
 				}
 				
-				private void tempusPräsensPassivKonjunktivEKonjugation() {
-					System.out.println("Präsens - Passiv - Konjunktiv - E Konjugation");
+				private void tempusPraesensPassivKonjunktivEKonjugation() {
+					System.out.println("Prï¿½sens - Passiv - Konjunktiv - E Konjugation");
 					
 					if (gv.endsWith("ear")) {
 						gvs = gv.substring(0,  gv.length()-3);
@@ -920,8 +920,8 @@ public class Formauswahl {
 					
 				}
 				
-				private void tempusPräsensPassivKonjunktivIKonjugation() {
-					System.out.println("Präsens - Passiv - Konjunktiv - I Konjugation");
+				private void tempusPraesensPassivKonjunktivIKonjugation() {
+					System.out.println("Prï¿½sens - Passiv - Konjunktiv - I Konjugation");
 					
 					if (gv.endsWith("iar")) {
 						gvs = gv.substring(0,  gv.length()-3);
@@ -1494,7 +1494,7 @@ public class Formauswahl {
 			// ::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 				
 				private void tempusPerfektPassivIndikativ() {
-					System.out.println("Präsens - Passiv - Indikativ");
+					System.out.println("Prï¿½sens - Passiv - Indikativ");
 					
 					if (gv.endsWith(" sum") || gv.endsWith(" est")) {
 						if (gv.substring(0, gv.length()-4).endsWith("atus")) {
@@ -1728,7 +1728,7 @@ public class Formauswahl {
 				}
 				
 				private void tempusPlusquamperfektAktivKonjunktivEKonjugation() {
-					System.out.println("Präsens - Aktiv - Konjunktiv - A Konjugation");
+					System.out.println("Prï¿½sens - Aktiv - Konjunktiv - A Konjugation");
 					
 					if (gv.endsWith("uissem") || gv.endsWith("uisses") || gv.endsWith("uisset")) {						
 						gvs = gv.substring(0, gv.length()-6);
@@ -1753,7 +1753,7 @@ public class Formauswahl {
 				}
 				
 				private void tempusPlusquamperfektAktivKonjunktivIKonjugation() {
-					System.out.println("Präsens - Aktiv - Konjunktiv - A Konjugation");
+					System.out.println("Prï¿½sens - Aktiv - Konjunktiv - A Konjugation");
 					
 					if (gv.endsWith("ivissem") || gv.endsWith("ivisses") || gv.endsWith("ivisset")) {						
 						gvs = gv.substring(0, gv.length()-7);
@@ -1769,7 +1769,7 @@ public class Formauswahl {
 				}
 				
 				private void tempusPlusquamperfektAktivKonjunktivKonsKonjugation() {
-					System.out.println("Präsens - Aktiv - Konjunktiv - A Konjugation");
+					System.out.println("Prï¿½sens - Aktiv - Konjunktiv - A Konjugation");
 					
 					//TODO
 					

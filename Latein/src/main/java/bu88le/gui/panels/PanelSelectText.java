@@ -2,7 +2,6 @@ package bu88le.gui.panels;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -11,9 +10,6 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -47,7 +43,7 @@ public class PanelSelectText extends CommonPanel {
 		c.insets = new Insets(5, 0, 5, 0);
 		c.fill = GridBagConstraints.VERTICAL;
 				
-		bt1_caesartext = new JButton("Cäsar");
+		bt1_caesartext = new JButton("Cï¿½sar");
 		bt1_caesartext.setBackground(Color.LIGHT_GRAY);
 		bt1_caesartext.setForeground(Color.BLUE);
 		bt1_caesartext.setCursor(new Cursor(Cursor.HAND_CURSOR));

@@ -59,10 +59,10 @@ public class PanelAdminLogin extends JPanel {
 		lbBeschreibung = new JLabel(Strings.getString("PanelMain.label_Beschreibung"), SwingConstants.CENTER); //$NON-NLS-1$
 		c.gridy = 0;
 		c.gridx = 0;
-		c.fill = GridBagConstraints.VERTICAL; // Füllt das "Kästchen" von oben
+		c.fill = GridBagConstraints.VERTICAL; // Fï¿½llt das "Kï¿½stchen" von oben
 												// nach unten aus (nicht links
 												// rechts)
-		c.insets = new Insets(0, 0, 10, 0); // Lässt 10 px nach unten Abstand
+		c.insets = new Insets(0, 0, 10, 0); // Lï¿½sst 10 px nach unten Abstand
 		pnBorderMitte.add(lbBeschreibung, c);
 
 		// -------------------------------
@@ -76,8 +76,8 @@ public class PanelAdminLogin extends JPanel {
 		tfEingabeVokabel.setForeground(Color.GRAY);
 		tfEingabeVokabel.setToolTipText(Strings.getString("PanelMain.tf_EingabeVokabel_ToolTip")); //$NON-NLS-1$
 		tfEingabeVokabel.setPreferredSize(new Dimension(200, 25)); // um
-																	// gewünschte
-																	// Größe zu
+																	// gewï¿½nschte
+																	// Grï¿½ï¿½e zu
 																	// bekommen
 		tfEingabeVokabel.setBorder(new LineBorder(Color.RED, 2));
 		tfEingabeVokabel.requestFocus();
@@ -105,7 +105,7 @@ public class PanelAdminLogin extends JPanel {
 			@Override
 			public void keyReleased(KeyEvent e) {
 				tfEingabeVokabel.setForeground(Color.BLACK);
-				// Prüfung der Eingabe mit Regex-Ausdrücken
+				// Prï¿½fung der Eingabe mit Regex-Ausdrï¿½cken
 				if (tfEingabeVokabel.getText().equals("") || !isValid(tfEingabeVokabel.getText())) { //$NON-NLS-1$
 					tfEingabeVokabel.setBorder(new LineBorder(Color.RED, 2));
 					btSuche.setEnabled(false);
@@ -169,7 +169,7 @@ public class PanelAdminLogin extends JPanel {
 		});
 
 		// -----------------------
-		// ---Panel für Buttons---
+		// ---Panel fï¿½r Buttons---
 		// -----------------------
 
 		pnButtons = new JPanel();
@@ -182,7 +182,7 @@ public class PanelAdminLogin extends JPanel {
 
 		pnButtons.add(Box.createHorizontalGlue());
 		pnButtons.add(btSuche);
-		pnButtons.add(Box.createRigidArea(new Dimension(20, 0))); // Lücke
+		pnButtons.add(Box.createRigidArea(new Dimension(20, 0))); // Lï¿½cke
 																	// zwischen
 																	// den zwei
 																	// BUttons
@@ -240,7 +240,7 @@ public class PanelAdminLogin extends JPanel {
 
 
 	private static boolean isValid(String s) {
-		if (s.matches("[a-zA-Z\\p{Blank}ß~üäö]*")) //$NON-NLS-1$
+		if (s.matches("[a-zA-Z\\p{Blank}ï¿½~ï¿½ï¿½ï¿½]*")) //$NON-NLS-1$
 			return true;
 
 		return false;

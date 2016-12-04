@@ -14,10 +14,10 @@ public class AKonjugation extends Thread {
 			.getResourceAsStream("endings/aKon/normalAKon.dat");
 	String			gvs;
 	
-	static String[]	präsensAktivIndikativ			= new String[6];
-	static String[]	präsensAktivKonjunktiv			= new String[6];
-	static String[]	präsensPassivIndikativ			= new String[6];
-	static String[]	präsensPassivKonjunktiv			= new String[6];
+	static String[]	praesensAktivIndikativ			= new String[6];
+	static String[]	praesensAktivKonjunktiv			= new String[6];
+	static String[]	praesensPassivIndikativ			= new String[6];
+	static String[]	praesensPassivKonjunktiv		= new String[6];
 	
 	static String[]	imperfektAktivIndikativ			= new String[6];
 	static String[]	imperfektAktivKonjunktiv		= new String[6];
@@ -57,22 +57,22 @@ public class AKonjugation extends Thread {
 			final ArrayList<String[]> auslesenArray = new ArrayList<>();
 			auslesenArray.add(auslesen.split(","));
 			for (int i = 0; i < auslesenArray.get(0).length; i++)
-				präsensAktivIndikativ[i] = gvs + auslesenArray.get(0)[i];
+				praesensAktivIndikativ[i] = gvs + auslesenArray.get(0)[i];
 			
 			auslesen = reader.readLine();
 			auslesenArray.add(auslesen.split(","));
 			for (int i = 0; i < auslesenArray.get(1).length; i++)
-				präsensAktivKonjunktiv[i] = gvs + auslesenArray.get(1)[i];
+				praesensAktivKonjunktiv[i] = gvs + auslesenArray.get(1)[i];
 			
 			auslesen = reader.readLine();
 			auslesenArray.add(auslesen.split(","));
 			for (int i = 0; i < auslesenArray.get(2).length; i++)
-				präsensPassivIndikativ[i] = gvs + auslesenArray.get(2)[i];
+				praesensPassivIndikativ[i] = gvs + auslesenArray.get(2)[i];
 			
 			auslesen = reader.readLine();
 			auslesenArray.add(auslesen.split(","));
 			for (int i = 0; i < auslesenArray.get(3).length; i++)
-				präsensPassivKonjunktiv[i] = gvs + auslesenArray.get(3)[i];
+				praesensPassivKonjunktiv[i] = gvs + auslesenArray.get(3)[i];
 			
 			auslesen = reader.readLine();
 			auslesenArray.add(auslesen.split(","));
@@ -163,21 +163,21 @@ public class AKonjugation extends Thread {
 		}
 	}
 	
-	public static String[] returnPräsensAktivIndikativ() {
-		return präsensAktivIndikativ;
+	public static String[] returnPraesensAktivIndikativ() {
+		return praesensAktivIndikativ;
 		
 	}
 	
-	public static String[] returnPräsensAktivKonjunktiv() {
-		return präsensAktivKonjunktiv;
+	public static String[] returnPraesensAktivKonjunktiv() {
+		return praesensAktivKonjunktiv;
 	}
 	
-	public static String[] returnPräsensPassivIndikativ() {
-		return präsensPassivIndikativ;
+	public static String[] returnPraesensPassivIndikativ() {
+		return praesensPassivIndikativ;
 	}
 	
-	public static String[] returnPräsensPassivKonjunktiv() {
-		return präsensPassivKonjunktiv;
+	public static String[] returnPraesensPassivKonjunktiv() {
+		return praesensPassivKonjunktiv;
 	}
 	
 	public static String[] returnImperfektAktivIndikativ() {
