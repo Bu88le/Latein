@@ -37,7 +37,7 @@ public class PanelAdminMenu extends JPanel {
 		panelPageStart = new JPanel();
 		panelPageStart.setLayout(new GridBagLayout());
 
-		bt1_PageStart = new JButton("Hauptmenü");
+		bt1_PageStart = new JButton("Hauptmenï¿½");
 		bt1_PageStart.setBackground(Color.BLACK);
 		bt1_PageStart.setForeground(Color.WHITE);
 		bt1_PageStart.setCursor(new Cursor(Cursor.HAND_CURSOR));

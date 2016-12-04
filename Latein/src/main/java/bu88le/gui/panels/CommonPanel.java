@@ -30,7 +30,7 @@ public class CommonPanel extends JPanel {
 
 		setLayout(new BorderLayout(10, 10));
 
-		back = new JButton("Zurück");
+		back = new JButton("Zurï¿½ck");
 		back.setBackground(new Color(9, 119, 165));
 		back.setForeground(Color.WHITE);
 		back.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -45,7 +45,7 @@ public class CommonPanel extends JPanel {
 			}
 		});
 
-		mainMenu = new JButton("Hauptmenü");
+		mainMenu = new JButton("Hauptmenï¿½");
 		mainMenu.setBackground(new Color(9, 119, 165));
 		mainMenu.setForeground(Color.WHITE);
 		mainMenu.setCursor(new Cursor(Cursor.HAND_CURSOR));
